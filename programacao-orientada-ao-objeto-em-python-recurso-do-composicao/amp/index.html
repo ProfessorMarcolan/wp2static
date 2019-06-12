@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html amp lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"><script type="application/ld+json" class="yoast-schema-graph yoast-schema-graph--main">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://github.professormarcolan.com.br/#website","url":"https://github.professormarcolan.com.br/","name":"Potencialize com conhecimento os seus estudos e projetos!","publisher":{"@id":"https://github.professormarcolan.com.br/#person"},"potentialAction":{"@type":"SearchAction","target":"https://github.professormarcolan.com.br/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"WebPage","@id":"https://github.professormarcolan.com.br/programacao-orientada-ao-objeto-em-python-recurso-do-composicao/#webpage","url":"https://github.professormarcolan.com.br/programacao-orientada-ao-objeto-em-python-recurso-do-composicao/","inLanguage":"pt-BR","name":"Programa\u00e7\u00e3o orientada ao objeto em Python: Como fazer composi\u00e7\u00e3o em python","isPartOf":{"@id":"https://github.professormarcolan.com.br/#website"},"image":{"@type":"ImageObject","@id":"https://github.professormarcolan.com.br/programacao-orientada-ao-objeto-em-python-recurso-do-composicao/#primaryimage","url":"https://github.professormarcolan.com.br/wp-content/uploads/2018/05/ProgramacaoOrientadaAoObjetoEmPythoncomposicao.jpg","width":735,"height":735,"caption":"Relacionamento entre classes. Relacionamento de composi\u00e7\u00e3o"},"primaryImageOfPage":{"@id":"https://github.professormarcolan.com.br/programacao-orientada-ao-objeto-em-python-recurso-do-composicao/#primaryimage"},"datePublished":"2018-05-06T23:39:57+00:00","dateModified":"2018-05-29T18:44:46+00:00","description":"Nesse tutorial iremos mergulhar em como fazer composi\u00e7\u00e3o em python. Um dos tres recursos da programa\u00e7\u00e3o orientada ao objeto. Pegue uma x\u00edcara de caf\u00e9 e venha conferir essa leitura de 5 minutos.."},{"@type":"Article","@id":"https://github.professormarcolan.com.br/programacao-orientada-ao-objeto-em-python-recurso-do-composicao/#article","isPartOf":{"@id":"https://github.professormarcolan.com.br/programacao-orientada-ao-objeto-em-python-recurso-do-composicao/#webpage"},"author":{"@id":"https://github.professormarcolan.com.br/schema/person/joaomarcolan/#author"},"headline":"Programa\u00e7\u00e3o orientada ao objeto em Python: Como fazer composi\u00e7\u00e3o em python","datePublished":"2018-05-06T23:39:57+00:00","dateModified":"2018-05-29T18:44:46+00:00","commentCount":0,"mainEntityOfPage":{"@id":"https://github.professormarcolan.com.br/programacao-orientada-ao-objeto-em-python-recurso-do-composicao/#webpage"},"publisher":{"@id":"https://github.professormarcolan.com.br/#person"},"image":{"@id":"https://github.professormarcolan.com.br/programacao-orientada-ao-objeto-em-python-recurso-do-composicao/#primaryimage"},"keywords":"Programa\u00e7\u00e3o Orientada ao objeto,Python","articleSection":"Python"},{"@type":["Person"],"@id":"https://github.professormarcolan.com.br/author/joaomarcolan/#author","name":"JoaoMarcolan","image":{"@type":"ImageObject","@id":"https://github.professormarcolan.com.br/#authorlogo","url":"https://secure.gravatar.com/avatar/decab487065c8029b68fb599b5a989c8?s=96&d=mm&r=g","caption":"JoaoMarcolan"},"sameAs":[]}]}</script><title>ProgramaÃ§Ã£o orientada ao objeto em Python: Como fazer composiÃ§Ã£o em python</title><script type="text/javascript" src="https://cdn.ampproject.org/v0.js" async></script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic"><style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style></head><body><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript><style amp-custom>
+		/* Generic WP styling */
+
+.alignright {
+	float: right;
+}
+
+.alignleft {
+	float: left;
+}
+
+.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.amp-wp-enforced-sizes {
+	/** Our sizes fallback is 100vw, and we have a padding on the container; the max-width here prevents the element from overflowing. **/
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+.amp-wp-unknown-size img {
+	/** Worst case scenario when we can't figure out dimensions for an image. **/
+	/** Force the image into a box of fixed dimensions and use object-fit to scale. **/
+	object-fit: contain;
+}
+
+/* Template Styles */
+
+.amp-wp-content,
+.amp-wp-title-bar div {
+		margin: 0 auto;
+	max-width: 895px;
+	}
+
+html {
+	background: #0a89c0;
+}
+
+body {
+	background: #fff;
+	color: #353535;
+	font-family: 'Merriweather', 'Times New Roman', Times, Serif;
+	font-weight: 300;
+	line-height: 1.75em;
+}
+
+p,
+ol,
+ul,
+figure {
+	margin: 0 0 1em;
+	padding: 0;
+}
+
+a,
+a:visited {
+	color: #0a89c0;
+}
+
+a:hover,
+a:active,
+a:focus {
+	color: #353535;
+}
+
+/* Quotes */
+
+blockquote {
+	color: #353535;
+	background: rgba(127,127,127,.125);
+	border-left: 2px solid #0a89c0;
+	margin: 8px 0 24px 0;
+	padding: 16px;
+}
+
+blockquote p:last-child {
+	margin-bottom: 0;
+}
+
+/* UI Fonts */
+
+.amp-wp-meta,
+.amp-wp-header div,
+.amp-wp-title,
+.wp-caption-text,
+.amp-wp-tax-category,
+.amp-wp-tax-tag,
+.amp-wp-comments-link,
+.amp-wp-footer p,
+.back-to-top {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
+}
+
+/* Header */
+
+.amp-wp-header {
+	background-color: #0a89c0;
+}
+
+.amp-wp-header div {
+	color: #fff;
+	font-size: 1em;
+	font-weight: 400;
+	margin: 0 auto;
+	max-width: calc(840px - 32px);
+	padding: .875em 16px;
+	position: relative;
+}
+
+.amp-wp-header a {
+	color: #fff;
+	text-decoration: none;
+}
+
+/* Site Icon */
+
+.amp-wp-header .amp-wp-site-icon {
+	/** site icon is 32px **/
+	background-color: #fff;
+	border: 1px solid #fff;
+	border-radius: 50%;
+	position: absolute;
+	right: 18px;
+	top: 10px;
+}
+
+/* Article */
+
+.amp-wp-article {
+	color: #353535;
+	font-weight: 400;
+	margin: 1.5em auto;
+	max-width: 840px;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+}
+
+/* Article Header */
+
+.amp-wp-article-header {
+	align-items: center;
+	align-content: stretch;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: 1.5em 16px 0;
+}
+
+.amp-wp-title {
+	color: #353535;
+	display: block;
+	flex: 1 0 100%;
+	font-weight: 900;
+	margin: 0 0 .625em;
+	width: 100%;
+}
+
+/* Article Meta */
+
+.amp-wp-meta {
+	color: #696969;
+	display: inline-block;
+	flex: 2 1 50%;
+	font-size: .875em;
+	line-height: 1.5em;
+	margin: 0 0 1.5em;
+	padding: 0;
+}
+
+.amp-wp-article-header .amp-wp-meta:last-of-type {
+	text-align: right;
+}
+
+.amp-wp-article-header .amp-wp-meta:first-of-type {
+	text-align: left;
+}
+
+.amp-wp-byline amp-img,
+.amp-wp-byline .amp-wp-author {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.amp-wp-byline amp-img {
+	border: 1px solid #0a89c0;
+	border-radius: 50%;
+	position: relative;
+	margin-right: 6px;
+}
+
+.amp-wp-posted-on {
+	text-align: right;
+}
+
+/* Featured image */
+
+.amp-wp-article-featured-image {
+	margin: 0 0 1em;
+}
+.amp-wp-article-featured-image amp-img {
+	margin: 0 auto;
+}
+.amp-wp-article-featured-image.wp-caption .wp-caption-text {
+	margin: 0 18px;
+}
+
+/* Article Content */
+
+.amp-wp-article-content {
+	margin: 0 16px;
+}
+
+.amp-wp-article-content ul,
+.amp-wp-article-content ol {
+	margin-left: 1em;
+}
+
+.amp-wp-article-content amp-img {
+	margin: 0 auto;
+}
+
+.amp-wp-article-content amp-img.alignright {
+	margin: 0 0 1em 16px;
+}
+
+.amp-wp-article-content amp-img.alignleft {
+	margin: 0 16px 1em 0;
+}
+
+/* Captions */
+
+.wp-caption {
+	padding: 0;
+}
+
+.wp-caption.alignleft {
+	margin-right: 16px;
+}
+
+.wp-caption.alignright {
+	margin-left: 16px;
+}
+
+.wp-caption .wp-caption-text {
+	border-bottom: 1px solid #c2c2c2;
+	color: #696969;
+	font-size: .875em;
+	line-height: 1.5em;
+	margin: 0;
+	padding: .66em 10px .75em;
+}
+
+/* AMP Media */
+
+amp-carousel {
+	background: #c2c2c2;
+	margin: 0 -16px 1.5em;
+}
+amp-iframe,
+amp-youtube,
+amp-instagram,
+amp-vine {
+	background: #c2c2c2;
+	margin: 0 -16px 1.5em;
+}
+
+.amp-wp-article-content amp-carousel amp-img {
+	border: none;
+}
+
+amp-carousel > amp-img > img {
+	object-fit: contain;
+}
+
+.amp-wp-iframe-placeholder {
+	background: #c2c2c2 url( https://github.professormarcolan.com.br/wp-content/plugins/amp/assets/images/placeholder-icon.png ) no-repeat center 40%;
+	background-size: 48px 48px;
+	min-height: 48px;
+}
+
+/* Article Footer Meta */
+
+.amp-wp-article-footer .amp-wp-meta {
+	display: block;
+}
+
+.amp-wp-tax-category,
+.amp-wp-tax-tag {
+	color: #696969;
+	font-size: .875em;
+	line-height: 1.5em;
+	margin: 1.5em 16px;
+}
+
+.amp-wp-comments-link {
+	color: #696969;
+	font-size: .875em;
+	line-height: 1.5em;
+	text-align: center;
+	margin: 2.25em 0 1.5em;
+}
+
+.amp-wp-comments-link a {
+	border-style: solid;
+	border-color: #c2c2c2;
+	border-width: 1px 1px 2px;
+	border-radius: 4px;
+	background-color: transparent;
+	color: #0a89c0;
+	cursor: pointer;
+	display: block;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 18px;
+	margin: 0 auto;
+	max-width: 200px;
+	padding: 11px 16px;
+	text-decoration: none;
+	width: 50%;
+	-webkit-transition: background-color 0.2s ease;
+			transition: background-color 0.2s ease;
+}
+
+/* AMP Footer */
+
+.amp-wp-footer {
+	border-top: 1px solid #c2c2c2;
+	margin: calc(1.5em - 1px) 0 0;
+}
+
+.amp-wp-footer div {
+	margin: 0 auto;
+	max-width: calc(840px - 32px);
+	padding: 1.25em 16px 1.25em;
+	position: relative;
+}
+
+.amp-wp-footer h2 {
+	font-size: 1em;
+	line-height: 1.375em;
+	margin: 0 0 .5em;
+}
+
+.amp-wp-footer p {
+	color: #696969;
+	font-size: .8em;
+	line-height: 1.5em;
+	margin: 0 85px 0 0;
+}
+
+.amp-wp-footer a {
+	text-decoration: none;
+}
+
+.back-to-top {
+	bottom: 1.275em;
+	font-size: .8em;
+	font-weight: 600;
+	line-height: 2em;
+	position: absolute;
+	right: 16px;
+}
+			</style><header id="top" class="amp-wp-header"><div>
+		<a href="https://github.professormarcolan.com.br/">
+										<amp-img src="https://github.professormarcolan.com.br/wp-content/uploads/2018/06/cropped-professor-marcolan-logo-1-32x32.png" width="32" height="32" class="amp-wp-site-icon"></amp-img><span class="amp-site-title">
+				Potencialize com conhecimento os seus estudos e projetos!			</span>
+		</a>
+	</div>
+</header><article class="amp-wp-article"><header class="amp-wp-article-header"><h1 class="amp-wp-title">ProgramaÃ§Ã£o orientada ao objeto em Python: Como fazer composiÃ§Ã£o em python</h1>
+			<div class="amp-wp-meta amp-wp-byline">
+					<amp-img src="https://secure.gravatar.com/avatar/decab487065c8029b68fb599b5a989c8?s=24&d=mm&r=g" alt="JoaoMarcolan" width="24" height="24" layout="fixed"></amp-img><span class="amp-wp-author author vcard">JoaoMarcolan</span>
+	</div>
+<div class="amp-wp-meta amp-wp-posted-on">
+	<time datetime="2018-05-06T20:39:57+00:00">
+		1 ano atrÃ¡s	</time></div>
+	</header><figure class="amp-wp-article-featured-image wp-caption"><amp-img width="735" height="735" src="https://github.professormarcolan.com.br/wp-content/uploads/2018/05/ProgramacaoOrientadaAoObjetoEmPythoncomposicao.jpg" class="attachment-large size-large wp-post-image amp-wp-enforced-sizes" alt="Relacionamento entre classes. Relacionamento de composiÃ§Ã£o" srcset="https://github.professormarcolan.com.br/wp-content/uploads/2018/05/ProgramacaoOrientadaAoObjetoEmPythoncomposicao.jpg 735w, https://github.professormarcolan.com.br/wp-content/uploads/2018/05/ProgramacaoOrientadaAoObjetoEmPythoncomposicao-150x150.jpg 150w, https://github.professormarcolan.com.br/wp-content/uploads/2018/05/ProgramacaoOrientadaAoObjetoEmPythoncomposicao-300x300.jpg 300w" layout="intrinsic"></amp-img><p class="wp-caption-text">
+			Relacionamento entre classes. Relacionamento de composiÃ§Ã£o		</p>
+	</figure><div class="amp-wp-article-content">
+		<p>
+        No post passado <a href="https://github.professormarcolan.com.br/introducao-a-programacao-orientada-ao-objeto-em-python/" target="_blank" rel="noopener">discutimos sobre os aspectos iniciais da programaÃ§Ã£o orientada ao objeto </a>. E em outro post <a href="https://github.professormarcolan.com.br/programacao-orientada-ao-objeto-classe-em-python/" target="_blank" rel="noopener">discutimos como criar uma classe e como instanciar ela para criar um objeto.</a> Neste tutorial, vamos nos aprofundar em na relaÃ§Ã£o de composiÃ§Ã£o em Python. E discutir como usar essa relaÃ§Ã£o da programaÃ§Ã£o orientada a objetos.
+</p><h2>
+Relacionamentos entre classes.<br></h2><p>
+Classes isoladas nÃ£o fornecem muita funcionalidade a um sistema. Geralmente as classes que compÃµem um software tem relacionamentos com outras classes. A grande vantagem dos relacionamentos entre classes Ã© a de poder criar classes mais complexas utilizando objetos de classes menos complexas.
+</p><p>
+ O Unified Modeling Language  (UML) fornece vÃ¡rias maneiras de representar relacionamentos entre classes. Cada relacionamento representa um tipo diferente de conexÃ£o entre classes. PorÃ©m, nesse tutorial iremos discutir apenas o relacionamento de composiÃ§Ã£o entre as classes.[6]
+</p><h2> Quando usar o relacionamento de composiÃ§Ã£o em programaÃ§Ã£o orientada ao objeto </h2><p> A composiÃ§Ã£o geralmente Ã© uma boa escolha quando um objeto faz parte de outro objeto. Por exemplo, uma calculadora tem componentes que fazem parte dela (display, teclado, unidade lÃ³gica) que podem ser programados de forma distinta. Ao fim da programaÃ§Ã£o dessas classes menos complexas podemos utiliza-los para criar a calculador. O relacionamento de composiÃ§Ã£o geralmente encontrado quando uma classe A (menos complexa) â&#128;&#156;â&#128;¦Ã© parte deâ&#128;¦â&#128;&#157; uma classe B (mais complexa).
+ </p><h3> Exemplo de composiÃ§Ã£o em Python </h3><p> Nesse tutorial iremos construir uma calculadora didÃ¡tica. Essa calculadora tem 4 objetos: uma bateria, um teclado, um controlador lÃ³gico e um display (figura 1) que fazem parte dela.</p><p>     </p>
+<center>
+<amp-img src="https://github.professormarcolan.com.br/wp-content/uploads/2018/05/ExemploDoRecursoDeEncapsulamentoptbr.jpg" alt="Exemplo do recurso de composiÃ§Ã£o da programaÃ§Ã£o oirentada ao objeto em python" width="942" height="1023" class="amp-wp-enforced-sizes" layout="intrinsic"></amp-img><figcaption class="wp-caption-text">Figura 1: Exemplo do recurso de composiÃ§Ã£o da programaÃ§Ã£o orientada ao objeto em Python</figcaption></center><p>
+    Inicialmente vamos escrevera a classe Caculadora com esses 4 objetos citados (cÃ³digo 1). Para isso, vamos implementar o mÃ©todo __init__() e dentro dele vamos instancia as classes para criar um objeto de cada uma das classes (uma bateria, um teclado, um controlador lÃ³gico e um display).
+</p><p></p>
+<pre class="brush: python; title: ; notranslate" title="">
+    #cÃ³digo 1 - Criando a classe Calculadora
+    class Calculadora():
+        """Classe calculadora
+        """
+        def __init__(self):
+            self.bateria = Bateria()
+            self.entrada = TeclasCalculadora()
+            self.operacoes = Operacoes()
+            self.display = Display()
+    </pre><h3> A classe bateria</h3><p>
+    A classe bateria (cÃ³digo 2) Ã© a classe responsÃ¡vel por emular o uso da bateria. Conforme o uso da calculadora a bateria vai sendo gasta. Ela tambÃ©m Ã© responsÃ¡vel por monitorar o uso da bateria e avisar quando a bateria estiver em um nivel baixo
+</p><p></p>
+<pre class="brush: python; title: ; notranslate" title="">
+    #cÃ³digo 2 - Criando a classe bateria
+    class Bateria():
+        def __init__(self):
+            self.pcBateria =100
+            self.gasto =0.9
+
+        def uso(self):
+            self.pcBateria =self.pcBateria*self.gasto
+            self.getBateriaFraca()
+
+
+        def getBateriaFraca(self):
+            print(" tem " + str(self.pcBateria) + "% de bateira")
+            if(self.pcBateria < 55):
+                print("bateria fraca")
+                return True
+            else:
+                return False
+    </pre><h3> A classe Teclas da Calculadora</h3><p>
+    A classe TeclasCalculadora (cÃ³digo 3) Ã© a classe responsavel por emular o telcado da calculadora. A calculadora didÃ¡tica vai ter como entrada dois numeros e essa classe vai ser responsavel guardar os valores. </p><p></p>
+<pre class="brush: python; title: ; notranslate" title="">
+    #cÃ³digo 3 - Criando a classe responsÃ¡vel por ler a entrada da calculadora
+    class TeclasCalculadora():
+        def __init__(self):
+            self.valor1=0
+            self.valor2=0
+
+        def valorEntrada(self,v1,v2):
+            self.valor1=v1
+            self.valor2=v2
+
+        def getValor(self):
+            return [self.valor1,self.valor2]
+    </pre><h3> A classe OperaÃ§Ãµes</h3><p>
+    A classe operaÃ§Ãµes (cÃ³digo 4) Ã© a responsÃ¡vel por emular o controlador lÃ³gico da calculadora. A calculadora didÃ¡tica vai ter duas operaÃ§Ãµes implementadas a de somar e a de subtrair dois nÃºmeros </p><p></p>
+<pre class="brush: python; title: ; notranslate" title="">
+    #cÃ³digo 4 - Criando a classe bateria
+    class Operacoes():
+
+        def soma(self, valores):
+            val=0
+            for v in valores:
+                val = val + v
+
+            return val
+
+        def subtracao(self, valores):
+            val=0
+            for v in valores:
+                val = val - v
+            return val
+    </pre><h3> A classe Display</h3><p>
+    A classe display (cÃ³digo 5) Ã© a classe responsÃ¡vel por exibir os valores na tela. </p><p></p>
+<pre class="brush: python; title: ; notranslate" title="">
+    #cÃ³digo 5 - Criando a classe bateria
+    class Display():
+        def __init__(self):
+            self.brilhoTela= 20
+            self.textoTela ="0"
+
+        def mostraTexto(self, textoTela):
+            self.textoTela =textoTela
+            print(self.textoTela)
+    </pre><h3> A classe Calculadora completa</h3><p>ApÃ³s a criaÃ§Ã£o das outras classes vamos adicionar mais dois novos mÃ©todos. Um mÃ©todo chamado novaOperaÃ§Ã£o que serve para o programador setar os valores da nova operaÃ§Ã£o e um mÃ©todo chamado soma que ao ser invocado chama a operaÃ§Ã£o de somar com os valores setador na funÃ§Ã£o novaOperaÃ§Ã£o. </p><p></p>
+<pre class="brush: python; title: ; notranslate" title="">
+    #cÃ³digo 6 - Adicionando dois novos mÃ©todos a classe Calculadora
+    class Calculadora():
+        def __init__(self):
+            self.bateria = Bateria()
+            self.entrada = TeclasCalculadora()
+            self.operacoes = Operacoes()
+            self.display = Display()
+
+        def novaOperacao(self, valor1,valor2):
+            self.entrada.valorEntrada(valor1,valor2)
+            self.bateria.uso()
+
+        def soma(self):
+            soma = self.operacoes.soma(self.entrada.getValor())
+            self.display.mostraTexto(soma)
+            self.bateria.uso()
+    </pre><h3> Instanciando a classe calculadora</h3><p>Agora, iremos instanciar a classe para criar uma calculadora e iremos utilizar esse novo objeto para calcular 3 somas diferentes. </p><p></p>
+<pre class="brush: python; title: ; notranslate" title="">
+    #cÃ³digo 7 - Utilizand a classe Calculadora para realizar 3 somas diferentes.
+    cal1 = Calculadora()
+
+    cal1.novaOperacao(10,20)
+    # tem 90.0% de bateira
+    cal1.soma()
+    # 30
+    # tem 81.0% de bateira
+
+
+    cal1.novaOperacao(15,20)
+    # tem 72.9% de bateira
+    cal1.soma()
+    # 35
+    # tem 65.61% de bateira
+
+    cal1.novaOperacao(20,20)
+    # tem 59.049% de bateira
+    cal1.soma()
+
+    # 40
+    # tem 53.144100000000016% de bateira
+    # bateria fraca
+
+    </pre><h2>DiscuÃ§Ã£o do recurso de composiÃ§Ã£o da calculadora</h2><p>
+    Em resumo, a classe calculadora conseguiu somar e subtrair conforme o esperado alÃ©m de possuir um controle da sua bateria. Na classe calculadora agrupamos os detalhes de menor nÃ­vel em outras classes (bateira, teclado, display) e utilizamos instancias (objetos) dessas classes para construir um componente de maior complexidade (calculadora).  Dessa forma conseguimos criar um componente (calculadora) de maior nÃ­vel de complexidade sem termos que nos preocupar com os detalhes de menor nÃ­vel. A classe calculadora pode fazer parte de um programa com maior complexidade (e.g. controlador de trajetoria de um missel).
+</p><h2> Encapsulamento HeranÃ§a e Polimorfismo em Python</h2><p>
+    O relacionamento de composiÃ§Ã£o nos permite criar componentes mais complexos criando os componentes mais simples. Para usar este recurso, basta fazer consultas simples, como: â&#128;&#147; â&#128;&#156;a classeâ&#128;&#157; A â&#128;&#156;tem um objetoâ&#128;&#157; B â&#128;&#156;, C e D?â&#128;&#157; â&#128;&#147; â&#128;&#156;o que a classe A tem?â&#128;&#157;. Usando esse recurso rapidamente pode tornar difÃ­cil saber quais mÃ©todos podem ser usados por outras classes e quais mÃ©todos sÃ£o importante para o funcionamento interno da classe. O prÃ³ximo tutorial discutirÃ¡ como utilizamos o recurso de encapsulamento que pode ser usado para separar esses dois tipos de mÃ©todos. Para seguir as atualizaÃ§Ãµes <a href="https://www.youtube.com/channel/UC9eGq_4v1Uu14Uznsey-hOg" target="_blank" rel="noopener">se inscreva no canal do youtube </a>e <a href="https://www.facebook.com/professormarcolan/" target="_blank" rel="noopener">nos siga no facebook. em @professormarcolan</a>.
+</p><h2>Referencias</h2><p>
+</p>
+<ul><li>[1] ZELLE, John M. Python programming: an introduction to computer science. Franklin, Beedle & Associates, Inc., 2004.</li>
+<li>[2] DOWNEY, Allen. Think Python. â&#128;&#157; Oâ&#128;&#153;Reilly Media, Inc.â&#128;&#157;, 2012. </li>
+<li>[3] PILGRIM, Mark. Dive Into Python. Createspace, 2009.</li>
+<li> https://docs.python.org/3/ </li>
+<li> [4] MATTHES, Eric. Python crash course: a hands-on, project-based introduction to programming. No Starch Press, 2015. </li>
+<li> [5]Smallshire, Robert. Bingham, Austin.  The Python Apprentice. Packt Publishing ,2017. </li>
+<li>
+                   [6]PILONE, Dan; PITMAN, Neil. UML 2.0 in a Nutshell. â&#128;&#157; Oâ&#128;&#153;Reilly Media, Inc.â&#128;&#157;, 2005.
+</li>
+</ul><div class="swp-content-locator"></div>	</div>
+
+	<footer class="amp-wp-article-footer"><div class="amp-wp-meta amp-wp-tax-category">
+		Categorias: <a href="https://github.professormarcolan.com.br/category/python/" rel="category tag">Python</a>	</div>
+
+	<div class="amp-wp-meta amp-wp-tax-tag">
+		Tags: <a href="https://github.professormarcolan.com.br/tag/programacao-orientada-ao-objeto/" rel="tag">ProgramaÃ§Ã£o Orientada ao objeto</a>, <a href="https://github.professormarcolan.com.br/tag/python/" rel="tag">Python</a>	</div>
+		<div class="amp-wp-meta amp-wp-comments-link">
+		<a href="https://github.professormarcolan.com.br/programacao-orientada-ao-objeto-em-python-recurso-do-composicao/#respond">
+			Deixar um comentÃ¡rio		</a>
+	</div>
+	</footer></article><footer class="amp-wp-footer"><div>
+		<h2>Potencialize com conhecimento os seus estudos e projetos!</h2>
+		<p>
+			<a href="https://wordpress.org/">
+				Desenvolvido por WordPress			</a>
+		</p>
+		<a href="#top" class="back-to-top">Ir para o topo</a>
+	</div>
+</footer></body></html>
