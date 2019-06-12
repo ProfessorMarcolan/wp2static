@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Polimorfismo em Python</title><style>@font-face {font-family: "sw-icon-font";src:url("https://github.professormarcolan.com.br/wp-content/plugins/social-warfare/assets/fonts/sw-icon-font.eot?ver=3.3.3");src:url("https://github.professormarcolan.com.br/wp-content/plugins/social-warfare/assets/fonts/sw-icon-font.eot?ver=3.3.3#iefix") format("embedded-opentype"),url("https://github.professormarcolan.com.br/wp-content/plugins/social-warfare/assets/fonts/sw-icon-font.woff?ver=3.3.3") format("woff"),
+	url("https://github.professormarcolan.com.br/wp-content/plugins/social-warfare/assets/fonts/sw-icon-font.ttf?ver=3.3.3") format("truetype"),url("https://github.professormarcolan.com.br/wp-content/plugins/social-warfare/assets/fonts/sw-icon-font.svg?ver=3.3.3#1445203416") format("svg");font-weight: normal;font-style: normal;}</style><meta name="description" content="Nesse post sobre programaÃ§Ã£o orientada ao objeto, de leitura fÃ¡cil e de 5 minutos, vocÃª irÃ¡ entender como utilizar o polimorfismo em Python."><meta property="og:locale" content="pt_BR"><meta property="og:type" content="article"><meta property="og:title" content="Polimorfismo em Python"><meta property="og:description" content="Nesse post sobre programaÃ§Ã£o orientada ao objeto, de leitura fÃ¡cil e de 5 minutos, vocÃª irÃ¡ entender como utilizar o polimorfismo em Python."><meta property="og:url" content="https://github.professormarcolan.com.br/polimorfismo-em-python/"><meta property="og:site_name" content="Potencialize com conhecimento os seus estudos e projetos!"><meta property="article:publisher" content="https://www.facebook.com/professormarcolan/"><meta property="article:tag" content="ProgramaÃ§Ã£o Orientada ao objeto"><meta property="article:tag" content="Python"><meta property="article:section" content="Python"><meta property="article:published_time" content="2018-07-08T23:29:36+00:00"><meta property="article:modified_time" content="2018-11-12T01:46:28+00:00"><meta property="og:updated_time" content="2018-11-12T01:46:28+00:00"><meta property="og:image" content="https://github.professormarcolan.com.br/wp-content/uploads/2018/07/programacao-orientada-ao-objeto-em-python-polimorfismo-python.png"><meta property="og:image:secure_url" content="https://github.professormarcolan.com.br/wp-content/uploads/2018/07/programacao-orientada-ao-objeto-em-python-polimorfismo-python.png"><meta property="og:image:width" content="735"><meta property="og:image:height" content="735"><meta name="twitter:card" content="summary"><meta name="twitter:description" content="Nesse post sobre programaÃ§Ã£o orientada ao objeto, de leitura fÃ¡cil e de 5 minutos, vocÃª irÃ¡ entender como utilizar o polimorfismo em Python."><meta name="twitter:title" content="Polimorfismo em Python"><meta name="twitter:image" content="https://github.professormarcolan.com.br/wp-content/uploads/2018/07/programacao-orientada-ao-objeto-em-python-polimorfismo-python.png"><script type="application/ld+json" class="yoast-schema-graph yoast-schema-graph--main">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://github.professormarcolan.com.br/#website","url":"https://github.professormarcolan.com.br/","name":"Potencialize com conhecimento os seus estudos e projetos!","publisher":{"@id":"https://github.professormarcolan.com.br/#person"},"potentialAction":{"@type":"SearchAction","target":"https://github.professormarcolan.com.br/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"WebPage","@id":"https://github.professormarcolan.com.br/polimorfismo-em-python/#webpage","url":"https://github.professormarcolan.com.br/polimorfismo-em-python/","inLanguage":"pt-BR","name":"Polimorfismo em Python","isPartOf":{"@id":"https://github.professormarcolan.com.br/#website"},"image":{"@type":"ImageObject","@id":"https://github.professormarcolan.com.br/polimorfismo-em-python/#primaryimage","url":"https://github.professormarcolan.com.br/wp-content/uploads/2018/07/programacao-orientada-ao-objeto-em-python-polimorfismo-python.png","width":735,"height":735,"caption":"programa\u00e7\u00e3o orientada ao objeto em python: recurso do polimorfismo"},"primaryImageOfPage":{"@id":"https://github.professormarcolan.com.br/polimorfismo-em-python/#primaryimage"},"datePublished":"2018-07-08T23:29:36+00:00","dateModified":"2018-11-12T01:46:28+00:00","description":"Nesse post sobre programa\u00e7\u00e3o orientada ao objeto, de leitura f\u00e1cil e de 5 minutos, voc\u00ea ir\u00e1 entender como utilizar o polimorfismo em Python."},{"@type":"Article","@id":"https://github.professormarcolan.com.br/polimorfismo-em-python/#article","isPartOf":{"@id":"https://github.professormarcolan.com.br/polimorfismo-em-python/#webpage"},"author":{"@id":"https://github.professormarcolan.com.br/schema/person/joaomarcolan/#author"},"headline":"Polimorfismo em Python","datePublished":"2018-07-08T23:29:36+00:00","dateModified":"2018-11-12T01:46:28+00:00","commentCount":0,"mainEntityOfPage":{"@id":"https://github.professormarcolan.com.br/polimorfismo-em-python/#webpage"},"publisher":{"@id":"https://github.professormarcolan.com.br/#person"},"image":{"@id":"https://github.professormarcolan.com.br/polimorfismo-em-python/#primaryimage"},"keywords":"Programa\u00e7\u00e3o Orientada ao objeto,Python","articleSection":"Python,Teoria"},{"@type":["Person"],"@id":"https://github.professormarcolan.com.br/author/joaomarcolan/#author","name":"JoaoMarcolan","image":{"@type":"ImageObject","@id":"https://github.professormarcolan.com.br/#authorlogo","url":"https://secure.gravatar.com/avatar/decab487065c8029b68fb599b5a989c8?s=96&d=mm&r=g","caption":"JoaoMarcolan"},"sameAs":[]}]}</script><link rel="dns-prefetch" href="//cdn.datacamp.com"><link rel="dns-prefetch" href="//fonts.googleapis.com"><link rel="dns-prefetch" href="//s.w.org"><script type="text/javascript" data-cfasync="false">
+	var mi_version         = '7.3.0';
+	var mi_track_user      = true;
+	var mi_no_track_reason = '';
+	
+	var disableStr = 'ga-disable-UA-90999033-1';
+
+	/* Function to detect opted out users */
+	function __gaTrackerIsOptedOut() {
+		return document.cookie.indexOf(disableStr + '=true') > -1;
+	}
+
+	/* Disable tracking if the opt-out cookie exists. */
+	if ( __gaTrackerIsOptedOut() ) {
+		window[disableStr] = true;
+	}
+
+	/* Opt-out function */
+	function __gaTrackerOptout() {
+	  document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+	  window[disableStr] = true;
+	}
+	
+	if ( mi_track_user ) {
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','__gaTracker');
+
+		__gaTracker('create', 'UA-90999033-1', 'auto');
+		__gaTracker('set', 'forceSSL', true);
+		__gaTracker('send','pageview');
+	} else {
+		console.log( "" );
+		(function() {
+			/* https://developers.google.com/analytics/devguides/collection/analyticsjs/ */
+			var noopfn = function() {
+				return null;
+			};
+			var noopnullfn = function() {
+				return null;
+			};
+			var Tracker = function() {
+				return null;
+			};
+			var p = Tracker.prototype;
+			p.get = noopfn;
+			p.set = noopfn;
+			p.send = noopfn;
+			var __gaTracker = function() {
+				var len = arguments.length;
+				if ( len === 0 ) {
+					return;
+				}
+				var f = arguments[len-1];
+				if ( typeof f !== 'object' || f === null || typeof f.hitCallback !== 'function' ) {
+					console.log( 'Not running function __gaTracker(' + arguments[0] + " ....) because you are not being tracked. " + mi_no_track_reason );
+					return;
+				}
+				try {
+					f.hitCallback();
+				} catch (ex) {
+
+				}
+			};
+			__gaTracker.create = function() {
+				return new Tracker();
+			};
+			__gaTracker.getByName = noopnullfn;
+			__gaTracker.getAll = function() {
+				return [];
+			};
+			__gaTracker.remove = noopfn;
+			window['__gaTracker'] = __gaTracker;
+					})();
+		}
+</script><link rel="stylesheet" id="validate-engine-css-css" href="https://github.professormarcolan.com.br/wp-content/plugins/wysija-newsletters/css/validationEngine.jquery.css" type="text/css" media="all"><link rel="stylesheet" id="datacamp-light-style-css" href="https://github.professormarcolan.com.br/wp-content/plugins/datacamp-light-wordpress-0.1.0/style/frontend_style.css" type="text/css" media="all"><link rel="stylesheet" id="ACT_css-css" href="https://github.professormarcolan.com.br/wp-content/plugins/list-all-posts-by-authors-nested-categories-and-titles/ACT.css" type="text/css" media="all"><link rel="stylesheet" id="social_warfare-css" href="https://github.professormarcolan.com.br/wp-content/plugins/social-warfare/assets/css/style.min.css" type="text/css" media="all"><link rel="stylesheet" id="font-awesome-css" href="https://github.professormarcolan.com.br/wp-content/themes/magazine-point/vendors/font-awesome/css/font-awesome.min.css" type="text/css" media="all"><link rel="stylesheet" id="magazine-point-google-fonts-css" href="https://fonts.googleapis.com/css?family=Magra%3A400%2C700%7CGudea%3A100%2C400%2C500%2C600&subset=latin%2Clatin-ext" type="text/css" media="all"><link rel="stylesheet" id="jquery-sidr-css" href="https://github.professormarcolan.com.br/wp-content/themes/magazine-point/vendors/sidr/css/jquery.sidr.dark.min.css" type="text/css" media="all"><link rel="stylesheet" id="jquery-slick-css" href="https://github.professormarcolan.com.br/wp-content/themes/magazine-point/vendors/slick/slick.min.css" type="text/css" media="all"><link rel="stylesheet" id="magazine-point-style-css" href="https://github.professormarcolan.com.br/wp-content/themes/magazine-point/style.css" type="text/css" media="all"><link rel="stylesheet" id="wpgform-css-css" href="https://github.professormarcolan.com.br/wp-content/plugins/wpgform/css/wpgform.css" type="text/css" media="all"><link rel="stylesheet" id="__EPYT__style-css" href="https://github.professormarcolan.com.br/wp-content/plugins/youtube-embed-plus/styles/ytprefs.min.css" type="text/css" media="all"><style id="__EPYT__style-inline-css" type="text/css">
+
+                .epyt-gallery-thumb {
+                        width: 33.333%;
+                }
+                
+</style><script type="text/javascript">
+/* <![CDATA[ */
+var monsterinsights_frontend = {"js_events_tracking":"true","is_debug_mode":"false","download_extensions":"doc,exe,js,pdf,ppt,tgz,zip,xls","inbound_paths":"","home_url":"https:\/\/PLACEHOLDER.wpsho","track_download_as":"event","internal_label":"int","hash_tracking":"false"};
+/* ]]> */
+</script><script type="text/javascript" src="https://github.professormarcolan.com.br/wp-content/plugins/google-analytics-for-wordpress/assets/js/frontend.min.js"></script><script type="text/javascript" src="https://github.professormarcolan.com.br/wp-includes/js/jquery/jquery.js"></script><script type="text/javascript" src="https://github.professormarcolan.com.br/wp-includes/js/jquery/jquery-migrate.min.js"></script><script type="text/javascript">
+/* <![CDATA[ */
+var _EPYT_ = {"ajaxurl":"https:\/\/github.professormarcolan.com.br\/wp-admin\/admin-ajax.php","security":"b53ddad27c","gallery_scrolloffset":"20","eppathtoscripts":"https:\/\/github.professormarcolan.com.br\/wp-content\/plugins\/youtube-embed-plus\/scripts\/","epresponsiveselector":"[\"iframe.__youtube_prefs_widget__\"]","epdovol":"1","version":"12.2","evselector":"iframe.__youtube_prefs__[src], iframe[src*=\"youtube.com\/embed\/\"], iframe[src*=\"youtube-nocookie.com\/embed\/\"]","ajax_compat":"","ytapi_load":"light","stopMobileBuffer":"1","vi_active":"","vi_js_posttypes":[]};
+/* ]]> */
+</script><script type="text/javascript" src="https://github.professormarcolan.com.br/wp-content/plugins/youtube-embed-plus/scripts/ytprefs.min.js"></script><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-5400208836705527",
+          enable_page_level_ads: true
+     });
+</script><style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style><style type="text/css">.broken_link, a.broken_link {
+	text-decoration: line-through;
+}</style><style type="text/css" id="custom-background-css">
+body.custom-background { background-color: #f1f0f0; }
+</style><link rel="amphtml" href="https://github.professormarcolan.com.br/polimorfismo-em-python/amp/"><style type="text/css" id="syntaxhighlighteranchor"></style><link rel="icon" href="https://github.professormarcolan.com.br/wp-content/uploads/2018/06/cropped-professor-marcolan-logo-1-32x32.png" sizes="32x32"><link rel="icon" href="https://github.professormarcolan.com.br/wp-content/uploads/2018/06/cropped-professor-marcolan-logo-1-192x192.png" sizes="192x192"><link rel="apple-touch-icon-precomposed" href="https://github.professormarcolan.com.br/wp-content/uploads/2018/06/cropped-professor-marcolan-logo-1-180x180.png"><meta name="msapplication-TileImage" content="https://github.professormarcolan.com.br/wp-content/uploads/2018/06/cropped-professor-marcolan-logo-1-270x270.png"><style type="text/css" id="wp-custom-css">
+			/*
+Voc? pode adicionar seu pr?prio CSS aqui.
+
+div.site-content{
+	background-color: rgb(201, 76, 76)
+}
+
+Clique no ?cone de ajuda acima para saber mais.
+
+div.featured-news-item {
+	background-color: rgb(201, 76, 76);
+	    float: left;
+    width: 12%;
+    position: relative;
+
+}
+*/
+
+
+body {
+    font-family: "Times New Roman", Times, serif;
+	font-size: 19px;
+	text-align:justify;
+    color: #00008B;
+}
+
+p{
+		text-indent: 5%;
+}
+
+b{
+	font-family: "Times New Roman", Times, serif;
+	font-size: 19px;
+	color: black;
+	
+}
+
+div.news-block-wrapper{
+	
+	font-size: 15px;
+	text-align:justify;
+  color: black;
+	
+}
+
+h2.widget-title{
+		font-size: 20px;
+	text-align:justify;
+  color: black;
+}
+
+p.site-description{
+	color: black;
+	font-size: 25px;
+}
+
+p.site-title{
+	font-size: 45px;
+	text-align:justify;
+	
+}
+#news1{
+	color: green;
+}
+#news2{
+	color: green;
+}
+
+#news3{
+	color: grey;
+}
+
+.code{
+	    background-color: rgb(230, 234, 235);
+	color:green;
+}
+
+
+		</style></head><body class="post-template-default single single-post postid-1212 single-format-standard custom-background wp-custom-logo site-layout-fluid global-layout-right-sidebar header-ads-enabled">
+
+	<div id="page" class="hfeed site"><a class="skip-link screen-reader-text" href="#content">Skip to content</a>		<a id="mobile-trigger" href="#mob-menu"><i class="fa fa-list-ul" aria-hidden="true"></i></a>
+		<div id="mob-menu">
+			<ul id="menu-menu-pt_br" class="menu"><li id="menu-item-737" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-737"><a href="https://github.professormarcolan.com.br/">Aulas em destaque</a></li>
+<li id="menu-item-738" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-has-children menu-item-738"><a href="https://github.professormarcolan.com.br/aulas-sobre-engenharia/">RepositÃ³rio de aulas</a>
+<ul class="sub-menu"><li id="menu-item-913" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-custom-parent menu-item-913"><a href="https://github.professormarcolan.com.br/category/python/">Python</a></li>
+	<li id="menu-item-912" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-912"><a href="https://github.professormarcolan.com.br/category/git/">git</a></li>
+</ul></li>
+<li id="menu-item-736" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-736"><a href="https://github.professormarcolan.com.br/sobre/">Sobre</a></li>
+<li id="menu-item-1024" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1024"><a href="https://github.professormarcolan.com.br/politica-de-privacidade/">PolÃ­tica de privacidade</a></li>
+<li id="menu-item-734" class="pll-parent-menu-item menu-item menu-item-type-custom menu-item-object-custom current-menu-parent menu-item-has-children menu-item-734"><a href="#pll_switcher"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAIAAAD5gJpuAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAHjSURBVHjaYmRIZkCAfwwMf2DkLzCCMyDoBwNAALEAlTVGN/5nYPj//x8Q/P3/9++/vzZa31gY/mw5z/Tn3x8g98+f37///fn99/eq2lUAAQTS8J/h/7NPz/9C5P79WRj89f9/zv//fztLvPVezPzrz+8/f3//+vtLhl8GaANAAIE1/P8PVA1U6qn7NVTqb1XVpAv/JH7/+a/848XmtpBlj39PO8gM1PP7z2+gqwACiAnoYpC9TF9nB34NVf5z4XpoZJbEjJKfWaEfL7KLlbaURKj8Opj08RfIVb+BNgAEEBPQW1L8P+b6/mb6//s/w+/+nc4F0/9P2cj65xdHc+p/QR39//9/AdHJ9A/60l8YvjIABBAT0JYH75jStv75zwCSMBY8BXTMxXv/21ezfHj9X5/3BESDy5JfBy7/ZuBnAAggkA1//vx594kpaCnLloe/smLaVT9/ff3y/+/P/w+u/+JuW7fhwS/tSayPXrOycrEyfGQACCAWoA1//oOCDIgm72fu4vy6b4LD/9/S/3///s9+S28yy+9/LEAf//kLChVgCAEEEEjD7z9/JHgkQeHwD8gUjV79O9r6CzPLv6lr1OUFwWH9Fxjcv//9BcYoA0AAMTI4ImIROUYRMf2XARkABBgA8kMvQf3q+24AAAAASUVORK5CYII=" title="PortuguÃªs" alt="PortuguÃªs"><span style="margin-left:0.3em;">PortuguÃªs</span></a>
+<ul class="sub-menu"><li class="lang-item lang-item-39 lang-item-pt lang-item-first current-lang menu-item menu-item-type-custom menu-item-object-custom menu-item-734-pt"><a href="https://github.professormarcolan.com.br/polimorfismo-em-python/" hreflang="pt-BR" lang="pt-BR"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAIAAAD5gJpuAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAHjSURBVHjaYmRIZkCAfwwMf2DkLzCCMyDoBwNAALEAlTVGN/5nYPj//x8Q/P3/9++/vzZa31gY/mw5z/Tn3x8g98+f37///fn99/eq2lUAAQTS8J/h/7NPz/9C5P79WRj89f9/zv//fztLvPVezPzrz+8/f3//+vtLhl8GaANAAIE1/P8PVA1U6qn7NVTqb1XVpAv/JH7/+a/848XmtpBlj39PO8gM1PP7z2+gqwACiAnoYpC9TF9nB34NVf5z4XpoZJbEjJKfWaEfL7KLlbaURKj8Opj08RfIVb+BNgAEEBPQW1L8P+b6/mb6//s/w+/+nc4F0/9P2cj65xdHc+p/QR39//9/AdHJ9A/60l8YvjIABBAT0JYH75jStv75zwCSMBY8BXTMxXv/21ezfHj9X5/3BESDy5JfBy7/ZuBnAAggkA1//vx594kpaCnLloe/smLaVT9/ff3y/+/P/w+u/+JuW7fhwS/tSayPXrOycrEyfGQACCAWoA1//oOCDIgm72fu4vy6b4LD/9/S/3///s9+S28yy+9/LEAf//kLChVgCAEEEEjD7z9/JHgkQeHwD8gUjV79O9r6CzPLv6lr1OUFwWH9Fxjcv//9BcYoA0AAMTI4ImIROUYRMf2XARkABBgA8kMvQf3q+24AAAAASUVORK5CYII=" title="PortuguÃªs" alt="PortuguÃªs"><span style="margin-left:0.3em;">PortuguÃªs</span></a></li>
+	<li class="lang-item lang-item-79 lang-item-en no-translation menu-item menu-item-type-custom menu-item-object-custom menu-item-734-en"><a href="https://github.professormarcolan.com.br/en/featured-lesson/" hreflang="en-US" lang="en-US"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAIAAAD5gJpuAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAHzSURBVHjaYkxOP8IAB//+Mfz7w8Dwi4HhP5CcJb/n/7evb16/APL/gRFQDiAAw3JuAgAIBEDQ/iswEERjGzBQLEru97ll0g0+3HvqMn1SpqlqGsZMsZsIe0SICA5gt5a/AGIEarCPtFh+6N/ffwxA9OvP/7//QYwff/6fZahmePeB4dNHhi+fGb59Y4zyvHHmCEAAAW3YDzQYaJJ93a+vX79aVf58//69fvEPlpIfnz59+vDhw7t37968efP3b/SXL59OnjwIEEAsDP+YgY53b2b89++/awvLn98MDi2cVxl+/vl6mituCtBghi9f/v/48e/XL86krj9XzwEEEENy8g6gu22rfn78+NGs5Ofr16+ZC58+fvyYwX8rxOxXr169fPny+fPn1//93bJlBUAAsQADZMEBxj9/GBxb2P/9+S/R8u3vzxuyaX8ZHv3j8/YGms3w8ycQARmi2eE37t4ACCDGR4/uSkrKAS35B3TT////wADOgLOBIaXIyjBlwxKAAGKRXjCB0SOEaeu+/y9fMnz4AHQxCP348R/o+l+//sMZQBNLEvif3AcIIMZbty7Ly6t9ZmXl+fXj/38GoHH/UcGfP79//BBiYHjy9+8/oUkNAAHEwt1V/vI/KBY/QSISFqM/GBg+MzB8A6PfYC5EFiDAABqgW776MP0rAAAAAElFTkSuQmCC" title="English" alt="English"><span style="margin-left:0.3em;">English</span></a></li>
+</ul></li>
+</ul></div>
+		
+	<header id="masthead" class="site-header" role="banner"><div class="container">				<div class="site-branding">
+
+			<a href="https://github.professormarcolan.com.br/" class="custom-logo-link" rel="home" itemprop="url"><img width="1147" height="383" src="https://github.professormarcolan.com.br/wp-content/uploads/2018/06/cropped-professor-marcolan-logo-2.png" class="custom-logo" alt="Potencialize com conhecimento os seus estudos e projetos!" itemprop="logo" srcset="https://github.professormarcolan.com.br/wp-content/uploads/2018/06/cropped-professor-marcolan-logo-2.png 1147w,https://github.professormarcolan.com.br/wp-content/uploads/2018/06/cropped-professor-marcolan-logo-2-300x100.png 300w,https://github.professormarcolan.com.br/wp-content/uploads/2018/06/cropped-professor-marcolan-logo-2-768x256.png 768w,https://github.professormarcolan.com.br/wp-content/uploads/2018/06/cropped-professor-marcolan-logo-2-1024x342.png 1024w,https://github.professormarcolan.com.br/wp-content/uploads/2018/06/cropped-professor-marcolan-logo-2-600x200.png 600w,https://github.professormarcolan.com.br/wp-content/uploads/2018/06/cropped-professor-marcolan-logo-2-400x134.png 400w" sizes="(max-width: 1147px) 100vw, 1147px" title="cropped-professor-marcolan-logo-2.png"></a>
+						
+							<div id="site-identity">
+																		<p class="site-title"><a href="https://github.professormarcolan.com.br/" rel="home">Potencialize com conhecimento os seus estudos e projetos!</a></p>
+											
+									</div>
+			
+		</div>
+					<div class="header-ads-area">
+				<aside id="tag_cloud-10" class="widget widget_tag_cloud"><h2 class="widget-title">Com as aulas sobre:</h2><div class="tagcloud"><a href="https://github.professormarcolan.com.br/tag/agile/" class="tag-cloud-link tag-link-37 tag-link-position-1" style="font-size: 12.9411764706pt;" aria-label="agile (3 itens)">agile<span class="tag-link-count"> (3)</span></a>
+<a href="https://github.professormarcolan.com.br/tag/boas-praticas/" class="tag-cloud-link tag-link-36 tag-link-position-2" style="font-size: 10.9647058824pt;" aria-label="boas prÃ¡ticas (2 itens)">boas prÃ¡ticas<span class="tag-link-count"> (2)</span></a>
+<a href="https://github.professormarcolan.com.br/tag/circuitos-eletricos/" class="tag-cloud-link tag-link-9 tag-link-position-3" style="font-size: 8pt;" aria-label="Circuitos ElÃ©tricos (1 item)">Circuitos ElÃ©tricos<span class="tag-link-count"> (1)</span></a>
+<a href="https://github.professormarcolan.com.br/tag/classes-e-objetos/" class="tag-cloud-link tag-link-30 tag-link-position-4" style="font-size: 15.9058823529pt;" aria-label="Classes e objetos (5 itens)">Classes e objetos<span class="tag-link-count"> (5)</span></a>
+<a href="https://github.professormarcolan.com.br/tag/controladores-de-versao/" class="tag-cloud-link tag-link-24 tag-link-position-5" style="font-size: 15.9058823529pt;" aria-label="Controladores de versÃ£o (5 itens)">Controladores de versÃ£o<span class="tag-link-count"> (5)</span></a>
+<a href="https://github.professormarcolan.com.br/tag/git/" class="tag-cloud-link tag-link-23 tag-link-position-6" style="font-size: 17.0588235294pt;" aria-label="Git (6 itens)">Git<span class="tag-link-count"> (6)</span></a>
+<a href="https://github.professormarcolan.com.br/tag/git-for-windows/" class="tag-cloud-link tag-link-26 tag-link-position-7" style="font-size: 14.5882352941pt;" aria-label="git-for-windows (4 itens)">git-for-windows<span class="tag-link-count"> (4)</span></a>
+<a href="https://github.professormarcolan.com.br/tag/ide/" class="tag-cloud-link tag-link-34 tag-link-position-8" style="font-size: 10.9647058824pt;" aria-label="ide (2 itens)">ide<span class="tag-link-count"> (2)</span></a>
+<a href="https://github.professormarcolan.com.br/tag/java/" class="tag-cloud-link tag-link-29 tag-link-position-9" style="font-size: 14.5882352941pt;" aria-label="Java (4 itens)">Java<span class="tag-link-count"> (4)</span></a>
+<a href="https://github.professormarcolan.com.br/tag/programacao-orientada-ao-objeto/" class="tag-cloud-link tag-link-31 tag-link-position-10" style="font-size: 20.1882352941pt;" aria-label="ProgramaÃ§Ã£o Orientada ao objeto (10 itens)">ProgramaÃ§Ã£o Orientada ao objeto<span class="tag-link-count"> (10)</span></a>
+<a href="https://github.professormarcolan.com.br/tag/python/" class="tag-cloud-link tag-link-32 tag-link-position-11" style="font-size: 22pt;" aria-label="Python (13 itens)">Python<span class="tag-link-count"> (13)</span></a>
+<a href="https://github.professormarcolan.com.br/tag/python-introducao/" class="tag-cloud-link tag-link-135 tag-link-position-12" style="font-size: 12.9411764706pt;" aria-label="Python introduÃ§Ã£o (3 itens)">Python introduÃ§Ã£o<span class="tag-link-count"> (3)</span></a>
+<a href="https://github.professormarcolan.com.br/tag/refatoracao/" class="tag-cloud-link tag-link-35 tag-link-position-13" style="font-size: 12.9411764706pt;" aria-label="refatoraÃ§Ã£o (3 itens)">refatoraÃ§Ã£o<span class="tag-link-count"> (3)</span></a>
+<a href="https://github.professormarcolan.com.br/tag/solid/" class="tag-cloud-link tag-link-38 tag-link-position-14" style="font-size: 10.9647058824pt;" aria-label="SOLID (2 itens)">SOLID<span class="tag-link-count"> (2)</span></a>
+<a href="https://github.professormarcolan.com.br/tag/turtoisegit/" class="tag-cloud-link tag-link-25 tag-link-position-15" style="font-size: 14.5882352941pt;" aria-label="TurtoiseGit (4 itens)">TurtoiseGit<span class="tag-link-count"> (4)</span></a></div>
+</aside></div> 
+				</div></header><div id="main-nav" class="clear-fix main-nav">
+			<div class="container">
+			<nav id="site-navigation" class="main-navigation" role="navigation"><div class="wrap-menu-content">
+					<div class="menu-menu-pt_br-container"><ul id="primary-menu" class="menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-737"><a href="https://github.professormarcolan.com.br/">Aulas em destaque</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-has-children menu-item-738"><a href="https://github.professormarcolan.com.br/aulas-sobre-engenharia/">RepositÃ³rio de aulas</a>
+<ul class="sub-menu"><li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-custom-parent menu-item-913"><a href="https://github.professormarcolan.com.br/category/python/">Python</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-912"><a href="https://github.professormarcolan.com.br/category/git/">git</a></li>
+</ul></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-736"><a href="https://github.professormarcolan.com.br/sobre/">Sobre</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1024"><a href="https://github.professormarcolan.com.br/politica-de-privacidade/">PolÃ­tica de privacidade</a></li>
+<li class="pll-parent-menu-item menu-item menu-item-type-custom menu-item-object-custom current-menu-parent menu-item-has-children menu-item-734"><a href="#pll_switcher"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAIAAAD5gJpuAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAHjSURBVHjaYmRIZkCAfwwMf2DkLzCCMyDoBwNAALEAlTVGN/5nYPj//x8Q/P3/9++/vzZa31gY/mw5z/Tn3x8g98+f37///fn99/eq2lUAAQTS8J/h/7NPz/9C5P79WRj89f9/zv//fztLvPVezPzrz+8/f3//+vtLhl8GaANAAIE1/P8PVA1U6qn7NVTqb1XVpAv/JH7/+a/848XmtpBlj39PO8gM1PP7z2+gqwACiAnoYpC9TF9nB34NVf5z4XpoZJbEjJKfWaEfL7KLlbaURKj8Opj08RfIVb+BNgAEEBPQW1L8P+b6/mb6//s/w+/+nc4F0/9P2cj65xdHc+p/QR39//9/AdHJ9A/60l8YvjIABBAT0JYH75jStv75zwCSMBY8BXTMxXv/21ezfHj9X5/3BESDy5JfBy7/ZuBnAAggkA1//vx594kpaCnLloe/smLaVT9/ff3y/+/P/w+u/+JuW7fhwS/tSayPXrOycrEyfGQACCAWoA1//oOCDIgm72fu4vy6b4LD/9/S/3///s9+S28yy+9/LEAf//kLChVgCAEEEEjD7z9/JHgkQeHwD8gUjV79O9r6CzPLv6lr1OUFwWH9Fxjcv//9BcYoA0AAMTI4ImIROUYRMf2XARkABBgA8kMvQf3q+24AAAAASUVORK5CYII=" title="PortuguÃªs" alt="PortuguÃªs"><span style="margin-left:0.3em;">PortuguÃªs</span></a>
+<ul class="sub-menu"><li class="lang-item lang-item-39 lang-item-pt lang-item-first current-lang menu-item menu-item-type-custom menu-item-object-custom menu-item-734-pt"><a href="https://github.professormarcolan.com.br/polimorfismo-em-python/" hreflang="pt-BR" lang="pt-BR"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAIAAAD5gJpuAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAHjSURBVHjaYmRIZkCAfwwMf2DkLzCCMyDoBwNAALEAlTVGN/5nYPj//x8Q/P3/9++/vzZa31gY/mw5z/Tn3x8g98+f37///fn99/eq2lUAAQTS8J/h/7NPz/9C5P79WRj89f9/zv//fztLvPVezPzrz+8/f3//+vtLhl8GaANAAIE1/P8PVA1U6qn7NVTqb1XVpAv/JH7/+a/848XmtpBlj39PO8gM1PP7z2+gqwACiAnoYpC9TF9nB34NVf5z4XpoZJbEjJKfWaEfL7KLlbaURKj8Opj08RfIVb+BNgAEEBPQW1L8P+b6/mb6//s/w+/+nc4F0/9P2cj65xdHc+p/QR39//9/AdHJ9A/60l8YvjIABBAT0JYH75jStv75zwCSMBY8BXTMxXv/21ezfHj9X5/3BESDy5JfBy7/ZuBnAAggkA1//vx594kpaCnLloe/smLaVT9/ff3y/+/P/w+u/+JuW7fhwS/tSayPXrOycrEyfGQACCAWoA1//oOCDIgm72fu4vy6b4LD/9/S/3///s9+S28yy+9/LEAf//kLChVgCAEEEEjD7z9/JHgkQeHwD8gUjV79O9r6CzPLv6lr1OUFwWH9Fxjcv//9BcYoA0AAMTI4ImIROUYRMf2XARkABBgA8kMvQf3q+24AAAAASUVORK5CYII=" title="PortuguÃªs" alt="PortuguÃªs"><span style="margin-left:0.3em;">PortuguÃªs</span></a></li>
+	<li class="lang-item lang-item-79 lang-item-en no-translation menu-item menu-item-type-custom menu-item-object-custom menu-item-734-en"><a href="https://github.professormarcolan.com.br/en/featured-lesson/" hreflang="en-US" lang="en-US"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAIAAAD5gJpuAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAHzSURBVHjaYkxOP8IAB//+Mfz7w8Dwi4HhP5CcJb/n/7evb16/APL/gRFQDiAAw3JuAgAIBEDQ/iswEERjGzBQLEru97ll0g0+3HvqMn1SpqlqGsZMsZsIe0SICA5gt5a/AGIEarCPtFh+6N/ffwxA9OvP/7//QYwff/6fZahmePeB4dNHhi+fGb59Y4zyvHHmCEAAAW3YDzQYaJJ93a+vX79aVf58//69fvEPlpIfnz59+vDhw7t37968efP3b/SXL59OnjwIEEAsDP+YgY53b2b89++/awvLn98MDi2cVxl+/vl6mituCtBghi9f/v/48e/XL86krj9XzwEEEENy8g6gu22rfn78+NGs5Ofr16+ZC58+fvyYwX8rxOxXr169fPny+fPn1//93bJlBUAAsQADZMEBxj9/GBxb2P/9+S/R8u3vzxuyaX8ZHv3j8/YGms3w8ycQARmi2eE37t4ACCDGR4/uSkrKAS35B3TT////wADOgLOBIaXIyjBlwxKAAGKRXjCB0SOEaeu+/y9fMnz4AHQxCP348R/o+l+//sMZQBNLEvif3AcIIMZbty7Ly6t9ZmXl+fXj/38GoHH/UcGfP79//BBiYHjy9+8/oUkNAAHEwt1V/vI/KBY/QSISFqM/GBg+MzB8A6PfYC5EFiDAABqgW776MP0rAAAAAElFTkSuQmCC" title="English" alt="English"><span style="margin-left:0.3em;">English</span></a></li>
+</ul></li>
+</ul></div>				</div>
+			</nav></div>
+		</div>
+			<div id="breadcrumb"><div class="container"><div role="navigation" aria-label="Breadcrumbs" class="breadcrumb-trail breadcrumbs" itemprop="breadcrumb"><ul class="trail-items" itemscope itemtype="http://schema.org/BreadcrumbList"><meta name="numberOfItems" content="3"><meta name="itemListOrder" content="Ascending"><li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="trail-item trail-begin"><a href="https://github.professormarcolan.com.br/" rel="home" itemprop="item"><span itemprop="name">Home</span></a><meta itemprop="position" content="1"></li><li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="trail-item"><a href="https://github.professormarcolan.com.br/category/teoria/" itemprop="item"><span itemprop="name">Teoria</span></a><meta itemprop="position" content="2"></li><li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="trail-item trail-end"><span itemprop="item"><span itemprop="name">Polimorfismo em Python</span></span><meta itemprop="position" content="3"></li></ul></div></div></div><div id="content" class="site-content"><div class="container"><div class="inner-wrapper">	
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main"><article id="post-1212" class="post-1212 post type-post status-publish format-standard has-post-thumbnail hentry category-python category-teoria tag-programacao-orientada-ao-objeto tag-python"><img width="735" height="735" src="https://github.professormarcolan.com.br/wp-content/uploads/2018/07/programacao-orientada-ao-objeto-em-python-polimorfismo-python.png" class="magazine-point-post-thumb aligncenter wp-post-image" alt="programaÃ§Ã£o orientada ao objeto em python: recurso do polimorfismo" srcset="https://github.professormarcolan.com.br/wp-content/uploads/2018/07/programacao-orientada-ao-objeto-em-python-polimorfismo-python.png 735w,https://github.professormarcolan.com.br/wp-content/uploads/2018/07/programacao-orientada-ao-objeto-em-python-polimorfismo-python-150x150.png 150w,https://github.professormarcolan.com.br/wp-content/uploads/2018/07/programacao-orientada-ao-objeto-em-python-polimorfismo-python-300x300.png 300w,https://github.professormarcolan.com.br/wp-content/uploads/2018/07/programacao-orientada-ao-objeto-em-python-polimorfismo-python-600x600.png 600w" sizes="(max-width: 735px) 100vw, 735px" title="programacao-orientada-ao-objeto-em-python-polimorfismo-python"><div class="article-wrapper">
+
+		<header class="entry-header"><h1 class="entry-title">Polimorfismo em Python</h1>
+			<div class="entry-meta">
+				<span class="posted-on"><a href="https://github.professormarcolan.com.br/polimorfismo-em-python/" rel="bookmark"><time class="entry-date published" datetime="2018-07-08T20:29:36+00:00">8 de julho de 2018</time><time class="updated" datetime="2018-11-11T23:46:28+00:00">11 de novembro de 2018</time></a></span><span class="byline"> <span class="author vcard"><a class="url fn n" href="https://github.professormarcolan.com.br/author/joaomarcolan/">JoaoMarcolan</a></span></span><span class="cat-links"><a href="https://github.professormarcolan.com.br/category/python/" rel="category tag">Python</a>, <a href="https://github.professormarcolan.com.br/category/teoria/" rel="category tag">Teoria</a></span>			</div>
+		</header><div class="entry-content">
+			
+<p>Polimorfismo é a ferramenta da programação orientada ao objeto que permite implementações elegantes de software. Porém, muito mais importante que isso é que essa ferramenta permite, caso seja necessário, que o software seja facilmente modificado. Nesse post, de 5 minutos, vamos explorar definir o que é polimorfismo em Python e exemplificar o uso do polimorfismo. [10]</p>
+<p>Para entender o polimorfismo é de suma importância que você já tenha entendido: <a href="https://github.professormarcolan.com.br/classe-em-python/" target="_blank" rel="noopener">como fazer uma classe em Python</a>, <a href="https://github.professormarcolan.com.br/como-utilizar-a-heranca-em-python/" target="_blank" rel="noopener">como utilizar a herança em Python</a>. Mesmo que, para o Python, o recurso do polimorfismo não seja alcançado, necessariamente, a partir da herança como vamos discutir no post sobre “tipagem de pato”. Nesse post vamos abordar de uma forma mais clássica, geralmente como é abordada em outras linguagens, esse recurso.</p>
+<h2>Polimorfismo em Python</h2>
+<p>O polimorfismo é uma palavra que deriva do Grego que significa “algo que assume muitas formas” [10]. Na programação orientada ao objeto o polimorfismo permite que os objetos de diferentes tipos, cada um com seus comportamentos específicos, possam serem tratados a partir de uma classe, comum a todos as diferentes classes, mais abstrata[4]. Ou seja, um objeto, de uma classe A mais abstrata, pode assumir o papel de diferentes tipos de objetos de classes derivadas, mais concretas. Para fixar, deixar mais claro, esse conceito para um exemplo.</p>
+<h2>Exemplo de polimorfismo em Python</h2>
+<p>Por exemplo, vamos definir que o circulo, quadrado e triangulo são formas geométricas. Assim, podemos pensar que uma classe que implemente um circulo, um quadrado ou um triangulo tem uma relação “.. é (são) um(a)…” com uma classe que constrói formas geométrica. Como vimos, no post sobre herança em Python, quando encontramos esse tipo de relação entre diferentes classes podemos utilizar o recurso de herança. Assim, a classe que constrói quadrados, a que constrói triangulo e a que constrói círculos são classes filhas, mais abstratas, de uma classe pai que define o que é uma forma geométrica, figura 1.</p>
+<p></p><center><img src="https://github.professormarcolan.com.br/wp-content/uploads/2018/07/diagrama-uml-polimorfismo-python.png" alt='"diagrama' title='"diagrama'></center>Figura 1 : Diagrama UML de um exemplo de polimorfismo em Python
+<p> </p>
+<h3>Implementação de uma interface em Python</h3>
+<p>A classe que implementara a classe abstrata de uma forma geométrica, de nome “FormaGeometrica” será determinada com uma interface – classe 100% abstrata que apenas tem os métodos bem delimitados. Essa classe tem 1 método demarcado: cal_Area, que serve para calcular a área da forma geométrica. Como cada forma geométrica terá sua própria forma de calcular a sua área esse método, na classe pai, apenas terá a palavra “pass”, código 1.</p>
+<div data-datacamp-exercise data-lang="python">
+
+<code data-type="sample-code">
+# código 1 - classe abstra
+class FormaGeometrica():
+def calc_area(self):
+pass
+</code>
+</div><h3>Desenvolvimento das classes concretas:</h3>
+<p>A classe “Quadrado” e “circulo” herdaram a classe “FormaGeometrica” e cada uma delas irá implementar a sua forma particular de calcular a área no método “calc_area”, codigo2.</p>
+<div data-datacamp-exercise data-lang="python">
+
+<code data-type="pre-exercise-code">
+class FormaGeometrica():
+def calc_area(self):
+pass
+
+</code>
+
+<code data-type="sample-code">
+# código 2 implementacao das classes concretas
+class Quadrado(FormaGeometrica):
+def __init__(self,base):
+self.base = base
+
+def calc_area(self):
+return self.base * self.base
+
+class Circulo(FormaGeometrica):
+def __init__(self, raio):
+self.raio = raio
+
+def calc_area(self):
+return self.raio * self.raio * 3.14
+
+</code>
+</div><p>Até esse momento, estamos apenas construindo as classes que vamos usar. Ainda, de fato, nada novo foi apresentado.</p>
+<h3>Como utilizar o polimorfismo em Python</h3>
+<p>Agora, após toda essa construção, vamos utilizar o recurso do polimorfismo para calcular a soma de todas as diferentes formas geométricas de uma lista codigo 3.</p>
+<div data-datacamp-exercise data-lang="python">
+<code data-type="pre-exercise-code">
+class FormaGeometrica():
+def calc_area(self):
+pass
+
+class Quadrado(FormaGeometrica):
+def __init__(self,base):
+self.base = base
+
+def calc_area(self):
+print("calculo a area de um quadrado")
+return self.base * self.base
+
+class Circulo(FormaGeometrica):
+def __init__(self, raio):
+self.raio = raio
+
+def calc_area(self):
+print("calculo a area de um circulo")
+return self.raio * self.raio * 3.14
+
+</code>
+
+<code data-type="sample-code">
+# código 3 polimorfismo
+quad1 = Quadrado(2)
+quad2 = Quadrado(3)
+cir1 = Circulo(1)
+cir2 = Circulo(2)
+
+formas_geometricas = [quad1, quad2 , cir1, cir2]
+
+soma=0
+for forma in formas_geometricas:
+soma = soma + forma.calc_area()
+
+print("a area foi de {}".format(soma))
+
+</code>
+</div><p>No código 3, construimos uma lista com 4 figuras geométricas e em um for looping a interamos e somamos todas as areas. O objeto polimorfico “forma” assumiu tanto o comportamento da classe “Quadrado”, quanto da classe “Circulo” e por isso conseguiu calcular de forma correta a soma de todas as areas.</p>
+<h2>Duck Tiping</h2>
+<p>Geralmente, em outras linguagens inclusive, é necessário fazer todo esse processo para se poder utilizar o recurso de polimorfismo. Geralmente se faz todo esse processo no Python porque fica mais explicito quais métodos são comuns a todas as classes que irão ser listadas junto. Porém, no Python, não é necessário realizar todo esse processo para utilizar o recurso do polimorfismo. Iremos entender sobre a “tipagem de pato” no próximo post. Poste sua dúvida nos comentários. Para seguir as atualizações <a href="https://www.youtube.com/channel/UC9eGq_4v1Uu14Uznsey-hOg" target="_blank" rel="noopener"> se inscreva no canal do youtube </a>e <a href="https://www.facebook.com/professormarcolan/" target="_blank" rel="noopener"> nos siga no facebook. em @professormarcolan</a>.</p>
+<h2>Referencias</h2>
+<ul><li>[1] ZELLE, John M. Python programming: an introduction to computer science. Franklin, Beedle & Associates, Inc., 2004.</li>
+<li>[2] DOWNEY, Allen. Think Python. ” O’Reilly Media, Inc.”, 2012.</li>
+<li>[3] PILGRIM, Mark. Dive Into Python. Createspace, 2009.</li>
+<li>https://docs.python.org/3/</li>
+<li>[4] MATTHES, Eric. Python crash course: a hands-on, project-based introduction to programming. No Starch Press, 2015.</li>
+<li>[5]Smallshire, Robert. Bingham, Austin. The Python Apprentice. Packt Publishing ,2017.</li>
+<li>[6]https://www.sololearn.com/Play/Python</li>
+<li>[7]https://stackoverflow.com/questions/1301346/what-is-the-meaning-of-a-single-and-a-double-underscore-before-an-object-name</li>
+<li>[8]https://www.python.org/dev/peps/pep-0008/#naming-conventions</li>
+<li>[9] Spronck, P. (2016). The Coder’s Apprentice: Learning Programming with Python 3.</li>
+<li>[10] Dierbach, C. (2012). Introduction to Computer Science Using Python: A Computational Problem-Solving Focus. Wiley Publishing.</li>
+</ul><div class="swp_social_panel swp_horizontal_panel  swp_flat_fresh  swp_default_full_color swp_individual_full_color swp_other_full_color  scale-100  scale-" data-min-width="1100" data-float-color="#ffffff" data-float="bottom" data-float-mobile="" style="">
+<div class="nc_tweetContainer swp_facebook" data-network="facebook"><a rel="nofollow noreferrer noopener" target="_blank" href="https://www.facebook.com/share.php?u=https%3A%2F%2Fprofessormarcolan.com.br%2Fpolimorfismo-em-python%2F" data-link="https://www.facebook.com/share.php?u=https%3A%2F%2Fprofessormarcolan.com.br%2Fpolimorfismo-em-python%2F" class="nc_tweet"><span class="iconFiller"><span class="spaceManWilly"><i class="sw swp_facebook_icon"></i><span class="swp_share">Compartilhar</span></span></span><span class="swp_count">18</span></a></div>
+<div class="nc_tweetContainer swp_pinterest" data-network="pinterest"><a rel="nofollow noreferrer noopener" class="nc_tweet noPop" onclick="var e=document.createElement('script');
+						   e.setAttribute('type','text/javascript');
+						   e.setAttribute('charset','UTF-8');
+						   e.setAttribute('src','//assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);
+						   document.body.appendChild(e);
+						"><span class="swp_count swp_hide"><span class="iconFiller"><span class="spaceManWilly"><i class="sw swp_pinterest_icon"></i><span class="swp_share">Pin</span></span></span></span></a></div>
+<div class="nc_tweetContainer swp_linkedin" data-network="linkedin"><a rel="nofollow noreferrer noopener" target="_blank" href="https://www.linkedin.com/cws/share?url=https%3A%2F%2Fprofessormarcolan.com.br%2Fpolimorfismo-em-python%2F" data-link="https://www.linkedin.com/cws/share?url=https%3A%2F%2Fprofessormarcolan.com.br%2Fpolimorfismo-em-python%2F" class="nc_tweet"><span class="swp_count swp_hide"><span class="iconFiller"><span class="spaceManWilly"><i class="sw swp_linkedin_icon"></i><span class="swp_share">Compartilhar</span></span></span></span></a></div>
+<div class="nc_tweetContainer total_shares total_sharesalt"><span class="swp_count ">18 <span class="swp_label">Compart.</span></span></div>
+</div>
+<div class="swp-content-locator"></div>
+					</div>
+
+		<footer class="entry-footer entry-meta"><span class="tags-links"><a href="https://github.professormarcolan.com.br/tag/programacao-orientada-ao-objeto/" rel="tag">ProgramaÃ§Ã£o Orientada ao objeto</a>, <a href="https://github.professormarcolan.com.br/tag/python/" rel="tag">Python</a></span>		</footer></div> 
+
+</article><nav class="navigation post-navigation" role="navigation"><h2 class="screen-reader-text">NavegaÃ§Ã£o de Post</h2>
+		<div class="nav-links"><div class="nav-previous"><a href="https://github.professormarcolan.com.br/como-utilizar-a-heranca-em-python/" rel="prev">Como utilizar a heranÃ§a em Python</a></div><div class="nav-next"><a href="https://github.professormarcolan.com.br/teste-api-rest/" rel="next">teste api rest</a></div></div>
+	</nav><div class="related-posts-wrapper related-posts-column-3">
+
+		<h4>Related Posts</h4>
+
+		<div class="inner-wrapper">
+
+			
+				<div class="related-posts-item">
+											<div class="related-posts-thumb">
+							<img src="https://github.professormarcolan.com.br/wp-content/themes/magazine-point/images/no-image.png"></div>
+					
+					<div class="related-posts-text-wrap">
+						<div class="related-posts-meta entry-meta">
+							<span class="posted-on">13 de marÃ§o de 2019</span>
+							<span class="comments-link"><a href="https://github.professormarcolan.com.br/teste-api-rest/#respond">0</a></span>						</div>
+						<h3 class="related-posts-title">
+							<a href="https://github.professormarcolan.com.br/teste-api-rest/">teste api rest</a>
+						</h3>
+					</div>
+
+				</div>
+
+			
+				<div class="related-posts-item">
+											<div class="related-posts-thumb">
+							<a href="https://github.professormarcolan.com.br/como-utilizar-a-heranca-em-python/">
+								<img width="300" height="300" src="https://github.professormarcolan.com.br/wp-content/uploads/2018/06/como-utilizaro-a-heran%C3%83%C2%A7a-em-python-300x300.png" class="aligncenter wp-post-image" alt="How to use the inheritance feature in python" srcset="https://github.professormarcolan.com.br/wp-content/uploads/2018/06/como-utilizaro-a-heran%C3%83%C2%A7a-em-python-300x300.png 300w,https://github.professormarcolan.com.br/wp-content/uploads/2018/06/como-utilizaro-a-heran%C3%83%C2%A7a-em-python-150x150.png 150w,https://github.professormarcolan.com.br/wp-content/uploads/2018/06/como-utilizaro-a-heran%C3%83%C2%A7a-em-python-600x600.png 600w,https://github.professormarcolan.com.br/wp-content/uploads/2018/06/como-utilizaro-a-heran%C3%83%C2%A7a-em-python.png 735w" sizes="(max-width: 300px) 100vw, 300px" title="como-utilizaro-a-heranÃ§a-em-python"></a>
+						</div>
+					
+					<div class="related-posts-text-wrap">
+						<div class="related-posts-meta entry-meta">
+							<span class="posted-on">24 de junho de 2018</span>
+							<span class="comments-link"><a href="https://github.professormarcolan.com.br/como-utilizar-a-heranca-em-python/#respond">0</a></span>						</div>
+						<h3 class="related-posts-title">
+							<a href="https://github.professormarcolan.com.br/como-utilizar-a-heranca-em-python/">Como utilizar a heranÃ§a em Python</a>
+						</h3>
+					</div>
+
+				</div>
+
+			
+				<div class="related-posts-item">
+											<div class="related-posts-thumb">
+							<a href="https://github.professormarcolan.com.br/encapsulamento-em-python/">
+								<img width="300" height="300" src="https://github.professormarcolan.com.br/wp-content/uploads/2018/06/programa%C3%83%C2%A7%C3%83%C2%A3oOrientadaAoObjetoRecursoDeEncaspsulamento-300x300.png" class="aligncenter wp-post-image" alt="ProgramaÃ§Ã£o Orientado ao objeto. Recurso de Encaspsulamento em Python" srcset="https://github.professormarcolan.com.br/wp-content/uploads/2018/06/programa%C3%83%C2%A7%C3%83%C2%A3oOrientadaAoObjetoRecursoDeEncaspsulamento-300x300.png 300w,https://github.professormarcolan.com.br/wp-content/uploads/2018/06/programa%C3%83%C2%A7%C3%83%C2%A3oOrientadaAoObjetoRecursoDeEncaspsulamento-150x150.png 150w,https://github.professormarcolan.com.br/wp-content/uploads/2018/06/programa%C3%83%C2%A7%C3%83%C2%A3oOrientadaAoObjetoRecursoDeEncaspsulamento.png 735w" sizes="(max-width: 300px) 100vw, 300px" title="programaÃ§Ã£oOrientadaAoObjetoRecursoDeEncaspsulamento"></a>
+						</div>
+					
+					<div class="related-posts-text-wrap">
+						<div class="related-posts-meta entry-meta">
+							<span class="posted-on">10 de junho de 2018</span>
+							<span class="comments-link"><a href="https://github.professormarcolan.com.br/encapsulamento-em-python/#respond">0</a></span>						</div>
+						<h3 class="related-posts-title">
+							<a href="https://github.professormarcolan.com.br/encapsulamento-em-python/">Encapsulamento em Python</a>
+						</h3>
+					</div>
+
+				</div>
+
+			
+			
+		</div>
+	</div>
+
+
+			
+<div id="comments" class="comments-area">
+
+	
+	
+	
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Deixe uma resposta <small><a rel="nofollow" id="cancel-comment-reply-link" href="/polimorfismo-em-python/#respond" style="display:none;">Cancelar resposta</a></small></h3><p class="must-log-in">VocÃª precisa fazer o <a href="https://github.professormarcolan.com.br/wp-login.php">login</a> para publicar um comentÃ¡rio.</p>	</div>
+	
+</div>
+
+		
+		</main></div>
+
+
+<div id="sidebar-primary" class="widget-area sidebar" role="complementary">
+	<div class="sidebar-widget-wrapper">
+					<aside id="polylang-2" class="widget widget_polylang"><h2 class="widget-title">Selecione a linguagem</h2><label class="screen-reader-text" for="lang_choice_polylang-2">Escolha um idioma</label><select name="lang_choice_polylang-2" id="lang_choice_polylang-2"><option value="pt" selected>PortuguÃªs</option><option value="en">English</option></select><script type="text/javascript">
+					//<![CDATA[
+					var urls_polylang2 = {"pt":"https:\/\/github.professormarcolan.com.br\/polimorfismo-em-python\/","en":"https:\/\/github.professormarcolan.com.br\/en\/featured-lesson\/"};
+					document.getElementById( "lang_choice_polylang-2" ).onchange = function() {
+						location.href = urls_polylang2[this.value];
+					}
+					//]]>
+				</script></aside><aside id="custom_html-17" class="widget_text widget widget_custom_html"><h2 class="widget-title">Se inscreva em nosso canal do Youtube para mais conteÃºdo</h2><div class="textwidget custom-html-widget"><img src="https://github.professormarcolan.com.br/wp-content/uploads/2019/01/logo_youutube_inscrevase.png" alt="Logo_do_canal_youtube"><script src="https://apis.google.com/js/platform.js"></script><div class="g-ytsubscribe" data-channelid="UC9eGq_4v1Uu14Uznsey-hOg" data-layout="default" data-count="default"></div></div></aside><aside id="custom_html-15" class="widget_text widget widget_custom_html"><h2 class="widget-title">Assine nossa Newsletter!</h2><div class="textwidget custom-html-widget"><img src="https://github.professormarcolan.com.br/wp-content/uploads/2018/06/logo-professor-marcolan-newsletter.png" alt="Italian Trulli"><div id="news1">
+	SÃ©rie de emails grÃ¡tis de <b>Python!</b> Assine para receber contÃ©udos exclusivo via email.
+	
+</div>
+
+
+
+<div id="news2">
+	<iframe width="100%" scrolling="no" frameborder="0" src="https://github.professormarcolan.com.br/?wysija-page=1&controller=subscribers&action=wysija_outter&wysija_form=2&external_site=1&wysijap=subscriptions" class="iframe-wysija" vspace="0" tabindex="0" style="position: static; top: 0pt; margin: 0px; border-style: none;left: 0pt; visibility: visible; font-size:160%" marginwidth="0" marginheight="0" hspace="0" allowtransparency="true" title="Assinatura MailPoet"></iframe>
+	
+</div>
+
+<div id="news3">
+	NÃ³s levamos a  sua privacidade a sÃ©rio. Sem qualquer tipo de spam, cancele a qualquer momente!
+	
+</div></div></aside><aside id="search-2" class="widget widget_search"><h2 class="widget-title">Encontre uma aula !</h2><form role="search" method="get" class="search-form" action="https://github.professormarcolan.com.br/">
+			<label>
+			<span class="screen-reader-text">Search for:</span>
+			<input type="search" class="search-field" placeholder="Search…" value="" name="s" title="Search for:"></label>
+			<input type="submit" class="search-submit" value=""></form></aside><aside id="tag_cloud-8" class="widget widget_tag_cloud"><h2 class="widget-title">Tags</h2><div class="tagcloud"><a href="https://github.professormarcolan.com.br/tag/agile/" class="tag-cloud-link tag-link-37 tag-link-position-1" style="font-size: 12.9411764706pt;" aria-label="agile (3 itens)">agile</a>
+<a href="https://github.professormarcolan.com.br/tag/boas-praticas/" class="tag-cloud-link tag-link-36 tag-link-position-2" style="font-size: 10.9647058824pt;" aria-label="boas prÃ¡ticas (2 itens)">boas prÃ¡ticas</a>
+<a href="https://github.professormarcolan.com.br/tag/circuitos-eletricos/" class="tag-cloud-link tag-link-9 tag-link-position-3" style="font-size: 8pt;" aria-label="Circuitos ElÃ©tricos (1 item)">Circuitos ElÃ©tricos</a>
+<a href="https://github.professormarcolan.com.br/tag/classes-e-objetos/" class="tag-cloud-link tag-link-30 tag-link-position-4" style="font-size: 15.9058823529pt;" aria-label="Classes e objetos (5 itens)">Classes e objetos</a>
+<a href="https://github.professormarcolan.com.br/tag/controladores-de-versao/" class="tag-cloud-link tag-link-24 tag-link-position-5" style="font-size: 15.9058823529pt;" aria-label="Controladores de versÃ£o (5 itens)">Controladores de versÃ£o</a>
+<a href="https://github.professormarcolan.com.br/tag/git/" class="tag-cloud-link tag-link-23 tag-link-position-6" style="font-size: 17.0588235294pt;" aria-label="Git (6 itens)">Git</a>
+<a href="https://github.professormarcolan.com.br/tag/git-for-windows/" class="tag-cloud-link tag-link-26 tag-link-position-7" style="font-size: 14.5882352941pt;" aria-label="git-for-windows (4 itens)">git-for-windows</a>
+<a href="https://github.professormarcolan.com.br/tag/ide/" class="tag-cloud-link tag-link-34 tag-link-position-8" style="font-size: 10.9647058824pt;" aria-label="ide (2 itens)">ide</a>
+<a href="https://github.professormarcolan.com.br/tag/java/" class="tag-cloud-link tag-link-29 tag-link-position-9" style="font-size: 14.5882352941pt;" aria-label="Java (4 itens)">Java</a>
+<a href="https://github.professormarcolan.com.br/tag/programacao-orientada-ao-objeto/" class="tag-cloud-link tag-link-31 tag-link-position-10" style="font-size: 20.1882352941pt;" aria-label="ProgramaÃ§Ã£o Orientada ao objeto (10 itens)">ProgramaÃ§Ã£o Orientada ao objeto</a>
+<a href="https://github.professormarcolan.com.br/tag/python/" class="tag-cloud-link tag-link-32 tag-link-position-11" style="font-size: 22pt;" aria-label="Python (13 itens)">Python</a>
+<a href="https://github.professormarcolan.com.br/tag/python-introducao/" class="tag-cloud-link tag-link-135 tag-link-position-12" style="font-size: 12.9411764706pt;" aria-label="Python introduÃ§Ã£o (3 itens)">Python introduÃ§Ã£o</a>
+<a href="https://github.professormarcolan.com.br/tag/refatoracao/" class="tag-cloud-link tag-link-35 tag-link-position-13" style="font-size: 12.9411764706pt;" aria-label="refatoraÃ§Ã£o (3 itens)">refatoraÃ§Ã£o</a>
+<a href="https://github.professormarcolan.com.br/tag/solid/" class="tag-cloud-link tag-link-38 tag-link-position-14" style="font-size: 10.9647058824pt;" aria-label="SOLID (2 itens)">SOLID</a>
+<a href="https://github.professormarcolan.com.br/tag/turtoisegit/" class="tag-cloud-link tag-link-25 tag-link-position-15" style="font-size: 14.5882352941pt;" aria-label="TurtoiseGit (4 itens)">TurtoiseGit</a></div>
+</aside><aside id="archives-2" class="widget widget_archive"><h2 class="widget-title">Arquivos</h2>		<ul><li><a href="https://github.professormarcolan.com.br/2019/03/">marÃ§o 2019</a></li>
+	<li><a href="https://github.professormarcolan.com.br/2018/07/">julho 2018</a></li>
+	<li><a href="https://github.professormarcolan.com.br/2018/06/">junho 2018</a></li>
+	<li><a href="https://github.professormarcolan.com.br/2018/05/">maio 2018</a></li>
+	<li><a href="https://github.professormarcolan.com.br/2018/04/">abril 2018</a></li>
+	<li><a href="https://github.professormarcolan.com.br/2018/03/">marÃ§o 2018</a></li>
+	<li><a href="https://github.professormarcolan.com.br/2018/02/">fevereiro 2018</a></li>
+	<li><a href="https://github.professormarcolan.com.br/2017/10/">outubro 2017</a></li>
+	<li><a href="https://github.professormarcolan.com.br/2017/02/">fevereiro 2017</a></li>
+	<li><a href="https://github.professormarcolan.com.br/2017/01/">janeiro 2017</a></li>
+		</ul></aside><aside id="categories-2" class="widget widget_categories"><h2 class="widget-title">Categorias</h2>		<ul><li class="cat-item cat-item-137"><a href="https://github.professormarcolan.com.br/category/agile/">Agile</a> (1)
+</li>
+	<li class="cat-item cat-item-128"><a href="https://github.professormarcolan.com.br/category/git/" title="Venha aprender a utilizar as ferramentas do git">git</a> (6)
+</li>
+	<li class="cat-item cat-item-3"><a href="https://github.professormarcolan.com.br/category/pratica/">pratica</a> (7)
+</li>
+	<li class="cat-item cat-item-122"><a href="https://github.professormarcolan.com.br/category/python/" title="VÃ¡rios tutoriais sobre Python. Venha aprender tudo sobre funÃ§Ãµes, programaÃ§Ã£o orientada ao objeto">Python</a> (10)
+</li>
+	<li class="cat-item cat-item-2"><a href="https://github.professormarcolan.com.br/category/teoria/">Teoria</a> (19)
+</li>
+		</ul></aside></div> 
+</div>
+</div></div></div>
+	
+	<div id="footer-widgets" class="widget-area" role="complementary">
+		<div class="container">
+						<div class="inner-wrapper">
+										<div class="widget-column footer-active-1">
+							<aside id="custom_html-6" class="widget_text widget widget_custom_html"><h3 class="widget-title">Entre em contato!</h3><div class="textwidget custom-html-widget">email : zn_john@hotmail.com
+<br>
+github : https://github.com/jmarcolan
+<br>
+https://www.facebook.com/jmarcolan</div></aside></div>
+									</div>
+		</div>
+	</div>
+
+<footer id="colophon" class="site-footer" role="contentinfo"><div class="container">	
+					<div id="footer-navigation" class="menu-menu-pt_br-container"><ul id="menu-menu-pt_br-1" class="menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-737"><a href="https://github.professormarcolan.com.br/">Aulas em destaque</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-has-children menu-item-738"><a href="https://github.professormarcolan.com.br/aulas-sobre-engenharia/">RepositÃ³rio de aulas</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-736"><a href="https://github.professormarcolan.com.br/sobre/">Sobre</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1024"><a href="https://github.professormarcolan.com.br/politica-de-privacidade/">PolÃ­tica de privacidade</a></li>
+<li class="pll-parent-menu-item menu-item menu-item-type-custom menu-item-object-custom current-menu-parent menu-item-has-children menu-item-734"><a href="#pll_switcher"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAIAAAD5gJpuAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAHjSURBVHjaYmRIZkCAfwwMf2DkLzCCMyDoBwNAALEAlTVGN/5nYPj//x8Q/P3/9++/vzZa31gY/mw5z/Tn3x8g98+f37///fn99/eq2lUAAQTS8J/h/7NPz/9C5P79WRj89f9/zv//fztLvPVezPzrz+8/f3//+vtLhl8GaANAAIE1/P8PVA1U6qn7NVTqb1XVpAv/JH7/+a/848XmtpBlj39PO8gM1PP7z2+gqwACiAnoYpC9TF9nB34NVf5z4XpoZJbEjJKfWaEfL7KLlbaURKj8Opj08RfIVb+BNgAEEBPQW1L8P+b6/mb6//s/w+/+nc4F0/9P2cj65xdHc+p/QR39//9/AdHJ9A/60l8YvjIABBAT0JYH75jStv75zwCSMBY8BXTMxXv/21ezfHj9X5/3BESDy5JfBy7/ZuBnAAggkA1//vx594kpaCnLloe/smLaVT9/ff3y/+/P/w+u/+JuW7fhwS/tSayPXrOycrEyfGQACCAWoA1//oOCDIgm72fu4vy6b4LD/9/S/3///s9+S28yy+9/LEAf//kLChVgCAEEEEjD7z9/JHgkQeHwD8gUjV79O9r6CzPLv6lr1OUFwWH9Fxjcv//9BcYoA0AAMTI4ImIROUYRMf2XARkABBgA8kMvQf3q+24AAAAASUVORK5CYII=" title="PortuguÃªs" alt="PortuguÃªs"><span style="margin-left:0.3em;">PortuguÃªs</span></a></li>
+</ul></div>							<div class="copyright">
+				Copyright © All rights reserved.			</div>
+				<div class="site-info">
+			<a href="https://wordpress.org/">Powered by WordPress</a>
+			<span class="sep"> | </span>
+			Magazine Point by <a href="https://axlethemes.com">Axle Themes</a>		</div>
+			</div></footer></div><a href="#page" class="scrollup" id="btn-scrollup"><i class="fa fa-angle-up"></i></a>
+<script type="text/javascript" src="https://cdn.datacamp.com/datacamp-light-latest.min.js?ver=4.9.10"></script><script type="text/javascript" src="https://github.professormarcolan.com.br/wp-content/plugins/social-warfare/assets/js/script.min.js"></script><script type="text/javascript" src="https://github.professormarcolan.com.br/wp-content/themes/magazine-point/js/skip-link-focus-fix.min.js"></script><script type="text/javascript" src="https://github.professormarcolan.com.br/wp-content/themes/magazine-point/vendors/cycle2/js/jquery.cycle2.min.js"></script><script type="text/javascript" src="https://github.professormarcolan.com.br/wp-content/themes/magazine-point/vendors/sidr/js/jquery.sidr.min.js"></script><script type="text/javascript" src="https://github.professormarcolan.com.br/wp-content/themes/magazine-point/vendors/slick/slick.min.js"></script><script type="text/javascript" src="https://github.professormarcolan.com.br/wp-content/themes/magazine-point/js/custom.min.js"></script><script type="text/javascript" src="https://github.professormarcolan.com.br/wp-content/plugins/youtube-embed-plus/scripts/fitvids.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=default&ver=1.3.10"></script><script type="text/javascript">var swpFloatBeforeContent = false;var swpClickTracking = false;</script></body></html>
