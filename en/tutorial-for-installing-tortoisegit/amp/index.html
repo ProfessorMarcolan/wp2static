@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html amp lang="en-US"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"><script type="application/ld+json" class="yoast-schema-graph yoast-schema-graph--main">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://github.professormarcolan.com.br/en/featured-lesson/#website","url":"https://github.professormarcolan.com.br/en/featured-lesson/","name":"Potencialize com conhecimento os seus estudos e projetos!","publisher":{"@id":"https://github.professormarcolan.com.br/en/featured-lesson/#person"},"potentialAction":{"@type":"SearchAction","target":"https://github.professormarcolan.com.br/en/featured-lesson/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"WebPage","@id":"https://github.professormarcolan.com.br/en/tutorial-for-installing-tortoisegit/#webpage","url":"https://github.professormarcolan.com.br/en/tutorial-for-installing-tortoisegit/","inLanguage":"en-US","name":"Tutorial for installing TortoiseGit","isPartOf":{"@id":"https://github.professormarcolan.com.br/en/featured-lesson/#website"},"image":{"@type":"ImageObject","@id":"https://github.professormarcolan.com.br/en/tutorial-for-installing-tortoisegit/#primaryimage","url":"https://github.professormarcolan.com.br/wp-content/uploads/2017/08/logo8-1.png","width":683,"height":570},"primaryImageOfPage":{"@id":"https://github.professormarcolan.com.br/en/tutorial-for-installing-tortoisegit/#primaryimage"},"datePublished":"2018-04-18T15:36:38+00:00","dateModified":"2018-04-18T15:36:38+00:00","description":"Aprenda a instalar o TortoiseGit no Windows nesse tutorial. A forma mais f\u00e1cil de aprender as ferramentas do git \u00e9 com o TortoiseGit. Instale o TortoiseGit e depois aproveite os tutoriais de como utilizar as suas ferramentas"},{"@type":"Article","@id":"https://github.professormarcolan.com.br/en/tutorial-for-installing-tortoisegit/#article","isPartOf":{"@id":"https://github.professormarcolan.com.br/en/tutorial-for-installing-tortoisegit/#webpage"},"author":{"@id":"https://github.professormarcolan.com.br/en/featured-lesson/schema/person/joaomarcolan/#author"},"headline":"Tutorial for installing TortoiseGit","datePublished":"2018-04-18T15:36:38+00:00","dateModified":"2018-04-18T15:36:38+00:00","commentCount":0,"mainEntityOfPage":{"@id":"https://github.professormarcolan.com.br/en/tutorial-for-installing-tortoisegit/#webpage"},"publisher":{"@id":"https://github.professormarcolan.com.br/en/featured-lesson/#person"},"image":{"@id":"https://github.professormarcolan.com.br/en/tutorial-for-installing-tortoisegit/#primaryimage"},"keywords":"version drivers","articleSection":"practice"},{"@type":["Person"],"@id":"https://github.professormarcolan.com.br/en/author/joaomarcolan/#author","name":"JoaoMarcolan","image":{"@type":"ImageObject","@id":"https://github.professormarcolan.com.br/en/featured-lesson/#authorlogo","url":"https://secure.gravatar.com/avatar/decab487065c8029b68fb599b5a989c8?s=96&d=mm&r=g","caption":"JoaoMarcolan"},"sameAs":[]}]}</script><title>Tutorial for installing TortoiseGit</title><script type="text/javascript" src="https://cdn.ampproject.org/v0.js" async></script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic"><style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style></head><body><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript><style amp-custom>
+		/* Generic WP styling */
+
+.alignright {
+	float: right;
+}
+
+.alignleft {
+	float: left;
+}
+
+.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.amp-wp-enforced-sizes {
+	/** Our sizes fallback is 100vw, and we have a padding on the container; the max-width here prevents the element from overflowing. **/
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+.amp-wp-unknown-size img {
+	/** Worst case scenario when we can't figure out dimensions for an image. **/
+	/** Force the image into a box of fixed dimensions and use object-fit to scale. **/
+	object-fit: contain;
+}
+
+/* Template Styles */
+
+.amp-wp-content,
+.amp-wp-title-bar div {
+		margin: 0 auto;
+	max-width: 895px;
+	}
+
+html {
+	background: #0a89c0;
+}
+
+body {
+	background: #fff;
+	color: #353535;
+	font-family: 'Merriweather', 'Times New Roman', Times, Serif;
+	font-weight: 300;
+	line-height: 1.75em;
+}
+
+p,
+ol,
+ul,
+figure {
+	margin: 0 0 1em;
+	padding: 0;
+}
+
+a,
+a:visited {
+	color: #0a89c0;
+}
+
+a:hover,
+a:active,
+a:focus {
+	color: #353535;
+}
+
+/* Quotes */
+
+blockquote {
+	color: #353535;
+	background: rgba(127,127,127,.125);
+	border-left: 2px solid #0a89c0;
+	margin: 8px 0 24px 0;
+	padding: 16px;
+}
+
+blockquote p:last-child {
+	margin-bottom: 0;
+}
+
+/* UI Fonts */
+
+.amp-wp-meta,
+.amp-wp-header div,
+.amp-wp-title,
+.wp-caption-text,
+.amp-wp-tax-category,
+.amp-wp-tax-tag,
+.amp-wp-comments-link,
+.amp-wp-footer p,
+.back-to-top {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
+}
+
+/* Header */
+
+.amp-wp-header {
+	background-color: #0a89c0;
+}
+
+.amp-wp-header div {
+	color: #fff;
+	font-size: 1em;
+	font-weight: 400;
+	margin: 0 auto;
+	max-width: calc(840px - 32px);
+	padding: .875em 16px;
+	position: relative;
+}
+
+.amp-wp-header a {
+	color: #fff;
+	text-decoration: none;
+}
+
+/* Site Icon */
+
+.amp-wp-header .amp-wp-site-icon {
+	/** site icon is 32px **/
+	background-color: #fff;
+	border: 1px solid #fff;
+	border-radius: 50%;
+	position: absolute;
+	right: 18px;
+	top: 10px;
+}
+
+/* Article */
+
+.amp-wp-article {
+	color: #353535;
+	font-weight: 400;
+	margin: 1.5em auto;
+	max-width: 840px;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+}
+
+/* Article Header */
+
+.amp-wp-article-header {
+	align-items: center;
+	align-content: stretch;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: 1.5em 16px 0;
+}
+
+.amp-wp-title {
+	color: #353535;
+	display: block;
+	flex: 1 0 100%;
+	font-weight: 900;
+	margin: 0 0 .625em;
+	width: 100%;
+}
+
+/* Article Meta */
+
+.amp-wp-meta {
+	color: #696969;
+	display: inline-block;
+	flex: 2 1 50%;
+	font-size: .875em;
+	line-height: 1.5em;
+	margin: 0 0 1.5em;
+	padding: 0;
+}
+
+.amp-wp-article-header .amp-wp-meta:last-of-type {
+	text-align: right;
+}
+
+.amp-wp-article-header .amp-wp-meta:first-of-type {
+	text-align: left;
+}
+
+.amp-wp-byline amp-img,
+.amp-wp-byline .amp-wp-author {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.amp-wp-byline amp-img {
+	border: 1px solid #0a89c0;
+	border-radius: 50%;
+	position: relative;
+	margin-right: 6px;
+}
+
+.amp-wp-posted-on {
+	text-align: right;
+}
+
+/* Featured image */
+
+.amp-wp-article-featured-image {
+	margin: 0 0 1em;
+}
+.amp-wp-article-featured-image amp-img {
+	margin: 0 auto;
+}
+.amp-wp-article-featured-image.wp-caption .wp-caption-text {
+	margin: 0 18px;
+}
+
+/* Article Content */
+
+.amp-wp-article-content {
+	margin: 0 16px;
+}
+
+.amp-wp-article-content ul,
+.amp-wp-article-content ol {
+	margin-left: 1em;
+}
+
+.amp-wp-article-content amp-img {
+	margin: 0 auto;
+}
+
+.amp-wp-article-content amp-img.alignright {
+	margin: 0 0 1em 16px;
+}
+
+.amp-wp-article-content amp-img.alignleft {
+	margin: 0 16px 1em 0;
+}
+
+/* Captions */
+
+.wp-caption {
+	padding: 0;
+}
+
+.wp-caption.alignleft {
+	margin-right: 16px;
+}
+
+.wp-caption.alignright {
+	margin-left: 16px;
+}
+
+.wp-caption .wp-caption-text {
+	border-bottom: 1px solid #c2c2c2;
+	color: #696969;
+	font-size: .875em;
+	line-height: 1.5em;
+	margin: 0;
+	padding: .66em 10px .75em;
+}
+
+/* AMP Media */
+
+amp-carousel {
+	background: #c2c2c2;
+	margin: 0 -16px 1.5em;
+}
+amp-iframe,
+amp-youtube,
+amp-instagram,
+amp-vine {
+	background: #c2c2c2;
+	margin: 0 -16px 1.5em;
+}
+
+.amp-wp-article-content amp-carousel amp-img {
+	border: none;
+}
+
+amp-carousel > amp-img > img {
+	object-fit: contain;
+}
+
+.amp-wp-iframe-placeholder {
+	background: #c2c2c2 url( https://github.professormarcolan.com.br/wp-content/plugins/amp/assets/images/placeholder-icon.png ) no-repeat center 40%;
+	background-size: 48px 48px;
+	min-height: 48px;
+}
+
+/* Article Footer Meta */
+
+.amp-wp-article-footer .amp-wp-meta {
+	display: block;
+}
+
+.amp-wp-tax-category,
+.amp-wp-tax-tag {
+	color: #696969;
+	font-size: .875em;
+	line-height: 1.5em;
+	margin: 1.5em 16px;
+}
+
+.amp-wp-comments-link {
+	color: #696969;
+	font-size: .875em;
+	line-height: 1.5em;
+	text-align: center;
+	margin: 2.25em 0 1.5em;
+}
+
+.amp-wp-comments-link a {
+	border-style: solid;
+	border-color: #c2c2c2;
+	border-width: 1px 1px 2px;
+	border-radius: 4px;
+	background-color: transparent;
+	color: #0a89c0;
+	cursor: pointer;
+	display: block;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 18px;
+	margin: 0 auto;
+	max-width: 200px;
+	padding: 11px 16px;
+	text-decoration: none;
+	width: 50%;
+	-webkit-transition: background-color 0.2s ease;
+			transition: background-color 0.2s ease;
+}
+
+/* AMP Footer */
+
+.amp-wp-footer {
+	border-top: 1px solid #c2c2c2;
+	margin: calc(1.5em - 1px) 0 0;
+}
+
+.amp-wp-footer div {
+	margin: 0 auto;
+	max-width: calc(840px - 32px);
+	padding: 1.25em 16px 1.25em;
+	position: relative;
+}
+
+.amp-wp-footer h2 {
+	font-size: 1em;
+	line-height: 1.375em;
+	margin: 0 0 .5em;
+}
+
+.amp-wp-footer p {
+	color: #696969;
+	font-size: .8em;
+	line-height: 1.5em;
+	margin: 0 85px 0 0;
+}
+
+.amp-wp-footer a {
+	text-decoration: none;
+}
+
+.back-to-top {
+	bottom: 1.275em;
+	font-size: .8em;
+	font-weight: 600;
+	line-height: 2em;
+	position: absolute;
+	right: 16px;
+}
+		/* Inline styles */
+.amp-wp-inline-897e9bd180b8d815c1d629834fb32a23{max-width:923px;}.amp-wp-inline-0f48249bda1f3be1292c12749394f80c{max-width:932px;}.amp-wp-inline-817fd73da0e7529c850f2a6646a4266c{max-width:935px;}.amp-wp-inline-dd763c3bf2f10fc2d0290f05e686d5fd{max-width:238px;}	</style><header id="top" class="amp-wp-header"><div>
+		<a href="https://github.professormarcolan.com.br/">
+										<amp-img src="https://github.professormarcolan.com.br/wp-content/uploads/2018/06/cropped-professor-marcolan-logo-1-32x32.png" width="32" height="32" class="amp-wp-site-icon"></amp-img><span class="amp-site-title">
+				Potencialize com conhecimento os seus estudos e projetos!			</span>
+		</a>
+	</div>
+</header><article class="amp-wp-article"><header class="amp-wp-article-header"><h1 class="amp-wp-title">Tutorial for installing TortoiseGit</h1>
+			<div class="amp-wp-meta amp-wp-byline">
+					<amp-img src="https://secure.gravatar.com/avatar/decab487065c8029b68fb599b5a989c8?s=24&d=mm&r=g" alt="JoaoMarcolan" width="24" height="24" layout="fixed"></amp-img><span class="amp-wp-author author vcard">JoaoMarcolan</span>
+	</div>
+<div class="amp-wp-meta amp-wp-posted-on">
+	<time datetime="2018-04-18T12:36:38+00:00">
+		1 year ago	</time></div>
+	</header><figure class="amp-wp-article-featured-image wp-caption"><amp-img width="683" height="570" src="https://github.professormarcolan.com.br/wp-content/uploads/2017/08/logo8-1.png" class="attachment-large size-large wp-post-image amp-wp-enforced-sizes" alt="logo8 1 - Tutorial for installing TortoiseGit" srcset="https://github.professormarcolan.com.br/wp-content/uploads/2017/08/logo8-1.png 683w, https://github.professormarcolan.com.br/wp-content/uploads/2017/08/logo8-1-300x250.png 300w, https://github.professormarcolan.com.br/wp-content/uploads/2017/08/logo8-1-359x300.png 359w, https://github.professormarcolan.com.br/wp-content/uploads/2017/08/logo8-1-600x500.png 600w" layout="intrinsic"></amp-img><p class="wp-caption-text">
+			Aprenda a instalar o TortoiseGit		</p>
+	</figure><div class="amp-wp-article-content">
+		<p>O tortoiseGit Ã© um <a href="https://www.professormarcolan.com.br/controladores-de-versao/">controlador de verscao</a> baseado no TortoiseSVN para Windows. Ele Ã© um programa de cÃ³digo aberto e pode ser usado no versionamento de qualquer tipo de documento pois suas funÃ§Ãµes nÃ£o estÃ£o atreladas a nenhum IDE especifico mas sim ao menu de contexto do Windows Explorer .</p><h4>Materiais necessÃ¡rio para o acompanhamento do Tutorial</h4><p>Para esse tutorial serÃ¡ necessÃ¡rio:</p><ul><li>Um computador com o sistema operacional Windows 7.</li>
+<li>Ter instalado o <a href="https://www.professormarcolan.com.br/tutorial-da-instalacao-do-git-for-windows/">git-for-windows</a>.</li>
+<li>O <a href="https://tortoisegit.org/download/" target="_blank" rel="noopener">download</a> do software turtoiseGit .</li>
+</ul><h4>Tutorial de instalaÃ§Ã£o do TortoiseGit</h4><ul><li>Passo 1: Clique no arquivo TortoiseGit te o execute;</li>
+<li>Passo 2: Na janela de inicio, figura 1a, clique no botÃ£o â&#128;&#156;nextâ&#128;&#157; para comeÃ§ar a configuraÃ§Ã£o da instalaÃ§Ã£o do TorotiseGit;</li>
+<li>Passo 3: Na janela de informaÃ§Ã£o sobre a licenÃ§a, figura 1b, clique no botÃ£o â&#128;&#156;next>â&#128;&#157; para aceitar a licenÃ§a;</li>
+</ul><figure id="attachment_121" class="wp-caption aligncenter amp-wp-inline-897e9bd180b8d815c1d629834fb32a23"><amp-img class="wp-image-121 size-full amp-wp-enforced-sizes" src="https://www.professormarcolan.com.br/wp-content/uploads/2017/02/turtoiseGit1.png" srcset="https://www.professormarcolan.com.br/wp-content/uploads/2017/02/turtoiseGit1.png 923w, https://www.professormarcolan.com.br/wp-content/uploads/2017/02/turtoiseGit1-300x118.png 300w, https://www.professormarcolan.com.br/wp-content/uploads/2017/02/turtoiseGit1-768x301.png 768w" width="923" height="362" alt="turtoiseGit1 - Tutorial for installing TortoiseGit" layout="intrinsic"></amp-img><figcaption class="wp-caption-text">Figura 1- (a) Janela de inicio (b) Janela de informaÃ§Ã£o sobre a licenÃ§a</figcaption></figure><ul><li>Passo 4: Na janela de customizaÃ§Ã£o, figura 2a, clique no botÃ£o â&#128;&#156;browseâ&#128;&#157; para escolher a localizaÃ§Ã£o da instalaÃ§Ã£o do TortoiseGit, alÃ©m disso, confira as principais caracteristicas que serÃ£o instaladas e as suas dependÃªncias. EntÃ£o, clique no botÃ£o â&#128;&#156;nextâ&#128;&#157; para continua a configuraÃ§Ã£o da instalaÃ§Ã£o.</li>
+<li>Passo 5: Na janela para o inicio da instalaÃ§Ã£o do TortoiseGit, figura 2b, clique no botÃ£o â&#128;&#156;Installâ&#128;&#157; para comeÃ§ar a instalaÃ§Ã£oâ&#128;&#157;.</li>
+</ul><figure id="attachment_122" class="wp-caption aligncenter amp-wp-inline-0f48249bda1f3be1292c12749394f80c"><amp-img class="wp-image-122 size-full amp-wp-enforced-sizes" src="https://www.professormarcolan.com.br/wp-content/uploads/2017/02/turtoiseGit2.png" srcset="https://www.professormarcolan.com.br/wp-content/uploads/2017/02/turtoiseGit2.png 932w, https://www.professormarcolan.com.br/wp-content/uploads/2017/02/turtoiseGit2-300x117.png 300w, https://www.professormarcolan.com.br/wp-content/uploads/2017/02/turtoiseGit2-768x298.png 768w" width="932" height="362" alt="turtoiseGit2 - Tutorial for installing TortoiseGit" layout="intrinsic"></amp-img><figcaption class="wp-caption-text">Figura 2- (a) Janela de customizaÃ§Ã£o. (b) Janela para o inicio de instalaÃ§Ã£o do TortoiseGit.</figcaption></figure><ul><li>Passo 6: Na janela de instalaÃ§Ã£o, figura 3a, e espera a instalaÃ§Ã£o do TortoiseGit completar. EntÃ£o, clique no botÃ£o â&#128;&#156;nextâ&#128;&#157;.</li>
+<li>Passo 7: Na janela fim da instalaÃ§Ã£o, figura 3b, clique no botÃ£o Finish para fechar a janela de instalaÃ§Ã£o.</li>
+</ul><figure id="attachment_123" class="wp-caption aligncenter amp-wp-inline-817fd73da0e7529c850f2a6646a4266c"><amp-img class="wp-image-123 size-full amp-wp-enforced-sizes" src="https://www.professormarcolan.com.br/wp-content/uploads/2017/02/turtoiseGit3.png" srcset="https://www.professormarcolan.com.br/wp-content/uploads/2017/02/turtoiseGit3.png 935w, https://www.professormarcolan.com.br/wp-content/uploads/2017/02/turtoiseGit3-300x116.png 300w, https://www.professormarcolan.com.br/wp-content/uploads/2017/02/turtoiseGit3-768x298.png 768w" width="935" height="363" alt="turtoiseGit3 - Tutorial for installing TortoiseGit" layout="intrinsic"></amp-img><figcaption class="wp-caption-text">Figura 3- (a) Janela de instalaÃ§Ã£o. (b) Janela de fim da instalaÃ§Ã£o.</figcaption></figure><p>Â </p><p>Passo 10: Clique com o botÃ£o direito dentro de alguma pasta e verifique se no menu de contexto do windows Explorer estÃ¡ habilitado as funÃ§Ãµes: â&#128;&#156;Git cloneâ&#128;&#157;,â&#128;&#157; Git Create repository hereâ&#128;&#157;, â&#128;&#156;TortoiseGitâ&#128;&#157;.</p><figure id="attachment_124" class="wp-caption aligncenter amp-wp-inline-dd763c3bf2f10fc2d0290f05e686d5fd"><amp-img class="wp-image-124 size-medium amp-wp-enforced-sizes" src="https://www.professormarcolan.com.br/wp-content/uploads/2017/02/turtoiseGit4-238x300.png" srcset="https://www.professormarcolan.com.br/wp-content/uploads/2017/02/turtoiseGit4-238x300.png 238w, https://www.professormarcolan.com.br/wp-content/uploads/2017/02/turtoiseGit4.png 285w" width="238" height="300" alt="turtoiseGit4 238x300 - Tutorial for installing TortoiseGit" layout="intrinsic"></amp-img><figcaption class="wp-caption-text">Figura 3 â&#128;&#147; Interface aberta pelo clique do botÃ£o direito</figcaption></figure><p>Â </p><p>Pronto, estÃ¡ instalado o TortoiseGit em seu computador. Nas prÃ³ximas aulas iremos abordar como usar o TortoiseGit <a href="https://www.professormarcolan.com.br/criando-um-repositorio-de-trabalho-com-tortoisegit/" target="_blank" rel="noopener"> para criar um repositÃ³rios de trabalho </a>,<a href="https://www.professormarcolan.com.br/utilizando-comando-commit-do-git-usando-tortoisegit/" target="_blank" rel="noopener"> para utilizar a ferramenta de commit do git </a>. repositÃ³rios de compartilhamento e como utiliza-los atravÃ©s das funÃ§Ãµes do git. Poste sua dÃºvida nos comentÃ¡rios. Para seguir as atualizaÃ§Ãµes se inscreva no canal do youtube e <a href="https://www.facebook.com/professormarcolan/" target="_blank" rel="noopener">nos siga no facebook. em @professormarcolan</a>.</p><div class="swp-content-locator"></div>	</div>
+
+	<footer class="amp-wp-article-footer"><div class="amp-wp-meta amp-wp-tax-category">
+		Categories: <a href="https://github.professormarcolan.com.br/en/category/practice/" rel="category tag">practice</a>	</div>
+
+	<div class="amp-wp-meta amp-wp-tax-tag">
+		Tags: <a href="https://github.professormarcolan.com.br/en/tag/version-drivers/" rel="tag">version drivers</a>	</div>
+		<div class="amp-wp-meta amp-wp-comments-link">
+		<a href="https://github.professormarcolan.com.br/en/tutorial-for-installing-tortoisegit/#respond">
+			Leave a Comment		</a>
+	</div>
+	</footer></article><footer class="amp-wp-footer"><div>
+		<h2>Potencialize com conhecimento os seus estudos e projetos!</h2>
+		<p>
+			<a href="https://wordpress.org/">
+				Powered by WordPress			</a>
+		</p>
+		<a href="#top" class="back-to-top">Back to top</a>
+	</div>
+</footer></body></html>
