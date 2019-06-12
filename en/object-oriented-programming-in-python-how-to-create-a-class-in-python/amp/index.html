@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html amp lang="en-US"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"><script type="application/ld+json" class="yoast-schema-graph yoast-schema-graph--main">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://github.professormarcolan.com.br/en/featured-lesson/#website","url":"https://github.professormarcolan.com.br/en/featured-lesson/","name":"Potencialize com conhecimento os seus estudos e projetos!","publisher":{"@id":"https://github.professormarcolan.com.br/en/featured-lesson/#person"},"potentialAction":{"@type":"SearchAction","target":"https://github.professormarcolan.com.br/en/featured-lesson/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"WebPage","@id":"https://github.professormarcolan.com.br/en/object-oriented-programming-in-python-how-to-create-a-class-in-python/#webpage","url":"https://github.professormarcolan.com.br/en/object-oriented-programming-in-python-how-to-create-a-class-in-python/","inLanguage":"en-US","name":"Object-oriented programming in Python: How to create a class in Python!","isPartOf":{"@id":"https://github.professormarcolan.com.br/en/featured-lesson/#website"},"image":{"@type":"ImageObject","@id":"https://github.professormarcolan.com.br/en/object-oriented-programming-in-python-how-to-create-a-class-in-python/#primaryimage","url":"https://github.professormarcolan.com.br/wp-content/uploads/2018/04/how-create-a-class-how-instantiate-a-class.png","width":735,"height":735,"caption":"How create a class in python and how instantiate a class"},"primaryImageOfPage":{"@id":"https://github.professormarcolan.com.br/en/object-oriented-programming-in-python-how-to-create-a-class-in-python/#primaryimage"},"datePublished":"2018-04-18T15:16:43+00:00","dateModified":"2018-06-25T21:57:01+00:00","description":"Nesse tutorial iremos discutir programa\u00e7\u00e3o orientada ao objeto em Python. Iremos ver como criar uma classe em Python. Como instanciar uma classe para construir um objeto. Como utilizar o m\u00e9todo inicializador __init__. Como invocar os m\u00e9todos da Classe em Python utilizando o operador ponto."},{"@type":"Article","@id":"https://github.professormarcolan.com.br/en/object-oriented-programming-in-python-how-to-create-a-class-in-python/#article","isPartOf":{"@id":"https://github.professormarcolan.com.br/en/object-oriented-programming-in-python-how-to-create-a-class-in-python/#webpage"},"author":{"@id":"https://github.professormarcolan.com.br/en/featured-lesson/schema/person/joaomarcolan/#author"},"headline":"Object-oriented programming in Python: How to create a class in Python!","datePublished":"2018-04-18T15:16:43+00:00","dateModified":"2018-06-25T21:57:01+00:00","commentCount":0,"mainEntityOfPage":{"@id":"https://github.professormarcolan.com.br/en/object-oriented-programming-in-python-how-to-create-a-class-in-python/#webpage"},"publisher":{"@id":"https://github.professormarcolan.com.br/en/featured-lesson/#person"},"image":{"@id":"https://github.professormarcolan.com.br/en/object-oriented-programming-in-python-how-to-create-a-class-in-python/#primaryimage"},"keywords":"Classes and objects,Python","articleSection":"theory"},{"@type":["Person"],"@id":"https://github.professormarcolan.com.br/en/author/joaomarcolan/#author","name":"JoaoMarcolan","image":{"@type":"ImageObject","@id":"https://github.professormarcolan.com.br/en/featured-lesson/#authorlogo","url":"https://secure.gravatar.com/avatar/decab487065c8029b68fb599b5a989c8?s=96&d=mm&r=g","caption":"JoaoMarcolan"},"sameAs":[]}]}</script><title>Object-oriented programming in Python: How to create a class in Python!</title><script type="text/javascript" src="https://cdn.ampproject.org/v0.js" async></script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic"><style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style></head><body><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript><style amp-custom>
+		/* Generic WP styling */
+
+.alignright {
+	float: right;
+}
+
+.alignleft {
+	float: left;
+}
+
+.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.amp-wp-enforced-sizes {
+	/** Our sizes fallback is 100vw, and we have a padding on the container; the max-width here prevents the element from overflowing. **/
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+.amp-wp-unknown-size img {
+	/** Worst case scenario when we can't figure out dimensions for an image. **/
+	/** Force the image into a box of fixed dimensions and use object-fit to scale. **/
+	object-fit: contain;
+}
+
+/* Template Styles */
+
+.amp-wp-content,
+.amp-wp-title-bar div {
+		margin: 0 auto;
+	max-width: 895px;
+	}
+
+html {
+	background: #0a89c0;
+}
+
+body {
+	background: #fff;
+	color: #353535;
+	font-family: 'Merriweather', 'Times New Roman', Times, Serif;
+	font-weight: 300;
+	line-height: 1.75em;
+}
+
+p,
+ol,
+ul,
+figure {
+	margin: 0 0 1em;
+	padding: 0;
+}
+
+a,
+a:visited {
+	color: #0a89c0;
+}
+
+a:hover,
+a:active,
+a:focus {
+	color: #353535;
+}
+
+/* Quotes */
+
+blockquote {
+	color: #353535;
+	background: rgba(127,127,127,.125);
+	border-left: 2px solid #0a89c0;
+	margin: 8px 0 24px 0;
+	padding: 16px;
+}
+
+blockquote p:last-child {
+	margin-bottom: 0;
+}
+
+/* UI Fonts */
+
+.amp-wp-meta,
+.amp-wp-header div,
+.amp-wp-title,
+.wp-caption-text,
+.amp-wp-tax-category,
+.amp-wp-tax-tag,
+.amp-wp-comments-link,
+.amp-wp-footer p,
+.back-to-top {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
+}
+
+/* Header */
+
+.amp-wp-header {
+	background-color: #0a89c0;
+}
+
+.amp-wp-header div {
+	color: #fff;
+	font-size: 1em;
+	font-weight: 400;
+	margin: 0 auto;
+	max-width: calc(840px - 32px);
+	padding: .875em 16px;
+	position: relative;
+}
+
+.amp-wp-header a {
+	color: #fff;
+	text-decoration: none;
+}
+
+/* Site Icon */
+
+.amp-wp-header .amp-wp-site-icon {
+	/** site icon is 32px **/
+	background-color: #fff;
+	border: 1px solid #fff;
+	border-radius: 50%;
+	position: absolute;
+	right: 18px;
+	top: 10px;
+}
+
+/* Article */
+
+.amp-wp-article {
+	color: #353535;
+	font-weight: 400;
+	margin: 1.5em auto;
+	max-width: 840px;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+}
+
+/* Article Header */
+
+.amp-wp-article-header {
+	align-items: center;
+	align-content: stretch;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: 1.5em 16px 0;
+}
+
+.amp-wp-title {
+	color: #353535;
+	display: block;
+	flex: 1 0 100%;
+	font-weight: 900;
+	margin: 0 0 .625em;
+	width: 100%;
+}
+
+/* Article Meta */
+
+.amp-wp-meta {
+	color: #696969;
+	display: inline-block;
+	flex: 2 1 50%;
+	font-size: .875em;
+	line-height: 1.5em;
+	margin: 0 0 1.5em;
+	padding: 0;
+}
+
+.amp-wp-article-header .amp-wp-meta:last-of-type {
+	text-align: right;
+}
+
+.amp-wp-article-header .amp-wp-meta:first-of-type {
+	text-align: left;
+}
+
+.amp-wp-byline amp-img,
+.amp-wp-byline .amp-wp-author {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.amp-wp-byline amp-img {
+	border: 1px solid #0a89c0;
+	border-radius: 50%;
+	position: relative;
+	margin-right: 6px;
+}
+
+.amp-wp-posted-on {
+	text-align: right;
+}
+
+/* Featured image */
+
+.amp-wp-article-featured-image {
+	margin: 0 0 1em;
+}
+.amp-wp-article-featured-image amp-img {
+	margin: 0 auto;
+}
+.amp-wp-article-featured-image.wp-caption .wp-caption-text {
+	margin: 0 18px;
+}
+
+/* Article Content */
+
+.amp-wp-article-content {
+	margin: 0 16px;
+}
+
+.amp-wp-article-content ul,
+.amp-wp-article-content ol {
+	margin-left: 1em;
+}
+
+.amp-wp-article-content amp-img {
+	margin: 0 auto;
+}
+
+.amp-wp-article-content amp-img.alignright {
+	margin: 0 0 1em 16px;
+}
+
+.amp-wp-article-content amp-img.alignleft {
+	margin: 0 16px 1em 0;
+}
+
+/* Captions */
+
+.wp-caption {
+	padding: 0;
+}
+
+.wp-caption.alignleft {
+	margin-right: 16px;
+}
+
+.wp-caption.alignright {
+	margin-left: 16px;
+}
+
+.wp-caption .wp-caption-text {
+	border-bottom: 1px solid #c2c2c2;
+	color: #696969;
+	font-size: .875em;
+	line-height: 1.5em;
+	margin: 0;
+	padding: .66em 10px .75em;
+}
+
+/* AMP Media */
+
+amp-carousel {
+	background: #c2c2c2;
+	margin: 0 -16px 1.5em;
+}
+amp-iframe,
+amp-youtube,
+amp-instagram,
+amp-vine {
+	background: #c2c2c2;
+	margin: 0 -16px 1.5em;
+}
+
+.amp-wp-article-content amp-carousel amp-img {
+	border: none;
+}
+
+amp-carousel > amp-img > img {
+	object-fit: contain;
+}
+
+.amp-wp-iframe-placeholder {
+	background: #c2c2c2 url( https://github.professormarcolan.com.br/wp-content/plugins/amp/assets/images/placeholder-icon.png ) no-repeat center 40%;
+	background-size: 48px 48px;
+	min-height: 48px;
+}
+
+/* Article Footer Meta */
+
+.amp-wp-article-footer .amp-wp-meta {
+	display: block;
+}
+
+.amp-wp-tax-category,
+.amp-wp-tax-tag {
+	color: #696969;
+	font-size: .875em;
+	line-height: 1.5em;
+	margin: 1.5em 16px;
+}
+
+.amp-wp-comments-link {
+	color: #696969;
+	font-size: .875em;
+	line-height: 1.5em;
+	text-align: center;
+	margin: 2.25em 0 1.5em;
+}
+
+.amp-wp-comments-link a {
+	border-style: solid;
+	border-color: #c2c2c2;
+	border-width: 1px 1px 2px;
+	border-radius: 4px;
+	background-color: transparent;
+	color: #0a89c0;
+	cursor: pointer;
+	display: block;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 18px;
+	margin: 0 auto;
+	max-width: 200px;
+	padding: 11px 16px;
+	text-decoration: none;
+	width: 50%;
+	-webkit-transition: background-color 0.2s ease;
+			transition: background-color 0.2s ease;
+}
+
+/* AMP Footer */
+
+.amp-wp-footer {
+	border-top: 1px solid #c2c2c2;
+	margin: calc(1.5em - 1px) 0 0;
+}
+
+.amp-wp-footer div {
+	margin: 0 auto;
+	max-width: calc(840px - 32px);
+	padding: 1.25em 16px 1.25em;
+	position: relative;
+}
+
+.amp-wp-footer h2 {
+	font-size: 1em;
+	line-height: 1.375em;
+	margin: 0 0 .5em;
+}
+
+.amp-wp-footer p {
+	color: #696969;
+	font-size: .8em;
+	line-height: 1.5em;
+	margin: 0 85px 0 0;
+}
+
+.amp-wp-footer a {
+	text-decoration: none;
+}
+
+.back-to-top {
+	bottom: 1.275em;
+	font-size: .8em;
+	font-weight: 600;
+	line-height: 2em;
+	position: absolute;
+	right: 16px;
+}
+			</style><header id="top" class="amp-wp-header"><div>
+		<a href="https://github.professormarcolan.com.br/">
+										<amp-img src="https://github.professormarcolan.com.br/wp-content/uploads/2018/06/cropped-professor-marcolan-logo-1-32x32.png" width="32" height="32" class="amp-wp-site-icon"></amp-img><span class="amp-site-title">
+				Potencialize com conhecimento os seus estudos e projetos!			</span>
+		</a>
+	</div>
+</header><article class="amp-wp-article"><header class="amp-wp-article-header"><h1 class="amp-wp-title">Object-oriented programming in Python: How to create a class in Python!</h1>
+			<div class="amp-wp-meta amp-wp-byline">
+					<amp-img src="https://secure.gravatar.com/avatar/decab487065c8029b68fb599b5a989c8?s=24&d=mm&r=g" alt="JoaoMarcolan" width="24" height="24" layout="fixed"></amp-img><span class="amp-wp-author author vcard">JoaoMarcolan</span>
+	</div>
+<div class="amp-wp-meta amp-wp-posted-on">
+	<time datetime="2018-04-18T12:16:43+00:00">
+		1 year ago	</time></div>
+	</header><figure class="amp-wp-article-featured-image wp-caption"><amp-img width="735" height="735" src="https://github.professormarcolan.com.br/wp-content/uploads/2018/04/how-create-a-class-how-instantiate-a-class.png" class="attachment-large size-large wp-post-image amp-wp-enforced-sizes" alt="How create a class in python and how instantiate a class" srcset="https://github.professormarcolan.com.br/wp-content/uploads/2018/04/how-create-a-class-how-instantiate-a-class.png 735w, https://github.professormarcolan.com.br/wp-content/uploads/2018/04/how-create-a-class-how-instantiate-a-class-150x150.png 150w, https://github.professormarcolan.com.br/wp-content/uploads/2018/04/how-create-a-class-how-instantiate-a-class-300x300.png 300w, https://github.professormarcolan.com.br/wp-content/uploads/2018/04/how-create-a-class-how-instantiate-a-class-600x600.png 600w" layout="intrinsic"></amp-img><p class="wp-caption-text">
+			How create a class in python and how instantiate a class		</p>
+	</figure><div class="amp-wp-article-content">
+		<p>The object-oriented programming paradigm is one of the most effective ways of writing software [4]. If you use it correctly you can prevent your codes from smelling bad. Several programming languages allow you to use object-oriented programming. Here you can find java tutorials on object-oriented programming. Now for Python this idea is even more central because as we will see later â&#128;&#156;allâ&#128;&#157; is considered an object. So in this line of tutorials we will understand how this programming paradigm works and how to create our own objects.</p><h2>Python Object Oriented Paradigm</h2><p>In the object orientation paradigm you write programs from the creation of classes. We can define the classes as a representation, a reproduction or a model. Classes represent situations / things. When you write a class, you define a general behavior that a whole category of objects can have. When you construct an object using the class you automatically equip this object with all the general behaviors. Classes have data and methods. For each object you can set your unique traits [4]. A didactic analogy would be to say that the classes are like the recipes of a cake, the objects are the cake itself, the attributes are the ingredients and the methods are the actions for the preparation of that cake.</p><p></p>
+<center><amp-img src="https://github.professormarcolan.com.br/wp-content/uploads/2018/06/what-is-a-class.png" alt="O que Ã© uma classe e o que Ã© um objeto" width="400" height="500" class="amp-wp-enforced-sizes" layout="intrinsic"></amp-img></center>Class (cake recipe) and its objects (cakes)
+<p>Â </p><h2>Class in Python</h2><p>The instantiation process is the process of constructing an object from a class. You work with instances of the class (the objects). In this tutorial we will learn how to create a class in Python as well as instantiate it. <a href="https://github.professormarcolan.com.br/en/transforming-atom-into-an-ide-for-python/" target="_blank" rel="noopener">To better follow this tutorial install Atom and configure it to be a Python IDE.</a> You can specify the information that will be stored in the instance (object) and define which actions you want to apply to those instances.</p><h3>Creating a Class in Python</h3><p>Defining a class in python is pretty simple. A class in Python begins with the reserved word class and then the class name followed by the parentheses (()) and colon (:). From the definition of the class name everything inside the indentation (four spaces) after the prototyping belongs to the class. And the first line of code without the indentation is out of class. You can a simple class in code 1.</p><pre class="brush: python; title: ; notranslate" title="">
+        #cÃ³digo 1
+        class FirstClass():
+            pass # The word pass pass does nothing.
+
+        </pre><p>This class does not yet have any method or data. The word pass pass does nothing. It is silently ignored and is usually added when the programmer is working on a new code or when the programmer wants to allow abstractions as we will see later.</p><h3>Instantiating a class in Python to create an object</h3><p>For code 1 we write our first class. Now in code 2 we will instantiate this class to create a new object of this class. For this we will create a variable p1 and assign it the class â&#128;&#156;FirstClassâ&#128;&#157;.</p><pre class="brush: python; title: ; notranslate" title="">
+        #cÃ³digo 2 Instantiating a new object
+
+        p1 = FirstClass()
+
+        print(type(p1))
+        #&amp;lt;class '__main__.FirstClass'&amp;gt;
+        </pre><p>Line 3 is instantiating a new object. As you can see instantiating classes in Python is quite straightforward. Just think of it as a function that returns a new object. In line 4 we are printing the type of variable p1. As we will observe the output will tell us that it is a variable of the type â&#128;&#156;FirstClassâ&#128;&#157;.</p><h2>Methods builders and destructors in Python</h2><p>In other languages that have the object orientation paradigm (eg c ++) objects have two special methods: the method that is invoked by the system when creating an object and the method the system calls when deleting an object. This is done because different objects require different steps to be built and destroyed. In a didactic analogy is to think how to think of the difference between the steps required to build a house in relation to a car. And they also have very different steps to be destroyed.</p><p>The method that is called to create the object is the constructor and the method that is invoked when it is necessary to delete it is the destructor. In other languages this is a super important topic because programs may have memory leak if these methods are implemented improperly. Python takes a piece of this work / responsibility from the programmer through the idea of the initializer method (__init__).</p><h2>The __init__ initializer method</h2><p>Python allows you to instruct the new creation of an object with an initializer method called __init__. The __init__ method is not the constructor. The constructor method calls the ___init__ method if one is implemented. In Python the object is already built when it calls the __init __ () initializer method. The initializer only sets the already created object before that object returns to whoever requested that new object. That is why it is possible to build objects in Python without having to implement this method in your code. In code 3 we will modify the class â&#128;&#156;FirstClassâ&#128;&#157; to appear with the method __init__. And again we will instantiate an object using this class.</p><pre class="brush: python; title: ; notranslate" title="">
+    #cÃ³digo 3 - inicializando uma classe
+    class FirstClass():
+        def __init__(self):
+            print("initialized our object")
+
+
+    p1 =FirstClass()
+    # initialized our object
+    </pre><p>Now when we run code 3 we notice that the message â&#128;&#156;initialized our objectâ&#128;&#157; is printed on the screen. This is because when we instantiate a new object Python invokes the constructor of the object that in turn calls our initializer method. And in our initializer method has a write function on the screen (print) that has as input a string argument. Looking closely at our __init __ () method also has an input argument the self.</p><h2>The self argument within the class in python</h2><p>When you define the methods of your class you should explicitly list the â&#128;&#156;selfâ&#128;&#157; argument as the first argument of each method, including the __init__ method. <a href="https://github.professormarcolan.com.br/en/how-to-use-inheritance-in-python/" target="_blank" rel="noopener">And as weâ&#128;&#153;ll see further ahead this should also be done when you call a method from a superclass (parent class, base class)</a>. However, when you call methods from outside the class you do not need to add the â&#128;&#156;selfâ&#128;&#157; parameter. You can totally skip this argument. Python will automatically add the instance reference to you. [3] This will seem confusing at first but this is not done inconsistently. It is done consistently because PythonÂ <a href="https://stackoverflow.com/questions/114214/class-method-differences-in-python-bound-unbound-and-static" target="_blank" rel="noopener">trust on the distinction between bound and unbound methods </a>. [3]</p><h2>Creating a method for the object</h2><p>We will now modify our â&#128;&#156;FirstClassâ&#128;&#157; class so that it has a method implemented by us and we will access this method from outside the class. This is followed by code 4..</p><pre class="brush: python; title: ; notranslate" title="">
+    #cÃ³digo 4 - criando um meotodo dentro da classes
+    #invocando esse metodo de fora da classe.
+    class FirstClass():
+        def __init__(self):
+            print("initialized our object")
+
+        def firstMethod(self):
+            print("first method implemented")
+
+
+    p1 =FirstClass()
+    # initialized our object
+    p1.firstMethod()
+    # first method implemented
+    </pre><p>Observing code 4 it can be seen that within the class the method â&#128;&#156;firstMethodâ&#128;&#157; has the argument â&#128;&#156;selfâ&#128;&#157; as an argument, but when we invoke it outside the class, we pass no arguments. To access the instance method we use the dot (.) Operator. The dot operator is the operator that is used to access the methods and data of the instance. When we invoke the method â&#128;&#156;firstMethodâ&#128;&#157; we realize that the command prompt is written the phrase â&#128;&#156;first method implementedâ&#128;&#157;.</p><h2>Adding Attributes to an Object</h2><p>In this tutorial you learned how to create a class, how to create a method for that class, and how to invoke methods using the dot operator. In the next tutorial we will delve into how to add attributes to an object in Python. These tutorials have enough concepts to absorb, so we are going slowly. All classes work the same way in Python.</p><h2>Bibliografia</h2><ul><li>[1] ZELLE, John M. Python programming: an introduction to computer science. Franklin, Beedle & Associates, Inc., 2004.</li>
+<li>[2] DOWNEY, Allen. Think Python. â&#128;&#157; Oâ&#128;&#153;Reilly Media, Inc.â&#128;&#157;, 2012.</li>
+<li>[3] PILGRIM, Mark. Dive Into Python. Createspace, 2009.</li>
+<li>https://docs.python.org/3/</li>
+<li>[4] MATTHES, Eric. Python crash course: a hands-on, project-based introduction to programming. No Starch Press, 2015.</li>
+<li>[5]Smallshire, Robert. Bingham, Austin. The Python Apprentice. Packt Publishing ,2017.</li>
+</ul><div class="swp-content-locator"></div>	</div>
+
+	<footer class="amp-wp-article-footer"><div class="amp-wp-meta amp-wp-tax-category">
+		Categories: <a href="https://github.professormarcolan.com.br/en/category/theory/" rel="category tag">theory</a>	</div>
+
+	<div class="amp-wp-meta amp-wp-tax-tag">
+		Tags: <a href="https://github.professormarcolan.com.br/en/tag/classes-and-objects/" rel="tag">Classes and objects</a>, <a href="https://github.professormarcolan.com.br/en/tag/python-en/" rel="tag">Python</a>	</div>
+		<div class="amp-wp-meta amp-wp-comments-link">
+		<a href="https://github.professormarcolan.com.br/en/object-oriented-programming-in-python-how-to-create-a-class-in-python/#respond">
+			Leave a Comment		</a>
+	</div>
+	</footer></article><footer class="amp-wp-footer"><div>
+		<h2>Potencialize com conhecimento os seus estudos e projetos!</h2>
+		<p>
+			<a href="https://wordpress.org/">
+				Powered by WordPress			</a>
+		</p>
+		<a href="#top" class="back-to-top">Back to top</a>
+	</div>
+</footer></body></html>
