@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en-US"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Object-oriented programming in Python: How to create a class in Python!</title><style>@font-face {font-family: "sw-icon-font";src:url("https://github.professormarcolan.com.br/wp-content/plugins/social-warfare/assets/fonts/sw-icon-font.eot?ver=3.3.3");src:url("https://github.professormarcolan.com.br/wp-content/plugins/social-warfare/assets/fonts/sw-icon-font.eot?ver=3.3.3#iefix") format("embedded-opentype"),url("https://github.professormarcolan.com.br/wp-content/plugins/social-warfare/assets/fonts/sw-icon-font.woff?ver=3.3.3") format("woff"),
+	url("https://github.professormarcolan.com.br/wp-content/plugins/social-warfare/assets/fonts/sw-icon-font.ttf?ver=3.3.3") format("truetype"),url("https://github.professormarcolan.com.br/wp-content/plugins/social-warfare/assets/fonts/sw-icon-font.svg?ver=3.3.3#1445203416") format("svg");font-weight: normal;font-style: normal;}</style><meta name="description" content="Nesse tutorial iremos discutir programaÃ§Ã£o orientada ao objeto em Python. Iremos ver como criar uma classe em Python. Como instanciar uma classe para construir um objeto. Como utilizar o mÃ©todo inicializador __init__. Como invocar os mÃ©todos da Classe em Python utilizando o operador ponto."><meta property="og:locale" content="en_US"><meta property="og:locale:alternate" content="pt_BR"><meta property="og:type" content="article"><meta property="og:title" content="Object-oriented programming in Python: How to create a class in Python!"><meta property="og:description" content="Nesse tutorial iremos discutir programaÃ§Ã£o orientada ao objeto em Python. Iremos ver como criar uma classe em Python. Como instanciar uma classe para construir um objeto. Como utilizar o mÃ©todo inicializador __init__. Como invocar os mÃ©todos da Classe em Python utilizando o operador ponto."><meta property="og:url" content="https://github.professormarcolan.com.br/en/object-oriented-programming-in-python-how-to-create-a-class-in-python/"><meta property="og:site_name" content="Potencialize com conhecimento os seus estudos e projetos!"><meta property="article:publisher" content="https://www.facebook.com/professormarcolan/"><meta property="article:tag" content="Classes and objects"><meta property="article:tag" content="Python"><meta property="article:section" content="theory"><meta property="article:published_time" content="2018-04-18T15:16:43+00:00"><meta property="article:modified_time" content="2018-06-25T21:57:01+00:00"><meta property="og:updated_time" content="2018-06-25T21:57:01+00:00"><meta property="og:image" content="https://github.professormarcolan.com.br/wp-content/uploads/2018/04/how-create-a-class-how-instantiate-a-class.png"><meta property="og:image:secure_url" content="https://github.professormarcolan.com.br/wp-content/uploads/2018/04/how-create-a-class-how-instantiate-a-class.png"><meta property="og:image:width" content="735"><meta property="og:image:height" content="735"><meta name="twitter:card" content="summary"><meta name="twitter:description" content="Nesse tutorial iremos discutir programaÃ§Ã£o orientada ao objeto em Python. Iremos ver como criar uma classe em Python. Como instanciar uma classe para construir um objeto. Como utilizar o mÃ©todo inicializador __init__. Como invocar os mÃ©todos da Classe em Python utilizando o operador ponto."><meta name="twitter:title" content="Object-oriented programming in Python: How to create a class in Python!"><meta name="twitter:image" content="https://github.professormarcolan.com.br/wp-content/uploads/2018/04/how-create-a-class-how-instantiate-a-class.png"><script type="application/ld+json" class="yoast-schema-graph yoast-schema-graph--main">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://github.professormarcolan.com.br/en/featured-lesson/#website","url":"https://github.professormarcolan.com.br/en/featured-lesson/","name":"Potencialize com conhecimento os seus estudos e projetos!","publisher":{"@id":"https://github.professormarcolan.com.br/en/featured-lesson/#person"},"potentialAction":{"@type":"SearchAction","target":"https://github.professormarcolan.com.br/en/featured-lesson/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"WebPage","@id":"https://github.professormarcolan.com.br/en/object-oriented-programming-in-python-how-to-create-a-class-in-python/#webpage","url":"https://github.professormarcolan.com.br/en/object-oriented-programming-in-python-how-to-create-a-class-in-python/","inLanguage":"en-US","name":"Object-oriented programming in Python: How to create a class in Python!","isPartOf":{"@id":"https://github.professormarcolan.com.br/en/featured-lesson/#website"},"image":{"@type":"ImageObject","@id":"https://github.professormarcolan.com.br/en/object-oriented-programming-in-python-how-to-create-a-class-in-python/#primaryimage","url":"https://github.professormarcolan.com.br/wp-content/uploads/2018/04/how-create-a-class-how-instantiate-a-class.png","width":735,"height":735,"caption":"How create a class in python and how instantiate a class"},"primaryImageOfPage":{"@id":"https://github.professormarcolan.com.br/en/object-oriented-programming-in-python-how-to-create-a-class-in-python/#primaryimage"},"datePublished":"2018-04-18T15:16:43+00:00","dateModified":"2018-06-25T21:57:01+00:00","description":"Nesse tutorial iremos discutir programa\u00e7\u00e3o orientada ao objeto em Python. Iremos ver como criar uma classe em Python. Como instanciar uma classe para construir um objeto. Como utilizar o m\u00e9todo inicializador __init__. Como invocar os m\u00e9todos da Classe em Python utilizando o operador ponto."},{"@type":"Article","@id":"https://github.professormarcolan.com.br/en/object-oriented-programming-in-python-how-to-create-a-class-in-python/#article","isPartOf":{"@id":"https://github.professormarcolan.com.br/en/object-oriented-programming-in-python-how-to-create-a-class-in-python/#webpage"},"author":{"@id":"https://github.professormarcolan.com.br/en/featured-lesson/schema/person/joaomarcolan/#author"},"headline":"Object-oriented programming in Python: How to create a class in Python!","datePublished":"2018-04-18T15:16:43+00:00","dateModified":"2018-06-25T21:57:01+00:00","commentCount":0,"mainEntityOfPage":{"@id":"https://github.professormarcolan.com.br/en/object-oriented-programming-in-python-how-to-create-a-class-in-python/#webpage"},"publisher":{"@id":"https://github.professormarcolan.com.br/en/featured-lesson/#person"},"image":{"@id":"https://github.professormarcolan.com.br/en/object-oriented-programming-in-python-how-to-create-a-class-in-python/#primaryimage"},"keywords":"Classes and objects,Python","articleSection":"theory"},{"@type":["Person"],"@id":"https://github.professormarcolan.com.br/en/author/joaomarcolan/#author","name":"JoaoMarcolan","image":{"@type":"ImageObject","@id":"https://github.professormarcolan.com.br/en/featured-lesson/#authorlogo","url":"https://secure.gravatar.com/avatar/decab487065c8029b68fb599b5a989c8?s=96&d=mm&r=g","caption":"JoaoMarcolan"},"sameAs":[]}]}</script><link rel="dns-prefetch" href="//cdn.datacamp.com"><link rel="dns-prefetch" href="//fonts.googleapis.com"><link rel="dns-prefetch" href="//s.w.org"><script type="text/javascript" data-cfasync="false">
+	var mi_version         = '7.3.0';
+	var mi_track_user      = true;
+	var mi_no_track_reason = '';
+	
+	var disableStr = 'ga-disable-UA-90999033-1';
+
+	/* Function to detect opted out users */
+	function __gaTrackerIsOptedOut() {
+		return document.cookie.indexOf(disableStr + '=true') > -1;
+	}
+
+	/* Disable tracking if the opt-out cookie exists. */
+	if ( __gaTrackerIsOptedOut() ) {
+		window[disableStr] = true;
+	}
+
+	/* Opt-out function */
+	function __gaTrackerOptout() {
+	  document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+	  window[disableStr] = true;
+	}
+	
+	if ( mi_track_user ) {
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','__gaTracker');
+
+		__gaTracker('create', 'UA-90999033-1', 'auto');
+		__gaTracker('set', 'forceSSL', true);
+		__gaTracker('send','pageview');
+	} else {
+		console.log( "" );
+		(function() {
+			/* https://developers.google.com/analytics/devguides/collection/analyticsjs/ */
+			var noopfn = function() {
+				return null;
+			};
+			var noopnullfn = function() {
+				return null;
+			};
+			var Tracker = function() {
+				return null;
+			};
+			var p = Tracker.prototype;
+			p.get = noopfn;
+			p.set = noopfn;
+			p.send = noopfn;
+			var __gaTracker = function() {
+				var len = arguments.length;
+				if ( len === 0 ) {
+					return;
+				}
+				var f = arguments[len-1];
+				if ( typeof f !== 'object' || f === null || typeof f.hitCallback !== 'function' ) {
+					console.log( 'Not running function __gaTracker(' + arguments[0] + " ....) because you are not being tracked. " + mi_no_track_reason );
+					return;
+				}
+				try {
+					f.hitCallback();
+				} catch (ex) {
+
+				}
+			};
+			__gaTracker.create = function() {
+				return new Tracker();
+			};
+			__gaTracker.getByName = noopnullfn;
+			__gaTracker.getAll = function() {
+				return [];
+			};
+			__gaTracker.remove = noopfn;
+			window['__gaTracker'] = __gaTracker;
+					})();
+		}
+</script><link rel="stylesheet" id="validate-engine-css-css" href="https://github.professormarcolan.com.br/wp-content/plugins/wysija-newsletters/css/validationEngine.jquery.css" type="text/css" media="all"><link rel="stylesheet" id="datacamp-light-style-css" href="https://github.professormarcolan.com.br/wp-content/plugins/datacamp-light-wordpress-0.1.0/style/frontend_style.css" type="text/css" media="all"><link rel="stylesheet" id="ACT_css-css" href="https://github.professormarcolan.com.br/wp-content/plugins/list-all-posts-by-authors-nested-categories-and-titles/ACT.css" type="text/css" media="all"><link rel="stylesheet" id="social_warfare-css" href="https://github.professormarcolan.com.br/wp-content/plugins/social-warfare/assets/css/style.min.css" type="text/css" media="all"><link rel="stylesheet" id="font-awesome-css" href="https://github.professormarcolan.com.br/wp-content/themes/magazine-point/vendors/font-awesome/css/font-awesome.min.css" type="text/css" media="all"><link rel="stylesheet" id="magazine-point-google-fonts-css" href="https://fonts.googleapis.com/css?family=Magra%3A400%2C700%7CGudea%3A100%2C400%2C500%2C600&subset=latin%2Clatin-ext" type="text/css" media="all"><link rel="stylesheet" id="jquery-sidr-css" href="https://github.professormarcolan.com.br/wp-content/themes/magazine-point/vendors/sidr/css/jquery.sidr.dark.min.css" type="text/css" media="all"><link rel="stylesheet" id="jquery-slick-css" href="https://github.professormarcolan.com.br/wp-content/themes/magazine-point/vendors/slick/slick.min.css" type="text/css" media="all"><link rel="stylesheet" id="magazine-point-style-css" href="https://github.professormarcolan.com.br/wp-content/themes/magazine-point/style.css" type="text/css" media="all"><link rel="stylesheet" id="wpgform-css-css" href="https://github.professormarcolan.com.br/wp-content/plugins/wpgform/css/wpgform.css" type="text/css" media="all"><link rel="stylesheet" id="__EPYT__style-css" href="https://github.professormarcolan.com.br/wp-content/plugins/youtube-embed-plus/styles/ytprefs.min.css" type="text/css" media="all"><style id="__EPYT__style-inline-css" type="text/css">
+
+                .epyt-gallery-thumb {
+                        width: 33.333%;
+                }
+                
+</style><script type="text/javascript">
+/* <![CDATA[ */
+var monsterinsights_frontend = {"js_events_tracking":"true","is_debug_mode":"false","download_extensions":"doc,exe,js,pdf,ppt,tgz,zip,xls","inbound_paths":"","home_url":"https:\/\/PLACEHOLDER.wpsho","track_download_as":"event","internal_label":"int","hash_tracking":"false"};
+/* ]]> */
+</script><script type="text/javascript" src="https://github.professormarcolan.com.br/wp-content/plugins/google-analytics-for-wordpress/assets/js/frontend.min.js"></script><script type="text/javascript" src="https://github.professormarcolan.com.br/wp-includes/js/jquery/jquery.js"></script><script type="text/javascript" src="https://github.professormarcolan.com.br/wp-includes/js/jquery/jquery-migrate.min.js"></script><script type="text/javascript">
+/* <![CDATA[ */
+var _EPYT_ = {"ajaxurl":"https:\/\/github.professormarcolan.com.br\/wp-admin\/admin-ajax.php","security":"b53ddad27c","gallery_scrolloffset":"20","eppathtoscripts":"https:\/\/github.professormarcolan.com.br\/wp-content\/plugins\/youtube-embed-plus\/scripts\/","epresponsiveselector":"[\"iframe.__youtube_prefs_widget__\"]","epdovol":"1","version":"12.2","evselector":"iframe.__youtube_prefs__[src], iframe[src*=\"youtube.com\/embed\/\"], iframe[src*=\"youtube-nocookie.com\/embed\/\"]","ajax_compat":"","ytapi_load":"light","stopMobileBuffer":"1","vi_active":"","vi_js_posttypes":[]};
+/* ]]> */
+</script><script type="text/javascript" src="https://github.professormarcolan.com.br/wp-content/plugins/youtube-embed-plus/scripts/ytprefs.min.js"></script><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-5400208836705527",
+          enable_page_level_ads: true
+     });
+</script><style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style><style type="text/css">.broken_link, a.broken_link {
+	text-decoration: line-through;
+}</style><style type="text/css" id="custom-background-css">
+body.custom-background { background-color: #f1f0f0; }
+</style><link rel="amphtml" href="https://github.professormarcolan.com.br/en/object-oriented-programming-in-python-how-to-create-a-class-in-python/amp/"><style type="text/css" id="syntaxhighlighteranchor"></style><link rel="icon" href="https://github.professormarcolan.com.br/wp-content/uploads/2018/06/cropped-professor-marcolan-logo-1-32x32.png" sizes="32x32"><link rel="icon" href="https://github.professormarcolan.com.br/wp-content/uploads/2018/06/cropped-professor-marcolan-logo-1-192x192.png" sizes="192x192"><link rel="apple-touch-icon-precomposed" href="https://github.professormarcolan.com.br/wp-content/uploads/2018/06/cropped-professor-marcolan-logo-1-180x180.png"><meta name="msapplication-TileImage" content="https://github.professormarcolan.com.br/wp-content/uploads/2018/06/cropped-professor-marcolan-logo-1-270x270.png"><style type="text/css" id="wp-custom-css">
+			/*
+Voc? pode adicionar seu pr?prio CSS aqui.
+
+div.site-content{
+	background-color: rgb(201, 76, 76)
+}
+
+Clique no ?cone de ajuda acima para saber mais.
+
+div.featured-news-item {
+	background-color: rgb(201, 76, 76);
+	    float: left;
+    width: 12%;
+    position: relative;
+
+}
+*/
+
+
+body {
+    font-family: "Times New Roman", Times, serif;
+	font-size: 19px;
+	text-align:justify;
+    color: #00008B;
+}
+
+p{
+		text-indent: 5%;
+}
+
+b{
+	font-family: "Times New Roman", Times, serif;
+	font-size: 19px;
+	color: black;
+	
+}
+
+div.news-block-wrapper{
+	
+	font-size: 15px;
+	text-align:justify;
+  color: black;
+	
+}
+
+h2.widget-title{
+		font-size: 20px;
+	text-align:justify;
+  color: black;
+}
+
+p.site-description{
+	color: black;
+	font-size: 25px;
+}
+
+p.site-title{
+	font-size: 45px;
+	text-align:justify;
+	
+}
+#news1{
+	color: green;
+}
+#news2{
+	color: green;
+}
+
+#news3{
+	color: grey;
+}
+
+.code{
+	    background-color: rgb(230, 234, 235);
+	color:green;
+}
+
+
+		</style></head><body class="post-template-default single single-post postid-846 single-format-standard custom-background wp-custom-logo site-layout-fluid global-layout-right-sidebar header-ads-enabled">
+
+	<div id="page" class="hfeed site"><a class="skip-link screen-reader-text" href="#content">Skip to content</a>		<a id="mobile-trigger" href="#mob-menu"><i class="fa fa-list-ul" aria-hidden="true"></i></a>
+		<div id="mob-menu">
+			<ul id="menu-menu-en_us" class="menu"><li id="menu-item-740" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-740"><a href="https://github.professormarcolan.com.br/en/featured-lesson/">Featured Lesson</a></li>
+<li id="menu-item-747" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-has-children menu-item-747"><a href="https://github.professormarcolan.com.br/en/repository-of-lessons/">Repository of lessons</a>
+<ul class="sub-menu"><li id="menu-item-910" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-910"><a href="https://github.professormarcolan.com.br/category/python/">Python</a></li>
+	<li id="menu-item-911" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-911"><a href="https://github.professormarcolan.com.br/category/git/">git</a></li>
+</ul></li>
+<li id="menu-item-741" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-741"><a href="https://github.professormarcolan.com.br/en/about/">About</a></li>
+<li id="menu-item-1029" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1029"><a href="https://github.professormarcolan.com.br/en/privacy-policies/">Privacy policies</a></li>
+<li id="menu-item-739" class="pll-parent-menu-item menu-item menu-item-type-custom menu-item-object-custom current-menu-parent menu-item-has-children menu-item-739"><a href="#pll_switcher"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAIAAAD5gJpuAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAHzSURBVHjaYkxOP8IAB//+Mfz7w8Dwi4HhP5CcJb/n/7evb16/APL/gRFQDiAAw3JuAgAIBEDQ/iswEERjGzBQLEru97ll0g0+3HvqMn1SpqlqGsZMsZsIe0SICA5gt5a/AGIEarCPtFh+6N/ffwxA9OvP/7//QYwff/6fZahmePeB4dNHhi+fGb59Y4zyvHHmCEAAAW3YDzQYaJJ93a+vX79aVf58//69fvEPlpIfnz59+vDhw7t37968efP3b/SXL59OnjwIEEAsDP+YgY53b2b89++/awvLn98MDi2cVxl+/vl6mituCtBghi9f/v/48e/XL86krj9XzwEEEENy8g6gu22rfn78+NGs5Ofr16+ZC58+fvyYwX8rxOxXr169fPny+fPn1//93bJlBUAAsQADZMEBxj9/GBxb2P/9+S/R8u3vzxuyaX8ZHv3j8/YGms3w8ycQARmi2eE37t4ACCDGR4/uSkrKAS35B3TT////wADOgLOBIaXIyjBlwxKAAGKRXjCB0SOEaeu+/y9fMnz4AHQxCP348R/o+l+//sMZQBNLEvif3AcIIMZbty7Ly6t9ZmXl+fXj/38GoHH/UcGfP79//BBiYHjy9+8/oUkNAAHEwt1V/vI/KBY/QSISFqM/GBg+MzB8A6PfYC5EFiDAABqgW776MP0rAAAAAElFTkSuQmCC" title="English" alt="English"><span style="margin-left:0.3em;">English</span></a>
+<ul class="sub-menu"><li class="lang-item lang-item-39 lang-item-pt lang-item-first menu-item menu-item-type-custom menu-item-object-custom menu-item-739-pt"><a href="https://github.professormarcolan.com.br/classe-em-python/" hreflang="pt-BR" lang="pt-BR"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAIAAAD5gJpuAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAHjSURBVHjaYmRIZkCAfwwMf2DkLzCCMyDoBwNAALEAlTVGN/5nYPj//x8Q/P3/9++/vzZa31gY/mw5z/Tn3x8g98+f37///fn99/eq2lUAAQTS8J/h/7NPz/9C5P79WRj89f9/zv//fztLvPVezPzrz+8/f3//+vtLhl8GaANAAIE1/P8PVA1U6qn7NVTqb1XVpAv/JH7/+a/848XmtpBlj39PO8gM1PP7z2+gqwACiAnoYpC9TF9nB34NVf5z4XpoZJbEjJKfWaEfL7KLlbaURKj8Opj08RfIVb+BNgAEEBPQW1L8P+b6/mb6//s/w+/+nc4F0/9P2cj65xdHc+p/QR39//9/AdHJ9A/60l8YvjIABBAT0JYH75jStv75zwCSMBY8BXTMxXv/21ezfHj9X5/3BESDy5JfBy7/ZuBnAAggkA1//vx594kpaCnLloe/smLaVT9/ff3y/+/P/w+u/+JuW7fhwS/tSayPXrOycrEyfGQACCAWoA1//oOCDIgm72fu4vy6b4LD/9/S/3///s9+S28yy+9/LEAf//kLChVgCAEEEEjD7z9/JHgkQeHwD8gUjV79O9r6CzPLv6lr1OUFwWH9Fxjcv//9BcYoA0AAMTI4ImIROUYRMf2XARkABBgA8kMvQf3q+24AAAAASUVORK5CYII=" title="PortuguÃªs" alt="PortuguÃªs"><span style="margin-left:0.3em;">PortuguÃªs</span></a></li>
+	<li class="lang-item lang-item-79 lang-item-en current-lang menu-item menu-item-type-custom menu-item-object-custom menu-item-739-en"><a href="https://github.professormarcolan.com.br/en/object-oriented-programming-in-python-how-to-create-a-class-in-python/" hreflang="en-US" lang="en-US"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAIAAAD5gJpuAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAHzSURBVHjaYkxOP8IAB//+Mfz7w8Dwi4HhP5CcJb/n/7evb16/APL/gRFQDiAAw3JuAgAIBEDQ/iswEERjGzBQLEru97ll0g0+3HvqMn1SpqlqGsZMsZsIe0SICA5gt5a/AGIEarCPtFh+6N/ffwxA9OvP/7//QYwff/6fZahmePeB4dNHhi+fGb59Y4zyvHHmCEAAAW3YDzQYaJJ93a+vX79aVf58//69fvEPlpIfnz59+vDhw7t37968efP3b/SXL59OnjwIEEAsDP+YgY53b2b89++/awvLn98MDi2cVxl+/vl6mituCtBghi9f/v/48e/XL86krj9XzwEEEENy8g6gu22rfn78+NGs5Ofr16+ZC58+fvyYwX8rxOxXr169fPny+fPn1//93bJlBUAAsQADZMEBxj9/GBxb2P/9+S/R8u3vzxuyaX8ZHv3j8/YGms3w8ycQARmi2eE37t4ACCDGR4/uSkrKAS35B3TT////wADOgLOBIaXIyjBlwxKAAGKRXjCB0SOEaeu+/y9fMnz4AHQxCP348R/o+l+//sMZQBNLEvif3AcIIMZbty7Ly6t9ZmXl+fXj/38GoHH/UcGfP79//BBiYHjy9+8/oUkNAAHEwt1V/vI/KBY/QSISFqM/GBg+MzB8A6PfYC5EFiDAABqgW776MP0rAAAAAElFTkSuQmCC" title="English" alt="English"><span style="margin-left:0.3em;">English</span></a></li>
+</ul></li>
+</ul></div>
+		
+	<header id="masthead" class="site-header" role="banner"><div class="container">				<div class="site-branding">
+
+			<a href="https://github.professormarcolan.com.br/en/featured-lesson/" class="custom-logo-link" rel="home" itemprop="url"><img width="1147" height="383" src="https://github.professormarcolan.com.br/wp-content/uploads/2018/06/cropped-professor-marcolan-logo-2.png" class="custom-logo" alt="Potencialize com conhecimento os seus estudos e projetos!" itemprop="logo" srcset="https://github.professormarcolan.com.br/wp-content/uploads/2018/06/cropped-professor-marcolan-logo-2.png 1147w,https://github.professormarcolan.com.br/wp-content/uploads/2018/06/cropped-professor-marcolan-logo-2-300x100.png 300w,https://github.professormarcolan.com.br/wp-content/uploads/2018/06/cropped-professor-marcolan-logo-2-768x256.png 768w,https://github.professormarcolan.com.br/wp-content/uploads/2018/06/cropped-professor-marcolan-logo-2-1024x342.png 1024w,https://github.professormarcolan.com.br/wp-content/uploads/2018/06/cropped-professor-marcolan-logo-2-600x200.png 600w,https://github.professormarcolan.com.br/wp-content/uploads/2018/06/cropped-professor-marcolan-logo-2-400x134.png 400w" sizes="(max-width: 1147px) 100vw, 1147px" title="cropped-professor-marcolan-logo-2.png"></a>
+						
+							<div id="site-identity">
+																		<p class="site-title"><a href="https://github.professormarcolan.com.br/en/featured-lesson/" rel="home">Potencialize com conhecimento os seus estudos e projetos!</a></p>
+											
+									</div>
+			
+		</div>
+					<div class="header-ads-area">
+				<aside id="tag_cloud-10" class="widget widget_tag_cloud"><h2 class="widget-title">Com as aulas sobre:</h2><div class="tagcloud"><a href="https://github.professormarcolan.com.br/en/tag/agile-en/" class="tag-cloud-link tag-link-89 tag-link-position-1" style="font-size: 10.6666666667pt;" aria-label="agile (3 items)">agile<span class="tag-link-count"> (3)</span></a>
+<a href="https://github.professormarcolan.com.br/en/tag/classes-and-objects/" class="tag-cloud-link tag-link-93 tag-link-position-2" style="font-size: 17.3333333333pt;" aria-label="Classes and objects (7 items)">Classes and objects<span class="tag-link-count"> (7)</span></a>
+<a href="https://github.professormarcolan.com.br/en/tag/good-practices/" class="tag-cloud-link tag-link-91 tag-link-position-3" style="font-size: 8pt;" aria-label="good practices (2 items)">good practices<span class="tag-link-count"> (2)</span></a>
+<a href="https://github.professormarcolan.com.br/en/tag/java-en/" class="tag-cloud-link tag-link-95 tag-link-position-4" style="font-size: 10.6666666667pt;" aria-label="Java (3 items)">Java<span class="tag-link-count"> (3)</span></a>
+<a href="https://github.professormarcolan.com.br/en/tag/python-en/" class="tag-cloud-link tag-link-102 tag-link-position-5" style="font-size: 22pt;" aria-label="Python (12 items)">Python<span class="tag-link-count"> (12)</span></a>
+<a href="https://github.professormarcolan.com.br/en/tag/version-drivers/" class="tag-cloud-link tag-link-97 tag-link-position-6" style="font-size: 14.6666666667pt;" aria-label="version drivers (5 items)">version drivers<span class="tag-link-count"> (5)</span></a></div>
+</aside></div> 
+				</div></header><div id="main-nav" class="clear-fix main-nav">
+			<div class="container">
+			<nav id="site-navigation" class="main-navigation" role="navigation"><div class="wrap-menu-content">
+					<div class="menu-menu-en_us-container"><ul id="primary-menu" class="menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-740"><a href="https://github.professormarcolan.com.br/en/featured-lesson/">Featured Lesson</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-has-children menu-item-747"><a href="https://github.professormarcolan.com.br/en/repository-of-lessons/">Repository of lessons</a>
+<ul class="sub-menu"><li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-910"><a href="https://github.professormarcolan.com.br/category/python/">Python</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-911"><a href="https://github.professormarcolan.com.br/category/git/">git</a></li>
+</ul></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-741"><a href="https://github.professormarcolan.com.br/en/about/">About</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1029"><a href="https://github.professormarcolan.com.br/en/privacy-policies/">Privacy policies</a></li>
+<li class="pll-parent-menu-item menu-item menu-item-type-custom menu-item-object-custom current-menu-parent menu-item-has-children menu-item-739"><a href="#pll_switcher"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAIAAAD5gJpuAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAHzSURBVHjaYkxOP8IAB//+Mfz7w8Dwi4HhP5CcJb/n/7evb16/APL/gRFQDiAAw3JuAgAIBEDQ/iswEERjGzBQLEru97ll0g0+3HvqMn1SpqlqGsZMsZsIe0SICA5gt5a/AGIEarCPtFh+6N/ffwxA9OvP/7//QYwff/6fZahmePeB4dNHhi+fGb59Y4zyvHHmCEAAAW3YDzQYaJJ93a+vX79aVf58//69fvEPlpIfnz59+vDhw7t37968efP3b/SXL59OnjwIEEAsDP+YgY53b2b89++/awvLn98MDi2cVxl+/vl6mituCtBghi9f/v/48e/XL86krj9XzwEEEENy8g6gu22rfn78+NGs5Ofr16+ZC58+fvyYwX8rxOxXr169fPny+fPn1//93bJlBUAAsQADZMEBxj9/GBxb2P/9+S/R8u3vzxuyaX8ZHv3j8/YGms3w8ycQARmi2eE37t4ACCDGR4/uSkrKAS35B3TT////wADOgLOBIaXIyjBlwxKAAGKRXjCB0SOEaeu+/y9fMnz4AHQxCP348R/o+l+//sMZQBNLEvif3AcIIMZbty7Ly6t9ZmXl+fXj/38GoHH/UcGfP79//BBiYHjy9+8/oUkNAAHEwt1V/vI/KBY/QSISFqM/GBg+MzB8A6PfYC5EFiDAABqgW776MP0rAAAAAElFTkSuQmCC" title="English" alt="English"><span style="margin-left:0.3em;">English</span></a>
+<ul class="sub-menu"><li class="lang-item lang-item-39 lang-item-pt lang-item-first menu-item menu-item-type-custom menu-item-object-custom menu-item-739-pt"><a href="https://github.professormarcolan.com.br/classe-em-python/" hreflang="pt-BR" lang="pt-BR"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAIAAAD5gJpuAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAHjSURBVHjaYmRIZkCAfwwMf2DkLzCCMyDoBwNAALEAlTVGN/5nYPj//x8Q/P3/9++/vzZa31gY/mw5z/Tn3x8g98+f37///fn99/eq2lUAAQTS8J/h/7NPz/9C5P79WRj89f9/zv//fztLvPVezPzrz+8/f3//+vtLhl8GaANAAIE1/P8PVA1U6qn7NVTqb1XVpAv/JH7/+a/848XmtpBlj39PO8gM1PP7z2+gqwACiAnoYpC9TF9nB34NVf5z4XpoZJbEjJKfWaEfL7KLlbaURKj8Opj08RfIVb+BNgAEEBPQW1L8P+b6/mb6//s/w+/+nc4F0/9P2cj65xdHc+p/QR39//9/AdHJ9A/60l8YvjIABBAT0JYH75jStv75zwCSMBY8BXTMxXv/21ezfHj9X5/3BESDy5JfBy7/ZuBnAAggkA1//vx594kpaCnLloe/smLaVT9/ff3y/+/P/w+u/+JuW7fhwS/tSayPXrOycrEyfGQACCAWoA1//oOCDIgm72fu4vy6b4LD/9/S/3///s9+S28yy+9/LEAf//kLChVgCAEEEEjD7z9/JHgkQeHwD8gUjV79O9r6CzPLv6lr1OUFwWH9Fxjcv//9BcYoA0AAMTI4ImIROUYRMf2XARkABBgA8kMvQf3q+24AAAAASUVORK5CYII=" title="PortuguÃªs" alt="PortuguÃªs"><span style="margin-left:0.3em;">PortuguÃªs</span></a></li>
+	<li class="lang-item lang-item-79 lang-item-en current-lang menu-item menu-item-type-custom menu-item-object-custom menu-item-739-en"><a href="https://github.professormarcolan.com.br/en/object-oriented-programming-in-python-how-to-create-a-class-in-python/" hreflang="en-US" lang="en-US"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAIAAAD5gJpuAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAHzSURBVHjaYkxOP8IAB//+Mfz7w8Dwi4HhP5CcJb/n/7evb16/APL/gRFQDiAAw3JuAgAIBEDQ/iswEERjGzBQLEru97ll0g0+3HvqMn1SpqlqGsZMsZsIe0SICA5gt5a/AGIEarCPtFh+6N/ffwxA9OvP/7//QYwff/6fZahmePeB4dNHhi+fGb59Y4zyvHHmCEAAAW3YDzQYaJJ93a+vX79aVf58//69fvEPlpIfnz59+vDhw7t37968efP3b/SXL59OnjwIEEAsDP+YgY53b2b89++/awvLn98MDi2cVxl+/vl6mituCtBghi9f/v/48e/XL86krj9XzwEEEENy8g6gu22rfn78+NGs5Ofr16+ZC58+fvyYwX8rxOxXr169fPny+fPn1//93bJlBUAAsQADZMEBxj9/GBxb2P/9+S/R8u3vzxuyaX8ZHv3j8/YGms3w8ycQARmi2eE37t4ACCDGR4/uSkrKAS35B3TT////wADOgLOBIaXIyjBlwxKAAGKRXjCB0SOEaeu+/y9fMnz4AHQxCP348R/o+l+//sMZQBNLEvif3AcIIMZbty7Ly6t9ZmXl+fXj/38GoHH/UcGfP79//BBiYHjy9+8/oUkNAAHEwt1V/vI/KBY/QSISFqM/GBg+MzB8A6PfYC5EFiDAABqgW776MP0rAAAAAElFTkSuQmCC" title="English" alt="English"><span style="margin-left:0.3em;">English</span></a></li>
+</ul></li>
+</ul></div>				</div>
+			</nav></div>
+		</div>
+			<div id="breadcrumb"><div class="container"><div role="navigation" aria-label="Breadcrumbs" class="breadcrumb-trail breadcrumbs" itemprop="breadcrumb"><ul class="trail-items" itemscope itemtype="http://schema.org/BreadcrumbList"><meta name="numberOfItems" content="3"><meta name="itemListOrder" content="Ascending"><li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="trail-item trail-begin"><a href="https://github.professormarcolan.com.br/en/featured-lesson/" rel="home" itemprop="item"><span itemprop="name">Home</span></a><meta itemprop="position" content="1"></li><li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="trail-item"><a href="https://github.professormarcolan.com.br/en/category/theory/" itemprop="item"><span itemprop="name">theory</span></a><meta itemprop="position" content="2"></li><li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="trail-item trail-end"><span itemprop="item"><span itemprop="name">Object-oriented programming in Python: How to create a class in Python!</span></span><meta itemprop="position" content="3"></li></ul></div></div></div><div id="content" class="site-content"><div class="container"><div class="inner-wrapper">	
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main"><article id="post-846" class="post-846 post type-post status-publish format-standard has-post-thumbnail hentry category-theory tag-classes-and-objects tag-python-en"><img width="735" height="735" src="https://github.professormarcolan.com.br/wp-content/uploads/2018/04/how-create-a-class-how-instantiate-a-class.png" class="magazine-point-post-thumb aligncenter wp-post-image" alt="How create a class in python and how instantiate a class" srcset="https://github.professormarcolan.com.br/wp-content/uploads/2018/04/how-create-a-class-how-instantiate-a-class.png 735w,https://github.professormarcolan.com.br/wp-content/uploads/2018/04/how-create-a-class-how-instantiate-a-class-150x150.png 150w,https://github.professormarcolan.com.br/wp-content/uploads/2018/04/how-create-a-class-how-instantiate-a-class-300x300.png 300w,https://github.professormarcolan.com.br/wp-content/uploads/2018/04/how-create-a-class-how-instantiate-a-class-600x600.png 600w" sizes="(max-width: 735px) 100vw, 735px" title="how-create-a-class-python-how-instantiate a class"><div class="article-wrapper">
+
+		<header class="entry-header"><h1 class="entry-title">Object-oriented programming in Python: How to create a class in Python!</h1>
+			<div class="entry-meta">
+				<span class="posted-on"><a href="https://github.professormarcolan.com.br/en/object-oriented-programming-in-python-how-to-create-a-class-in-python/" rel="bookmark"><time class="entry-date published" datetime="2018-04-18T12:16:43+00:00">18 de April de 2018</time><time class="updated" datetime="2018-06-25T18:57:01+00:00">25 de June de 2018</time></a></span><span class="byline"> <span class="author vcard"><a class="url fn n" href="https://github.professormarcolan.com.br/en/author/joaomarcolan/">JoaoMarcolan</a></span></span><span class="cat-links"><a href="https://github.professormarcolan.com.br/en/category/theory/" rel="category tag">theory</a></span>			</div>
+		</header><div class="entry-content">
+			
+<p>The object-oriented programming paradigm is one of the most effective ways of writing software [4]. If you use it correctly you can prevent your codes from smelling bad. Several programming languages allow you to use object-oriented programming. Here you can find java tutorials on object-oriented programming. Now for Python this idea is even more central because as we will see later “all” is considered an object. So in this line of tutorials we will understand how this programming paradigm works and how to create our own objects.</p>
+<h2>Python Object Oriented Paradigm</h2>
+<p>In the object orientation paradigm you write programs from the creation of classes. We can define the classes as a representation, a reproduction or a model. Classes represent situations / things. When you write a class, you define a general behavior that a whole category of objects can have. When you construct an object using the class you automatically equip this object with all the general behaviors. Classes have data and methods. For each object you can set your unique traits [4]. A didactic analogy would be to say that the classes are like the recipes of a cake, the objects are the cake itself, the attributes are the ingredients and the methods are the actions for the preparation of that cake.</p>
+<p></p><center><img src="https://github.professormarcolan.com.br/wp-content/uploads/2018/06/what-is-a-class.png" alt="O que é uma classe e o que é um objeto" width="400" height="500" title="O que é uma classe e o que é um objeto"></center>Class (cake recipe) and its objects (cakes)
+<p> </p>
+<h2>Class in Python</h2>
+<p>The instantiation process is the process of constructing an object from a class. You work with instances of the class (the objects). In this tutorial we will learn how to create a class in Python as well as instantiate it. <a href="https://github.professormarcolan.com.br/en/transforming-atom-into-an-ide-for-python/" target="_blank" rel="noopener">To better follow this tutorial install Atom and configure it to be a Python IDE.</a> You can specify the information that will be stored in the instance (object) and define which actions you want to apply to those instances.</p>
+<h3>Creating a Class in Python</h3>
+<p>Defining a class in python is pretty simple. A class in Python begins with the reserved word class and then the class name followed by the parentheses (()) and colon (:). From the definition of the class name everything inside the indentation (four spaces) after the prototyping belongs to the class. And the first line of code without the indentation is out of class. You can a simple class in code 1.</p>
+<pre class="brush: python; title: ; notranslate" title="">
+        #código 1
+        class FirstClass():
+            pass # The word pass pass does nothing.
+
+        </pre>
+<p>This class does not yet have any method or data. The word pass pass does nothing. It is silently ignored and is usually added when the programmer is working on a new code or when the programmer wants to allow abstractions as we will see later.</p>
+<h3>Instantiating a class in Python to create an object</h3>
+<p>For code 1 we write our first class. Now in code 2 we will instantiate this class to create a new object of this class. For this we will create a variable p1 and assign it the class “FirstClass”.</p>
+<pre class="brush: python; title: ; notranslate" title="">
+        #código 2 Instantiating a new object
+
+        p1 = FirstClass()
+
+        print(type(p1))
+        #&amp;lt;class '__main__.FirstClass'&amp;gt;
+        </pre>
+<p>Line 3 is instantiating a new object. As you can see instantiating classes in Python is quite straightforward. Just think of it as a function that returns a new object. In line 4 we are printing the type of variable p1. As we will observe the output will tell us that it is a variable of the type “FirstClass”.</p>
+<h2>Methods builders and destructors in Python</h2>
+<p>In other languages that have the object orientation paradigm (eg c ++) objects have two special methods: the method that is invoked by the system when creating an object and the method the system calls when deleting an object. This is done because different objects require different steps to be built and destroyed. In a didactic analogy is to think how to think of the difference between the steps required to build a house in relation to a car. And they also have very different steps to be destroyed.</p>
+<p>The method that is called to create the object is the constructor and the method that is invoked when it is necessary to delete it is the destructor. In other languages this is a super important topic because programs may have memory leak if these methods are implemented improperly. Python takes a piece of this work / responsibility from the programmer through the idea of the initializer method (__init__).</p>
+<h2>The __init__ initializer method</h2>
+<p>Python allows you to instruct the new creation of an object with an initializer method called __init__. The __init__ method is not the constructor. The constructor method calls the ___init__ method if one is implemented. In Python the object is already built when it calls the __init __ () initializer method. The initializer only sets the already created object before that object returns to whoever requested that new object. That is why it is possible to build objects in Python without having to implement this method in your code. In code 3 we will modify the class “FirstClass” to appear with the method __init__. And again we will instantiate an object using this class.</p>
+<pre class="brush: python; title: ; notranslate" title="">
+    #código 3 - inicializando uma classe
+    class FirstClass():
+        def __init__(self):
+            print("initialized our object")
+
+
+    p1 =FirstClass()
+    # initialized our object
+    </pre>
+<p>Now when we run code 3 we notice that the message “initialized our object” is printed on the screen. This is because when we instantiate a new object Python invokes the constructor of the object that in turn calls our initializer method. And in our initializer method has a write function on the screen (print) that has as input a string argument. Looking closely at our __init __ () method also has an input argument the self.</p>
+<h2>The self argument within the class in python</h2>
+<p>When you define the methods of your class you should explicitly list the “self” argument as the first argument of each method, including the __init__ method. <a href="https://github.professormarcolan.com.br/en/how-to-use-inheritance-in-python/" target="_blank" rel="noopener">And as we’ll see further ahead this should also be done when you call a method from a superclass (parent class, base class)</a>. However, when you call methods from outside the class you do not need to add the “self” parameter. You can totally skip this argument. Python will automatically add the instance reference to you. [3] This will seem confusing at first but this is not done inconsistently. It is done consistently because Python <a href="https://stackoverflow.com/questions/114214/class-method-differences-in-python-bound-unbound-and-static" target="_blank" rel="noopener">trust on the distinction between bound and unbound methods </a>. [3]</p>
+<h2>Creating a method for the object</h2>
+<p>We will now modify our “FirstClass” class so that it has a method implemented by us and we will access this method from outside the class. This is followed by code 4..</p>
+<pre class="brush: python; title: ; notranslate" title="">
+    #código 4 - criando um meotodo dentro da classes
+    #invocando esse metodo de fora da classe.
+    class FirstClass():
+        def __init__(self):
+            print("initialized our object")
+
+        def firstMethod(self):
+            print("first method implemented")
+
+
+    p1 =FirstClass()
+    # initialized our object
+    p1.firstMethod()
+    # first method implemented
+    </pre>
+<p>Observing code 4 it can be seen that within the class the method “firstMethod” has the argument “self” as an argument, but when we invoke it outside the class, we pass no arguments. To access the instance method we use the dot (.) Operator. The dot operator is the operator that is used to access the methods and data of the instance. When we invoke the method “firstMethod” we realize that the command prompt is written the phrase “first method implemented”.</p>
+<h2>Adding Attributes to an Object</h2>
+<p>In this tutorial you learned how to create a class, how to create a method for that class, and how to invoke methods using the dot operator. In the next tutorial we will delve into how to add attributes to an object in Python. These tutorials have enough concepts to absorb, so we are going slowly. All classes work the same way in Python.</p>
+<h2>Bibliografia</h2>
+<ul><li>[1] ZELLE, John M. Python programming: an introduction to computer science. Franklin, Beedle & Associates, Inc., 2004.</li>
+<li>[2] DOWNEY, Allen. Think Python. ” O’Reilly Media, Inc.”, 2012.</li>
+<li>[3] PILGRIM, Mark. Dive Into Python. Createspace, 2009.</li>
+<li>https://docs.python.org/3/</li>
+<li>[4] MATTHES, Eric. Python crash course: a hands-on, project-based introduction to programming. No Starch Press, 2015.</li>
+<li>[5]Smallshire, Robert. Bingham, Austin. The Python Apprentice. Packt Publishing ,2017.</li>
+</ul><div class="swp_social_panel swp_horizontal_panel  swp_flat_fresh  swp_default_full_color swp_individual_full_color swp_other_full_color  scale-100  scale-" data-min-width="1100" data-float-color="#ffffff" data-float="bottom" data-float-mobile="" style="">
+<div class="nc_tweetContainer swp_facebook" data-network="facebook"><a rel="nofollow noreferrer noopener" target="_blank" href="https://www.facebook.com/share.php?u=https%3A%2F%2Fprofessormarcolan.com.br%2Fen%2Fobject-oriented-programming-in-python-how-to-create-a-class-in-python%2F" data-link="https://www.facebook.com/share.php?u=https%3A%2F%2Fprofessormarcolan.com.br%2Fen%2Fobject-oriented-programming-in-python-how-to-create-a-class-in-python%2F" class="nc_tweet"><span class="swp_count swp_hide"><span class="iconFiller"><span class="spaceManWilly"><i class="sw swp_facebook_icon"></i><span class="swp_share">Share</span></span></span></span></a></div>
+<div class="nc_tweetContainer swp_pinterest" data-network="pinterest"><a rel="nofollow noreferrer noopener" class="nc_tweet noPop" onclick="var e=document.createElement('script');
+						   e.setAttribute('type','text/javascript');
+						   e.setAttribute('charset','UTF-8');
+						   e.setAttribute('src','//assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);
+						   document.body.appendChild(e);
+						"><span class="swp_count swp_hide"><span class="iconFiller"><span class="spaceManWilly"><i class="sw swp_pinterest_icon"></i><span class="swp_share">Pin</span></span></span></span></a></div>
+<div class="nc_tweetContainer swp_linkedin" data-network="linkedin"><a rel="nofollow noreferrer noopener" target="_blank" href="https://www.linkedin.com/cws/share?url=https%3A%2F%2Fprofessormarcolan.com.br%2Fen%2Fobject-oriented-programming-in-python-how-to-create-a-class-in-python%2F" data-link="https://www.linkedin.com/cws/share?url=https%3A%2F%2Fprofessormarcolan.com.br%2Fen%2Fobject-oriented-programming-in-python-how-to-create-a-class-in-python%2F" class="nc_tweet"><span class="swp_count swp_hide"><span class="iconFiller"><span class="spaceManWilly"><i class="sw swp_linkedin_icon"></i><span class="swp_share">Share</span></span></span></span></a></div>
+<div class="nc_tweetContainer total_shares total_sharesalt"><span class="swp_count ">0 <span class="swp_label">Shares</span></span></div>
+</div>
+<div class="swp-content-locator"></div>
+					</div>
+
+		<footer class="entry-footer entry-meta"><span class="tags-links"><a href="https://github.professormarcolan.com.br/en/tag/classes-and-objects/" rel="tag">Classes and objects</a>, <a href="https://github.professormarcolan.com.br/en/tag/python-en/" rel="tag">Python</a></span>		</footer></div> 
+
+</article><nav class="navigation post-navigation" role="navigation"><h2 class="screen-reader-text">Post navigation</h2>
+		<div class="nav-links"><div class="nav-previous"><a href="https://github.professormarcolan.com.br/en/solid-principles-single-responsibility-principle/" rel="prev">SOLID principles: Single Responsibility Principle</a></div><div class="nav-next"><a href="https://github.professormarcolan.com.br/en/how-to-create-a-function-in-python/" rel="next">How to create a function in Python</a></div></div>
+	</nav><div class="related-posts-wrapper related-posts-column-3">
+
+		<h4>Related Posts</h4>
+
+		<div class="inner-wrapper">
+
+			
+				<div class="related-posts-item">
+											<div class="related-posts-thumb">
+							<a href="https://github.professormarcolan.com.br/en/how-to-use-inheritance-in-python/">
+								<img width="300" height="300" src="https://github.professormarcolan.com.br/wp-content/uploads/2018/06/come-understante-the-inheritance-feature-in-python-300x300.png" class="aligncenter wp-post-image" alt="How to use the inheritance feature in python" srcset="https://github.professormarcolan.com.br/wp-content/uploads/2018/06/come-understante-the-inheritance-feature-in-python-300x300.png 300w,https://github.professormarcolan.com.br/wp-content/uploads/2018/06/come-understante-the-inheritance-feature-in-python-150x150.png 150w,https://github.professormarcolan.com.br/wp-content/uploads/2018/06/come-understante-the-inheritance-feature-in-python-600x600.png 600w,https://github.professormarcolan.com.br/wp-content/uploads/2018/06/come-understante-the-inheritance-feature-in-python.png 735w" sizes="(max-width: 300px) 100vw, 300px" title="come-understante-the-inheritance-feature-in-python"></a>
+						</div>
+					
+					<div class="related-posts-text-wrap">
+						<div class="related-posts-meta entry-meta">
+							<span class="posted-on">25 de June de 2018</span>
+							<span class="comments-link"><a href="https://github.professormarcolan.com.br/en/how-to-use-inheritance-in-python/#respond">0</a></span>						</div>
+						<h3 class="related-posts-title">
+							<a href="https://github.professormarcolan.com.br/en/how-to-use-inheritance-in-python/">Object-Oriented Programming in Python: How to use inheritance in Python</a>
+						</h3>
+					</div>
+
+				</div>
+
+			
+				<div class="related-posts-item">
+											<div class="related-posts-thumb">
+							<a href="https://github.professormarcolan.com.br/en/how-to-do-encapsulation-in-python/">
+								<img width="300" height="300" src="https://github.professormarcolan.com.br/wp-content/uploads/2018/05/EncapsulationFeature-300x300.png" class="aligncenter wp-post-image" alt="Object oriented programmin in python. Come to understand encapsulation feature in Python" srcset="https://github.professormarcolan.com.br/wp-content/uploads/2018/05/EncapsulationFeature-300x300.png 300w,https://github.professormarcolan.com.br/wp-content/uploads/2018/05/EncapsulationFeature-150x150.png 150w,https://github.professormarcolan.com.br/wp-content/uploads/2018/05/EncapsulationFeature-768x768.png 768w,https://github.professormarcolan.com.br/wp-content/uploads/2018/05/EncapsulationFeature.png 784w" sizes="(max-width: 300px) 100vw, 300px" title="EncapsulationFeature"></a>
+						</div>
+					
+					<div class="related-posts-text-wrap">
+						<div class="related-posts-meta entry-meta">
+							<span class="posted-on">13 de May de 2018</span>
+							<span class="comments-link"><a href="https://github.professormarcolan.com.br/en/how-to-do-encapsulation-in-python/#respond">0</a></span>						</div>
+						<h3 class="related-posts-title">
+							<a href="https://github.professormarcolan.com.br/en/how-to-do-encapsulation-in-python/">How to do encapsulation in Python!</a>
+						</h3>
+					</div>
+
+				</div>
+
+			
+				<div class="related-posts-item">
+											<div class="related-posts-thumb">
+							<a href="https://github.professormarcolan.com.br/en/introduction-to-object-oriented-programming-in-python/">
+								<img width="300" height="300" src="https://github.professormarcolan.com.br/wp-content/uploads/2018/04/thumbnailIntrodu%C3%83%C2%A7%C3%83%C2%A3oAPrograma%C3%83%C2%A7%C3%83%C2%A3oOrientadaAoObjetoemPythonEng-300x300.jpg" class="aligncenter wp-post-image" alt="Introduction to object oriented programing in Python" srcset="https://github.professormarcolan.com.br/wp-content/uploads/2018/04/thumbnailIntrodu%C3%83%C2%A7%C3%83%C2%A3oAPrograma%C3%83%C2%A7%C3%83%C2%A3oOrientadaAoObjetoemPythonEng-300x300.jpg 300w,https://github.professormarcolan.com.br/wp-content/uploads/2018/04/thumbnailIntrodu%C3%83%C2%A7%C3%83%C2%A3oAPrograma%C3%83%C2%A7%C3%83%C2%A3oOrientadaAoObjetoemPythonEng-150x150.jpg 150w,https://github.professormarcolan.com.br/wp-content/uploads/2018/04/thumbnailIntrodu%C3%83%C2%A7%C3%83%C2%A3oAPrograma%C3%83%C2%A7%C3%83%C2%A3oOrientadaAoObjetoemPythonEng.jpg 735w" sizes="(max-width: 300px) 100vw, 300px" title="thumbnailIntroduÃ§Ã£oAProgramaÃ§Ã£oOrientadaAoObjetoemPythonEng"></a>
+						</div>
+					
+					<div class="related-posts-text-wrap">
+						<div class="related-posts-meta entry-meta">
+							<span class="posted-on">23 de April de 2018</span>
+							<span class="comments-link"><a href="https://github.professormarcolan.com.br/en/introduction-to-object-oriented-programming-in-python/#respond">0</a></span>						</div>
+						<h3 class="related-posts-title">
+							<a href="https://github.professormarcolan.com.br/en/introduction-to-object-oriented-programming-in-python/">Introduction to object oriented programming in Python</a>
+						</h3>
+					</div>
+
+				</div>
+
+			
+			
+		</div>
+	</div>
+
+
+			
+<div id="comments" class="comments-area">
+
+	
+	
+	
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/en/object-oriented-programming-in-python-how-to-create-a-class-in-python/#respond" style="display:none;">Cancel reply</a></small></h3><p class="must-log-in">You must be <a href="https://github.professormarcolan.com.br/wp-login.php">logged in</a> to post a comment.</p>	</div>
+	
+</div>
+
+		
+		</main></div>
+
+
+<div id="sidebar-primary" class="widget-area sidebar" role="complementary">
+	<div class="sidebar-widget-wrapper">
+					<aside id="custom_html-15" class="widget_text widget widget_custom_html"><h2 class="widget-title">Assine nossa Newsletter!</h2><div class="textwidget custom-html-widget"><img src="https://github.professormarcolan.com.br/wp-content/uploads/2018/06/logo-professor-marcolan-newsletter.png" alt="Italian Trulli"><div id="news1">
+	SÃ©rie de emails grÃ¡tis de <b>Python!</b> Assine para receber contÃ©udos exclusivo via email.
+	
+</div>
+
+
+
+<div id="news2">
+	<iframe width="100%" scrolling="no" frameborder="0" src="https://github.professormarcolan.com.br/?wysija-page=1&controller=subscribers&action=wysija_outter&wysija_form=2&external_site=1&wysijap=subscriptions" class="iframe-wysija" vspace="0" tabindex="0" style="position: static; top: 0pt; margin: 0px; border-style: none;left: 0pt; visibility: visible; font-size:160%" marginwidth="0" marginheight="0" hspace="0" allowtransparency="true" title="Assinatura MailPoet"></iframe>
+	
+</div>
+
+<div id="news3">
+	NÃ³s levamos a  sua privacidade a sÃ©rio. Sem qualquer tipo de spam, cancele a qualquer momente!
+	
+</div></div></aside><aside id="search-2" class="widget widget_search"><h2 class="widget-title">Find some lessons!</h2><form role="search" method="get" class="search-form" action="https://github.professormarcolan.com.br/en/">
+			<label>
+			<span class="screen-reader-text">Search for:</span>
+			<input type="search" class="search-field" placeholder="Search…" value="" name="s" title="Search for:"></label>
+			<input type="submit" class="search-submit" value=""></form></aside><aside id="tag_cloud-8" class="widget widget_tag_cloud"><h2 class="widget-title">Tags</h2><div class="tagcloud"><a href="https://github.professormarcolan.com.br/en/tag/agile-en/" class="tag-cloud-link tag-link-89 tag-link-position-1" style="font-size: 10.6666666667pt;" aria-label="agile (3 items)">agile</a>
+<a href="https://github.professormarcolan.com.br/en/tag/classes-and-objects/" class="tag-cloud-link tag-link-93 tag-link-position-2" style="font-size: 17.3333333333pt;" aria-label="Classes and objects (7 items)">Classes and objects</a>
+<a href="https://github.professormarcolan.com.br/en/tag/good-practices/" class="tag-cloud-link tag-link-91 tag-link-position-3" style="font-size: 8pt;" aria-label="good practices (2 items)">good practices</a>
+<a href="https://github.professormarcolan.com.br/en/tag/java-en/" class="tag-cloud-link tag-link-95 tag-link-position-4" style="font-size: 10.6666666667pt;" aria-label="Java (3 items)">Java</a>
+<a href="https://github.professormarcolan.com.br/en/tag/python-en/" class="tag-cloud-link tag-link-102 tag-link-position-5" style="font-size: 22pt;" aria-label="Python (12 items)">Python</a>
+<a href="https://github.professormarcolan.com.br/en/tag/version-drivers/" class="tag-cloud-link tag-link-97 tag-link-position-6" style="font-size: 14.6666666667pt;" aria-label="version drivers (5 items)">version drivers</a></div>
+</aside><aside id="archives-2" class="widget widget_archive"><h2 class="widget-title">Archives</h2>		<ul><li><a href="https://github.professormarcolan.com.br/en/2018/06/">June 2018</a></li>
+	<li><a href="https://github.professormarcolan.com.br/en/2018/05/">May 2018</a></li>
+	<li><a href="https://github.professormarcolan.com.br/en/2018/04/">April 2018</a></li>
+	<li><a href="https://github.professormarcolan.com.br/en/2018/03/">March 2018</a></li>
+		</ul></aside><aside id="categories-2" class="widget widget_categories"><h2 class="widget-title">Categories</h2>		<ul><li class="cat-item cat-item-126"><a href="https://github.professormarcolan.com.br/en/category/git-en/" title="Learn how to use git">git</a> (1)
+</li>
+	<li class="cat-item cat-item-99"><a href="https://github.professormarcolan.com.br/en/category/practice/">practice</a> (6)
+</li>
+	<li class="cat-item cat-item-124"><a href="https://github.professormarcolan.com.br/en/category/python-en/" title="Learn Python. Object programming orientation">Python</a> (4)
+</li>
+	<li class="cat-item cat-item-81"><a href="https://github.professormarcolan.com.br/en/category/theory/">theory</a> (16)
+</li>
+		</ul></aside></div> 
+</div>
+</div></div></div>
+	
+	<div id="footer-widgets" class="widget-area" role="complementary">
+		<div class="container">
+						<div class="inner-wrapper">
+										<div class="widget-column footer-active-1">
+							<aside id="custom_html-6" class="widget_text widget widget_custom_html"><h3 class="widget-title">Contact!</h3><div class="textwidget custom-html-widget">email : zn_john@hotmail.com
+<br>
+github : https://github.com/jmarcolan
+<br>
+https://www.facebook.com/jmarcolan</div></aside></div>
+									</div>
+		</div>
+	</div>
+
+<footer id="colophon" class="site-footer" role="contentinfo"><div class="container">	
+					<div id="footer-navigation" class="menu-menu-en_us-container"><ul id="menu-menu-en_us-1" class="menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-740"><a href="https://github.professormarcolan.com.br/en/featured-lesson/">Featured Lesson</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-has-children menu-item-747"><a href="https://github.professormarcolan.com.br/en/repository-of-lessons/">Repository of lessons</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-741"><a href="https://github.professormarcolan.com.br/en/about/">About</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1029"><a href="https://github.professormarcolan.com.br/en/privacy-policies/">Privacy policies</a></li>
+<li class="pll-parent-menu-item menu-item menu-item-type-custom menu-item-object-custom current-menu-parent menu-item-has-children menu-item-739"><a href="#pll_switcher"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAIAAAD5gJpuAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAHzSURBVHjaYkxOP8IAB//+Mfz7w8Dwi4HhP5CcJb/n/7evb16/APL/gRFQDiAAw3JuAgAIBEDQ/iswEERjGzBQLEru97ll0g0+3HvqMn1SpqlqGsZMsZsIe0SICA5gt5a/AGIEarCPtFh+6N/ffwxA9OvP/7//QYwff/6fZahmePeB4dNHhi+fGb59Y4zyvHHmCEAAAW3YDzQYaJJ93a+vX79aVf58//69fvEPlpIfnz59+vDhw7t37968efP3b/SXL59OnjwIEEAsDP+YgY53b2b89++/awvLn98MDi2cVxl+/vl6mituCtBghi9f/v/48e/XL86krj9XzwEEEENy8g6gu22rfn78+NGs5Ofr16+ZC58+fvyYwX8rxOxXr169fPny+fPn1//93bJlBUAAsQADZMEBxj9/GBxb2P/9+S/R8u3vzxuyaX8ZHv3j8/YGms3w8ycQARmi2eE37t4ACCDGR4/uSkrKAS35B3TT////wADOgLOBIaXIyjBlwxKAAGKRXjCB0SOEaeu+/y9fMnz4AHQxCP348R/o+l+//sMZQBNLEvif3AcIIMZbty7Ly6t9ZmXl+fXj/38GoHH/UcGfP79//BBiYHjy9+8/oUkNAAHEwt1V/vI/KBY/QSISFqM/GBg+MzB8A6PfYC5EFiDAABqgW776MP0rAAAAAElFTkSuQmCC" title="English" alt="English"><span style="margin-left:0.3em;">English</span></a></li>
+</ul></div>							<div class="copyright">
+				Copyright © All rights reserved.			</div>
+				<div class="site-info">
+			<a href="https://wordpress.org/">Powered by WordPress</a>
+			<span class="sep"> | </span>
+			Magazine Point by <a href="https://axlethemes.com">Axle Themes</a>		</div>
+			</div></footer></div><a href="#page" class="scrollup" id="btn-scrollup"><i class="fa fa-angle-up"></i></a>
+<script type="text/javascript" src="https://github.professormarcolan.com.br/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shCore.js"></script><script type="text/javascript" src="https://github.professormarcolan.com.br/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPython.js"></script><script type="text/javascript">
+	(function(){
+		var corecss = document.createElement('link');
+		var themecss = document.createElement('link');
+		var corecssurl = "https://github.professormarcolan.com.br/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shCore.css?ver=3.0.9b";
+		if ( corecss.setAttribute ) {
+				corecss.setAttribute( "rel", "stylesheet" );
+				corecss.setAttribute( "type", "text/css" );
+				corecss.setAttribute( "href", corecssurl );
+		} else {
+				corecss.rel = "stylesheet";
+				corecss.href = corecssurl;
+		}
+		document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+		var themecssurl = "https://github.professormarcolan.com.br/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shThemeDefault.css?ver=3.0.9b";
+		if ( themecss.setAttribute ) {
+				themecss.setAttribute( "rel", "stylesheet" );
+				themecss.setAttribute( "type", "text/css" );
+				themecss.setAttribute( "href", themecssurl );
+		} else {
+				themecss.rel = "stylesheet";
+				themecss.href = themecssurl;
+		}
+		//document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+		document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+	})();
+	SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+	SyntaxHighlighter.config.strings.help = '?';
+	SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+	SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+	SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+	SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+	SyntaxHighlighter.defaults['toolbar'] = false;
+	SyntaxHighlighter.all();
+</script><script type="text/javascript" src="https://cdn.datacamp.com/datacamp-light-latest.min.js?ver=4.9.10"></script><script type="text/javascript" src="https://github.professormarcolan.com.br/wp-content/plugins/social-warfare/assets/js/script.min.js"></script><script type="text/javascript" src="https://github.professormarcolan.com.br/wp-content/themes/magazine-point/js/skip-link-focus-fix.min.js"></script><script type="text/javascript" src="https://github.professormarcolan.com.br/wp-content/themes/magazine-point/vendors/cycle2/js/jquery.cycle2.min.js"></script><script type="text/javascript" src="https://github.professormarcolan.com.br/wp-content/themes/magazine-point/vendors/sidr/js/jquery.sidr.min.js"></script><script type="text/javascript" src="https://github.professormarcolan.com.br/wp-content/themes/magazine-point/vendors/slick/slick.min.js"></script><script type="text/javascript" src="https://github.professormarcolan.com.br/wp-content/themes/magazine-point/js/custom.min.js"></script><script type="text/javascript" src="https://github.professormarcolan.com.br/wp-content/plugins/youtube-embed-plus/scripts/fitvids.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=default&ver=1.3.10"></script><script type="text/javascript">var swpFloatBeforeContent = false;var swpClickTracking = false;</script></body></html>
