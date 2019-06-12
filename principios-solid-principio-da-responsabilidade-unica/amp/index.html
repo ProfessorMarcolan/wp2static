@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html amp lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"><script type="application/ld+json" class="yoast-schema-graph yoast-schema-graph--main">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://github.professormarcolan.com.br/#website","url":"https://github.professormarcolan.com.br/","name":"Potencialize com conhecimento os seus estudos e projetos!","publisher":{"@id":"https://github.professormarcolan.com.br/#person"},"potentialAction":{"@type":"SearchAction","target":"https://github.professormarcolan.com.br/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"WebPage","@id":"https://github.professormarcolan.com.br/principios-solid-principio-da-responsabilidade-unica/#webpage","url":"https://github.professormarcolan.com.br/principios-solid-principio-da-responsabilidade-unica/","inLanguage":"pt-BR","name":"Princ\u00edpios SOLID : Princ\u00edpio da responsabilidade \u00fanica","isPartOf":{"@id":"https://github.professormarcolan.com.br/#website"},"image":{"@type":"ImageObject","@id":"https://github.professormarcolan.com.br/principios-solid-principio-da-responsabilidade-unica/#primaryimage","url":"https://github.professormarcolan.com.br/wp-content/uploads/2018/03/principiosSolidPrincioDaResponsabilidadeUnica.jpg","width":735,"height":735,"caption":"Principios SOLID: Princip\u00edo da responsabilidade unica. single responsibility principle"},"primaryImageOfPage":{"@id":"https://github.professormarcolan.com.br/principios-solid-principio-da-responsabilidade-unica/#primaryimage"},"datePublished":"2018-03-11T18:35:00+00:00","dateModified":"2018-03-11T19:38:34+00:00","description":"Nesse post iremos discutir o Principio da responsabilidade Unica (Single responsibility principle). Ele \u00e9 um dos princ\u00edpios do acr\u00f4nimo SOLID. Clique nesse tutorial para aprender a prevenir que seu c\u00f3digo apodre\u00e7a ou refatorar seus c\u00f3digos que est\u00e3o cheirando mal."},{"@type":"Article","@id":"https://github.professormarcolan.com.br/principios-solid-principio-da-responsabilidade-unica/#article","isPartOf":{"@id":"https://github.professormarcolan.com.br/principios-solid-principio-da-responsabilidade-unica/#webpage"},"author":{"@id":"https://github.professormarcolan.com.br/schema/person/joaomarcolan/#author"},"headline":"Princ\u00edpios SOLID : Princ\u00edpio da responsabilidade \u00fanica","datePublished":"2018-03-11T18:35:00+00:00","dateModified":"2018-03-11T19:38:34+00:00","commentCount":0,"mainEntityOfPage":{"@id":"https://github.professormarcolan.com.br/principios-solid-principio-da-responsabilidade-unica/#webpage"},"publisher":{"@id":"https://github.professormarcolan.com.br/#person"},"image":{"@id":"https://github.professormarcolan.com.br/principios-solid-principio-da-responsabilidade-unica/#primaryimage"},"keywords":"agile,Python,SOLID","articleSection":"Teoria"},{"@type":["Person"],"@id":"https://github.professormarcolan.com.br/author/joaomarcolan/#author","name":"JoaoMarcolan","image":{"@type":"ImageObject","@id":"https://github.professormarcolan.com.br/#authorlogo","url":"https://secure.gravatar.com/avatar/decab487065c8029b68fb599b5a989c8?s=96&d=mm&r=g","caption":"JoaoMarcolan"},"sameAs":[]}]}</script><title>PrincÃ­pios SOLID : PrincÃ­pio da responsabilidade Ãºnica</title><script type="text/javascript" src="https://cdn.ampproject.org/v0.js" async></script><script type="text/javascript" src="https://cdn.ampproject.org/v0/amp-iframe-latest.js" async custom-element="amp-iframe"></script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic"><style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style></head><body><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript><style amp-custom>
+		/* Generic WP styling */
+
+.alignright {
+	float: right;
+}
+
+.alignleft {
+	float: left;
+}
+
+.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.amp-wp-enforced-sizes {
+	/** Our sizes fallback is 100vw, and we have a padding on the container; the max-width here prevents the element from overflowing. **/
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+.amp-wp-unknown-size img {
+	/** Worst case scenario when we can't figure out dimensions for an image. **/
+	/** Force the image into a box of fixed dimensions and use object-fit to scale. **/
+	object-fit: contain;
+}
+
+/* Template Styles */
+
+.amp-wp-content,
+.amp-wp-title-bar div {
+		margin: 0 auto;
+	max-width: 895px;
+	}
+
+html {
+	background: #0a89c0;
+}
+
+body {
+	background: #fff;
+	color: #353535;
+	font-family: 'Merriweather', 'Times New Roman', Times, Serif;
+	font-weight: 300;
+	line-height: 1.75em;
+}
+
+p,
+ol,
+ul,
+figure {
+	margin: 0 0 1em;
+	padding: 0;
+}
+
+a,
+a:visited {
+	color: #0a89c0;
+}
+
+a:hover,
+a:active,
+a:focus {
+	color: #353535;
+}
+
+/* Quotes */
+
+blockquote {
+	color: #353535;
+	background: rgba(127,127,127,.125);
+	border-left: 2px solid #0a89c0;
+	margin: 8px 0 24px 0;
+	padding: 16px;
+}
+
+blockquote p:last-child {
+	margin-bottom: 0;
+}
+
+/* UI Fonts */
+
+.amp-wp-meta,
+.amp-wp-header div,
+.amp-wp-title,
+.wp-caption-text,
+.amp-wp-tax-category,
+.amp-wp-tax-tag,
+.amp-wp-comments-link,
+.amp-wp-footer p,
+.back-to-top {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
+}
+
+/* Header */
+
+.amp-wp-header {
+	background-color: #0a89c0;
+}
+
+.amp-wp-header div {
+	color: #fff;
+	font-size: 1em;
+	font-weight: 400;
+	margin: 0 auto;
+	max-width: calc(840px - 32px);
+	padding: .875em 16px;
+	position: relative;
+}
+
+.amp-wp-header a {
+	color: #fff;
+	text-decoration: none;
+}
+
+/* Site Icon */
+
+.amp-wp-header .amp-wp-site-icon {
+	/** site icon is 32px **/
+	background-color: #fff;
+	border: 1px solid #fff;
+	border-radius: 50%;
+	position: absolute;
+	right: 18px;
+	top: 10px;
+}
+
+/* Article */
+
+.amp-wp-article {
+	color: #353535;
+	font-weight: 400;
+	margin: 1.5em auto;
+	max-width: 840px;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+}
+
+/* Article Header */
+
+.amp-wp-article-header {
+	align-items: center;
+	align-content: stretch;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: 1.5em 16px 0;
+}
+
+.amp-wp-title {
+	color: #353535;
+	display: block;
+	flex: 1 0 100%;
+	font-weight: 900;
+	margin: 0 0 .625em;
+	width: 100%;
+}
+
+/* Article Meta */
+
+.amp-wp-meta {
+	color: #696969;
+	display: inline-block;
+	flex: 2 1 50%;
+	font-size: .875em;
+	line-height: 1.5em;
+	margin: 0 0 1.5em;
+	padding: 0;
+}
+
+.amp-wp-article-header .amp-wp-meta:last-of-type {
+	text-align: right;
+}
+
+.amp-wp-article-header .amp-wp-meta:first-of-type {
+	text-align: left;
+}
+
+.amp-wp-byline amp-img,
+.amp-wp-byline .amp-wp-author {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.amp-wp-byline amp-img {
+	border: 1px solid #0a89c0;
+	border-radius: 50%;
+	position: relative;
+	margin-right: 6px;
+}
+
+.amp-wp-posted-on {
+	text-align: right;
+}
+
+/* Featured image */
+
+.amp-wp-article-featured-image {
+	margin: 0 0 1em;
+}
+.amp-wp-article-featured-image amp-img {
+	margin: 0 auto;
+}
+.amp-wp-article-featured-image.wp-caption .wp-caption-text {
+	margin: 0 18px;
+}
+
+/* Article Content */
+
+.amp-wp-article-content {
+	margin: 0 16px;
+}
+
+.amp-wp-article-content ul,
+.amp-wp-article-content ol {
+	margin-left: 1em;
+}
+
+.amp-wp-article-content amp-img {
+	margin: 0 auto;
+}
+
+.amp-wp-article-content amp-img.alignright {
+	margin: 0 0 1em 16px;
+}
+
+.amp-wp-article-content amp-img.alignleft {
+	margin: 0 16px 1em 0;
+}
+
+/* Captions */
+
+.wp-caption {
+	padding: 0;
+}
+
+.wp-caption.alignleft {
+	margin-right: 16px;
+}
+
+.wp-caption.alignright {
+	margin-left: 16px;
+}
+
+.wp-caption .wp-caption-text {
+	border-bottom: 1px solid #c2c2c2;
+	color: #696969;
+	font-size: .875em;
+	line-height: 1.5em;
+	margin: 0;
+	padding: .66em 10px .75em;
+}
+
+/* AMP Media */
+
+amp-carousel {
+	background: #c2c2c2;
+	margin: 0 -16px 1.5em;
+}
+amp-iframe,
+amp-youtube,
+amp-instagram,
+amp-vine {
+	background: #c2c2c2;
+	margin: 0 -16px 1.5em;
+}
+
+.amp-wp-article-content amp-carousel amp-img {
+	border: none;
+}
+
+amp-carousel > amp-img > img {
+	object-fit: contain;
+}
+
+.amp-wp-iframe-placeholder {
+	background: #c2c2c2 url( https://github.professormarcolan.com.br/wp-content/plugins/amp/assets/images/placeholder-icon.png ) no-repeat center 40%;
+	background-size: 48px 48px;
+	min-height: 48px;
+}
+
+/* Article Footer Meta */
+
+.amp-wp-article-footer .amp-wp-meta {
+	display: block;
+}
+
+.amp-wp-tax-category,
+.amp-wp-tax-tag {
+	color: #696969;
+	font-size: .875em;
+	line-height: 1.5em;
+	margin: 1.5em 16px;
+}
+
+.amp-wp-comments-link {
+	color: #696969;
+	font-size: .875em;
+	line-height: 1.5em;
+	text-align: center;
+	margin: 2.25em 0 1.5em;
+}
+
+.amp-wp-comments-link a {
+	border-style: solid;
+	border-color: #c2c2c2;
+	border-width: 1px 1px 2px;
+	border-radius: 4px;
+	background-color: transparent;
+	color: #0a89c0;
+	cursor: pointer;
+	display: block;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 18px;
+	margin: 0 auto;
+	max-width: 200px;
+	padding: 11px 16px;
+	text-decoration: none;
+	width: 50%;
+	-webkit-transition: background-color 0.2s ease;
+			transition: background-color 0.2s ease;
+}
+
+/* AMP Footer */
+
+.amp-wp-footer {
+	border-top: 1px solid #c2c2c2;
+	margin: calc(1.5em - 1px) 0 0;
+}
+
+.amp-wp-footer div {
+	margin: 0 auto;
+	max-width: calc(840px - 32px);
+	padding: 1.25em 16px 1.25em;
+	position: relative;
+}
+
+.amp-wp-footer h2 {
+	font-size: 1em;
+	line-height: 1.375em;
+	margin: 0 0 .5em;
+}
+
+.amp-wp-footer p {
+	color: #696969;
+	font-size: .8em;
+	line-height: 1.5em;
+	margin: 0 85px 0 0;
+}
+
+.amp-wp-footer a {
+	text-decoration: none;
+}
+
+.back-to-top {
+	bottom: 1.275em;
+	font-size: .8em;
+	font-weight: 600;
+	line-height: 2em;
+	position: absolute;
+	right: 16px;
+}
+			</style><header id="top" class="amp-wp-header"><div>
+		<a href="https://github.professormarcolan.com.br/">
+										<amp-img src="https://github.professormarcolan.com.br/wp-content/uploads/2018/06/cropped-professor-marcolan-logo-1-32x32.png" width="32" height="32" class="amp-wp-site-icon"></amp-img><span class="amp-site-title">
+				Potencialize com conhecimento os seus estudos e projetos!			</span>
+		</a>
+	</div>
+</header><article class="amp-wp-article"><header class="amp-wp-article-header"><h1 class="amp-wp-title">PrincÃ­pios SOLID : PrincÃ­pio da responsabilidade Ãºnica</h1>
+			<div class="amp-wp-meta amp-wp-byline">
+					<amp-img src="https://secure.gravatar.com/avatar/decab487065c8029b68fb599b5a989c8?s=24&d=mm&r=g" alt="JoaoMarcolan" width="24" height="24" layout="fixed"></amp-img><span class="amp-wp-author author vcard">JoaoMarcolan</span>
+	</div>
+<div class="amp-wp-meta amp-wp-posted-on">
+	<time datetime="2018-03-11T15:35:00+00:00">
+		1 ano atrÃ¡s	</time></div>
+	</header><figure class="amp-wp-article-featured-image wp-caption"><amp-img width="735" height="735" src="https://github.professormarcolan.com.br/wp-content/uploads/2018/03/principiosSolidPrincioDaResponsabilidadeUnica.jpg" class="attachment-large size-large wp-post-image amp-wp-enforced-sizes" alt="Principios SOLID: PrincipÃ­o da responsabilidade unica. single responsibility principle" srcset="https://github.professormarcolan.com.br/wp-content/uploads/2018/03/principiosSolidPrincioDaResponsabilidadeUnica.jpg 735w, https://github.professormarcolan.com.br/wp-content/uploads/2018/03/principiosSolidPrincioDaResponsabilidadeUnica-150x150.jpg 150w, https://github.professormarcolan.com.br/wp-content/uploads/2018/03/principiosSolidPrincioDaResponsabilidadeUnica-300x300.jpg 300w" layout="intrinsic"></amp-img><p class="wp-caption-text">
+			 Principios SOLID: PrincipÃ­o da responsabilidade unica.  single responsibility principle		</p>
+	</figure><div class="amp-wp-article-content">
+		<p>
+        Nesse tutorial iremos discutir sobre o PrincÃ­pio da responsabilidade Ãºnica. Ele Ã© um dos cinco princÃ­pios que tem a intenÃ§Ã£o de tornar o software mais compreensivo, flexÃ­vel e fÃ¡cil de manter.  Esses princÃ­pios foram promovidos por Robert C. Martin. Martin Ã© um dos <a href="https://www.professormarcolan.com.br/valores-da-metodologia-agile/%20" target="_blank" rel="noopener"> defensores dos valores Agile </a>.  Esse principio faz parte do <a href="https://www.professormarcolan.com.br/tag/solid/%20" target="_blank" rel="noopener"> acrÃ´nimo SOLID introduzidos por Michael Feathers </a>. Nos tutoriais passados discutimos <a href="https://www.professormarcolan.com.br/os-sintomas-de-um-codigo-que-cheira-mal/%20" target="_blank" rel="noopener"> sobre sintomas de um cÃ³digo que cheira mal </a>  e em um prÃ³ximo iremos listar as principais causas que fazem o cÃ³digo cheirar mal. Os principios SOLID servem para prevenir e combater que seu cÃ³digo possua mal cheiros  </p><h2>  Principio da responsabilidade Unica (Single responsibility principle)</h2><p>
+        O principio da responsabilidade unica vem da premissa que todos os mÃ³dulos ou classes devem ter apenas uma responsabilidade sobre uma Ãºnica parte ou funcionalidade provida pelo software. Todos os serviÃ§os das classes ou mÃ³dulo devem estar alinhadas com a responsabilidade definida. Martin define o termo responsabilidade como razÃ£o para mudar. EntÃ£o, esse principio defende que uma classe ou mÃ³dulo deve ter apenas uma razÃ£o para mudar (ser reescrito).
+    </p><h2>  Exemplo didÃ¡tido do principio da responsabildiade Ãºnica </h2><p>    Para melhor exemplificar esse principio iremos criar uma classe contendo um cÃ³digo em Python de um jogo qualquer. O jogo didÃ¡tico proposto possui um mÃ©todo no qual gerencia a lÃ³gica do jogo,  um mÃ©todo responsÃ¡vel por salvar o progresso do jogador e um ultimo mÃ©todo responsÃ¡vel por carregar o progresso do jogador. Inicialmente o programador produz o cÃ³digo 1
+    </p><p></p>
+<pre class="brush: python; title: ; notranslate" title="">
+    #cÃ³digo 1 - cÃ³digo que fere o principio da responsabilidade Ãºnica
+    class Jogo():
+        def __init__(self):
+            """construtor do jogo"""
+            print("inicializou a classe!")
+
+        def calcularFisica(self):
+            print("calculando a fÃ­sica do jogo")
+
+
+        def gravarArquivo(self):
+            print("gravando o estado corrente do jogo")
+
+        def carregarArquivo(self):
+            print("carrega o estado corrente do jogo")
+
+    </pre><p>    Ao analisar o cÃ³digo produzido da para perceber que a classe â&#128;&#156;jogoâ&#128;&#157; produzida estÃ¡ gerenciando duas responsabilidades diferentes. A primeira responsabilidade que ela estÃ¡ gerenciando Ã© a de manter e processar o jogo- de realizar a lÃ³gica do jogo. A segunda responsabilidade que essa classe estÃ¡ lidando Ã© a de gerenciar a persistÃªncia dos dados do jogo â&#128;&#147; dos arquivos permanentes do jogo. Sendo assim, a classe â&#128;&#156;jogoâ&#128;&#157; estÃ¡ ferindo o principio da responsabilidade Ãºnica pois ela tem duas razÃµes para mudar.
+</p><h3>  Seguindo o principio da responsabilidade Ãºnica </h3><p>
+    Agora iremos refatorar a classe â&#128;&#156;jogoâ&#128;&#157; para que nÃ£o fira o principio da responsabilidade unÃ­ca. Como anÃ¡lisado anteriormente a classe â&#128;&#156;jogoâ&#128;&#157; tem dois motivos para mudar. EntÃ£o, iremos implementar uma classe para cada responsabilidade. Uma classe irÃ¡ ter a responsabilidade de manter a logica/processamento do jogo e uma outra classe sera responsÃ¡vel por lidar com a persistÃªncia dos dados desse jogo. Com isso geramos o cÃ³digo em python a abaixo.
+</p><p></p>
+<pre class="brush: python; title: ; notranslate" title="">
+    #cÃ³digo 2-classes seguindo o principio da responsabilidade Ãºnica
+    class JogoProcessamento(object):
+        def __init__(self):
+        """ contrutor de um objeto que contem a lÃ³gica do jogo"""
+            print("inicializou a classe!")
+
+        def calcularFisica(self):
+            print("calculando a fÃ­sica do jogo")
+
+
+    class JogoPersistencia(object):
+        def __init__(self):
+        """contrutor de um objeto que lida com a persistencia dos dados desse jogo"""
+            print("inicializou a classe!")
+
+        def gravarArquivo(self):
+            print("gravando o estado corrente do jogo")
+
+        def carregarArquivo(self):
+            print("carrega o estado corrente do jogo")
+
+    </pre><p>
+ Agora observando o cÃ³digo 2, pode-se perceber que cada uma das classes implementadas estÃ¡ tendo uma Ãºnica razÃ£o para mudar. Caso o programador queira implementar uma nova lÃ³gica no jogo ele precisa apenas alterar a classe <i> JogoProcessamento</i> e caso ele queira alterar a forma de persistencia dos dados ele precisa apenas alterar a classe <i> JogoPersistencia</i>.
+</p><h2> Principio do OPEM CLOSE dos principios SOLID </h2><p>
+    Nesse tutorial discutimos o principio da responsabilidade unica. <a href="https://github.com/jmarcolan/ProfessorMarcolan/tree/master/SOLID/OpenClose%20" target="_blank" rel="noopener"> O cÃ³digo vocÃª consegue clonar pelo github </a>. No prÃ³ximo tutorial dos princÃ­pios SOLID iremos discutir sobre o princÃ­pio <i>â&#128;&#156;OPEN/CLOSEâ&#128;&#157; </i>.   Poste sua dÃºvida nos comentÃ¡rios. Para seguir as atualizaÃ§Ãµes <a href="https://www.youtube.com/channel/UC9eGq_4v1Uu14Uznsey-hOg" target="_blank" rel="noopener"> se inscreva no canal do youtube </a>e <a href="https://www.facebook.com/professormarcolan/" target="_blank" rel="noopener"> nos siga no facebook. em @professormarcolan</a>.</p><h2> Bibliografia </h2><table><tr><th>[1]MARTIN, Robert C. Agile software development: principles, patterns, and practices. Prentice Hall, 2002.</th>
+<th><amp-iframe frameborder="0" src="https://ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=BR&source=ac&ref=qf_sp_asin_til&ad_type=product_link&tracking_id=jmarcolan-20&marketplace=amazon&region=BR&placement=0135974445&asins=0135974445&linkId=5b087b063be8b55ba91acba0a8660f52&show_border=false&link_opens_in_new_window=false&price_color=333333&title_color=0066c0&bg_color=ffffff" sandbox="allow-scripts allow-same-origin" height="400" layout="fixed-height"><div placeholder="" class="amp-wp-iframe-placeholder"></div></amp-iframe></th>
+</tr><tr><th>[2] http://www.agilemodeling.com/essays/agileDocumentation.htm</th>
+<th> </th>
+</tr><tr><th>[3] https://en.wikipedia.org/wiki/SOLID_(object-oriented_design)</th>
+<th> </th>
+</tr><tr><th>[4]MARTIN, Robert C. Clean code: a handbook of agile software craftsmanship. Pearson Education, 2009.</th>
+<th><amp-iframe frameborder="0" src="https://ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=BR&source=ac&ref=qf_sp_asin_til&ad_type=product_link&tracking_id=jmarcolan-20&marketplace=amazon&region=BR&placement=B001GSTOAM&asins=B001GSTOAM&linkId=916f769b3a972e16da38672c9c439a71&show_border=false&link_opens_in_new_window=false&price_color=333333&title_color=0066c0&bg_color=ffffff" sandbox="allow-scripts allow-same-origin" height="400" layout="fixed-height"><div placeholder="" class="amp-wp-iframe-placeholder"></div></amp-iframe></th>
+</tr></table><div class="swp-content-locator"></div>	</div>
+
+	<footer class="amp-wp-article-footer"><div class="amp-wp-meta amp-wp-tax-category">
+		Categorias: <a href="https://github.professormarcolan.com.br/category/teoria/" rel="category tag">Teoria</a>	</div>
+
+	<div class="amp-wp-meta amp-wp-tax-tag">
+		Tags: <a href="https://github.professormarcolan.com.br/tag/agile/" rel="tag">agile</a>, <a href="https://github.professormarcolan.com.br/tag/python/" rel="tag">Python</a>, <a href="https://github.professormarcolan.com.br/tag/solid/" rel="tag">SOLID</a>	</div>
+		<div class="amp-wp-meta amp-wp-comments-link">
+		<a href="https://github.professormarcolan.com.br/principios-solid-principio-da-responsabilidade-unica/#respond">
+			Deixar um comentÃ¡rio		</a>
+	</div>
+	</footer></article><footer class="amp-wp-footer"><div>
+		<h2>Potencialize com conhecimento os seus estudos e projetos!</h2>
+		<p>
+			<a href="https://wordpress.org/">
+				Desenvolvido por WordPress			</a>
+		</p>
+		<a href="#top" class="back-to-top">Ir para o topo</a>
+	</div>
+</footer></body></html>
