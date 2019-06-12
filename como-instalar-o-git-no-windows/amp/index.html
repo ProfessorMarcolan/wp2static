@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html amp lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"><script type="application/ld+json" class="yoast-schema-graph yoast-schema-graph--main">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://github.professormarcolan.com.br/#website","url":"https://github.professormarcolan.com.br/","name":"Potencialize com conhecimento os seus estudos e projetos!","publisher":{"@id":"https://github.professormarcolan.com.br/#person"},"potentialAction":{"@type":"SearchAction","target":"https://github.professormarcolan.com.br/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"WebPage","@id":"https://github.professormarcolan.com.br/como-instalar-o-git-no-windows/#webpage","url":"https://github.professormarcolan.com.br/como-instalar-o-git-no-windows/","inLanguage":"pt-BR","name":"Como instalar o Git no Windows","isPartOf":{"@id":"https://github.professormarcolan.com.br/#website"},"image":{"@type":"ImageObject","@id":"https://github.professormarcolan.com.br/como-instalar-o-git-no-windows/#primaryimage","url":"https://github.professormarcolan.com.br/wp-content/uploads/2017/08/logo7.png","width":683,"height":570},"primaryImageOfPage":{"@id":"https://github.professormarcolan.com.br/como-instalar-o-git-no-windows/#primaryimage"},"datePublished":"2017-02-01T01:27:13+00:00","dateModified":"2019-01-21T04:44:21+00:00","description":"Nesse tutorial voc\u00ea vaio descobrir como instalar o git no windows. O git tem sido um dos principais software de versionamento. Ao final do tutorial lhe mostraremos como fazer ficar mais f\u00e1cil utilizar o git para o windows com a instala\u00e7\u00e3o do TortoiseGit."},{"@type":"Article","@id":"https://github.professormarcolan.com.br/como-instalar-o-git-no-windows/#article","isPartOf":{"@id":"https://github.professormarcolan.com.br/como-instalar-o-git-no-windows/#webpage"},"author":{"@id":"https://github.professormarcolan.com.br/schema/person/joaomarcolan/#author"},"headline":"Como instalar o Git no Windows","datePublished":"2017-02-01T01:27:13+00:00","dateModified":"2019-01-21T04:44:21+00:00","commentCount":0,"mainEntityOfPage":{"@id":"https://github.professormarcolan.com.br/como-instalar-o-git-no-windows/#webpage"},"publisher":{"@id":"https://github.professormarcolan.com.br/#person"},"image":{"@id":"https://github.professormarcolan.com.br/como-instalar-o-git-no-windows/#primaryimage"},"keywords":"Git","articleSection":"git,pratica"},{"@type":["Person"],"@id":"https://github.professormarcolan.com.br/author/joaomarcolan/#author","name":"JoaoMarcolan","image":{"@type":"ImageObject","@id":"https://github.professormarcolan.com.br/#authorlogo","url":"https://secure.gravatar.com/avatar/decab487065c8029b68fb599b5a989c8?s=96&d=mm&r=g","caption":"JoaoMarcolan"},"sameAs":[]}]}</script><title>Como instalar o Git no Windows</title><script type="text/javascript" src="https://cdn.ampproject.org/v0.js" async></script><script type="text/javascript" src="https://cdn.ampproject.org/v0/amp-iframe-latest.js" async custom-element="amp-iframe"></script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic"><style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style></head><body><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript><style amp-custom>
+		/* Generic WP styling */
+
+.alignright {
+	float: right;
+}
+
+.alignleft {
+	float: left;
+}
+
+.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.amp-wp-enforced-sizes {
+	/** Our sizes fallback is 100vw, and we have a padding on the container; the max-width here prevents the element from overflowing. **/
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+.amp-wp-unknown-size img {
+	/** Worst case scenario when we can't figure out dimensions for an image. **/
+	/** Force the image into a box of fixed dimensions and use object-fit to scale. **/
+	object-fit: contain;
+}
+
+/* Template Styles */
+
+.amp-wp-content,
+.amp-wp-title-bar div {
+		margin: 0 auto;
+	max-width: 895px;
+	}
+
+html {
+	background: #0a89c0;
+}
+
+body {
+	background: #fff;
+	color: #353535;
+	font-family: 'Merriweather', 'Times New Roman', Times, Serif;
+	font-weight: 300;
+	line-height: 1.75em;
+}
+
+p,
+ol,
+ul,
+figure {
+	margin: 0 0 1em;
+	padding: 0;
+}
+
+a,
+a:visited {
+	color: #0a89c0;
+}
+
+a:hover,
+a:active,
+a:focus {
+	color: #353535;
+}
+
+/* Quotes */
+
+blockquote {
+	color: #353535;
+	background: rgba(127,127,127,.125);
+	border-left: 2px solid #0a89c0;
+	margin: 8px 0 24px 0;
+	padding: 16px;
+}
+
+blockquote p:last-child {
+	margin-bottom: 0;
+}
+
+/* UI Fonts */
+
+.amp-wp-meta,
+.amp-wp-header div,
+.amp-wp-title,
+.wp-caption-text,
+.amp-wp-tax-category,
+.amp-wp-tax-tag,
+.amp-wp-comments-link,
+.amp-wp-footer p,
+.back-to-top {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
+}
+
+/* Header */
+
+.amp-wp-header {
+	background-color: #0a89c0;
+}
+
+.amp-wp-header div {
+	color: #fff;
+	font-size: 1em;
+	font-weight: 400;
+	margin: 0 auto;
+	max-width: calc(840px - 32px);
+	padding: .875em 16px;
+	position: relative;
+}
+
+.amp-wp-header a {
+	color: #fff;
+	text-decoration: none;
+}
+
+/* Site Icon */
+
+.amp-wp-header .amp-wp-site-icon {
+	/** site icon is 32px **/
+	background-color: #fff;
+	border: 1px solid #fff;
+	border-radius: 50%;
+	position: absolute;
+	right: 18px;
+	top: 10px;
+}
+
+/* Article */
+
+.amp-wp-article {
+	color: #353535;
+	font-weight: 400;
+	margin: 1.5em auto;
+	max-width: 840px;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+}
+
+/* Article Header */
+
+.amp-wp-article-header {
+	align-items: center;
+	align-content: stretch;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: 1.5em 16px 0;
+}
+
+.amp-wp-title {
+	color: #353535;
+	display: block;
+	flex: 1 0 100%;
+	font-weight: 900;
+	margin: 0 0 .625em;
+	width: 100%;
+}
+
+/* Article Meta */
+
+.amp-wp-meta {
+	color: #696969;
+	display: inline-block;
+	flex: 2 1 50%;
+	font-size: .875em;
+	line-height: 1.5em;
+	margin: 0 0 1.5em;
+	padding: 0;
+}
+
+.amp-wp-article-header .amp-wp-meta:last-of-type {
+	text-align: right;
+}
+
+.amp-wp-article-header .amp-wp-meta:first-of-type {
+	text-align: left;
+}
+
+.amp-wp-byline amp-img,
+.amp-wp-byline .amp-wp-author {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.amp-wp-byline amp-img {
+	border: 1px solid #0a89c0;
+	border-radius: 50%;
+	position: relative;
+	margin-right: 6px;
+}
+
+.amp-wp-posted-on {
+	text-align: right;
+}
+
+/* Featured image */
+
+.amp-wp-article-featured-image {
+	margin: 0 0 1em;
+}
+.amp-wp-article-featured-image amp-img {
+	margin: 0 auto;
+}
+.amp-wp-article-featured-image.wp-caption .wp-caption-text {
+	margin: 0 18px;
+}
+
+/* Article Content */
+
+.amp-wp-article-content {
+	margin: 0 16px;
+}
+
+.amp-wp-article-content ul,
+.amp-wp-article-content ol {
+	margin-left: 1em;
+}
+
+.amp-wp-article-content amp-img {
+	margin: 0 auto;
+}
+
+.amp-wp-article-content amp-img.alignright {
+	margin: 0 0 1em 16px;
+}
+
+.amp-wp-article-content amp-img.alignleft {
+	margin: 0 16px 1em 0;
+}
+
+/* Captions */
+
+.wp-caption {
+	padding: 0;
+}
+
+.wp-caption.alignleft {
+	margin-right: 16px;
+}
+
+.wp-caption.alignright {
+	margin-left: 16px;
+}
+
+.wp-caption .wp-caption-text {
+	border-bottom: 1px solid #c2c2c2;
+	color: #696969;
+	font-size: .875em;
+	line-height: 1.5em;
+	margin: 0;
+	padding: .66em 10px .75em;
+}
+
+/* AMP Media */
+
+amp-carousel {
+	background: #c2c2c2;
+	margin: 0 -16px 1.5em;
+}
+amp-iframe,
+amp-youtube,
+amp-instagram,
+amp-vine {
+	background: #c2c2c2;
+	margin: 0 -16px 1.5em;
+}
+
+.amp-wp-article-content amp-carousel amp-img {
+	border: none;
+}
+
+amp-carousel > amp-img > img {
+	object-fit: contain;
+}
+
+.amp-wp-iframe-placeholder {
+	background: #c2c2c2 url( https://github.professormarcolan.com.br/wp-content/plugins/amp/assets/images/placeholder-icon.png ) no-repeat center 40%;
+	background-size: 48px 48px;
+	min-height: 48px;
+}
+
+/* Article Footer Meta */
+
+.amp-wp-article-footer .amp-wp-meta {
+	display: block;
+}
+
+.amp-wp-tax-category,
+.amp-wp-tax-tag {
+	color: #696969;
+	font-size: .875em;
+	line-height: 1.5em;
+	margin: 1.5em 16px;
+}
+
+.amp-wp-comments-link {
+	color: #696969;
+	font-size: .875em;
+	line-height: 1.5em;
+	text-align: center;
+	margin: 2.25em 0 1.5em;
+}
+
+.amp-wp-comments-link a {
+	border-style: solid;
+	border-color: #c2c2c2;
+	border-width: 1px 1px 2px;
+	border-radius: 4px;
+	background-color: transparent;
+	color: #0a89c0;
+	cursor: pointer;
+	display: block;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 18px;
+	margin: 0 auto;
+	max-width: 200px;
+	padding: 11px 16px;
+	text-decoration: none;
+	width: 50%;
+	-webkit-transition: background-color 0.2s ease;
+			transition: background-color 0.2s ease;
+}
+
+/* AMP Footer */
+
+.amp-wp-footer {
+	border-top: 1px solid #c2c2c2;
+	margin: calc(1.5em - 1px) 0 0;
+}
+
+.amp-wp-footer div {
+	margin: 0 auto;
+	max-width: calc(840px - 32px);
+	padding: 1.25em 16px 1.25em;
+	position: relative;
+}
+
+.amp-wp-footer h2 {
+	font-size: 1em;
+	line-height: 1.375em;
+	margin: 0 0 .5em;
+}
+
+.amp-wp-footer p {
+	color: #696969;
+	font-size: .8em;
+	line-height: 1.5em;
+	margin: 0 85px 0 0;
+}
+
+.amp-wp-footer a {
+	text-decoration: none;
+}
+
+.back-to-top {
+	bottom: 1.275em;
+	font-size: .8em;
+	font-weight: 600;
+	line-height: 2em;
+	position: absolute;
+	right: 16px;
+}
+		/* Inline styles */
+.amp-wp-inline-bc47f3bfed45cd88c7f38b0e86ec71c7{max-width:940px;}.amp-wp-inline-81dcf5268797f5ad01db524bff39dc7d{max-width:937px;}.amp-wp-inline-84ca1f3a3a3633df925c17c68d991222{max-width:946px;}.amp-wp-inline-8f42d3f0406314e3edcce5df0db6000c{max-width:938px;}.amp-wp-inline-ba0d60f59b6ab6b8d9dc8332528bfe3c{max-width:466px;}.amp-wp-inline-86c26e8f1b8d62a181ac3582f80530d9{max-width:250px;}	</style><header id="top" class="amp-wp-header"><div>
+		<a href="https://github.professormarcolan.com.br/">
+										<amp-img src="https://github.professormarcolan.com.br/wp-content/uploads/2018/06/cropped-professor-marcolan-logo-1-32x32.png" width="32" height="32" class="amp-wp-site-icon"></amp-img><span class="amp-site-title">
+				Potencialize com conhecimento os seus estudos e projetos!			</span>
+		</a>
+	</div>
+</header><article class="amp-wp-article"><header class="amp-wp-article-header"><h1 class="amp-wp-title">Como instalar o Git no Windows</h1>
+			<div class="amp-wp-meta amp-wp-byline">
+					<amp-img src="https://secure.gravatar.com/avatar/decab487065c8029b68fb599b5a989c8?s=24&d=mm&r=g" alt="JoaoMarcolan" width="24" height="24" layout="fixed"></amp-img><span class="amp-wp-author author vcard">JoaoMarcolan</span>
+	</div>
+<div class="amp-wp-meta amp-wp-posted-on">
+	<time datetime="2017-01-31T23:27:13+00:00">
+		2 anos atrÃ¡s	</time></div>
+	</header><figure class="amp-wp-article-featured-image wp-caption"><amp-img width="683" height="570" src="https://github.professormarcolan.com.br/wp-content/uploads/2017/08/logo7.png" class="attachment-large size-large wp-post-image amp-wp-enforced-sizes" alt="logo7 - Como instalar o Git no Windows" srcset="https://github.professormarcolan.com.br/wp-content/uploads/2017/08/logo7.png 683w, https://github.professormarcolan.com.br/wp-content/uploads/2017/08/logo7-300x250.png 300w, https://github.professormarcolan.com.br/wp-content/uploads/2017/08/logo7-359x300.png 359w, https://github.professormarcolan.com.br/wp-content/uploads/2017/08/logo7-600x500.png 600w" layout="intrinsic"></amp-img><p class="wp-caption-text">
+			Aprenda a instalar o Git-for-Windows		</p>
+	</figure><div class="amp-wp-article-content">
+		<p>Nesse tutorial vamos explicar uma alternativa fÃ¡cil para instalar o git no windows. O Git-for-Windows (git para windows) Ã© um aplicativo leve que trÃ¡s todas as ferramentas do <a href="https://git-scm.com/" target="_blank" rel="noopener">git desenvolvido para linux</a> para o ambiente windows. Para os usuÃ¡rios experientes, que jÃ¡ estÃ£o familiarizados com as linhas de comando do Git, ele consta com um emulador do Bash capaz de interpretar os comandos. Isso permite tanto uma interoperabilidade entre programas de diferentes sistemas operacionais como uma documentaÃ§Ã£o unica. Para usuÃ¡rios do windows ele conta com interfaces grÃ¡ficas e opÃ§Ãµes de navegaÃ§Ã£o a partir do menu de contexto do Explorer. As interfaces grÃ¡ficas permitem uma fÃ¡cil assimilaÃ§Ã£o das <a href="https://www.professormarcolan.com.br/controladores-de-versao/">idÃ©ias de versionamento</a> trazidas pelo Git.</p><h4>Materiais necessÃ¡rio para o acompanhamento do Tutorial</h4><p>Para esse tutorial serÃ¡ necessÃ¡rio:</p><ul><li>Um computador com o sistema operacional Windows 7.</li>
+<li>O <a href="https://git-for-windows.github.io/" target="_blank" rel="noopener">download</a> do software Git-For-windows.</li>
+</ul><p>Â </p><p>Â </p><h4>Video aula de como instalar o Git-for-Windows</h4><amp-iframe width="895" height="503" src="https://www.youtube.com/embed/8AEfxb_PVa0?enablejsapi=1&autoplay=0&cc_load_policy=0&iv_load_policy=1&loop=0&modestbranding=0&rel=1&showinfo=1&fs=1&playsinline=0&autohide=2&theme=dark&color=red&controls=2&" class="__youtube_prefs__ amp-wp-enforced-sizes" allowfullscreen="" sandbox="allow-scripts allow-same-origin" layout="intrinsic"><div placeholder="" class="amp-wp-iframe-placeholder"></div></amp-iframe><p>Â </p><p>Â </p><h4>Como instalar o Git para o windows</h4><ul><li>Passo 1: Clique no arquivo Git-for-windows baixado e o execute;</li>
+<li>Passo 2: Na janela de informaÃ§Ã£o da licenÃ§a, figura 1a, clique no botÃ£o â&#128;&#156;nextâ&#128;&#157; para aceitar a licenÃ§a GNU;</li>
+<li>Passo 3: Na janela de seleÃ§Ã£o do local de instalaÃ§Ã£o, figura 1b, clique no botÃ£o â&#128;&#156;Browse..â&#128;&#157; para selecionar o caminho que serÃ¡ instalado o git-for-windows e entÃ£o clique no botÃ£o â&#128;&#156;nextâ&#128;&#157; para seguir a instalaÃ§Ã£o;</li>
+</ul><figure id="attachment_95" class="wp-caption aligncenter amp-wp-inline-bc47f3bfed45cd88c7f38b0e86ec71c7"><amp-img class="wp-image-95 size-full amp-wp-enforced-sizes" src="https://www.professormarcolan.com.br/wp-content/uploads/2017/01/text3612-0-2.png" srcset="https://www.professormarcolan.com.br/wp-content/uploads/2017/01/text3612-0-2.png 940w, https://www.professormarcolan.com.br/wp-content/uploads/2017/01/text3612-0-2-300x115.png 300w, https://www.professormarcolan.com.br/wp-content/uploads/2017/01/text3612-0-2-768x293.png 768w" alt=" (a) Janela de informaÃ§Ã£o da licenÃ§a do Git-For-Windows (b) Janela de seleÃ§Ã£o do local de instalÃ§Ã£o do arquivo" width="940" height="359" layout="intrinsic"></amp-img><figcaption class="wp-caption-text">Figura 1- (a) Janela de informaÃ§Ã£o da licenÃ§a do Git-For-Windows (b) Janela de seleÃ§Ã£o do local de instalÃ§Ã£o do arquivo</figcaption></figure><ul><li>Passo 4: Na janela de seleÃ§Ã£o dos componentes da instalaÃ§Ã£o, figura 2a, deixe selecionado as opÃ§Ãµes â&#128;&#156;Windows Explorer Integrationâ&#128;&#157;, â&#128;&#156;Git Bash Hereâ&#128;&#157;, â&#128;&#156;Git Gui Hereâ&#128;&#157;, â&#128;&#156;Associata .git* configuration filies with the default text editorâ&#128;&#157;, â&#128;&#156;Associate .sh files to be run with bashâ&#128;&#157;. ApÃ³s a seleÃ§Ã£o das opÃ§Ãµes pressione o botÃ£o â&#128;&#156;nextâ&#128;&#157; para seguir a instalaÃ§Ã£o.</li>
+<li>Passo 5: Na janela de criaÃ§Ã£o da pasta do menu iniciar, figura 2b, clique no botÃ£o â&#128;&#156;nextâ&#128;&#157; para continuarâ&#128;&#157;.</li>
+</ul><figure id="attachment_99" class="wp-caption aligncenter amp-wp-inline-81dcf5268797f5ad01db524bff39dc7d"><amp-img class="wp-image-99 size-full amp-wp-enforced-sizes" src="https://www.professormarcolan.com.br/wp-content/uploads/2017/01/text3612-0-3.png" srcset="https://www.professormarcolan.com.br/wp-content/uploads/2017/01/text3612-0-3.png 937w, https://www.professormarcolan.com.br/wp-content/uploads/2017/01/text3612-0-3-300x115.png 300w, https://www.professormarcolan.com.br/wp-content/uploads/2017/01/text3612-0-3-768x293.png 768w" width="937" height="358" alt="text3612 0 3 - Como instalar o Git no Windows" layout="intrinsic"></amp-img><figcaption class="wp-caption-text">Figura 2- (a) Janela de seleÃ§Ã£o dos componentes da instalÃ§Ã£o. (b) Janela de criaÃ§Ã£o da pasta do menu iniciar</figcaption></figure><ul><li>Passo 6: Na janela de ajuste das variÃ¡veis de ambiente, figura 3a, selecione a opÃ§Ã£o â&#128;&#156;Use Git form the Windows Commando Promptâ&#128;&#157; entÃ£o clique no botÃ£o â&#128;&#156;nextâ&#128;&#157; para continuar a instalÃ§Ã£o.</li>
+<li>Passo 7: Na janela de configuraÃ§Ã£o da ediÃ§Ã£o das linha de conversÃ£o, figura 3b, selecione a opÃ§Ã£o â&#128;&#156;Checkout Windows-stype, commit Unix-style line endingsâ&#128;&#157; entÃ£o clique no botÃ£o â&#128;&#156;nextâ&#128;&#157; para continuar a instalaÃ§Ã£o.</li>
+</ul><figure id="attachment_100" class="wp-caption aligncenter amp-wp-inline-84ca1f3a3a3633df925c17c68d991222"><amp-img class="wp-image-100 size-full amp-wp-enforced-sizes" src="https://www.professormarcolan.com.br/wp-content/uploads/2017/01/gfwfigura3.png" srcset="https://www.professormarcolan.com.br/wp-content/uploads/2017/01/gfwfigura3.png 946w, https://www.professormarcolan.com.br/wp-content/uploads/2017/01/gfwfigura3-300x114.png 300w, https://www.professormarcolan.com.br/wp-content/uploads/2017/01/gfwfigura3-768x292.png 768w" width="946" height="360" alt="gfwfigura3 - Como instalar o Git no Windows" layout="intrinsic"></amp-img><figcaption class="wp-caption-text">Figura 3 â&#128;&#147; (a) Janela de ajuste das variÃ¡veis de ambiente. (b) Janela de configuraÃ§Ã£o da ediÃ§Ã£o das linha de conversÃ£o.</figcaption></figure><p>Â </p><ul><li>Passo 6: Na janela de configuraÃ§Ã£o do emulador de terminal, figura 4a, selecione a opÃ§Ã£o â&#128;&#156;Use MinTTy (the default terminal of MSYS2â&#128;&#157; entÃ£o clique no botÃ£o â&#128;&#156;nextâ&#128;&#157; para continuar a instalÃ§Ã£o.</li>
+<li>Passo 7: Na janela de configuraÃ§Ãµes extra, figura 4b,selecione a opÃ§Ã£o â&#128;&#156;Enable file system cachingâ&#128;&#157; entÃ£o clique no botÃ£o â&#128;&#156;nextâ&#128;&#157; para continuar a instalÃ§Ã£o.</li>
+</ul><figure id="attachment_101" class="wp-caption aligncenter amp-wp-inline-bc47f3bfed45cd88c7f38b0e86ec71c7"><amp-img class="wp-image-101 size-full amp-wp-enforced-sizes" src="https://www.professormarcolan.com.br/wp-content/uploads/2017/01/gfwfigura4.png" srcset="https://www.professormarcolan.com.br/wp-content/uploads/2017/01/gfwfigura4.png 940w, https://www.professormarcolan.com.br/wp-content/uploads/2017/01/gfwfigura4-300x115.png 300w, https://www.professormarcolan.com.br/wp-content/uploads/2017/01/gfwfigura4-768x294.png 768w" width="940" height="360" alt="gfwfigura4 - Como instalar o Git no Windows" layout="intrinsic"></amp-img><figcaption class="wp-caption-text">Janela 4- (a) Janela de configuraÃ§Ã£o do emulador de terminal. (b)Janela de configuraÃ§Ãµes extra.</figcaption></figure><ul><li>Passo 8: Na janela de Janela das opÃ§Ãµes experimentais, figura 4a, desmarque selecione a opÃ§Ã£o â&#128;&#156;Use MinTTy (the default terminal of MSYS2â&#128;&#157; entÃ£o clique no botÃ£o â&#128;&#156;nextâ&#128;&#157; para continuar a instalaÃ§Ã£o.</li>
+<li>Passo 9: Na janela de Janela de instalaÃ§Ã£o, figura 46, acompanhe a instalaÃ§Ã£o do git-for-windows.</li>
+</ul><figure id="attachment_102" class="wp-caption aligncenter amp-wp-inline-8f42d3f0406314e3edcce5df0db6000c"><amp-img class="wp-image-102 size-full amp-wp-enforced-sizes" src="https://www.professormarcolan.com.br/wp-content/uploads/2017/01/gfwfigura5.png" srcset="https://www.professormarcolan.com.br/wp-content/uploads/2017/01/gfwfigura5.png 938w, https://www.professormarcolan.com.br/wp-content/uploads/2017/01/gfwfigura5-300x116.png 300w, https://www.professormarcolan.com.br/wp-content/uploads/2017/01/gfwfigura5-768x296.png 768w" width="938" height="362" alt="gfwfigura5 - Como instalar o Git no Windows" layout="intrinsic"></amp-img><figcaption class="wp-caption-text">Figura 5- (a) Janela das opÃ§Ãµes experimentais. (b) Janela de instalÃ§Ã£o.</figcaption></figure><ul><li>Passo 10: Na janela de finalizaÃ§Ã£o da instalÃ§Ã£o do Git for Windows clique em finish para fechar a janela de instalÃ§Ã£o.</li>
+</ul><figure id="attachment_103" class="wp-caption aligncenter amp-wp-inline-ba0d60f59b6ab6b8d9dc8332528bfe3c"><amp-img class="wp-image-103 size-full amp-wp-enforced-sizes" src="https://www.professormarcolan.com.br/wp-content/uploads/2017/01/gffw5.png" srcset="https://www.professormarcolan.com.br/wp-content/uploads/2017/01/gffw5.png 466w, https://www.professormarcolan.com.br/wp-content/uploads/2017/01/gffw5-300x231.png 300w" width="466" height="359" alt="gffw5 - Como instalar o Git no Windows" layout="intrinsic"></amp-img><figcaption class="wp-caption-text">Figura 6 â&#128;&#147; Janela de finalizaÃ§Ã£o da instalÃ§Ã£o do Git for Windows.</figcaption></figure><h4>Testando a instalaÃ§Ã£o do Git-For-Windows</h4><p>Clique com o botÃ£o direito e abra o menu de contexto do explorer depois verifique se estÃ¡ habilitado a funÃ§Ã£o â&#128;&#156;Git Gui Hereâ&#128;&#157; e â&#128;&#157; Git Bash Hereâ&#128;&#157;. Caso vocÃª encontre essas novas duas funÃ§oes o Git-For-Windows foi instalado corretamente.</p><figure id="attachment_112" class="wp-caption aligncenter amp-wp-inline-86c26e8f1b8d62a181ac3582f80530d9"><amp-img class="wp-image-112 size-medium amp-wp-enforced-sizes" src="https://www.professormarcolan.com.br/wp-content/uploads/2017/01/Screenshot_11-editada-250x300.png" srcset="https://www.professormarcolan.com.br/wp-content/uploads/2017/01/Screenshot_11-editada-250x300.png 250w, https://www.professormarcolan.com.br/wp-content/uploads/2017/01/Screenshot_11-editada.png 275w" width="250" height="300" alt="Screenshot 11 editada 250x300 - Como instalar o Git no Windows" layout="intrinsic"></amp-img><figcaption class="wp-caption-text">Figura 7 â&#128;&#147; Novo menu de contexto do explorer com as funÃ§Ãµes de Git.</figcaption></figure><p>Â </p><p>Pronto, estÃ¡ instalado o Git-for-windows. Agora vocÃª pode utilizar o git no windows. Mas para utilizar os comandos do Git de forma mais intuitiva <a href="https://www.professormarcolan.com.br/tutorial-para-a-instalacao-do-tortoisegit/">instale o TortoiGit</a>.</p><p>Poste sua dÃºvida nos comentÃ¡rios. Para seguir as atualizaÃ§Ãµes <a href="https://www.youtube.com/channel/UC9eGq_4v1Uu14Uznsey-hOg" target="_blank" rel="noopener">se inscreva no canal do youtube </a>e <a href="https://www.facebook.com/professormarcolan/" target="_blank" rel="noopener">nos siga no facebook. em @professormarcolan</a>.</p><p>Â </p><div class="swp-content-locator"></div>	</div>
+
+	<footer class="amp-wp-article-footer"><div class="amp-wp-meta amp-wp-tax-category">
+		Categorias: <a href="https://github.professormarcolan.com.br/category/git/" rel="category tag">git</a>, <a href="https://github.professormarcolan.com.br/category/pratica/" rel="category tag">pratica</a>	</div>
+
+	<div class="amp-wp-meta amp-wp-tax-tag">
+		Tags: <a href="https://github.professormarcolan.com.br/tag/git/" rel="tag">Git</a>	</div>
+		<div class="amp-wp-meta amp-wp-comments-link">
+		<a href="https://github.professormarcolan.com.br/como-instalar-o-git-no-windows/#respond">
+			Deixar um comentÃ¡rio		</a>
+	</div>
+	</footer></article><footer class="amp-wp-footer"><div>
+		<h2>Potencialize com conhecimento os seus estudos e projetos!</h2>
+		<p>
+			<a href="https://wordpress.org/">
+				Desenvolvido por WordPress			</a>
+		</p>
+		<a href="#top" class="back-to-top">Ir para o topo</a>
+	</div>
+</footer></body></html>
