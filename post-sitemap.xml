@@ -1,0 +1,754 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="//github.professormarcolan.com.br/wp-content/plugins/wordpress-seo/css/main-sitemap.xsl"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+	<url>
+		<loc>https://github.professormarcolan.com.br/aulas-sobre-engenharia/</loc>
+		<lastmod>2019-03-20T14:37:43-03:00</lastmod>
+	</url>
+	<url>
+		<loc>https://github.professormarcolan.com.br/rest-api-1/</loc>
+		<lastmod>2017-06-19T20:00:35-03:00</lastmod>
+	</url>
+	<url>
+		<loc>https://github.professormarcolan.com.br/instalacao-do-eclipse-para-desenvolvedores-java/</loc>
+		<lastmod>2018-02-24T21:23:14-03:00</lastmod>
+		<image:image>
+			<image:loc>https://github.professormarcolan.com.br/wp-content/uploads/2017/08/logo4.png</image:loc>
+			<image:title><![CDATA[Aula pr�tica 0 de java]]></image:title>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://github.professormarcolan.com.br/principios-solid-principio-da-responsabilidade-unica/</loc>
+		<lastmod>2018-03-11T16:38:34-03:00</lastmod>
+		<image:image>
+			<image:loc>https://github.professormarcolan.com.br/wp-content/uploads/2018/03/principiosSolidPrincioDaResponsabilidadeUnica.jpg</image:loc>
+			<image:title><![CDATA[principiosSolidPrincioDaResponsabilidadeUnica]]></image:title>
+			<image:caption><![CDATA[Principios SOLID: Principío da responsabilidade unica. single responsibility principle]]></image:caption>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://github.professormarcolan.com.br/os-sintomas-de-um-codigo-que-cheira-mal/</loc>
+		<lastmod>2018-03-17T14:09:26-03:00</lastmod>
+		<image:image>
+			<image:loc>https://github.professormarcolan.com.br/wp-content/uploads/2018/03/OsSintomasDeUmCodigoQuecheirMal.png</image:loc>
+			<image:title><![CDATA[OsSintomasDeUmCodigoQuecheirMal]]></image:title>
+			<image:caption><![CDATA[Os sintomas de um código que chiera mal!]]></image:caption>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://github.professormarcolan.com.br/principios-solid-principio-aberto-fechado-python/</loc>
+		<lastmod>2018-04-16T14:13:48-03:00</lastmod>
+		<image:image>
+			<image:loc>https://github.professormarcolan.com.br/wp-content/uploads/2018/04/principioSOLIDAbertoFechadoEmPython.jpg</image:loc>
+			<image:title><![CDATA[principioSOLIDAbertoFechadoEmPython]]></image:title>
+			<image:caption><![CDATA[Principio Solid aberto fechado em Python]]></image:caption>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://github.professormarcolan.com.br/en/introduction-to-programming-with-python-variables-in-python/</loc>
+		<lastmod>2018-04-18T12:06:01-03:00</lastmod>
+		<image:image>
+			<image:loc>https://github.professormarcolan.com.br/wp-content/uploads/2018/03/thubnailIntroducaoSobrePythonAprendaACriarVariaveis.jpg</image:loc>
+			<image:title><![CDATA[thubnailIntroducaoSobrePythonAprendaACriarVariaveis]]></image:title>
+			<image:caption><![CDATA[Introdução sobre Python aprenda a criar variavesi em python. Entenda o que tipagem dinamica e forte]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.professormarcolan.com.br/wp-content/uploads/2018/03/diagramaDeEstadoDoCodigo2.png</image:loc>
+			<image:caption><![CDATA[Diagrama de estado do código 2]]></image:caption>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://github.professormarcolan.com.br/en/introduction-to-programming-in-python-how-to-use-the-global-operator/</loc>
+		<lastmod>2018-04-18T12:09:03-03:00</lastmod>
+		<image:image>
+			<image:loc>https://github.professormarcolan.com.br/wp-content/uploads/2018/04/operadorGlobal.jpg</image:loc>
+			<image:title><![CDATA[O operador global do python. Aprenda a usara variaveis globais no python]]></image:title>
+			<image:caption><![CDATA[O operador global do python. Aprenda a usara variaveis globais no python]]></image:caption>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://github.professormarcolan.com.br/en/values-of-the-agile-methodology/</loc>
+		<lastmod>2018-04-18T12:11:14-03:00</lastmod>
+		<image:image>
+			<image:loc>https://github.professormarcolan.com.br/wp-content/uploads/2018/02/valoresDaMetodologiaAgile.png</image:loc>
+			<image:title><![CDATA[valoresDaMetodologiaAgile]]></image:title>
+			<image:caption><![CDATA[Valores da Metodologia Agile]]></image:caption>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://github.professormarcolan.com.br/en/the-symptoms-of-a-code-that-smells-bad/</loc>
+		<lastmod>2018-04-18T12:12:40-03:00</lastmod>
+		<image:image>
+			<image:loc>https://github.professormarcolan.com.br/wp-content/uploads/2018/03/OsSintomasDeUmCodigoQuecheirMal.png</image:loc>
+			<image:title><![CDATA[OsSintomasDeUmCodigoQuecheirMal]]></image:title>
+			<image:caption><![CDATA[Os sintomas de um código que chiera mal!]]></image:caption>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://github.professormarcolan.com.br/en/solid-principles-single-responsibility-principle/</loc>
+		<lastmod>2018-04-18T12:14:19-03:00</lastmod>
+		<image:image>
+			<image:loc>https://github.professormarcolan.com.br/wp-content/uploads/2018/03/principiosSolidPrincioDaResponsabilidadeUnica.jpg</image:loc>
+			<image:title><![CDATA[principiosSolidPrincioDaResponsabilidadeUnica]]></image:title>
+			<image:caption><![CDATA[Principios SOLID: Principío da responsabilidade unica. single responsibility principle]]></image:caption>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://github.professormarcolan.com.br/en/solid-principles-open-closed-principle-in-python/</loc>
+		<lastmod>2018-04-18T12:31:18-03:00</lastmod>
+		<image:image>
+			<image:loc>https://github.professormarcolan.com.br/wp-content/uploads/2018/04/principioSOLIDAbertoFechadoEmPython.jpg</image:loc>
+			<image:title><![CDATA[principioSOLIDAbertoFechadoEmPython]]></image:title>
+			<image:caption><![CDATA[Principio Solid aberto fechado em Python]]></image:caption>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://github.professormarcolan.com.br/en/version-controllers-with-git/</loc>
+		<lastmod>2018-04-18T12:35:23-03:00</lastmod>
+		<image:image>
+			<image:loc>https://github.professormarcolan.com.br/wp-content/uploads/2017/08/logo6.png</image:loc>
+			<image:title><![CDATA[logo6]]></image:title>
+		</image:image>
+		<image:image>
+			<image:loc>https://github.professormarcolan.com.br/wp-content/uploads/2017/01/Figura1.jpg</image:loc>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://github.professormarcolan.com.br/en/tutorial-for-installing-tortoisegit/</loc>
+		<lastmod>2018-04-18T12:36:38-03:00</lastmod>
+		<image:image>
+			<image:loc>https://github.professormarcolan.com.br/wp-content/uploads/2017/08/logo8-1.png</image:loc>
+			<image:title><![CDATA[Aula pratica 2 de git]]></image:title>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.professormarcolan.com.br/wp-content/uploads/2017/02/turtoiseGit1.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.professormarcolan.com.br/wp-content/uploads/2017/02/turtoiseGit2.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.professormarcolan.com.br/wp-content/uploads/2017/02/turtoiseGit3.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://github.professormarcolan.com.br/wp-content/uploads/2017/02/turtoiseGit4.png</image:loc>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://github.professormarcolan.com.br/en/how-to-create-a-working-repository-using-tortoisegit/</loc>
+		<lastmod>2018-04-18T12:38:50-03:00</lastmod>
+		<image:image>
+			<image:loc>https://github.professormarcolan.com.br/wp-content/uploads/2018/02/introCriandoumRepositoriodeTrabalhocomotortoiseGit.png</image:loc>
+			<image:title><![CDATA[introCriandoumRepositoriodeTrabalhocomotortoiseGit]]></image:title>
+			<image:caption><![CDATA[Como criar um repositório de trabalho do git no Windows utilizando o TortoiseGit]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.professormarcolan.com.br/wp-content/uploads/2018/02/criandoRepositorio.png</image:loc>
+			<image:caption><![CDATA[Criando repositório de trabalho usando o TortoiseGit]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.professormarcolan.com.br/wp-content/uploads/2018/02/warningRepositorio.png</image:loc>
+			<image:caption><![CDATA[Aviso do TortoiseGit para a escolha do tipo de repositório]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.professormarcolan.com.br/wp-content/uploads/2018/02/corretaCriacaoDeRepositorio.png</image:loc>
+			<image:caption><![CDATA[menu de contexto contendo as ferramentas do TortoiseGit]]></image:caption>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://github.professormarcolan.com.br/en/how-to-use-the-git-commit-command-using-tortoisegit/</loc>
+		<lastmod>2018-04-18T12:52:11-03:00</lastmod>
+		<image:image>
+			<image:loc>https://github.professormarcolan.com.br/wp-content/uploads/2018/02/comoutilizarocomandocommitdogitusandooTortoiseGit.png</image:loc>
+			<image:title><![CDATA[comoutilizarocomandocommitdogitusandooTortoiseGit]]></image:title>
+			<image:caption><![CDATA[Como utilizar o commando commit do git usando o tortoiseGit]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.professormarcolan.com.br/wp-content/uploads/2018/02/primeiroVersionamentoArquivo.png</image:loc>
+			<image:caption><![CDATA[arquivo do primeiro versionamento]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.professormarcolan.com.br/wp-content/uploads/2018/02/primeiroGitCommitMaster.png</image:loc>
+			<image:caption><![CDATA[arquivo do primeiro versionamento]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.professormarcolan.com.br/wp-content/uploads/2018/02/primeiroVersionamentoTurtoiseGit.png</image:loc>
+			<image:caption><![CDATA[tela de versionamento (commit do git]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.professormarcolan.com.br/wp-content/uploads/2018/02/commitFuncionou.png</image:loc>
+			<image:caption><![CDATA[tela de versionamento commit do git]]></image:caption>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://github.professormarcolan.com.br/en/how-to-install-git-for-windows/</loc>
+		<lastmod>2018-04-18T12:58:33-03:00</lastmod>
+		<image:image>
+			<image:loc>https://github.professormarcolan.com.br/wp-content/uploads/2017/08/logo7.png</image:loc>
+			<image:title><![CDATA[Aula Pratica 1 de controladores de versao]]></image:title>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.professormarcolan.com.br/wp-content/uploads/2017/01/text3612-0-2.png</image:loc>
+			<image:caption><![CDATA[ (a) Janela de informação da licença do Git-For-Windows (b) Janela de seleção do local de instalção do arquivo]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.professormarcolan.com.br/wp-content/uploads/2017/01/text3612-0-3.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.professormarcolan.com.br/wp-content/uploads/2017/01/gfwfigura3.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.professormarcolan.com.br/wp-content/uploads/2017/01/gfwfigura4.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.professormarcolan.com.br/wp-content/uploads/2017/01/gfwfigura5.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.professormarcolan.com.br/wp-content/uploads/2017/01/gffw5.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://github.professormarcolan.com.br/wp-content/uploads/2017/01/Screenshot_11-editada.png</image:loc>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://github.professormarcolan.com.br/en/class-and-object-in-java-object-oriented-programming-in-java-class/</loc>
+		<lastmod>2018-04-18T13:00:49-03:00</lastmod>
+		<image:image>
+			<image:loc>https://github.professormarcolan.com.br/wp-content/uploads/2017/08/logo1.png</image:loc>
+			<image:title><![CDATA[Classe e objeto em java]]></image:title>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.professormarcolan.com.br/wp-content/uploads/2017/08/ClasseObjetos.png</image:loc>
+			<image:caption><![CDATA[Objetos não encantam mesmo os olhos ?]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.professormarcolan.com.br/wp-content/uploads/2017/08/ClasseBoloChoco.png</image:loc>
+			<image:title><![CDATA[Diagrama UML da classe BoloDeChocolate, +modificador public, - modificador private , sublinhado são as variáveis e os métodos estáticos]]></image:title>
+			<image:caption><![CDATA[Diagrama UML da classe BoloDeChocolate, +modificador public, - modificador private , sublinhado são as variaveis e os métodos staticos]]></image:caption>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://github.professormarcolan.com.br/classe-e-objeto-em-java-aula-sobre-programacao-orientada-ao-objeto/</loc>
+		<lastmod>2018-04-18T13:01:32-03:00</lastmod>
+		<image:image>
+			<image:loc>https://github.professormarcolan.com.br/wp-content/uploads/2017/08/logo1.png</image:loc>
+			<image:title><![CDATA[Classe e objeto em java]]></image:title>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.professormarcolan.com.br/wp-content/uploads/2017/08/ClasseObjetos.png</image:loc>
+			<image:caption><![CDATA[Objetos não encantam mesmo os olhos ?]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.professormarcolan.com.br/wp-content/uploads/2017/08/ClasseBoloChoco.png</image:loc>
+			<image:title><![CDATA[Diagrama UML da classe BoloDeChocolate, +modificador public, - modificador private , sublinhado são as variáveis e os métodos estáticos]]></image:title>
+			<image:caption><![CDATA[Diagrama UML da classe BoloDeChocolate, +modificador public, - modificador private , sublinhado são as variaveis e os métodos staticos]]></image:caption>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://github.professormarcolan.com.br/en/object-oriented-programming-in-java-inheritance-extends-and-polymorphism/</loc>
+		<lastmod>2018-04-18T13:04:20-03:00</lastmod>
+		<image:image>
+			<image:loc>https://github.professormarcolan.com.br/wp-content/uploads/2017/08/logo2.png</image:loc>
+			<image:title><![CDATA[Herança (extends) e polimorfismo]]></image:title>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.professormarcolan.com.br/wp-content/uploads/2018/03/javaExemploHeranca.png</image:loc>
+			<image:title><![CDATA[Exemplo de superclasse e subclasse]]></image:title>
+			<image:caption><![CDATA[Exemplo de superclasse e subclasse]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.professormarcolan.com.br/wp-content/uploads/2017/08/diagrama-de-venn.png</image:loc>
+			<image:caption><![CDATA[Programação orientada ao objeto]]></image:caption>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://github.professormarcolan.com.br/programacao-orientada-ao-objeto-heranca-extends-e-polimorfismo/</loc>
+		<lastmod>2018-04-18T13:06:29-03:00</lastmod>
+		<image:image>
+			<image:loc>https://github.professormarcolan.com.br/wp-content/uploads/2017/08/logo2.png</image:loc>
+			<image:title><![CDATA[Herança (extends) e polimorfismo]]></image:title>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.professormarcolan.com.br/wp-content/uploads/2018/03/javaExemploHeranca.png</image:loc>
+			<image:title><![CDATA[Exemplo de superclasse e subclasse]]></image:title>
+			<image:caption><![CDATA[Exemplo de superclasse e subclasse]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.professormarcolan.com.br/wp-content/uploads/2017/08/diagrama-de-venn.png</image:loc>
+			<image:caption><![CDATA[Programação orientada ao objeto]]></image:caption>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://github.professormarcolan.com.br/interfaces-classes-100-abstratas-em-java-e-o-operador-implements/</loc>
+		<lastmod>2018-04-18T13:09:36-03:00</lastmod>
+		<image:image>
+			<image:loc>https://github.professormarcolan.com.br/wp-content/uploads/2017/08/logo3.png</image:loc>
+			<image:title><![CDATA[logo3]]></image:title>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.professormarcolan.com.br/wp-content/uploads/2017/08/genericoEspeci.png</image:loc>
+			<image:title><![CDATA[Exemplo de classes abstratas]]></image:title>
+			<image:caption><![CDATA[Exemplo de classes abstratas]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.professormarcolan.com.br/wp-content/uploads/2017/08/DDD.png</image:loc>
+			<image:caption><![CDATA[Problema do diamante mortal da morte]]></image:caption>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://github.professormarcolan.com.br/en/interfaces-in-java-the-100-abstract-classes-in-java-and-the-implements-operator/</loc>
+		<lastmod>2018-04-18T13:11:04-03:00</lastmod>
+		<image:image>
+			<image:loc>https://github.professormarcolan.com.br/wp-content/uploads/2017/08/logo3.png</image:loc>
+			<image:title><![CDATA[logo3]]></image:title>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.professormarcolan.com.br/wp-content/uploads/2017/08/genericoEspeci.png</image:loc>
+			<image:title><![CDATA[Exemplo de classes abstratas]]></image:title>
+			<image:caption><![CDATA[Exemplo de classes abstratas]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.professormarcolan.com.br/wp-content/uploads/2017/08/DDD.png</image:loc>
+			<image:caption><![CDATA[Problema do diamante mortal da morte]]></image:caption>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://github.professormarcolan.com.br/en/introduction-to-object-oriented-programming-in-python/</loc>
+		<lastmod>2018-04-23T16:12:57-03:00</lastmod>
+		<image:image>
+			<image:loc>https://github.professormarcolan.com.br/wp-content/uploads/2018/04/thumbnailIntrodu%C3%A7%C3%A3oAPrograma%C3%A7%C3%A3oOrientadaAoObjetoemPythonEng.jpg</image:loc>
+			<image:title><![CDATA[thumbnailIntroduçãoAProgramaçãoOrientadaAoObjetoemPythonEng]]></image:title>
+			<image:caption><![CDATA[Introduction to object oriented programing in Python]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://github.professormarcolan.com.br/wp-content/uploads/2018/04/Margaret.png</image:loc>
+			<image:caption><![CDATA[Margaret Hamilton next to the MIT navigation software Apollo project.]]></image:caption>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://github.professormarcolan.com.br/introducao-a-programacao-orientada-ao-objeto-em-python/</loc>
+		<lastmod>2018-05-06T14:42:53-03:00</lastmod>
+		<image:image>
+			<image:loc>https://github.professormarcolan.com.br/wp-content/uploads/2018/04/thumbnailIntrodu%C3%A7%C3%A3oAPrograma%C3%A7%C3%A3oOrientadaAoObjetoemPython.jpg</image:loc>
+			<image:title><![CDATA[thumbnailIntroduçãoAProgramaçãoOrientadaAoObjetoemPython]]></image:title>
+			<image:caption><![CDATA[Introdução a programação orientada ao objeto em Python]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://github.professormarcolan.com.br/wp-content/uploads/2018/04/Margaret.png</image:loc>
+			<image:caption><![CDATA[Margaret Hamilton ao lado do software de navegação MIT projeto Apollo.]]></image:caption>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://github.professormarcolan.com.br/usar-o-log-do-git-mostrar-historico-de-versionamento-tortoisegit/</loc>
+		<lastmod>2018-05-12T14:21:58-03:00</lastmod>
+		<image:image>
+			<image:loc>https://github.professormarcolan.com.br/wp-content/uploads/2018/02/comousarologdogitparamostrarohistoricodeversionamentodosarquivos.png</image:loc>
+			<image:title><![CDATA[comousarologdogitparamostrarohistoricodeversionamentodosarquivos]]></image:title>
+			<image:caption><![CDATA[Aprenda a usar o log do git para mostrar todo o histórico de commits feitos.]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.professormarcolan.com.br/wp-content/uploads/2018/02/showLog.png</image:loc>
+			<image:caption><![CDATA[Função show log no menu do TortoiseGit do Windows]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.professormarcolan.com.br/wp-content/uploads/2018/02/logInterface.png</image:loc>
+			<image:caption><![CDATA[Interface gráfica do TortoiseGit da ferramenta do log do Git]]></image:caption>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://github.professormarcolan.com.br/en/how-to-use-git-log-to-show-the-versioning-history-of-the-files-with-the-tortoisegit/</loc>
+		<lastmod>2018-05-12T14:22:23-03:00</lastmod>
+		<image:image>
+			<image:loc>https://github.professormarcolan.com.br/wp-content/uploads/2018/02/comousarologdogitparamostrarohistoricodeversionamentodosarquivos.png</image:loc>
+			<image:title><![CDATA[comousarologdogitparamostrarohistoricodeversionamentodosarquivos]]></image:title>
+			<image:caption><![CDATA[Aprenda a usar o log do git para mostrar todo o histórico de commits feitos.]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.professormarcolan.com.br/wp-content/uploads/2018/02/showLog.png</image:loc>
+			<image:caption><![CDATA[Função show log no menu do TortoiseGit do Windows]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.professormarcolan.com.br/wp-content/uploads/2018/02/logInterface.png</image:loc>
+			<image:caption><![CDATA[Interface gráfica do TortoiseGit da ferramenta do log do Git]]></image:caption>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://github.professormarcolan.com.br/utilizando-comando-commit-do-git-usando-tortoisegit/</loc>
+		<lastmod>2018-05-12T14:23:15-03:00</lastmod>
+		<image:image>
+			<image:loc>https://github.professormarcolan.com.br/wp-content/uploads/2018/02/comoutilizarocomandocommitdogitusandooTortoiseGit.png</image:loc>
+			<image:title><![CDATA[comoutilizarocomandocommitdogitusandooTortoiseGit]]></image:title>
+			<image:caption><![CDATA[Como utilizar o commando commit do git usando o tortoiseGit]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.professormarcolan.com.br/wp-content/uploads/2018/02/primeiroVersionamentoArquivo.png</image:loc>
+			<image:caption><![CDATA[arquivo do primeiro versionamento]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.professormarcolan.com.br/wp-content/uploads/2018/02/primeiroGitCommitMaster.png</image:loc>
+			<image:caption><![CDATA[arquivo do primeiro versionamento]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.professormarcolan.com.br/wp-content/uploads/2018/02/primeiroVersionamentoTurtoiseGit.png</image:loc>
+			<image:caption><![CDATA[tela de versionamento (commit do git]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.professormarcolan.com.br/wp-content/uploads/2018/02/commitFuncionou.png</image:loc>
+			<image:caption><![CDATA[tela de versionamento commit do git]]></image:caption>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://github.professormarcolan.com.br/criando-um-repositorio-de-trabalho-com-tortoisegit/</loc>
+		<lastmod>2018-05-12T14:23:25-03:00</lastmod>
+		<image:image>
+			<image:loc>https://github.professormarcolan.com.br/wp-content/uploads/2018/02/introCriandoumRepositoriodeTrabalhocomotortoiseGit.png</image:loc>
+			<image:title><![CDATA[introCriandoumRepositoriodeTrabalhocomotortoiseGit]]></image:title>
+			<image:caption><![CDATA[Como criar um repositório de trabalho do git no Windows utilizando o TortoiseGit]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.professormarcolan.com.br/wp-content/uploads/2018/02/criandoRepositorio.png</image:loc>
+			<image:caption><![CDATA[Criando repositório de trabalho usando o TortoiseGit]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.professormarcolan.com.br/wp-content/uploads/2018/02/warningRepositorio.png</image:loc>
+			<image:caption><![CDATA[Aviso do TortoiseGit para a escolha do tipo de repositório]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.professormarcolan.com.br/wp-content/uploads/2018/02/corretaCriacaoDeRepositorio.png</image:loc>
+			<image:caption><![CDATA[menu de contexto contendo as ferramentas do TortoiseGit]]></image:caption>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://github.professormarcolan.com.br/controladores-de-versao/</loc>
+		<lastmod>2018-05-12T14:24:04-03:00</lastmod>
+		<image:image>
+			<image:loc>https://github.professormarcolan.com.br/wp-content/uploads/2017/08/logo6.png</image:loc>
+			<image:title><![CDATA[logo6]]></image:title>
+		</image:image>
+		<image:image>
+			<image:loc>https://github.professormarcolan.com.br/wp-content/uploads/2017/01/Figura1.jpg</image:loc>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://github.professormarcolan.com.br/en/object-oriented-programming-in-python-composition-resource/</loc>
+		<lastmod>2018-05-29T15:43:06-03:00</lastmod>
+		<image:image>
+			<image:loc>https://github.professormarcolan.com.br/wp-content/uploads/2018/05/ProgramacaoOrientadaAoObjetoEmPythonCompositionEnglish.jpg</image:loc>
+			<image:title><![CDATA[ProgramacaoOrientadaAoObjetoEmPythonCompositionEnglish]]></image:title>
+			<image:caption><![CDATA[Come to learn about the composition relathionship between classes]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://github.professormarcolan.com.br/wp-content/uploads/2018/05/exemplodeUmaCalculadoraen.png</image:loc>
+			<image:caption><![CDATA[Exemplo do recurso de encapsulamento da programação oirentada ao objeto em python]]></image:caption>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://github.professormarcolan.com.br/programacao-orientada-ao-objeto-em-python-recurso-do-composicao/</loc>
+		<lastmod>2018-05-29T15:44:46-03:00</lastmod>
+		<image:image>
+			<image:loc>https://github.professormarcolan.com.br/wp-content/uploads/2018/05/ProgramacaoOrientadaAoObjetoEmPythoncomposicao.jpg</image:loc>
+			<image:title><![CDATA[ProgramacaoOrientadaAoObjetoEmPythoncomposicao]]></image:title>
+			<image:caption><![CDATA[Relacionamento entre classes. Relacionamento de composição]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://github.professormarcolan.com.br/wp-content/uploads/2018/05/ExemploDoRecursoDeEncapsulamentoptbr.jpg</image:loc>
+			<image:caption><![CDATA[Exemplo do recurso de composição da programação oirentada ao objeto em python]]></image:caption>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://github.professormarcolan.com.br/en/object-oriented-programming-in-python-how-to-create-a-class-in-python/</loc>
+		<lastmod>2018-06-25T18:57:01-03:00</lastmod>
+		<image:image>
+			<image:loc>https://github.professormarcolan.com.br/wp-content/uploads/2018/04/how-create-a-class-how-instantiate-a-class.png</image:loc>
+			<image:title><![CDATA[how-create-a-class-python-how-instantiate a class]]></image:title>
+			<image:caption><![CDATA[How create a class in python and how instantiate a class]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://github.professormarcolan.com.br/wp-content/uploads/2018/06/what-is-a-class.png</image:loc>
+			<image:caption><![CDATA[O que é uma classe e o que é um objeto]]></image:caption>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://github.professormarcolan.com.br/en/how-to-use-inheritance-in-python/</loc>
+		<lastmod>2018-06-25T19:35:29-03:00</lastmod>
+		<image:image>
+			<image:loc>https://github.professormarcolan.com.br/wp-content/uploads/2018/06/come-understante-the-inheritance-feature-in-python.png</image:loc>
+			<image:title><![CDATA[come-understante-the-inheritance-feature-in-python]]></image:title>
+			<image:caption><![CDATA[How to use the inheritance feature in python]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://github.professormarcolan.com.br/wp-content/uploads/2018/06/how-use-inheritance-in-python.png</image:loc>
+			<image:caption><![CDATA[Como utilizar a herança em Python]]></image:caption>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://github.professormarcolan.com.br/variaveis-globais-em-python/</loc>
+		<lastmod>2018-07-01T23:45:38-03:00</lastmod>
+		<image:image>
+			<image:loc>https://github.professormarcolan.com.br/wp-content/uploads/2018/04/operadorGlobal.jpg</image:loc>
+			<image:title><![CDATA[O operador global do python. Aprenda a usara variaveis globais no python]]></image:title>
+			<image:caption><![CDATA[O operador global do python. Aprenda a usara variaveis globais no python]]></image:caption>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://github.professormarcolan.com.br/en/atom-ide-for-python/</loc>
+		<lastmod>2018-11-11T23:12:12-02:00</lastmod>
+		<image:image>
+			<image:loc>https://github.professormarcolan.com.br/wp-content/uploads/2018/04/best-ide-python-free.png</image:loc>
+			<image:title><![CDATA[best-ide-python-free]]></image:title>
+			<image:caption><![CDATA[best ide for python]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.professormarcolan.com.br/wp-content/uploads/2018/02/configuracoesAtom.png</image:loc>
+			<image:caption><![CDATA[Configurações possessíveis do atom]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.professormarcolan.com.br/wp-content/uploads/2018/02/atomFirstUsage.png</image:loc>
+			<image:caption><![CDATA[Arquivo de boas vindas do Atom]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.professormarcolan.com.br/wp-content/uploads/2018/02/configurandoEditorTextoAtom.png</image:loc>
+			<image:caption><![CDATA[configurando o editor de texto do atom para python]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.professormarcolan.com.br/wp-content/uploads/2018/02/aposConfiguracaoDoEditorAtom.png</image:loc>
+			<image:caption><![CDATA[configurando o editor de texto do atom para python]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.professormarcolan.com.br/wp-content/uploads/2018/02/kiteeJedi.png</image:loc>
+			<image:caption><![CDATA[configurando o editor de texto do atom para python]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.professormarcolan.com.br/wp-content/uploads/2018/02/autoCompletarPython.png</image:loc>
+			<image:caption><![CDATA[configurando o editor de texto do atom para python]]></image:caption>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://github.professormarcolan.com.br/atom-ide-para-python-gratis/</loc>
+		<lastmod>2018-11-11T23:19:34-02:00</lastmod>
+		<image:image>
+			<image:loc>https://github.professormarcolan.com.br/wp-content/uploads/2018/02/aprendaAConfigurarOAtomParaSerUmIDEParaPython.jpg</image:loc>
+			<image:title><![CDATA[aprendaAConfigurarOAtomParaSerUmIDEParaPython]]></image:title>
+			<image:caption><![CDATA[Aprenda a configurar o Atom para ser um IDE para Python]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.professormarcolan.com.br/wp-content/uploads/2018/02/configuracoesAtom.png</image:loc>
+			<image:caption><![CDATA[Configurações possessíveis do atom]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.professormarcolan.com.br/wp-content/uploads/2018/02/atomFirstUsage.png</image:loc>
+			<image:caption><![CDATA[Arquivo de boas vindas do Atom]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.professormarcolan.com.br/wp-content/uploads/2018/02/configurandoEditorTextoAtom.png</image:loc>
+			<image:caption><![CDATA[configurando o editor de texto do atom para python]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.professormarcolan.com.br/wp-content/uploads/2018/02/aposConfiguracaoDoEditorAtom.png</image:loc>
+			<image:caption><![CDATA[configurando o editor de texto do atom para python]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.professormarcolan.com.br/wp-content/uploads/2018/02/kiteeJedi.png</image:loc>
+			<image:caption><![CDATA[configurando o editor de texto do atom para python]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.professormarcolan.com.br/wp-content/uploads/2018/02/autoCompletarPython.png</image:loc>
+			<image:caption><![CDATA[configurando o editor de texto do atom para python]]></image:caption>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://github.professormarcolan.com.br/polimorfismo-em-python/</loc>
+		<lastmod>2018-11-11T23:46:28-02:00</lastmod>
+		<image:image>
+			<image:loc>https://github.professormarcolan.com.br/wp-content/uploads/2018/07/programacao-orientada-ao-objeto-em-python-polimorfismo-python.png</image:loc>
+			<image:title><![CDATA[programacao-orientada-ao-objeto-em-python-polimorfismo-python]]></image:title>
+			<image:caption><![CDATA[programação orientada ao objeto em python: recurso do polimorfismo]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://github.professormarcolan.com.br/wp-content/uploads/2018/07/diagrama-uml-polimorfismo-python.png</image:loc>
+			<image:caption><![CDATA["diagrama]]></image:caption>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://github.professormarcolan.com.br/como-utilizar-a-heranca-em-python/</loc>
+		<lastmod>2018-11-12T00:16:22-02:00</lastmod>
+		<image:image>
+			<image:loc>https://github.professormarcolan.com.br/wp-content/uploads/2018/06/como-utilizaro-a-heran%C3%A7a-em-python.png</image:loc>
+			<image:title><![CDATA[como-utilizaro-a-herança-em-python]]></image:title>
+			<image:caption><![CDATA[How to use the inheritance feature in python]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://github.professormarcolan.com.br/wp-content/uploads/2018/06/Jargoes-Heranca-Orienta%C3%A7ao-Objeto-Python.png</image:loc>
+			<image:caption><![CDATA[Como utilizar a herança em Python]]></image:caption>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://github.professormarcolan.com.br/valores-da-metodologia-agile/</loc>
+		<lastmod>2018-11-12T00:22:28-02:00</lastmod>
+		<image:image>
+			<image:loc>https://github.professormarcolan.com.br/wp-content/uploads/2018/02/valoresDaMetodologiaAgile.png</image:loc>
+			<image:title><![CDATA[valoresDaMetodologiaAgile]]></image:title>
+			<image:caption><![CDATA[Valores da Metodologia Agile]]></image:caption>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://github.professormarcolan.com.br/encapsulamento-em-python/</loc>
+		<lastmod>2018-11-12T00:28:13-02:00</lastmod>
+		<image:image>
+			<image:loc>https://github.professormarcolan.com.br/wp-content/uploads/2018/06/programa%C3%A7%C3%A3oOrientadaAoObjetoRecursoDeEncaspsulamento.png</image:loc>
+			<image:title><![CDATA[programaçãoOrientadaAoObjetoRecursoDeEncaspsulamento]]></image:title>
+			<image:caption><![CDATA[Programação Orientado ao objeto. Recurso de Encaspsulamento em Python]]></image:caption>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://github.professormarcolan.com.br/en/how-to-do-encapsulation-in-python/</loc>
+		<lastmod>2018-11-12T00:35:00-02:00</lastmod>
+		<image:image>
+			<image:loc>https://github.professormarcolan.com.br/wp-content/uploads/2018/05/EncapsulationFeature.png</image:loc>
+			<image:title><![CDATA[EncapsulationFeature]]></image:title>
+			<image:caption><![CDATA[Object oriented programmin in python. Come to understand encapsulation feature in Python]]></image:caption>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://github.professormarcolan.com.br/python-funcao/</loc>
+		<lastmod>2018-11-12T00:39:04-02:00</lastmod>
+		<image:image>
+			<image:loc>https://github.professormarcolan.com.br/wp-content/uploads/2018/03/thumbnailIntrodu%C3%A7%C3%A3oSobrePythonComoCriarFun%C3%A7%C3%B5es.jpg</image:loc>
+			<image:title><![CDATA[thumbnailIntroduçãoSobrePythonComoCriarFunções]]></image:title>
+			<image:caption><![CDATA[Introdução sobre python como criar uma função]]></image:caption>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://github.professormarcolan.com.br/en/how-to-create-a-function-in-python/</loc>
+		<lastmod>2018-11-12T00:42:02-02:00</lastmod>
+		<image:image>
+			<image:loc>https://github.professormarcolan.com.br/wp-content/uploads/2018/03/thumbnailIntrodu%C3%A7%C3%A3oSobrePythonComoCriarFun%C3%A7%C3%B5es.jpg</image:loc>
+			<image:title><![CDATA[thumbnailIntroduçãoSobrePythonComoCriarFunções]]></image:title>
+			<image:caption><![CDATA[Introdução sobre python como criar uma função]]></image:caption>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://github.professormarcolan.com.br/introducao-a-programacao-em-python/</loc>
+		<lastmod>2018-11-12T00:53:30-02:00</lastmod>
+		<image:image>
+			<image:loc>https://github.professormarcolan.com.br/wp-content/uploads/2018/04/blocosDecodigoPythonParadigmaProgramacaoEstruturada.jpg</image:loc>
+			<image:title><![CDATA[blocos de código em python .  Para digma da programação estruturada]]></image:title>
+			<image:caption><![CDATA[blocos de código em python . Para digma da programação estruturada]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.professormarcolan.com.br/wp-content/uploads/2018/04/blocoDeCodigo-1.png</image:loc>
+			<image:caption><![CDATA[Figura 1 - O primeiro bloco de código do Python é o próprio documento!]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.professormarcolan.com.br/wp-content/uploads/2018/04/blocosAninhados.png</image:loc>
+			<image:caption><![CDATA[Programação orientada ao objeto]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.professormarcolan.com.br/wp-content/uploads/2018/04/blocosAninhado1.png</image:loc>
+			<image:caption><![CDATA[Análise de estrutura do código 2]]></image:caption>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://github.professormarcolan.com.br/en/introduction-to-programming-in-python/</loc>
+		<lastmod>2018-11-12T00:55:30-02:00</lastmod>
+		<image:image>
+			<image:loc>https://github.professormarcolan.com.br/wp-content/uploads/2018/04/blocosDecodigoPythonParadigmaProgramacaoEstruturada.jpg</image:loc>
+			<image:title><![CDATA[blocos de código em python .  Para digma da programação estruturada]]></image:title>
+			<image:caption><![CDATA[blocos de código em python . Para digma da programação estruturada]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.professormarcolan.com.br/wp-content/uploads/2018/04/blocoDeCodigo-1.png</image:loc>
+			<image:caption><![CDATA[Figura 1 - O primeiro bloco de código do Python é o próprio documento!]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.professormarcolan.com.br/wp-content/uploads/2018/04/blocosAninhados.png</image:loc>
+			<image:caption><![CDATA[Programação orientada ao objeto]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.professormarcolan.com.br/wp-content/uploads/2018/04/blocosAninhado1.png</image:loc>
+			<image:caption><![CDATA[Análise de estrutura do código 2]]></image:caption>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://github.professormarcolan.com.br/classe-em-python/</loc>
+		<lastmod>2018-11-12T01:01:35-02:00</lastmod>
+		<image:image>
+			<image:loc>https://github.professormarcolan.com.br/wp-content/uploads/2018/03/thumbnailProgramacaoOrientadaAoObjetoClasseEmPython.jpg</image:loc>
+			<image:title><![CDATA[thumbnailProgramacaoOrientadaAoObjetoClasseEmPython]]></image:title>
+			<image:caption><![CDATA[Programação orientada ao objeto em Python. Aprenda a criar e a usar uma classe em python]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.professormarcolan.com.br/wp-content/uploads/2018/03/ClasseObjetos.png</image:loc>
+			<image:caption><![CDATA[O que é uma classe e o que é um objeto]]></image:caption>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://github.professormarcolan.com.br/variaveis-em-python/</loc>
+		<lastmod>2018-11-12T01:03:37-02:00</lastmod>
+		<image:image>
+			<image:loc>https://github.professormarcolan.com.br/wp-content/uploads/2018/03/thubnailIntroducaoSobrePythonAprendaACriarVariaveis.jpg</image:loc>
+			<image:title><![CDATA[thubnailIntroducaoSobrePythonAprendaACriarVariaveis]]></image:title>
+			<image:caption><![CDATA[Introdução sobre Python aprenda a criar variavesi em python. Entenda o que tipagem dinamica e forte]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.professormarcolan.com.br/wp-content/uploads/2018/03/diagramaDeEstadoDoCodigo2.png</image:loc>
+			<image:caption><![CDATA[Diagrama de estado do código 2]]></image:caption>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://github.professormarcolan.com.br/tutorial-para-a-instalacao-do-tortoisegit/</loc>
+		<lastmod>2019-01-20T17:50:26-02:00</lastmod>
+		<image:image>
+			<image:loc>https://github.professormarcolan.com.br/wp-content/uploads/2017/08/logo8-1.png</image:loc>
+			<image:title><![CDATA[Aula pratica 2 de git]]></image:title>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.professormarcolan.com.br/wp-content/uploads/2017/02/turtoiseGit1.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.professormarcolan.com.br/wp-content/uploads/2017/02/turtoiseGit2.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.professormarcolan.com.br/wp-content/uploads/2017/02/turtoiseGit3.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://github.professormarcolan.com.br/wp-content/uploads/2017/02/turtoiseGit4.png</image:loc>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://github.professormarcolan.com.br/como-instalar-o-git-no-windows/</loc>
+		<lastmod>2019-01-21T02:44:21-02:00</lastmod>
+		<image:image>
+			<image:loc>https://github.professormarcolan.com.br/wp-content/uploads/2017/08/logo7.png</image:loc>
+			<image:title><![CDATA[Aula Pratica 1 de controladores de versao]]></image:title>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.professormarcolan.com.br/wp-content/uploads/2017/01/text3612-0-2.png</image:loc>
+			<image:caption><![CDATA[ (a) Janela de informação da licença do Git-For-Windows (b) Janela de seleção do local de instalção do arquivo]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.professormarcolan.com.br/wp-content/uploads/2017/01/text3612-0-3.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.professormarcolan.com.br/wp-content/uploads/2017/01/gfwfigura3.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.professormarcolan.com.br/wp-content/uploads/2017/01/gfwfigura4.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.professormarcolan.com.br/wp-content/uploads/2017/01/gfwfigura5.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.professormarcolan.com.br/wp-content/uploads/2017/01/gffw5.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://github.professormarcolan.com.br/wp-content/uploads/2017/01/Screenshot_11-editada.png</image:loc>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://github.professormarcolan.com.br/teste-api-rest/</loc>
+		<lastmod>2019-03-20T14:37:43-03:00</lastmod>
+		<image:image>
+			<image:loc>https://github.professormarcolan.com.br/wp-content/uploads/2019/03/demo.jpg</image:loc>
+		</image:image>
+	</url>
+</urlset>
+<!-- XML Sitemap generated by Yoast SEO -->
