@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html amp lang="en-US"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"><script type="application/ld+json" class="yoast-schema-graph yoast-schema-graph--main">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://github.professormarcolan.com.br/en/featured-lesson/#website","url":"https://github.professormarcolan.com.br/en/featured-lesson/","name":"Potencialize com conhecimento os seus estudos e projetos!","publisher":{"@id":"https://github.professormarcolan.com.br/en/featured-lesson/#person"},"potentialAction":{"@type":"SearchAction","target":"https://github.professormarcolan.com.br/en/featured-lesson/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"WebPage","@id":"https://github.professormarcolan.com.br/en/object-oriented-programming-in-java-inheritance-extends-and-polymorphism/#webpage","url":"https://github.professormarcolan.com.br/en/object-oriented-programming-in-java-inheritance-extends-and-polymorphism/","inLanguage":"en-US","name":"Object-oriented programming in java : Inheritance (extends) and polymorphism","isPartOf":{"@id":"https://github.professormarcolan.com.br/en/featured-lesson/#website"},"image":{"@type":"ImageObject","@id":"https://github.professormarcolan.com.br/en/object-oriented-programming-in-java-inheritance-extends-and-polymorphism/#primaryimage","url":"https://github.professormarcolan.com.br/wp-content/uploads/2017/08/logo2.png","width":683,"height":570},"primaryImageOfPage":{"@id":"https://github.professormarcolan.com.br/en/object-oriented-programming-in-java-inheritance-extends-and-polymorphism/#primaryimage"},"datePublished":"2018-04-18T16:04:20+00:00","dateModified":"2018-04-18T16:04:20+00:00","description":"No Java a heran\u00e7a \u00e9 feita a partir do modificador extends. Venha aprender a utilizar essa importante ferramenta da orienta\u00e7\u00e3o ao objeto em java que voc\u00ea pode utilzar no desenvolvimento de c\u00f3digos."},{"@type":"Article","@id":"https://github.professormarcolan.com.br/en/object-oriented-programming-in-java-inheritance-extends-and-polymorphism/#article","isPartOf":{"@id":"https://github.professormarcolan.com.br/en/object-oriented-programming-in-java-inheritance-extends-and-polymorphism/#webpage"},"author":{"@id":"https://github.professormarcolan.com.br/en/featured-lesson/schema/person/joaomarcolan/#author"},"headline":"Object-oriented programming in java : Inheritance (extends) and polymorphism","datePublished":"2018-04-18T16:04:20+00:00","dateModified":"2018-04-18T16:04:20+00:00","commentCount":0,"mainEntityOfPage":{"@id":"https://github.professormarcolan.com.br/en/object-oriented-programming-in-java-inheritance-extends-and-polymorphism/#webpage"},"publisher":{"@id":"https://github.professormarcolan.com.br/en/featured-lesson/#person"},"image":{"@id":"https://github.professormarcolan.com.br/en/object-oriented-programming-in-java-inheritance-extends-and-polymorphism/#primaryimage"},"keywords":"Classes and objects,Java","articleSection":"theory"},{"@type":["Person"],"@id":"https://github.professormarcolan.com.br/en/author/joaomarcolan/#author","name":"JoaoMarcolan","image":{"@type":"ImageObject","@id":"https://github.professormarcolan.com.br/en/featured-lesson/#authorlogo","url":"https://secure.gravatar.com/avatar/decab487065c8029b68fb599b5a989c8?s=96&d=mm&r=g","caption":"JoaoMarcolan"},"sameAs":[]}]}</script><title>Object-oriented programming in java : Inheritance (extends) and polymorphism</title><script type="text/javascript" src="https://cdn.ampproject.org/v0.js" async></script><script type="text/javascript" src="https://cdn.ampproject.org/v0/amp-iframe-latest.js" async custom-element="amp-iframe"></script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic"><style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style></head><body><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript><style amp-custom>
+		/* Generic WP styling */
+
+.alignright {
+	float: right;
+}
+
+.alignleft {
+	float: left;
+}
+
+.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.amp-wp-enforced-sizes {
+	/** Our sizes fallback is 100vw, and we have a padding on the container; the max-width here prevents the element from overflowing. **/
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+.amp-wp-unknown-size img {
+	/** Worst case scenario when we can't figure out dimensions for an image. **/
+	/** Force the image into a box of fixed dimensions and use object-fit to scale. **/
+	object-fit: contain;
+}
+
+/* Template Styles */
+
+.amp-wp-content,
+.amp-wp-title-bar div {
+		margin: 0 auto;
+	max-width: 895px;
+	}
+
+html {
+	background: #0a89c0;
+}
+
+body {
+	background: #fff;
+	color: #353535;
+	font-family: 'Merriweather', 'Times New Roman', Times, Serif;
+	font-weight: 300;
+	line-height: 1.75em;
+}
+
+p,
+ol,
+ul,
+figure {
+	margin: 0 0 1em;
+	padding: 0;
+}
+
+a,
+a:visited {
+	color: #0a89c0;
+}
+
+a:hover,
+a:active,
+a:focus {
+	color: #353535;
+}
+
+/* Quotes */
+
+blockquote {
+	color: #353535;
+	background: rgba(127,127,127,.125);
+	border-left: 2px solid #0a89c0;
+	margin: 8px 0 24px 0;
+	padding: 16px;
+}
+
+blockquote p:last-child {
+	margin-bottom: 0;
+}
+
+/* UI Fonts */
+
+.amp-wp-meta,
+.amp-wp-header div,
+.amp-wp-title,
+.wp-caption-text,
+.amp-wp-tax-category,
+.amp-wp-tax-tag,
+.amp-wp-comments-link,
+.amp-wp-footer p,
+.back-to-top {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
+}
+
+/* Header */
+
+.amp-wp-header {
+	background-color: #0a89c0;
+}
+
+.amp-wp-header div {
+	color: #fff;
+	font-size: 1em;
+	font-weight: 400;
+	margin: 0 auto;
+	max-width: calc(840px - 32px);
+	padding: .875em 16px;
+	position: relative;
+}
+
+.amp-wp-header a {
+	color: #fff;
+	text-decoration: none;
+}
+
+/* Site Icon */
+
+.amp-wp-header .amp-wp-site-icon {
+	/** site icon is 32px **/
+	background-color: #fff;
+	border: 1px solid #fff;
+	border-radius: 50%;
+	position: absolute;
+	right: 18px;
+	top: 10px;
+}
+
+/* Article */
+
+.amp-wp-article {
+	color: #353535;
+	font-weight: 400;
+	margin: 1.5em auto;
+	max-width: 840px;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+}
+
+/* Article Header */
+
+.amp-wp-article-header {
+	align-items: center;
+	align-content: stretch;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: 1.5em 16px 0;
+}
+
+.amp-wp-title {
+	color: #353535;
+	display: block;
+	flex: 1 0 100%;
+	font-weight: 900;
+	margin: 0 0 .625em;
+	width: 100%;
+}
+
+/* Article Meta */
+
+.amp-wp-meta {
+	color: #696969;
+	display: inline-block;
+	flex: 2 1 50%;
+	font-size: .875em;
+	line-height: 1.5em;
+	margin: 0 0 1.5em;
+	padding: 0;
+}
+
+.amp-wp-article-header .amp-wp-meta:last-of-type {
+	text-align: right;
+}
+
+.amp-wp-article-header .amp-wp-meta:first-of-type {
+	text-align: left;
+}
+
+.amp-wp-byline amp-img,
+.amp-wp-byline .amp-wp-author {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.amp-wp-byline amp-img {
+	border: 1px solid #0a89c0;
+	border-radius: 50%;
+	position: relative;
+	margin-right: 6px;
+}
+
+.amp-wp-posted-on {
+	text-align: right;
+}
+
+/* Featured image */
+
+.amp-wp-article-featured-image {
+	margin: 0 0 1em;
+}
+.amp-wp-article-featured-image amp-img {
+	margin: 0 auto;
+}
+.amp-wp-article-featured-image.wp-caption .wp-caption-text {
+	margin: 0 18px;
+}
+
+/* Article Content */
+
+.amp-wp-article-content {
+	margin: 0 16px;
+}
+
+.amp-wp-article-content ul,
+.amp-wp-article-content ol {
+	margin-left: 1em;
+}
+
+.amp-wp-article-content amp-img {
+	margin: 0 auto;
+}
+
+.amp-wp-article-content amp-img.alignright {
+	margin: 0 0 1em 16px;
+}
+
+.amp-wp-article-content amp-img.alignleft {
+	margin: 0 16px 1em 0;
+}
+
+/* Captions */
+
+.wp-caption {
+	padding: 0;
+}
+
+.wp-caption.alignleft {
+	margin-right: 16px;
+}
+
+.wp-caption.alignright {
+	margin-left: 16px;
+}
+
+.wp-caption .wp-caption-text {
+	border-bottom: 1px solid #c2c2c2;
+	color: #696969;
+	font-size: .875em;
+	line-height: 1.5em;
+	margin: 0;
+	padding: .66em 10px .75em;
+}
+
+/* AMP Media */
+
+amp-carousel {
+	background: #c2c2c2;
+	margin: 0 -16px 1.5em;
+}
+amp-iframe,
+amp-youtube,
+amp-instagram,
+amp-vine {
+	background: #c2c2c2;
+	margin: 0 -16px 1.5em;
+}
+
+.amp-wp-article-content amp-carousel amp-img {
+	border: none;
+}
+
+amp-carousel > amp-img > img {
+	object-fit: contain;
+}
+
+.amp-wp-iframe-placeholder {
+	background: #c2c2c2 url( https://github.professormarcolan.com.br/wp-content/plugins/amp/assets/images/placeholder-icon.png ) no-repeat center 40%;
+	background-size: 48px 48px;
+	min-height: 48px;
+}
+
+/* Article Footer Meta */
+
+.amp-wp-article-footer .amp-wp-meta {
+	display: block;
+}
+
+.amp-wp-tax-category,
+.amp-wp-tax-tag {
+	color: #696969;
+	font-size: .875em;
+	line-height: 1.5em;
+	margin: 1.5em 16px;
+}
+
+.amp-wp-comments-link {
+	color: #696969;
+	font-size: .875em;
+	line-height: 1.5em;
+	text-align: center;
+	margin: 2.25em 0 1.5em;
+}
+
+.amp-wp-comments-link a {
+	border-style: solid;
+	border-color: #c2c2c2;
+	border-width: 1px 1px 2px;
+	border-radius: 4px;
+	background-color: transparent;
+	color: #0a89c0;
+	cursor: pointer;
+	display: block;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 18px;
+	margin: 0 auto;
+	max-width: 200px;
+	padding: 11px 16px;
+	text-decoration: none;
+	width: 50%;
+	-webkit-transition: background-color 0.2s ease;
+			transition: background-color 0.2s ease;
+}
+
+/* AMP Footer */
+
+.amp-wp-footer {
+	border-top: 1px solid #c2c2c2;
+	margin: calc(1.5em - 1px) 0 0;
+}
+
+.amp-wp-footer div {
+	margin: 0 auto;
+	max-width: calc(840px - 32px);
+	padding: 1.25em 16px 1.25em;
+	position: relative;
+}
+
+.amp-wp-footer h2 {
+	font-size: 1em;
+	line-height: 1.375em;
+	margin: 0 0 .5em;
+}
+
+.amp-wp-footer p {
+	color: #696969;
+	font-size: .8em;
+	line-height: 1.5em;
+	margin: 0 85px 0 0;
+}
+
+.amp-wp-footer a {
+	text-decoration: none;
+}
+
+.back-to-top {
+	bottom: 1.275em;
+	font-size: .8em;
+	font-weight: 600;
+	line-height: 2em;
+	position: absolute;
+	right: 16px;
+}
+		/* Inline styles */
+.amp-wp-inline-a5175566a3873f4c44d7ddf7f1376050{max-width:1047px;}.amp-wp-inline-83e09f5225ac2c7e8627815fdfb17a33{max-width:420px;}	</style><header id="top" class="amp-wp-header"><div>
+		<a href="https://github.professormarcolan.com.br/">
+										<amp-img src="https://github.professormarcolan.com.br/wp-content/uploads/2018/06/cropped-professor-marcolan-logo-1-32x32.png" width="32" height="32" class="amp-wp-site-icon"></amp-img><span class="amp-site-title">
+				Potencialize com conhecimento os seus estudos e projetos!			</span>
+		</a>
+	</div>
+</header><article class="amp-wp-article"><header class="amp-wp-article-header"><h1 class="amp-wp-title">Object-oriented programming in java : Inheritance (extends) and polymorphism</h1>
+			<div class="amp-wp-meta amp-wp-byline">
+					<amp-img src="https://secure.gravatar.com/avatar/decab487065c8029b68fb599b5a989c8?s=24&d=mm&r=g" alt="JoaoMarcolan" width="24" height="24" layout="fixed"></amp-img><span class="amp-wp-author author vcard">JoaoMarcolan</span>
+	</div>
+<div class="amp-wp-meta amp-wp-posted-on">
+	<time datetime="2018-04-18T13:04:20+00:00">
+		1 year ago	</time></div>
+	</header><figure class="amp-wp-article-featured-image wp-caption"><amp-img width="683" height="570" src="https://github.professormarcolan.com.br/wp-content/uploads/2017/08/logo2.png" class="attachment-large size-large wp-post-image amp-wp-enforced-sizes" alt="logo2 - Object-oriented programming in java : Inheritance (extends) and polymorphism" srcset="https://github.professormarcolan.com.br/wp-content/uploads/2017/08/logo2.png 683w, https://github.professormarcolan.com.br/wp-content/uploads/2017/08/logo2-300x250.png 300w, https://github.professormarcolan.com.br/wp-content/uploads/2017/08/logo2-359x300.png 359w, https://github.professormarcolan.com.br/wp-content/uploads/2017/08/logo2-600x500.png 600w" layout="intrinsic"></amp-img><p class="wp-caption-text">
+			Como utilizar o operador extends em java		</p>
+	</figure><div class="amp-wp-article-content">
+		<p>Imagine recuperar todos dados e mÃ©todos e ainda por cima caso desejado poder modificar o funcionamento dessas funÃ§Ãµes. Imagine poder criar listas de objetos diferentes que tem aspectos em comum. Isso Ã© possÃ­vel a partir da programaÃ§Ã£o orientada ao objeto utilizando os conceitos de heranÃ§a e polimorfismo.</p><h1>HeranÃ§a e o reuso de cÃ³digo</h1><p>Como discutido<a href="https://www.professormarcolan.com.br/classe-e-objeto-em-java-aula-sobre-programacao-orientada-ao-objeto/"> no post Classes com JAVA </a>o paradigma da orientaÃ§Ã£o ao objeto foca em unir dados e mÃ©todos em um objeto. [2]. Existem classes que possuem muitas caracteristicas em comum (e.g. a receita de bolo de chocolate com cobertura de morango, receita do bolo de chocolate com cobertura de chocolate). Usar o mecanismo de heranÃ§a (extends) evita redundÃ¢ncia de implementaÃ§Ã£o de cÃ³digo. RedundÃ¢ncia de cÃ³digo Ã© um mal designe pois dificulta a manutenÃ§Ã£o. A heranÃ§a (operadorÂ extends) Ã© uma importante caracterÃ­stica para ao reuso de algoritmos. [2] Diferentes classes podem ter comportamentos parecidos que podem ser generalizados em uma classe. Com o mecanismo de heranÃ§a (extends) essa classe pode ser compartilhada por outras classes mais especificas. No processo de heranÃ§a a classe mais especifica herda propriedades da classe mais geral. Por exemplo, no nosso exemplo didÃ¡tico podemos criar uma classe pai chamada de Bolo de Chocolate e uma classe filha chamada de Bolo de Chocolate com cobertura de Morango. Em Java quando uma classe C1 ( filha ) estende uma classe C2 ( pai) chamamos C1 de subclasse e C2 de superclasse. No Java a heranÃ§a Ã© feita a partir do modificador extends.</p><figure class="wp-caption aligncenter amp-wp-inline-a5175566a3873f4c44d7ddf7f1376050"><amp-img src="https://www.professormarcolan.com.br/wp-content/uploads/2018/03/javaExemploHeranca.png" alt="Exemplo de superclasse e subclasse" width="1047" height="286" class="amp-wp-enforced-sizes" layout="intrinsic"></amp-img><figcaption class="wp-caption-text">Exemplo do mecanismo de heranca: superclasse (bolo de chocolate) e as suas mÃºltiplas subclasses.</figcaption></figure><h1>Sobrescrever e sobrecarregar mÃ©todos</h1><p>Uma subclasse herda os mÃ©todos da superclasse porÃ©m em alguns momentos Ã© necessÃ¡rio que as classes mais especificas modifiquem a implementaÃ§Ã£o dos mÃ©todos. Isso pode ser feito pelo processo de Sobrescrever basta na subclasse rescrever com a mesma assinatura (mesmos parÃ¢metros de entrada e saÃ­da) a funÃ§Ã£o que ele deseja reescrever. Por exemplo na classe bolo de chocolate com morango ele pode, por exemplo, sobrescrever a funÃ§Ã£o cobertura da superclasse pai. Outra abordagem que ainda pode ser feita Ã© a de sobrecarregar os mÃ©todos nesse caso na mesma classe Ã© possÃ­vel passar e retornar outros parÃ¢metros. Por exemplo, na classe bolo de chocolate com cobertura de chocolate ele pode, por exemplo, sobrecarregar a funÃ§Ã£o cobertura para aceitar como parametro de entrada o tipo de chocolate da cobertura.</p><h1>Polimorfismo</h1><p>Um bom teste para um bom design de classes Ã© fazer a seguinte pergunta â&#128;&#156;Faz sentido disser que o tipo A Ã© do tipo Bâ&#128;&#157;.[1] Por exemplo um Gato Ã© um Felino, um bolo de chocolate Ã© um bolo. Entendemos que quando a classe B estende, herda, a classe A a casse B se torna a classe A. Assim, toda subclasse Ã© uma especializaÃ§Ã£o da superclasse. Toda instancia de uma subclasse tambÃ©m Ã© uma instancia da superclasse porÃ©m o contrario nÃ£o Ã© verdade . Por exemplo todo bolo de chocolate com cobertura de morango (subclasse) Ã© um bolo de chocolate(superclasse) mas nem todo bolo de chocolate Ã© um bolo com cobertura de morango. Isso pode ser observado pelo diagrama de venns:</p><figure class="wp-caption aligncenter amp-wp-inline-83e09f5225ac2c7e8627815fdfb17a33"><amp-img src="https://www.professormarcolan.com.br/wp-content/uploads/2017/08/diagrama-de-venn.png" alt="ProgramaÃ§Ã£o orientada ao objeto" width="420" height="378" class="amp-wp-enforced-sizes" layout="intrinsic"></amp-img><figcaption class="wp-caption-text">Diagrama de Venn : Bolos de chocolate com cobertura de morango, Bolos de chocolate com cobertura de chocolate, Bolos de chocolate com cobertura de bombom estÃ£o contidos em Bolos de chocolate.</figcaption></figure><p>Â </p><p>Ã© estabelecido que um tipo de objeto definido por uma subclasse Ã© chamado de subtipo e um tipo definido por uma superclasse Ã© um supertipo. Assim, um objeto criado por uma subclasse pode ser usado em qualquer lugar que poderia ser usado um objeto da superclasse. Isso Ã© chamado de polimorfismo que vem do grego â&#128;&#156;muitas formas â&#128;&#157; [2]. A partir do polimorfismo o programador pode criar container de dados mais genÃ©ricos para hospedar os vÃ¡rios tipos de subclasses.</p><h1>PrÃ³xima aula</h1><p>Outra coisa entÃ£o que podemos perceber no processo de heranÃ§a Ã© que existe classes mais abstratas e classes mais concretas. Na verdade isso Ã© um importante conceito em Java que iremos ver no prÃ³ximo post. Iremos abordar os diferentes niveis de abstraÃ§Ã£o. Para fixar melhor o conhecimento veja o vÃ­deo pratico de programaÃ§Ã£o em java.</p><p>Qualquer duvida deixe um comentÃ¡rio.</p><p>Poste sua dÃºvida nos comentÃ¡rios. Para seguir as atualizaÃ§Ãµes <a href="https://www.youtube.com/channel/UC9eGq_4v1Uu14Uznsey-hOg" target="_blank" rel="noopener">se inscreva no canal do youtube </a>e <a href="https://www.facebook.com/professormarcolan/" target="_blank" rel="noopener">nos siga no facebook. em @professormarcolan</a>.</p><h1>Referencias</h1><table><tbody><tr><th>[1] FREEMAN, Eric et al. Head First Design Patterns: A Brain-Friendly Guide. â&#128;&#157; Oâ&#128;&#153;Reilly Media, Inc.â&#128;&#157;, 2004.</th>
+<th><amp-iframe src="https://ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=BR&source=ac&ref=tf_til&ad_type=product_link&tracking_id=jmarcolan-20&marketplace=amazon&region=BR&placement=B00AA36RZY&asins=B00AA36RZY&linkId=07977550e53ff7121f98cd7d385028bd&show_border=false&link_opens_in_new_window=false&price_color=333333&title_color=0066c0&bg_color=ffffff" width="300" height="150" frameborder="0" sandbox="allow-scripts allow-same-origin" layout="intrinsic" class="amp-wp-enforced-sizes"><div placeholder="" class="amp-wp-iframe-placeholder"></div></amp-iframe></th>
+</tr><tr><th>[2] LIANG, Y. Daniel. Introduction to Java programming: brief version. Pearson, 2013.</th>
+<th>
+<ul><li><amp-iframe src="https://ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=BR&source=ac&ref=tf_til&ad_type=product_link&tracking_id=jmarcolan-20&marketplace=amazon&region=BR&placement=B00F5MO4GE&asins=B00F5MO4GE&linkId=1fc814f6a0a026a8a0ff4729bef71b10&show_border=false&link_opens_in_new_window=false&price_color=333333&title_color=0066c0&bg_color=ffffff" width="300" height="150" frameborder="0" sandbox="allow-scripts allow-same-origin" layout="intrinsic" class="amp-wp-enforced-sizes"><div placeholder="" class="amp-wp-iframe-placeholder"></div></amp-iframe></li>
+</ul></th>
+</tr><tr><th>[3] VÃ³ Tere, Receitas de bolos deliciosos, 1980</th>
+<th></th>
+</tr></tbody></table><div class="swp-content-locator"></div>	</div>
+
+	<footer class="amp-wp-article-footer"><div class="amp-wp-meta amp-wp-tax-category">
+		Categories: <a href="https://github.professormarcolan.com.br/en/category/theory/" rel="category tag">theory</a>	</div>
+
+	<div class="amp-wp-meta amp-wp-tax-tag">
+		Tags: <a href="https://github.professormarcolan.com.br/en/tag/classes-and-objects/" rel="tag">Classes and objects</a>, <a href="https://github.professormarcolan.com.br/en/tag/java-en/" rel="tag">Java</a>	</div>
+		<div class="amp-wp-meta amp-wp-comments-link">
+		<a href="https://github.professormarcolan.com.br/en/object-oriented-programming-in-java-inheritance-extends-and-polymorphism/#respond">
+			Leave a Comment		</a>
+	</div>
+	</footer></article><footer class="amp-wp-footer"><div>
+		<h2>Potencialize com conhecimento os seus estudos e projetos!</h2>
+		<p>
+			<a href="https://wordpress.org/">
+				Powered by WordPress			</a>
+		</p>
+		<a href="#top" class="back-to-top">Back to top</a>
+	</div>
+</footer></body></html>
