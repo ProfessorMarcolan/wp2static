@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en-US"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>SOLID principles: Single Responsibility Principle</title><style>@font-face {font-family: "sw-icon-font";src:url("https://github.professormarcolan.com.br/wp-content/plugins/social-warfare/assets/fonts/sw-icon-font.eot?ver=3.3.3");src:url("https://github.professormarcolan.com.br/wp-content/plugins/social-warfare/assets/fonts/sw-icon-font.eot?ver=3.3.3#iefix") format("embedded-opentype"),url("https://github.professormarcolan.com.br/wp-content/plugins/social-warfare/assets/fonts/sw-icon-font.woff?ver=3.3.3") format("woff"),
+	url("https://github.professormarcolan.com.br/wp-content/plugins/social-warfare/assets/fonts/sw-icon-font.ttf?ver=3.3.3") format("truetype"),url("https://github.professormarcolan.com.br/wp-content/plugins/social-warfare/assets/fonts/sw-icon-font.svg?ver=3.3.3#1445203416") format("svg");font-weight: normal;font-style: normal;}</style><meta name="description" content="Nesse post iremos discutir o Principio da responsabilidade Unica (Single responsibility principle). Ele Ã© um dos princÃ­pios do acrÃ´nimo SOLID. Clique nesse tutorial para aprender a prevenir que seu cÃ³digo apodreÃ§a ou refatorar seus cÃ³digos que estÃ£o cheirando mal."><meta property="og:locale" content="en_US"><meta property="og:locale:alternate" content="pt_BR"><meta property="og:type" content="article"><meta property="og:title" content="SOLID principles: Single Responsibility Principle"><meta property="og:description" content="Nesse post iremos discutir o Principio da responsabilidade Unica (Single responsibility principle). Ele Ã© um dos princÃ­pios do acrÃ´nimo SOLID. Clique nesse tutorial para aprender a prevenir que seu cÃ³digo apodreÃ§a ou refatorar seus cÃ³digos que estÃ£o cheirando mal."><meta property="og:url" content="https://github.professormarcolan.com.br/en/solid-principles-single-responsibility-principle/"><meta property="og:site_name" content="Potencialize com conhecimento os seus estudos e projetos!"><meta property="article:publisher" content="https://www.facebook.com/professormarcolan/"><meta property="article:tag" content="agile"><meta property="article:tag" content="Python"><meta property="article:section" content="theory"><meta property="article:published_time" content="2018-04-18T15:14:19+00:00"><meta property="og:image" content="https://github.professormarcolan.com.br/wp-content/uploads/2018/03/principiosSolidPrincioDaResponsabilidadeUnica.jpg"><meta property="og:image:secure_url" content="https://github.professormarcolan.com.br/wp-content/uploads/2018/03/principiosSolidPrincioDaResponsabilidadeUnica.jpg"><meta property="og:image:width" content="735"><meta property="og:image:height" content="735"><meta name="twitter:card" content="summary"><meta name="twitter:description" content="Nesse post iremos discutir o Principio da responsabilidade Unica (Single responsibility principle). Ele Ã© um dos princÃ­pios do acrÃ´nimo SOLID. Clique nesse tutorial para aprender a prevenir que seu cÃ³digo apodreÃ§a ou refatorar seus cÃ³digos que estÃ£o cheirando mal."><meta name="twitter:title" content="SOLID principles: Single Responsibility Principle"><meta name="twitter:image" content="https://github.professormarcolan.com.br/wp-content/uploads/2018/03/principiosSolidPrincioDaResponsabilidadeUnica.jpg"><script type="application/ld+json" class="yoast-schema-graph yoast-schema-graph--main">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://github.professormarcolan.com.br/en/featured-lesson/#website","url":"https://github.professormarcolan.com.br/en/featured-lesson/","name":"Potencialize com conhecimento os seus estudos e projetos!","publisher":{"@id":"https://github.professormarcolan.com.br/en/featured-lesson/#person"},"potentialAction":{"@type":"SearchAction","target":"https://github.professormarcolan.com.br/en/featured-lesson/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"WebPage","@id":"https://github.professormarcolan.com.br/en/solid-principles-single-responsibility-principle/#webpage","url":"https://github.professormarcolan.com.br/en/solid-principles-single-responsibility-principle/","inLanguage":"en-US","name":"SOLID principles: Single Responsibility Principle","isPartOf":{"@id":"https://github.professormarcolan.com.br/en/featured-lesson/#website"},"image":{"@type":"ImageObject","@id":"https://github.professormarcolan.com.br/en/solid-principles-single-responsibility-principle/#primaryimage","url":"https://github.professormarcolan.com.br/wp-content/uploads/2018/03/principiosSolidPrincioDaResponsabilidadeUnica.jpg","width":735,"height":735,"caption":"Principios SOLID: Princip\u00edo da responsabilidade unica. single responsibility principle"},"primaryImageOfPage":{"@id":"https://github.professormarcolan.com.br/en/solid-principles-single-responsibility-principle/#primaryimage"},"datePublished":"2018-04-18T15:14:19+00:00","dateModified":"2018-04-18T15:14:19+00:00","description":"Nesse post iremos discutir o Principio da responsabilidade Unica (Single responsibility principle). Ele \u00e9 um dos princ\u00edpios do acr\u00f4nimo SOLID. Clique nesse tutorial para aprender a prevenir que seu c\u00f3digo apodre\u00e7a ou refatorar seus c\u00f3digos que est\u00e3o cheirando mal."},{"@type":"Article","@id":"https://github.professormarcolan.com.br/en/solid-principles-single-responsibility-principle/#article","isPartOf":{"@id":"https://github.professormarcolan.com.br/en/solid-principles-single-responsibility-principle/#webpage"},"author":{"@id":"https://github.professormarcolan.com.br/en/featured-lesson/schema/person/joaomarcolan/#author"},"headline":"SOLID principles: Single Responsibility Principle","datePublished":"2018-04-18T15:14:19+00:00","dateModified":"2018-04-18T15:14:19+00:00","commentCount":0,"mainEntityOfPage":{"@id":"https://github.professormarcolan.com.br/en/solid-principles-single-responsibility-principle/#webpage"},"publisher":{"@id":"https://github.professormarcolan.com.br/en/featured-lesson/#person"},"image":{"@id":"https://github.professormarcolan.com.br/en/solid-principles-single-responsibility-principle/#primaryimage"},"keywords":"agile,Python","articleSection":"theory"},{"@type":["Person"],"@id":"https://github.professormarcolan.com.br/en/author/joaomarcolan/#author","name":"JoaoMarcolan","image":{"@type":"ImageObject","@id":"https://github.professormarcolan.com.br/en/featured-lesson/#authorlogo","url":"https://secure.gravatar.com/avatar/decab487065c8029b68fb599b5a989c8?s=96&d=mm&r=g","caption":"JoaoMarcolan"},"sameAs":[]}]}</script><link rel="dns-prefetch" href="//cdn.datacamp.com"><link rel="dns-prefetch" href="//fonts.googleapis.com"><link rel="dns-prefetch" href="//s.w.org"><script type="text/javascript" data-cfasync="false">
+	var mi_version         = '7.3.0';
+	var mi_track_user      = true;
+	var mi_no_track_reason = '';
+	
+	var disableStr = 'ga-disable-UA-90999033-1';
+
+	/* Function to detect opted out users */
+	function __gaTrackerIsOptedOut() {
+		return document.cookie.indexOf(disableStr + '=true') > -1;
+	}
+
+	/* Disable tracking if the opt-out cookie exists. */
+	if ( __gaTrackerIsOptedOut() ) {
+		window[disableStr] = true;
+	}
+
+	/* Opt-out function */
+	function __gaTrackerOptout() {
+	  document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+	  window[disableStr] = true;
+	}
+	
+	if ( mi_track_user ) {
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','__gaTracker');
+
+		__gaTracker('create', 'UA-90999033-1', 'auto');
+		__gaTracker('set', 'forceSSL', true);
+		__gaTracker('send','pageview');
+	} else {
+		console.log( "" );
+		(function() {
+			/* https://developers.google.com/analytics/devguides/collection/analyticsjs/ */
+			var noopfn = function() {
+				return null;
+			};
+			var noopnullfn = function() {
+				return null;
+			};
+			var Tracker = function() {
+				return null;
+			};
+			var p = Tracker.prototype;
+			p.get = noopfn;
+			p.set = noopfn;
+			p.send = noopfn;
+			var __gaTracker = function() {
+				var len = arguments.length;
+				if ( len === 0 ) {
+					return;
+				}
+				var f = arguments[len-1];
+				if ( typeof f !== 'object' || f === null || typeof f.hitCallback !== 'function' ) {
+					console.log( 'Not running function __gaTracker(' + arguments[0] + " ....) because you are not being tracked. " + mi_no_track_reason );
+					return;
+				}
+				try {
+					f.hitCallback();
+				} catch (ex) {
+
+				}
+			};
+			__gaTracker.create = function() {
+				return new Tracker();
+			};
+			__gaTracker.getByName = noopnullfn;
+			__gaTracker.getAll = function() {
+				return [];
+			};
+			__gaTracker.remove = noopfn;
+			window['__gaTracker'] = __gaTracker;
+					})();
+		}
+</script><link rel="stylesheet" id="validate-engine-css-css" href="https://github.professormarcolan.com.br/wp-content/plugins/wysija-newsletters/css/validationEngine.jquery.css" type="text/css" media="all"><link rel="stylesheet" id="datacamp-light-style-css" href="https://github.professormarcolan.com.br/wp-content/plugins/datacamp-light-wordpress-0.1.0/style/frontend_style.css" type="text/css" media="all"><link rel="stylesheet" id="ACT_css-css" href="https://github.professormarcolan.com.br/wp-content/plugins/list-all-posts-by-authors-nested-categories-and-titles/ACT.css" type="text/css" media="all"><link rel="stylesheet" id="social_warfare-css" href="https://github.professormarcolan.com.br/wp-content/plugins/social-warfare/assets/css/style.min.css" type="text/css" media="all"><link rel="stylesheet" id="font-awesome-css" href="https://github.professormarcolan.com.br/wp-content/themes/magazine-point/vendors/font-awesome/css/font-awesome.min.css" type="text/css" media="all"><link rel="stylesheet" id="magazine-point-google-fonts-css" href="https://fonts.googleapis.com/css?family=Magra%3A400%2C700%7CGudea%3A100%2C400%2C500%2C600&subset=latin%2Clatin-ext" type="text/css" media="all"><link rel="stylesheet" id="jquery-sidr-css" href="https://github.professormarcolan.com.br/wp-content/themes/magazine-point/vendors/sidr/css/jquery.sidr.dark.min.css" type="text/css" media="all"><link rel="stylesheet" id="jquery-slick-css" href="https://github.professormarcolan.com.br/wp-content/themes/magazine-point/vendors/slick/slick.min.css" type="text/css" media="all"><link rel="stylesheet" id="magazine-point-style-css" href="https://github.professormarcolan.com.br/wp-content/themes/magazine-point/style.css" type="text/css" media="all"><link rel="stylesheet" id="wpgform-css-css" href="https://github.professormarcolan.com.br/wp-content/plugins/wpgform/css/wpgform.css" type="text/css" media="all"><link rel="stylesheet" id="__EPYT__style-css" href="https://github.professormarcolan.com.br/wp-content/plugins/youtube-embed-plus/styles/ytprefs.min.css" type="text/css" media="all"><style id="__EPYT__style-inline-css" type="text/css">
+
+                .epyt-gallery-thumb {
+                        width: 33.333%;
+                }
+                
+</style><script type="text/javascript">
+/* <![CDATA[ */
+var monsterinsights_frontend = {"js_events_tracking":"true","is_debug_mode":"false","download_extensions":"doc,exe,js,pdf,ppt,tgz,zip,xls","inbound_paths":"","home_url":"https:\/\/PLACEHOLDER.wpsho","track_download_as":"event","internal_label":"int","hash_tracking":"false"};
+/* ]]> */
+</script><script type="text/javascript" src="https://github.professormarcolan.com.br/wp-content/plugins/google-analytics-for-wordpress/assets/js/frontend.min.js"></script><script type="text/javascript" src="https://github.professormarcolan.com.br/wp-includes/js/jquery/jquery.js"></script><script type="text/javascript" src="https://github.professormarcolan.com.br/wp-includes/js/jquery/jquery-migrate.min.js"></script><script type="text/javascript">
+/* <![CDATA[ */
+var _EPYT_ = {"ajaxurl":"https:\/\/github.professormarcolan.com.br\/wp-admin\/admin-ajax.php","security":"b53ddad27c","gallery_scrolloffset":"20","eppathtoscripts":"https:\/\/github.professormarcolan.com.br\/wp-content\/plugins\/youtube-embed-plus\/scripts\/","epresponsiveselector":"[\"iframe.__youtube_prefs_widget__\"]","epdovol":"1","version":"12.2","evselector":"iframe.__youtube_prefs__[src], iframe[src*=\"youtube.com\/embed\/\"], iframe[src*=\"youtube-nocookie.com\/embed\/\"]","ajax_compat":"","ytapi_load":"light","stopMobileBuffer":"1","vi_active":"","vi_js_posttypes":[]};
+/* ]]> */
+</script><script type="text/javascript" src="https://github.professormarcolan.com.br/wp-content/plugins/youtube-embed-plus/scripts/ytprefs.min.js"></script><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-5400208836705527",
+          enable_page_level_ads: true
+     });
+</script><style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style><style type="text/css">.broken_link, a.broken_link {
+	text-decoration: line-through;
+}</style><style type="text/css" id="custom-background-css">
+body.custom-background { background-color: #f1f0f0; }
+</style><link rel="amphtml" href="https://github.professormarcolan.com.br/en/solid-principles-single-responsibility-principle/amp/"><style type="text/css" id="syntaxhighlighteranchor"></style><link rel="icon" href="https://github.professormarcolan.com.br/wp-content/uploads/2018/06/cropped-professor-marcolan-logo-1-32x32.png" sizes="32x32"><link rel="icon" href="https://github.professormarcolan.com.br/wp-content/uploads/2018/06/cropped-professor-marcolan-logo-1-192x192.png" sizes="192x192"><link rel="apple-touch-icon-precomposed" href="https://github.professormarcolan.com.br/wp-content/uploads/2018/06/cropped-professor-marcolan-logo-1-180x180.png"><meta name="msapplication-TileImage" content="https://github.professormarcolan.com.br/wp-content/uploads/2018/06/cropped-professor-marcolan-logo-1-270x270.png"><style type="text/css" id="wp-custom-css">
+			/*
+Voc? pode adicionar seu pr?prio CSS aqui.
+
+div.site-content{
+	background-color: rgb(201, 76, 76)
+}
+
+Clique no ?cone de ajuda acima para saber mais.
+
+div.featured-news-item {
+	background-color: rgb(201, 76, 76);
+	    float: left;
+    width: 12%;
+    position: relative;
+
+}
+*/
+
+
+body {
+    font-family: "Times New Roman", Times, serif;
+	font-size: 19px;
+	text-align:justify;
+    color: #00008B;
+}
+
+p{
+		text-indent: 5%;
+}
+
+b{
+	font-family: "Times New Roman", Times, serif;
+	font-size: 19px;
+	color: black;
+	
+}
+
+div.news-block-wrapper{
+	
+	font-size: 15px;
+	text-align:justify;
+  color: black;
+	
+}
+
+h2.widget-title{
+		font-size: 20px;
+	text-align:justify;
+  color: black;
+}
+
+p.site-description{
+	color: black;
+	font-size: 25px;
+}
+
+p.site-title{
+	font-size: 45px;
+	text-align:justify;
+	
+}
+#news1{
+	color: green;
+}
+#news2{
+	color: green;
+}
+
+#news3{
+	color: grey;
+}
+
+.code{
+	    background-color: rgb(230, 234, 235);
+	color:green;
+}
+
+
+		</style></head><body class="post-template-default single single-post postid-842 single-format-standard custom-background wp-custom-logo site-layout-fluid global-layout-right-sidebar header-ads-enabled">
+
+	<div id="page" class="hfeed site"><a class="skip-link screen-reader-text" href="#content">Skip to content</a>		<a id="mobile-trigger" href="#mob-menu"><i class="fa fa-list-ul" aria-hidden="true"></i></a>
+		<div id="mob-menu">
+			<ul id="menu-menu-en_us" class="menu"><li id="menu-item-740" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-740"><a href="https://github.professormarcolan.com.br/en/featured-lesson/">Featured Lesson</a></li>
+<li id="menu-item-747" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-has-children menu-item-747"><a href="https://github.professormarcolan.com.br/en/repository-of-lessons/">Repository of lessons</a>
+<ul class="sub-menu"><li id="menu-item-910" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-910"><a href="https://github.professormarcolan.com.br/category/python/">Python</a></li>
+	<li id="menu-item-911" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-911"><a href="https://github.professormarcolan.com.br/category/git/">git</a></li>
+</ul></li>
+<li id="menu-item-741" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-741"><a href="https://github.professormarcolan.com.br/en/about/">About</a></li>
+<li id="menu-item-1029" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1029"><a href="https://github.professormarcolan.com.br/en/privacy-policies/">Privacy policies</a></li>
+<li id="menu-item-739" class="pll-parent-menu-item menu-item menu-item-type-custom menu-item-object-custom current-menu-parent menu-item-has-children menu-item-739"><a href="#pll_switcher"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAIAAAD5gJpuAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAHzSURBVHjaYkxOP8IAB//+Mfz7w8Dwi4HhP5CcJb/n/7evb16/APL/gRFQDiAAw3JuAgAIBEDQ/iswEERjGzBQLEru97ll0g0+3HvqMn1SpqlqGsZMsZsIe0SICA5gt5a/AGIEarCPtFh+6N/ffwxA9OvP/7//QYwff/6fZahmePeB4dNHhi+fGb59Y4zyvHHmCEAAAW3YDzQYaJJ93a+vX79aVf58//69fvEPlpIfnz59+vDhw7t37968efP3b/SXL59OnjwIEEAsDP+YgY53b2b89++/awvLn98MDi2cVxl+/vl6mituCtBghi9f/v/48e/XL86krj9XzwEEEENy8g6gu22rfn78+NGs5Ofr16+ZC58+fvyYwX8rxOxXr169fPny+fPn1//93bJlBUAAsQADZMEBxj9/GBxb2P/9+S/R8u3vzxuyaX8ZHv3j8/YGms3w8ycQARmi2eE37t4ACCDGR4/uSkrKAS35B3TT////wADOgLOBIaXIyjBlwxKAAGKRXjCB0SOEaeu+/y9fMnz4AHQxCP348R/o+l+//sMZQBNLEvif3AcIIMZbty7Ly6t9ZmXl+fXj/38GoHH/UcGfP79//BBiYHjy9+8/oUkNAAHEwt1V/vI/KBY/QSISFqM/GBg+MzB8A6PfYC5EFiDAABqgW776MP0rAAAAAElFTkSuQmCC" title="English" alt="English"><span style="margin-left:0.3em;">English</span></a>
+<ul class="sub-menu"><li class="lang-item lang-item-39 lang-item-pt lang-item-first menu-item menu-item-type-custom menu-item-object-custom menu-item-739-pt"><a href="https://github.professormarcolan.com.br/principios-solid-principio-da-responsabilidade-unica/" hreflang="pt-BR" lang="pt-BR"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAIAAAD5gJpuAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAHjSURBVHjaYmRIZkCAfwwMf2DkLzCCMyDoBwNAALEAlTVGN/5nYPj//x8Q/P3/9++/vzZa31gY/mw5z/Tn3x8g98+f37///fn99/eq2lUAAQTS8J/h/7NPz/9C5P79WRj89f9/zv//fztLvPVezPzrz+8/f3//+vtLhl8GaANAAIE1/P8PVA1U6qn7NVTqb1XVpAv/JH7/+a/848XmtpBlj39PO8gM1PP7z2+gqwACiAnoYpC9TF9nB34NVf5z4XpoZJbEjJKfWaEfL7KLlbaURKj8Opj08RfIVb+BNgAEEBPQW1L8P+b6/mb6//s/w+/+nc4F0/9P2cj65xdHc+p/QR39//9/AdHJ9A/60l8YvjIABBAT0JYH75jStv75zwCSMBY8BXTMxXv/21ezfHj9X5/3BESDy5JfBy7/ZuBnAAggkA1//vx594kpaCnLloe/smLaVT9/ff3y/+/P/w+u/+JuW7fhwS/tSayPXrOycrEyfGQACCAWoA1//oOCDIgm72fu4vy6b4LD/9/S/3///s9+S28yy+9/LEAf//kLChVgCAEEEEjD7z9/JHgkQeHwD8gUjV79O9r6CzPLv6lr1OUFwWH9Fxjcv//9BcYoA0AAMTI4ImIROUYRMf2XARkABBgA8kMvQf3q+24AAAAASUVORK5CYII=" title="PortuguÃªs" alt="PortuguÃªs"><span style="margin-left:0.3em;">PortuguÃªs</span></a></li>
+	<li class="lang-item lang-item-79 lang-item-en current-lang menu-item menu-item-type-custom menu-item-object-custom menu-item-739-en"><a href="https://github.professormarcolan.com.br/en/solid-principles-single-responsibility-principle/" hreflang="en-US" lang="en-US"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAIAAAD5gJpuAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAHzSURBVHjaYkxOP8IAB//+Mfz7w8Dwi4HhP5CcJb/n/7evb16/APL/gRFQDiAAw3JuAgAIBEDQ/iswEERjGzBQLEru97ll0g0+3HvqMn1SpqlqGsZMsZsIe0SICA5gt5a/AGIEarCPtFh+6N/ffwxA9OvP/7//QYwff/6fZahmePeB4dNHhi+fGb59Y4zyvHHmCEAAAW3YDzQYaJJ93a+vX79aVf58//69fvEPlpIfnz59+vDhw7t37968efP3b/SXL59OnjwIEEAsDP+YgY53b2b89++/awvLn98MDi2cVxl+/vl6mituCtBghi9f/v/48e/XL86krj9XzwEEEENy8g6gu22rfn78+NGs5Ofr16+ZC58+fvyYwX8rxOxXr169fPny+fPn1//93bJlBUAAsQADZMEBxj9/GBxb2P/9+S/R8u3vzxuyaX8ZHv3j8/YGms3w8ycQARmi2eE37t4ACCDGR4/uSkrKAS35B3TT////wADOgLOBIaXIyjBlwxKAAGKRXjCB0SOEaeu+/y9fMnz4AHQxCP348R/o+l+//sMZQBNLEvif3AcIIMZbty7Ly6t9ZmXl+fXj/38GoHH/UcGfP79//BBiYHjy9+8/oUkNAAHEwt1V/vI/KBY/QSISFqM/GBg+MzB8A6PfYC5EFiDAABqgW776MP0rAAAAAElFTkSuQmCC" title="English" alt="English"><span style="margin-left:0.3em;">English</span></a></li>
+</ul></li>
+</ul></div>
+		
+	<header id="masthead" class="site-header" role="banner"><div class="container">				<div class="site-branding">
+
+			<a href="https://github.professormarcolan.com.br/en/featured-lesson/" class="custom-logo-link" rel="home" itemprop="url"><img width="1147" height="383" src="https://github.professormarcolan.com.br/wp-content/uploads/2018/06/cropped-professor-marcolan-logo-2.png" class="custom-logo" alt="Potencialize com conhecimento os seus estudos e projetos!" itemprop="logo" srcset="https://github.professormarcolan.com.br/wp-content/uploads/2018/06/cropped-professor-marcolan-logo-2.png 1147w,https://github.professormarcolan.com.br/wp-content/uploads/2018/06/cropped-professor-marcolan-logo-2-300x100.png 300w,https://github.professormarcolan.com.br/wp-content/uploads/2018/06/cropped-professor-marcolan-logo-2-768x256.png 768w,https://github.professormarcolan.com.br/wp-content/uploads/2018/06/cropped-professor-marcolan-logo-2-1024x342.png 1024w,https://github.professormarcolan.com.br/wp-content/uploads/2018/06/cropped-professor-marcolan-logo-2-600x200.png 600w,https://github.professormarcolan.com.br/wp-content/uploads/2018/06/cropped-professor-marcolan-logo-2-400x134.png 400w" sizes="(max-width: 1147px) 100vw, 1147px" title="cropped-professor-marcolan-logo-2.png"></a>
+						
+							<div id="site-identity">
+																		<p class="site-title"><a href="https://github.professormarcolan.com.br/en/featured-lesson/" rel="home">Potencialize com conhecimento os seus estudos e projetos!</a></p>
+											
+									</div>
+			
+		</div>
+					<div class="header-ads-area">
+				<aside id="tag_cloud-10" class="widget widget_tag_cloud"><h2 class="widget-title">Com as aulas sobre:</h2><div class="tagcloud"><a href="https://github.professormarcolan.com.br/en/tag/agile-en/" class="tag-cloud-link tag-link-89 tag-link-position-1" style="font-size: 10.6666666667pt;" aria-label="agile (3 items)">agile<span class="tag-link-count"> (3)</span></a>
+<a href="https://github.professormarcolan.com.br/en/tag/classes-and-objects/" class="tag-cloud-link tag-link-93 tag-link-position-2" style="font-size: 17.3333333333pt;" aria-label="Classes and objects (7 items)">Classes and objects<span class="tag-link-count"> (7)</span></a>
+<a href="https://github.professormarcolan.com.br/en/tag/good-practices/" class="tag-cloud-link tag-link-91 tag-link-position-3" style="font-size: 8pt;" aria-label="good practices (2 items)">good practices<span class="tag-link-count"> (2)</span></a>
+<a href="https://github.professormarcolan.com.br/en/tag/java-en/" class="tag-cloud-link tag-link-95 tag-link-position-4" style="font-size: 10.6666666667pt;" aria-label="Java (3 items)">Java<span class="tag-link-count"> (3)</span></a>
+<a href="https://github.professormarcolan.com.br/en/tag/python-en/" class="tag-cloud-link tag-link-102 tag-link-position-5" style="font-size: 22pt;" aria-label="Python (12 items)">Python<span class="tag-link-count"> (12)</span></a>
+<a href="https://github.professormarcolan.com.br/en/tag/version-drivers/" class="tag-cloud-link tag-link-97 tag-link-position-6" style="font-size: 14.6666666667pt;" aria-label="version drivers (5 items)">version drivers<span class="tag-link-count"> (5)</span></a></div>
+</aside></div> 
+				</div></header><div id="main-nav" class="clear-fix main-nav">
+			<div class="container">
+			<nav id="site-navigation" class="main-navigation" role="navigation"><div class="wrap-menu-content">
+					<div class="menu-menu-en_us-container"><ul id="primary-menu" class="menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-740"><a href="https://github.professormarcolan.com.br/en/featured-lesson/">Featured Lesson</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-has-children menu-item-747"><a href="https://github.professormarcolan.com.br/en/repository-of-lessons/">Repository of lessons</a>
+<ul class="sub-menu"><li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-910"><a href="https://github.professormarcolan.com.br/category/python/">Python</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-911"><a href="https://github.professormarcolan.com.br/category/git/">git</a></li>
+</ul></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-741"><a href="https://github.professormarcolan.com.br/en/about/">About</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1029"><a href="https://github.professormarcolan.com.br/en/privacy-policies/">Privacy policies</a></li>
+<li class="pll-parent-menu-item menu-item menu-item-type-custom menu-item-object-custom current-menu-parent menu-item-has-children menu-item-739"><a href="#pll_switcher"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAIAAAD5gJpuAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAHzSURBVHjaYkxOP8IAB//+Mfz7w8Dwi4HhP5CcJb/n/7evb16/APL/gRFQDiAAw3JuAgAIBEDQ/iswEERjGzBQLEru97ll0g0+3HvqMn1SpqlqGsZMsZsIe0SICA5gt5a/AGIEarCPtFh+6N/ffwxA9OvP/7//QYwff/6fZahmePeB4dNHhi+fGb59Y4zyvHHmCEAAAW3YDzQYaJJ93a+vX79aVf58//69fvEPlpIfnz59+vDhw7t37968efP3b/SXL59OnjwIEEAsDP+YgY53b2b89++/awvLn98MDi2cVxl+/vl6mituCtBghi9f/v/48e/XL86krj9XzwEEEENy8g6gu22rfn78+NGs5Ofr16+ZC58+fvyYwX8rxOxXr169fPny+fPn1//93bJlBUAAsQADZMEBxj9/GBxb2P/9+S/R8u3vzxuyaX8ZHv3j8/YGms3w8ycQARmi2eE37t4ACCDGR4/uSkrKAS35B3TT////wADOgLOBIaXIyjBlwxKAAGKRXjCB0SOEaeu+/y9fMnz4AHQxCP348R/o+l+//sMZQBNLEvif3AcIIMZbty7Ly6t9ZmXl+fXj/38GoHH/UcGfP79//BBiYHjy9+8/oUkNAAHEwt1V/vI/KBY/QSISFqM/GBg+MzB8A6PfYC5EFiDAABqgW776MP0rAAAAAElFTkSuQmCC" title="English" alt="English"><span style="margin-left:0.3em;">English</span></a>
+<ul class="sub-menu"><li class="lang-item lang-item-39 lang-item-pt lang-item-first menu-item menu-item-type-custom menu-item-object-custom menu-item-739-pt"><a href="https://github.professormarcolan.com.br/principios-solid-principio-da-responsabilidade-unica/" hreflang="pt-BR" lang="pt-BR"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAIAAAD5gJpuAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAHjSURBVHjaYmRIZkCAfwwMf2DkLzCCMyDoBwNAALEAlTVGN/5nYPj//x8Q/P3/9++/vzZa31gY/mw5z/Tn3x8g98+f37///fn99/eq2lUAAQTS8J/h/7NPz/9C5P79WRj89f9/zv//fztLvPVezPzrz+8/f3//+vtLhl8GaANAAIE1/P8PVA1U6qn7NVTqb1XVpAv/JH7/+a/848XmtpBlj39PO8gM1PP7z2+gqwACiAnoYpC9TF9nB34NVf5z4XpoZJbEjJKfWaEfL7KLlbaURKj8Opj08RfIVb+BNgAEEBPQW1L8P+b6/mb6//s/w+/+nc4F0/9P2cj65xdHc+p/QR39//9/AdHJ9A/60l8YvjIABBAT0JYH75jStv75zwCSMBY8BXTMxXv/21ezfHj9X5/3BESDy5JfBy7/ZuBnAAggkA1//vx594kpaCnLloe/smLaVT9/ff3y/+/P/w+u/+JuW7fhwS/tSayPXrOycrEyfGQACCAWoA1//oOCDIgm72fu4vy6b4LD/9/S/3///s9+S28yy+9/LEAf//kLChVgCAEEEEjD7z9/JHgkQeHwD8gUjV79O9r6CzPLv6lr1OUFwWH9Fxjcv//9BcYoA0AAMTI4ImIROUYRMf2XARkABBgA8kMvQf3q+24AAAAASUVORK5CYII=" title="PortuguÃªs" alt="PortuguÃªs"><span style="margin-left:0.3em;">PortuguÃªs</span></a></li>
+	<li class="lang-item lang-item-79 lang-item-en current-lang menu-item menu-item-type-custom menu-item-object-custom menu-item-739-en"><a href="https://github.professormarcolan.com.br/en/solid-principles-single-responsibility-principle/" hreflang="en-US" lang="en-US"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAIAAAD5gJpuAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAHzSURBVHjaYkxOP8IAB//+Mfz7w8Dwi4HhP5CcJb/n/7evb16/APL/gRFQDiAAw3JuAgAIBEDQ/iswEERjGzBQLEru97ll0g0+3HvqMn1SpqlqGsZMsZsIe0SICA5gt5a/AGIEarCPtFh+6N/ffwxA9OvP/7//QYwff/6fZahmePeB4dNHhi+fGb59Y4zyvHHmCEAAAW3YDzQYaJJ93a+vX79aVf58//69fvEPlpIfnz59+vDhw7t37968efP3b/SXL59OnjwIEEAsDP+YgY53b2b89++/awvLn98MDi2cVxl+/vl6mituCtBghi9f/v/48e/XL86krj9XzwEEEENy8g6gu22rfn78+NGs5Ofr16+ZC58+fvyYwX8rxOxXr169fPny+fPn1//93bJlBUAAsQADZMEBxj9/GBxb2P/9+S/R8u3vzxuyaX8ZHv3j8/YGms3w8ycQARmi2eE37t4ACCDGR4/uSkrKAS35B3TT////wADOgLOBIaXIyjBlwxKAAGKRXjCB0SOEaeu+/y9fMnz4AHQxCP348R/o+l+//sMZQBNLEvif3AcIIMZbty7Ly6t9ZmXl+fXj/38GoHH/UcGfP79//BBiYHjy9+8/oUkNAAHEwt1V/vI/KBY/QSISFqM/GBg+MzB8A6PfYC5EFiDAABqgW776MP0rAAAAAElFTkSuQmCC" title="English" alt="English"><span style="margin-left:0.3em;">English</span></a></li>
+</ul></li>
+</ul></div>				</div>
+			</nav></div>
+		</div>
+			<div id="breadcrumb"><div class="container"><div role="navigation" aria-label="Breadcrumbs" class="breadcrumb-trail breadcrumbs" itemprop="breadcrumb"><ul class="trail-items" itemscope itemtype="http://schema.org/BreadcrumbList"><meta name="numberOfItems" content="3"><meta name="itemListOrder" content="Ascending"><li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="trail-item trail-begin"><a href="https://github.professormarcolan.com.br/en/featured-lesson/" rel="home" itemprop="item"><span itemprop="name">Home</span></a><meta itemprop="position" content="1"></li><li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="trail-item"><a href="https://github.professormarcolan.com.br/en/category/theory/" itemprop="item"><span itemprop="name">theory</span></a><meta itemprop="position" content="2"></li><li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="trail-item trail-end"><span itemprop="item"><span itemprop="name">SOLID principles: Single Responsibility Principle</span></span><meta itemprop="position" content="3"></li></ul></div></div></div><div id="content" class="site-content"><div class="container"><div class="inner-wrapper">	
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main"><article id="post-842" class="post-842 post type-post status-publish format-standard has-post-thumbnail hentry category-theory tag-agile-en tag-python-en"><img width="735" height="735" src="https://github.professormarcolan.com.br/wp-content/uploads/2018/03/principiosSolidPrincioDaResponsabilidadeUnica.jpg" class="magazine-point-post-thumb aligncenter wp-post-image" alt="Principios SOLID: PrincipÃ­o da responsabilidade unica. single responsibility principle" srcset="https://github.professormarcolan.com.br/wp-content/uploads/2018/03/principiosSolidPrincioDaResponsabilidadeUnica.jpg 735w,https://github.professormarcolan.com.br/wp-content/uploads/2018/03/principiosSolidPrincioDaResponsabilidadeUnica-150x150.jpg 150w,https://github.professormarcolan.com.br/wp-content/uploads/2018/03/principiosSolidPrincioDaResponsabilidadeUnica-300x300.jpg 300w" sizes="(max-width: 735px) 100vw, 735px" title="principiosSolidPrincioDaResponsabilidadeUnica"><div class="article-wrapper">
+
+		<header class="entry-header"><h1 class="entry-title">SOLID principles: Single Responsibility Principle</h1>
+			<div class="entry-meta">
+				<span class="posted-on"><a href="https://github.professormarcolan.com.br/en/solid-principles-single-responsibility-principle/" rel="bookmark"><time class="entry-date published updated" datetime="2018-04-18T12:14:19+00:00">18 de April de 2018</time></a></span><span class="byline"> <span class="author vcard"><a class="url fn n" href="https://github.professormarcolan.com.br/en/author/joaomarcolan/">JoaoMarcolan</a></span></span><span class="cat-links"><a href="https://github.professormarcolan.com.br/en/category/theory/" rel="category tag">theory</a></span>			</div>
+		</header><div class="entry-content">
+			
+<p>
+        Nesse tutorial iremos discutir sobre o Princípio da responsabilidade única. Ele é um dos cinco princípios que tem a intenção de tornar o software mais compreensivo, flexível e fácil de manter.  Esses princípios foram promovidos por Robert C. Martin. Martin é um dos <a href="https://www.professormarcolan.com.br/valores-da-metodologia-agile/%20" target="_blank" rel="noopener"> defensores dos valores Agile </a>.  Esse principio faz parte do <a href="https://www.professormarcolan.com.br/tag/solid/%20" target="_blank" rel="noopener"> acrônimo SOLID introduzidos por Michael Feathers </a>. Nos tutoriais passados discutimos <a href="https://www.professormarcolan.com.br/os-sintomas-de-um-codigo-que-cheira-mal/%20" target="_blank" rel="noopener"> sobre sintomas de um código que cheira mal </a>  e em um próximo iremos listar as principais causas que fazem o código cheirar mal. Os principios SOLID servem para prevenir e combater que seu código possua mal cheiros  </p>
+<h2>  Principio da responsabilidade Unica (Single responsibility principle)</h2>
+<p>
+        O principio da responsabilidade unica vem da premissa que todos os módulos ou classes devem ter apenas uma responsabilidade sobre uma única parte ou funcionalidade provida pelo software. Todos os serviços das classes ou módulo devem estar alinhadas com a responsabilidade definida. Martin define o termo responsabilidade como razão para mudar. Então, esse principio defende que uma classe ou módulo deve ter apenas uma razão para mudar (ser reescrito).
+    </p>
+<h2>  Exemplo didátido do principio da responsabildiade única </h2>
+<p>    Para melhor exemplificar esse principio iremos criar uma classe contendo um código em Python de um jogo qualquer. O jogo didático proposto possui um método no qual gerencia a lógica do jogo,  um método responsável por salvar o progresso do jogador e um ultimo método responsável por carregar o progresso do jogador. Inicialmente o programador produz o código 1
+    </p>
+<p></p><pre class="brush: python; title: ; notranslate" title="">
+    #código 1 - código que fere o principio da responsabilidade única
+    class Jogo():
+        def __init__(self):
+            """construtor do jogo"""
+            print("inicializou a classe!")
+
+        def calcularFisica(self):
+            print("calculando a física do jogo")
+
+
+        def gravarArquivo(self):
+            print("gravando o estado corrente do jogo")
+
+        def carregarArquivo(self):
+            print("carrega o estado corrente do jogo")
+
+    </pre>
+
+<p>    Ao analisar o código produzido da para perceber que a classe “jogo” produzida está gerenciando duas responsabilidades diferentes. A primeira responsabilidade que ela está gerenciando é a de manter e processar o jogo- de realizar a lógica do jogo. A segunda responsabilidade que essa classe está lidando é a de gerenciar a persistência dos dados do jogo – dos arquivos permanentes do jogo. Sendo assim, a classe “jogo” está ferindo o principio da responsabilidade única pois ela tem duas razões para mudar.
+</p>
+<h3>  Seguindo o principio da responsabilidade única </h3>
+<p>
+    Agora iremos refatorar a classe “jogo” para que não fira o principio da responsabilidade uníca. Como análisado anteriormente a classe “jogo” tem dois motivos para mudar. Então, iremos implementar uma classe para cada responsabilidade. Uma classe irá ter a responsabilidade de manter a logica/processamento do jogo e uma outra classe sera responsável por lidar com a persistência dos dados desse jogo. Com isso geramos o código em python a abaixo.
+</p>
+<p></p><pre class="brush: python; title: ; notranslate" title="">
+    #código 2-classes seguindo o principio da responsabilidade única
+    class JogoProcessamento(object):
+        def __init__(self):
+        """ contrutor de um objeto que contem a lógica do jogo"""
+            print("inicializou a classe!")
+
+        def calcularFisica(self):
+            print("calculando a física do jogo")
+
+
+    class JogoPersistencia(object):
+        def __init__(self):
+        """contrutor de um objeto que lida com a persistencia dos dados desse jogo"""
+            print("inicializou a classe!")
+
+        def gravarArquivo(self):
+            print("gravando o estado corrente do jogo")
+
+        def carregarArquivo(self):
+            print("carrega o estado corrente do jogo")
+
+    </pre>
+
+<p>
+ Agora observando o código 2, pode-se perceber que cada uma das classes implementadas está tendo uma única razão para mudar. Caso o programador queira implementar uma nova lógica no jogo ele precisa apenas alterar a classe <i> JogoProcessamento</i> e caso ele queira alterar a forma de persistencia dos dados ele precisa apenas alterar a classe <i> JogoPersistencia</i>.
+</p>
+<h2> Principio do OPEM CLOSE dos principios SOLID </h2>
+<p>
+    Nesse tutorial discutimos o principio da responsabilidade unica. <a href="https://github.com/jmarcolan/ProfessorMarcolan/tree/master/SOLID/OpenClose%20" target="_blank" rel="noopener"> O código você consegue clonar pelo github </a>. No próximo tutorial dos princípios SOLID iremos discutir sobre o princípio <i>“OPEN/CLOSE” </i>.   Poste sua dúvida nos comentários. Para seguir as atualizações <a href="https://www.youtube.com/channel/UC9eGq_4v1Uu14Uznsey-hOg" target="_blank" rel="noopener"> se inscreva no canal do youtube </a>e <a href="https://www.facebook.com/professormarcolan/" target="_blank" rel="noopener"> nos siga no facebook. em @professormarcolan</a>.</p>
+
+<h2> Bibliografia </h2>
+<table><tr><th>[1]MARTIN, Robert C. Agile software development: principles, patterns, and practices. Prentice Hall, 2002.</th>
+<th><iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=BR&source=ac&ref=qf_sp_asin_til&ad_type=product_link&tracking_id=jmarcolan-20&marketplace=amazon&region=BR&placement=0135974445&asins=0135974445&linkId=5b087b063be8b55ba91acba0a8660f52&show_border=false&link_opens_in_new_window=false&price_color=333333&title_color=0066c0&bg_color=ffffff"><br></iframe></th>
+</tr><tr><th>[2] http://www.agilemodeling.com/essays/agileDocumentation.htm</th>
+<th> </th>
+</tr><tr><th>[3] https://en.wikipedia.org/wiki/SOLID_(object-oriented_design)</th>
+<th> </th>
+</tr><tr><th>[4]MARTIN, Robert C. Clean code: a handbook of agile software craftsmanship. Pearson Education, 2009.</th>
+<th><iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=BR&source=ac&ref=qf_sp_asin_til&ad_type=product_link&tracking_id=jmarcolan-20&marketplace=amazon&region=BR&placement=B001GSTOAM&asins=B001GSTOAM&linkId=916f769b3a972e16da38672c9c439a71&show_border=false&link_opens_in_new_window=false&price_color=333333&title_color=0066c0&bg_color=ffffff"><br></iframe></th>
+</tr></table><div class="swp_social_panel swp_horizontal_panel  swp_flat_fresh  swp_default_full_color swp_individual_full_color swp_other_full_color  scale-100  scale-" data-min-width="1100" data-float-color="#ffffff" data-float="bottom" data-float-mobile="" style="">
+<div class="nc_tweetContainer swp_facebook" data-network="facebook"><a rel="nofollow noreferrer noopener" target="_blank" href="https://www.facebook.com/share.php?u=https%3A%2F%2Fprofessormarcolan.com.br%2Fen%2Fsolid-principles-single-responsibility-principle%2F" data-link="https://www.facebook.com/share.php?u=https%3A%2F%2Fprofessormarcolan.com.br%2Fen%2Fsolid-principles-single-responsibility-principle%2F" class="nc_tweet"><span class="swp_count swp_hide"><span class="iconFiller"><span class="spaceManWilly"><i class="sw swp_facebook_icon"></i><span class="swp_share">Share</span></span></span></span></a></div>
+<div class="nc_tweetContainer swp_pinterest" data-network="pinterest"><a rel="nofollow noreferrer noopener" class="nc_tweet noPop" onclick="var e=document.createElement('script');
+						   e.setAttribute('type','text/javascript');
+						   e.setAttribute('charset','UTF-8');
+						   e.setAttribute('src','//assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);
+						   document.body.appendChild(e);
+						"><span class="swp_count swp_hide"><span class="iconFiller"><span class="spaceManWilly"><i class="sw swp_pinterest_icon"></i><span class="swp_share">Pin</span></span></span></span></a></div>
+<div class="nc_tweetContainer swp_linkedin" data-network="linkedin"><a rel="nofollow noreferrer noopener" target="_blank" href="https://www.linkedin.com/cws/share?url=https%3A%2F%2Fprofessormarcolan.com.br%2Fen%2Fsolid-principles-single-responsibility-principle%2F" data-link="https://www.linkedin.com/cws/share?url=https%3A%2F%2Fprofessormarcolan.com.br%2Fen%2Fsolid-principles-single-responsibility-principle%2F" class="nc_tweet"><span class="swp_count swp_hide"><span class="iconFiller"><span class="spaceManWilly"><i class="sw swp_linkedin_icon"></i><span class="swp_share">Share</span></span></span></span></a></div>
+<div class="nc_tweetContainer total_shares total_sharesalt"><span class="swp_count ">0 <span class="swp_label">Shares</span></span></div>
+</div>
+<div class="swp-content-locator"></div>
+					</div>
+
+		<footer class="entry-footer entry-meta"><span class="tags-links"><a href="https://github.professormarcolan.com.br/en/tag/agile-en/" rel="tag">agile</a>, <a href="https://github.professormarcolan.com.br/en/tag/python-en/" rel="tag">Python</a></span>		</footer></div> 
+
+</article><nav class="navigation post-navigation" role="navigation"><h2 class="screen-reader-text">Post navigation</h2>
+		<div class="nav-links"><div class="nav-previous"><a href="https://github.professormarcolan.com.br/en/the-symptoms-of-a-code-that-smells-bad/" rel="prev">The symptoms of a code that smells bad</a></div><div class="nav-next"><a href="https://github.professormarcolan.com.br/en/object-oriented-programming-in-python-how-to-create-a-class-in-python/" rel="next">Object-oriented programming in Python: How to create a class in Python!</a></div></div>
+	</nav><div class="related-posts-wrapper related-posts-column-3">
+
+		<h4>Related Posts</h4>
+
+		<div class="inner-wrapper">
+
+			
+				<div class="related-posts-item">
+											<div class="related-posts-thumb">
+							<a href="https://github.professormarcolan.com.br/en/how-to-use-inheritance-in-python/">
+								<img width="300" height="300" src="https://github.professormarcolan.com.br/wp-content/uploads/2018/06/come-understante-the-inheritance-feature-in-python-300x300.png" class="aligncenter wp-post-image" alt="How to use the inheritance feature in python" srcset="https://github.professormarcolan.com.br/wp-content/uploads/2018/06/come-understante-the-inheritance-feature-in-python-300x300.png 300w,https://github.professormarcolan.com.br/wp-content/uploads/2018/06/come-understante-the-inheritance-feature-in-python-150x150.png 150w,https://github.professormarcolan.com.br/wp-content/uploads/2018/06/come-understante-the-inheritance-feature-in-python-600x600.png 600w,https://github.professormarcolan.com.br/wp-content/uploads/2018/06/come-understante-the-inheritance-feature-in-python.png 735w" sizes="(max-width: 300px) 100vw, 300px" title="come-understante-the-inheritance-feature-in-python"></a>
+						</div>
+					
+					<div class="related-posts-text-wrap">
+						<div class="related-posts-meta entry-meta">
+							<span class="posted-on">25 de June de 2018</span>
+							<span class="comments-link"><a href="https://github.professormarcolan.com.br/en/how-to-use-inheritance-in-python/#respond">0</a></span>						</div>
+						<h3 class="related-posts-title">
+							<a href="https://github.professormarcolan.com.br/en/how-to-use-inheritance-in-python/">Object-Oriented Programming in Python: How to use inheritance in Python</a>
+						</h3>
+					</div>
+
+				</div>
+
+			
+				<div class="related-posts-item">
+											<div class="related-posts-thumb">
+							<a href="https://github.professormarcolan.com.br/en/how-to-do-encapsulation-in-python/">
+								<img width="300" height="300" src="https://github.professormarcolan.com.br/wp-content/uploads/2018/05/EncapsulationFeature-300x300.png" class="aligncenter wp-post-image" alt="Object oriented programmin in python. Come to understand encapsulation feature in Python" srcset="https://github.professormarcolan.com.br/wp-content/uploads/2018/05/EncapsulationFeature-300x300.png 300w,https://github.professormarcolan.com.br/wp-content/uploads/2018/05/EncapsulationFeature-150x150.png 150w,https://github.professormarcolan.com.br/wp-content/uploads/2018/05/EncapsulationFeature-768x768.png 768w,https://github.professormarcolan.com.br/wp-content/uploads/2018/05/EncapsulationFeature.png 784w" sizes="(max-width: 300px) 100vw, 300px" title="EncapsulationFeature"></a>
+						</div>
+					
+					<div class="related-posts-text-wrap">
+						<div class="related-posts-meta entry-meta">
+							<span class="posted-on">13 de May de 2018</span>
+							<span class="comments-link"><a href="https://github.professormarcolan.com.br/en/how-to-do-encapsulation-in-python/#respond">0</a></span>						</div>
+						<h3 class="related-posts-title">
+							<a href="https://github.professormarcolan.com.br/en/how-to-do-encapsulation-in-python/">How to do encapsulation in Python!</a>
+						</h3>
+					</div>
+
+				</div>
+
+			
+				<div class="related-posts-item">
+											<div class="related-posts-thumb">
+							<a href="https://github.professormarcolan.com.br/en/introduction-to-object-oriented-programming-in-python/">
+								<img width="300" height="300" src="https://github.professormarcolan.com.br/wp-content/uploads/2018/04/thumbnailIntrodu%C3%83%C2%A7%C3%83%C2%A3oAPrograma%C3%83%C2%A7%C3%83%C2%A3oOrientadaAoObjetoemPythonEng-300x300.jpg" class="aligncenter wp-post-image" alt="Introduction to object oriented programing in Python" srcset="https://github.professormarcolan.com.br/wp-content/uploads/2018/04/thumbnailIntrodu%C3%83%C2%A7%C3%83%C2%A3oAPrograma%C3%83%C2%A7%C3%83%C2%A3oOrientadaAoObjetoemPythonEng-300x300.jpg 300w,https://github.professormarcolan.com.br/wp-content/uploads/2018/04/thumbnailIntrodu%C3%83%C2%A7%C3%83%C2%A3oAPrograma%C3%83%C2%A7%C3%83%C2%A3oOrientadaAoObjetoemPythonEng-150x150.jpg 150w,https://github.professormarcolan.com.br/wp-content/uploads/2018/04/thumbnailIntrodu%C3%83%C2%A7%C3%83%C2%A3oAPrograma%C3%83%C2%A7%C3%83%C2%A3oOrientadaAoObjetoemPythonEng.jpg 735w" sizes="(max-width: 300px) 100vw, 300px" title="thumbnailIntroduÃ§Ã£oAProgramaÃ§Ã£oOrientadaAoObjetoemPythonEng"></a>
+						</div>
+					
+					<div class="related-posts-text-wrap">
+						<div class="related-posts-meta entry-meta">
+							<span class="posted-on">23 de April de 2018</span>
+							<span class="comments-link"><a href="https://github.professormarcolan.com.br/en/introduction-to-object-oriented-programming-in-python/#respond">0</a></span>						</div>
+						<h3 class="related-posts-title">
+							<a href="https://github.professormarcolan.com.br/en/introduction-to-object-oriented-programming-in-python/">Introduction to object oriented programming in Python</a>
+						</h3>
+					</div>
+
+				</div>
+
+			
+			
+		</div>
+	</div>
+
+
+			
+<div id="comments" class="comments-area">
+
+	
+	
+	
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/en/solid-principles-single-responsibility-principle/#respond" style="display:none;">Cancel reply</a></small></h3><p class="must-log-in">You must be <a href="https://github.professormarcolan.com.br/wp-login.php">logged in</a> to post a comment.</p>	</div>
+	
+</div>
+
+		
+		</main></div>
+
+
+<div id="sidebar-primary" class="widget-area sidebar" role="complementary">
+	<div class="sidebar-widget-wrapper">
+					<aside id="custom_html-15" class="widget_text widget widget_custom_html"><h2 class="widget-title">Assine nossa Newsletter!</h2><div class="textwidget custom-html-widget"><img src="https://github.professormarcolan.com.br/wp-content/uploads/2018/06/logo-professor-marcolan-newsletter.png" alt="Italian Trulli"><div id="news1">
+	SÃ©rie de emails grÃ¡tis de <b>Python!</b> Assine para receber contÃ©udos exclusivo via email.
+	
+</div>
+
+
+
+<div id="news2">
+	<iframe width="100%" scrolling="no" frameborder="0" src="https://github.professormarcolan.com.br/?wysija-page=1&controller=subscribers&action=wysija_outter&wysija_form=2&external_site=1&wysijap=subscriptions" class="iframe-wysija" vspace="0" tabindex="0" style="position: static; top: 0pt; margin: 0px; border-style: none;left: 0pt; visibility: visible; font-size:160%" marginwidth="0" marginheight="0" hspace="0" allowtransparency="true" title="Assinatura MailPoet"></iframe>
+	
+</div>
+
+<div id="news3">
+	NÃ³s levamos a  sua privacidade a sÃ©rio. Sem qualquer tipo de spam, cancele a qualquer momente!
+	
+</div></div></aside><aside id="search-2" class="widget widget_search"><h2 class="widget-title">Find some lessons!</h2><form role="search" method="get" class="search-form" action="https://github.professormarcolan.com.br/en/">
+			<label>
+			<span class="screen-reader-text">Search for:</span>
+			<input type="search" class="search-field" placeholder="Search…" value="" name="s" title="Search for:"></label>
+			<input type="submit" class="search-submit" value=""></form></aside><aside id="tag_cloud-8" class="widget widget_tag_cloud"><h2 class="widget-title">Tags</h2><div class="tagcloud"><a href="https://github.professormarcolan.com.br/en/tag/agile-en/" class="tag-cloud-link tag-link-89 tag-link-position-1" style="font-size: 10.6666666667pt;" aria-label="agile (3 items)">agile</a>
+<a href="https://github.professormarcolan.com.br/en/tag/classes-and-objects/" class="tag-cloud-link tag-link-93 tag-link-position-2" style="font-size: 17.3333333333pt;" aria-label="Classes and objects (7 items)">Classes and objects</a>
+<a href="https://github.professormarcolan.com.br/en/tag/good-practices/" class="tag-cloud-link tag-link-91 tag-link-position-3" style="font-size: 8pt;" aria-label="good practices (2 items)">good practices</a>
+<a href="https://github.professormarcolan.com.br/en/tag/java-en/" class="tag-cloud-link tag-link-95 tag-link-position-4" style="font-size: 10.6666666667pt;" aria-label="Java (3 items)">Java</a>
+<a href="https://github.professormarcolan.com.br/en/tag/python-en/" class="tag-cloud-link tag-link-102 tag-link-position-5" style="font-size: 22pt;" aria-label="Python (12 items)">Python</a>
+<a href="https://github.professormarcolan.com.br/en/tag/version-drivers/" class="tag-cloud-link tag-link-97 tag-link-position-6" style="font-size: 14.6666666667pt;" aria-label="version drivers (5 items)">version drivers</a></div>
+</aside><aside id="archives-2" class="widget widget_archive"><h2 class="widget-title">Archives</h2>		<ul><li><a href="https://github.professormarcolan.com.br/en/2018/06/">June 2018</a></li>
+	<li><a href="https://github.professormarcolan.com.br/en/2018/05/">May 2018</a></li>
+	<li><a href="https://github.professormarcolan.com.br/en/2018/04/">April 2018</a></li>
+	<li><a href="https://github.professormarcolan.com.br/en/2018/03/">March 2018</a></li>
+		</ul></aside><aside id="categories-2" class="widget widget_categories"><h2 class="widget-title">Categories</h2>		<ul><li class="cat-item cat-item-126"><a href="https://github.professormarcolan.com.br/en/category/git-en/" title="Learn how to use git">git</a> (1)
+</li>
+	<li class="cat-item cat-item-99"><a href="https://github.professormarcolan.com.br/en/category/practice/">practice</a> (6)
+</li>
+	<li class="cat-item cat-item-124"><a href="https://github.professormarcolan.com.br/en/category/python-en/" title="Learn Python. Object programming orientation">Python</a> (4)
+</li>
+	<li class="cat-item cat-item-81"><a href="https://github.professormarcolan.com.br/en/category/theory/">theory</a> (16)
+</li>
+		</ul></aside></div> 
+</div>
+</div></div></div>
+	
+	<div id="footer-widgets" class="widget-area" role="complementary">
+		<div class="container">
+						<div class="inner-wrapper">
+										<div class="widget-column footer-active-1">
+							<aside id="custom_html-6" class="widget_text widget widget_custom_html"><h3 class="widget-title">Contact!</h3><div class="textwidget custom-html-widget">email : zn_john@hotmail.com
+<br>
+github : https://github.com/jmarcolan
+<br>
+https://www.facebook.com/jmarcolan</div></aside></div>
+									</div>
+		</div>
+	</div>
+
+<footer id="colophon" class="site-footer" role="contentinfo"><div class="container">	
+					<div id="footer-navigation" class="menu-menu-en_us-container"><ul id="menu-menu-en_us-1" class="menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-740"><a href="https://github.professormarcolan.com.br/en/featured-lesson/">Featured Lesson</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-has-children menu-item-747"><a href="https://github.professormarcolan.com.br/en/repository-of-lessons/">Repository of lessons</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-741"><a href="https://github.professormarcolan.com.br/en/about/">About</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1029"><a href="https://github.professormarcolan.com.br/en/privacy-policies/">Privacy policies</a></li>
+<li class="pll-parent-menu-item menu-item menu-item-type-custom menu-item-object-custom current-menu-parent menu-item-has-children menu-item-739"><a href="#pll_switcher"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAIAAAD5gJpuAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAHzSURBVHjaYkxOP8IAB//+Mfz7w8Dwi4HhP5CcJb/n/7evb16/APL/gRFQDiAAw3JuAgAIBEDQ/iswEERjGzBQLEru97ll0g0+3HvqMn1SpqlqGsZMsZsIe0SICA5gt5a/AGIEarCPtFh+6N/ffwxA9OvP/7//QYwff/6fZahmePeB4dNHhi+fGb59Y4zyvHHmCEAAAW3YDzQYaJJ93a+vX79aVf58//69fvEPlpIfnz59+vDhw7t37968efP3b/SXL59OnjwIEEAsDP+YgY53b2b89++/awvLn98MDi2cVxl+/vl6mituCtBghi9f/v/48e/XL86krj9XzwEEEENy8g6gu22rfn78+NGs5Ofr16+ZC58+fvyYwX8rxOxXr169fPny+fPn1//93bJlBUAAsQADZMEBxj9/GBxb2P/9+S/R8u3vzxuyaX8ZHv3j8/YGms3w8ycQARmi2eE37t4ACCDGR4/uSkrKAS35B3TT////wADOgLOBIaXIyjBlwxKAAGKRXjCB0SOEaeu+/y9fMnz4AHQxCP348R/o+l+//sMZQBNLEvif3AcIIMZbty7Ly6t9ZmXl+fXj/38GoHH/UcGfP79//BBiYHjy9+8/oUkNAAHEwt1V/vI/KBY/QSISFqM/GBg+MzB8A6PfYC5EFiDAABqgW776MP0rAAAAAElFTkSuQmCC" title="English" alt="English"><span style="margin-left:0.3em;">English</span></a></li>
+</ul></div>							<div class="copyright">
+				Copyright © All rights reserved.			</div>
+				<div class="site-info">
+			<a href="https://wordpress.org/">Powered by WordPress</a>
+			<span class="sep"> | </span>
+			Magazine Point by <a href="https://axlethemes.com">Axle Themes</a>		</div>
+			</div></footer></div><a href="#page" class="scrollup" id="btn-scrollup"><i class="fa fa-angle-up"></i></a>
+<script type="text/javascript" src="https://github.professormarcolan.com.br/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shCore.js"></script><script type="text/javascript" src="https://github.professormarcolan.com.br/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPython.js"></script><script type="text/javascript">
+	(function(){
+		var corecss = document.createElement('link');
+		var themecss = document.createElement('link');
+		var corecssurl = "https://github.professormarcolan.com.br/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shCore.css?ver=3.0.9b";
+		if ( corecss.setAttribute ) {
+				corecss.setAttribute( "rel", "stylesheet" );
+				corecss.setAttribute( "type", "text/css" );
+				corecss.setAttribute( "href", corecssurl );
+		} else {
+				corecss.rel = "stylesheet";
+				corecss.href = corecssurl;
+		}
+		document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+		var themecssurl = "https://github.professormarcolan.com.br/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shThemeDefault.css?ver=3.0.9b";
+		if ( themecss.setAttribute ) {
+				themecss.setAttribute( "rel", "stylesheet" );
+				themecss.setAttribute( "type", "text/css" );
+				themecss.setAttribute( "href", themecssurl );
+		} else {
+				themecss.rel = "stylesheet";
+				themecss.href = themecssurl;
+		}
+		//document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+		document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+	})();
+	SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+	SyntaxHighlighter.config.strings.help = '?';
+	SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+	SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+	SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+	SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+	SyntaxHighlighter.defaults['toolbar'] = false;
+	SyntaxHighlighter.all();
+</script><script type="text/javascript" src="https://cdn.datacamp.com/datacamp-light-latest.min.js?ver=4.9.10"></script><script type="text/javascript" src="https://github.professormarcolan.com.br/wp-content/plugins/social-warfare/assets/js/script.min.js"></script><script type="text/javascript" src="https://github.professormarcolan.com.br/wp-content/themes/magazine-point/js/skip-link-focus-fix.min.js"></script><script type="text/javascript" src="https://github.professormarcolan.com.br/wp-content/themes/magazine-point/vendors/cycle2/js/jquery.cycle2.min.js"></script><script type="text/javascript" src="https://github.professormarcolan.com.br/wp-content/themes/magazine-point/vendors/sidr/js/jquery.sidr.min.js"></script><script type="text/javascript" src="https://github.professormarcolan.com.br/wp-content/themes/magazine-point/vendors/slick/slick.min.js"></script><script type="text/javascript" src="https://github.professormarcolan.com.br/wp-content/themes/magazine-point/js/custom.min.js"></script><script type="text/javascript" src="https://github.professormarcolan.com.br/wp-content/plugins/youtube-embed-plus/scripts/fitvids.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=default&ver=1.3.10"></script><script type="text/javascript">var swpFloatBeforeContent = false;var swpClickTracking = false;</script></body></html>
