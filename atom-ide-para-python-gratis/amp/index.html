@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html amp lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"><script type="application/ld+json" class="yoast-schema-graph yoast-schema-graph--main">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://github.professormarcolan.com.br/#website","url":"https://github.professormarcolan.com.br/","name":"Potencialize com conhecimento os seus estudos e projetos!","publisher":{"@id":"https://github.professormarcolan.com.br/#person"},"potentialAction":{"@type":"SearchAction","target":"https://github.professormarcolan.com.br/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"WebPage","@id":"https://github.professormarcolan.com.br/atom-ide-para-python-gratis/#webpage","url":"https://github.professormarcolan.com.br/atom-ide-para-python-gratis/","inLanguage":"pt-BR","name":"Transformando o Atom IDE para Python","isPartOf":{"@id":"https://github.professormarcolan.com.br/#website"},"image":{"@type":"ImageObject","@id":"https://github.professormarcolan.com.br/atom-ide-para-python-gratis/#primaryimage","url":"https://github.professormarcolan.com.br/wp-content/uploads/2018/02/aprendaAConfigurarOAtomParaSerUmIDEParaPython.jpg","width":735,"height":735,"caption":"Aprenda a configurar o Atom para ser um IDE para Python"},"primaryImageOfPage":{"@id":"https://github.professormarcolan.com.br/atom-ide-para-python-gratis/#primaryimage"},"datePublished":"2018-02-09T23:36:05+00:00","dateModified":"2018-11-12T01:19:34+00:00","description":"Neste tutorial mostraremos os 7 principais plugins que voc\u00ea deve ter para tornar o Atom IDE para Python. Incluindo um plug-in para preencher automaticamente o c\u00f3digo Python no editor de texto do Atom. Al\u00e9m disso, mostraremos como configurar o editor de texto do Atom para usar no Python. Com esses plugins, o Atom se torna um dos melhores IDES para Python."},{"@type":"Article","@id":"https://github.professormarcolan.com.br/atom-ide-para-python-gratis/#article","isPartOf":{"@id":"https://github.professormarcolan.com.br/atom-ide-para-python-gratis/#webpage"},"author":{"@id":"https://github.professormarcolan.com.br/schema/person/joaomarcolan/#author"},"headline":"Transformando o Atom IDE para Python","datePublished":"2018-02-09T23:36:05+00:00","dateModified":"2018-11-12T01:19:34+00:00","commentCount":0,"mainEntityOfPage":{"@id":"https://github.professormarcolan.com.br/atom-ide-para-python-gratis/#webpage"},"publisher":{"@id":"https://github.professormarcolan.com.br/#person"},"image":{"@id":"https://github.professormarcolan.com.br/atom-ide-para-python-gratis/#primaryimage"},"keywords":"ide,Python","articleSection":"pratica,Python"},{"@type":["Person"],"@id":"https://github.professormarcolan.com.br/author/joaomarcolan/#author","name":"JoaoMarcolan","image":{"@type":"ImageObject","@id":"https://github.professormarcolan.com.br/#authorlogo","url":"https://secure.gravatar.com/avatar/decab487065c8029b68fb599b5a989c8?s=96&d=mm&r=g","caption":"JoaoMarcolan"},"sameAs":[]}]}</script><title>Transformando o Atom IDE para Python</title><script type="text/javascript" src="https://cdn.ampproject.org/v0.js" async></script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic"><style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style></head><body><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript><style amp-custom>
+		/* Generic WP styling */
+
+.alignright {
+	float: right;
+}
+
+.alignleft {
+	float: left;
+}
+
+.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.amp-wp-enforced-sizes {
+	/** Our sizes fallback is 100vw, and we have a padding on the container; the max-width here prevents the element from overflowing. **/
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+.amp-wp-unknown-size img {
+	/** Worst case scenario when we can't figure out dimensions for an image. **/
+	/** Force the image into a box of fixed dimensions and use object-fit to scale. **/
+	object-fit: contain;
+}
+
+/* Template Styles */
+
+.amp-wp-content,
+.amp-wp-title-bar div {
+		margin: 0 auto;
+	max-width: 895px;
+	}
+
+html {
+	background: #0a89c0;
+}
+
+body {
+	background: #fff;
+	color: #353535;
+	font-family: 'Merriweather', 'Times New Roman', Times, Serif;
+	font-weight: 300;
+	line-height: 1.75em;
+}
+
+p,
+ol,
+ul,
+figure {
+	margin: 0 0 1em;
+	padding: 0;
+}
+
+a,
+a:visited {
+	color: #0a89c0;
+}
+
+a:hover,
+a:active,
+a:focus {
+	color: #353535;
+}
+
+/* Quotes */
+
+blockquote {
+	color: #353535;
+	background: rgba(127,127,127,.125);
+	border-left: 2px solid #0a89c0;
+	margin: 8px 0 24px 0;
+	padding: 16px;
+}
+
+blockquote p:last-child {
+	margin-bottom: 0;
+}
+
+/* UI Fonts */
+
+.amp-wp-meta,
+.amp-wp-header div,
+.amp-wp-title,
+.wp-caption-text,
+.amp-wp-tax-category,
+.amp-wp-tax-tag,
+.amp-wp-comments-link,
+.amp-wp-footer p,
+.back-to-top {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
+}
+
+/* Header */
+
+.amp-wp-header {
+	background-color: #0a89c0;
+}
+
+.amp-wp-header div {
+	color: #fff;
+	font-size: 1em;
+	font-weight: 400;
+	margin: 0 auto;
+	max-width: calc(840px - 32px);
+	padding: .875em 16px;
+	position: relative;
+}
+
+.amp-wp-header a {
+	color: #fff;
+	text-decoration: none;
+}
+
+/* Site Icon */
+
+.amp-wp-header .amp-wp-site-icon {
+	/** site icon is 32px **/
+	background-color: #fff;
+	border: 1px solid #fff;
+	border-radius: 50%;
+	position: absolute;
+	right: 18px;
+	top: 10px;
+}
+
+/* Article */
+
+.amp-wp-article {
+	color: #353535;
+	font-weight: 400;
+	margin: 1.5em auto;
+	max-width: 840px;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+}
+
+/* Article Header */
+
+.amp-wp-article-header {
+	align-items: center;
+	align-content: stretch;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: 1.5em 16px 0;
+}
+
+.amp-wp-title {
+	color: #353535;
+	display: block;
+	flex: 1 0 100%;
+	font-weight: 900;
+	margin: 0 0 .625em;
+	width: 100%;
+}
+
+/* Article Meta */
+
+.amp-wp-meta {
+	color: #696969;
+	display: inline-block;
+	flex: 2 1 50%;
+	font-size: .875em;
+	line-height: 1.5em;
+	margin: 0 0 1.5em;
+	padding: 0;
+}
+
+.amp-wp-article-header .amp-wp-meta:last-of-type {
+	text-align: right;
+}
+
+.amp-wp-article-header .amp-wp-meta:first-of-type {
+	text-align: left;
+}
+
+.amp-wp-byline amp-img,
+.amp-wp-byline .amp-wp-author {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.amp-wp-byline amp-img {
+	border: 1px solid #0a89c0;
+	border-radius: 50%;
+	position: relative;
+	margin-right: 6px;
+}
+
+.amp-wp-posted-on {
+	text-align: right;
+}
+
+/* Featured image */
+
+.amp-wp-article-featured-image {
+	margin: 0 0 1em;
+}
+.amp-wp-article-featured-image amp-img {
+	margin: 0 auto;
+}
+.amp-wp-article-featured-image.wp-caption .wp-caption-text {
+	margin: 0 18px;
+}
+
+/* Article Content */
+
+.amp-wp-article-content {
+	margin: 0 16px;
+}
+
+.amp-wp-article-content ul,
+.amp-wp-article-content ol {
+	margin-left: 1em;
+}
+
+.amp-wp-article-content amp-img {
+	margin: 0 auto;
+}
+
+.amp-wp-article-content amp-img.alignright {
+	margin: 0 0 1em 16px;
+}
+
+.amp-wp-article-content amp-img.alignleft {
+	margin: 0 16px 1em 0;
+}
+
+/* Captions */
+
+.wp-caption {
+	padding: 0;
+}
+
+.wp-caption.alignleft {
+	margin-right: 16px;
+}
+
+.wp-caption.alignright {
+	margin-left: 16px;
+}
+
+.wp-caption .wp-caption-text {
+	border-bottom: 1px solid #c2c2c2;
+	color: #696969;
+	font-size: .875em;
+	line-height: 1.5em;
+	margin: 0;
+	padding: .66em 10px .75em;
+}
+
+/* AMP Media */
+
+amp-carousel {
+	background: #c2c2c2;
+	margin: 0 -16px 1.5em;
+}
+amp-iframe,
+amp-youtube,
+amp-instagram,
+amp-vine {
+	background: #c2c2c2;
+	margin: 0 -16px 1.5em;
+}
+
+.amp-wp-article-content amp-carousel amp-img {
+	border: none;
+}
+
+amp-carousel > amp-img > img {
+	object-fit: contain;
+}
+
+.amp-wp-iframe-placeholder {
+	background: #c2c2c2 url( https://github.professormarcolan.com.br/wp-content/plugins/amp/assets/images/placeholder-icon.png ) no-repeat center 40%;
+	background-size: 48px 48px;
+	min-height: 48px;
+}
+
+/* Article Footer Meta */
+
+.amp-wp-article-footer .amp-wp-meta {
+	display: block;
+}
+
+.amp-wp-tax-category,
+.amp-wp-tax-tag {
+	color: #696969;
+	font-size: .875em;
+	line-height: 1.5em;
+	margin: 1.5em 16px;
+}
+
+.amp-wp-comments-link {
+	color: #696969;
+	font-size: .875em;
+	line-height: 1.5em;
+	text-align: center;
+	margin: 2.25em 0 1.5em;
+}
+
+.amp-wp-comments-link a {
+	border-style: solid;
+	border-color: #c2c2c2;
+	border-width: 1px 1px 2px;
+	border-radius: 4px;
+	background-color: transparent;
+	color: #0a89c0;
+	cursor: pointer;
+	display: block;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 18px;
+	margin: 0 auto;
+	max-width: 200px;
+	padding: 11px 16px;
+	text-decoration: none;
+	width: 50%;
+	-webkit-transition: background-color 0.2s ease;
+			transition: background-color 0.2s ease;
+}
+
+/* AMP Footer */
+
+.amp-wp-footer {
+	border-top: 1px solid #c2c2c2;
+	margin: calc(1.5em - 1px) 0 0;
+}
+
+.amp-wp-footer div {
+	margin: 0 auto;
+	max-width: calc(840px - 32px);
+	padding: 1.25em 16px 1.25em;
+	position: relative;
+}
+
+.amp-wp-footer h2 {
+	font-size: 1em;
+	line-height: 1.375em;
+	margin: 0 0 .5em;
+}
+
+.amp-wp-footer p {
+	color: #696969;
+	font-size: .8em;
+	line-height: 1.5em;
+	margin: 0 85px 0 0;
+}
+
+.amp-wp-footer a {
+	text-decoration: none;
+}
+
+.back-to-top {
+	bottom: 1.275em;
+	font-size: .8em;
+	font-weight: 600;
+	line-height: 2em;
+	position: absolute;
+	right: 16px;
+}
+			</style><header id="top" class="amp-wp-header"><div>
+		<a href="https://github.professormarcolan.com.br/">
+										<amp-img src="https://github.professormarcolan.com.br/wp-content/uploads/2018/06/cropped-professor-marcolan-logo-1-32x32.png" width="32" height="32" class="amp-wp-site-icon"></amp-img><span class="amp-site-title">
+				Potencialize com conhecimento os seus estudos e projetos!			</span>
+		</a>
+	</div>
+</header><article class="amp-wp-article"><header class="amp-wp-article-header"><h1 class="amp-wp-title">Transformando o Atom IDE para Python</h1>
+			<div class="amp-wp-meta amp-wp-byline">
+					<amp-img src="https://secure.gravatar.com/avatar/decab487065c8029b68fb599b5a989c8?s=24&d=mm&r=g" alt="JoaoMarcolan" width="24" height="24" layout="fixed"></amp-img><span class="amp-wp-author author vcard">JoaoMarcolan</span>
+	</div>
+<div class="amp-wp-meta amp-wp-posted-on">
+	<time datetime="2018-02-09T21:36:05+00:00">
+		1 ano atrÃ¡s	</time></div>
+	</header><figure class="amp-wp-article-featured-image wp-caption"><amp-img width="735" height="735" src="https://github.professormarcolan.com.br/wp-content/uploads/2018/02/aprendaAConfigurarOAtomParaSerUmIDEParaPython.jpg" class="attachment-large size-large wp-post-image amp-wp-enforced-sizes" alt="Aprenda a configurar o Atom para ser um IDE para Python" srcset="https://github.professormarcolan.com.br/wp-content/uploads/2018/02/aprendaAConfigurarOAtomParaSerUmIDEParaPython.jpg 735w, https://github.professormarcolan.com.br/wp-content/uploads/2018/02/aprendaAConfigurarOAtomParaSerUmIDEParaPython-150x150.jpg 150w, https://github.professormarcolan.com.br/wp-content/uploads/2018/02/aprendaAConfigurarOAtomParaSerUmIDEParaPython-300x300.jpg 300w" layout="intrinsic"></amp-img><p class="wp-caption-text">
+			Aprenda a configurar 
+ o Atom para ser um IDE para Python		</p>
+	</figure><div class="amp-wp-article-content">
+		<p>Â </p><p>Os programas criados em Python sÃ£o altamente dependes da indentaÃ§Ã£o encontrada no texto do documento. Um editor de texto que ajude a montar a estrutura necessÃ¡ria pode ser extremamento util na hora da programaÃ§Ã£o. Venha conferir esse tutorial aonde apresentarei o Atom como IDE para Python.<a href="https://www.professormarcolan.com.br/programacao-orientada-ao-objeto-classe-em-python/" target="_blank" rel="noopener"> Esse Ã© o IDE usado nos tutoriais sobre orientaÃ§Ã£o ao objeto para Python</a>. Assim, como Ã© o IDE usado nos <a href="https://www.professormarcolan.com.br/tag/python/" target="_blank" rel="noopener"> tutoriais introdutÃ³rios sobre programaÃ§Ã£o em Python</a>.</p><h1>Atom</h1><p>O uso de uma IDE adequada pode aumentar o desempenho dos programadores em qualquer linguagem. O uso de um editor de texto que encontre algumas ferramentas (e.g., auto completar e de navegaÃ§Ã£o pelo documento) melhoram a produtividade dos programadores. O Atom Ã© um editor de texto moderno que pode ser totalmente customizado, podendo ser usado para programar em muitas linguagens de programaÃ§Ãµes diferentes.</p><p></p>
+<center><amp-img src="https://www.professormarcolan.com.br/wp-content/uploads/2018/02/configuracoesAtom.png" alt="ConfiguraÃ§Ãµes possessÃ­veis do atom" width="614" height="366" class="amp-wp-enforced-sizes" layout="intrinsic"></amp-img></center>Figura 1. ConfiguraÃ§Ãµes possÃ­veis do atom: nÃºcleo, editor de texto, teclas de atalhos, temas, pacotes.
+<p>Â </p><p>Se Ã© a sua primeira vez usando esse editor, ele vai exibir na tela inicial o arquivo de boas vindas e com esse documento vocÃª pode chegar no documento de configuraÃ§Ãµes (figura 1).</p><p></p>
+<center><amp-img src="https://www.professormarcolan.com.br/wp-content/uploads/2018/02/atomFirstUsage.png" alt="Arquivo de boas vindas do Atom" width="320" height="384" class="amp-wp-enforced-sizes" layout="intrinsic"></amp-img></center>Figura 2. Arquivo de boas vindas do Atom
+<p>Caso vocÃª tenha fechado a aba de boas vindas vocÃª sempre conseguira reabrir o documento de configuraÃ§Ãµes indo em <b>file>settings</b>.</p><h1>Modificando o Atom para se tornar um IDE para Python</h1><p>Vamos configurar o Atom para ser um IDE para Python. O Atom possui milhares de pacotes que podem adicionar novas funcionalidades. Nesse tutorial vamos instalar alguns pacotes que nos interessam e os atalhos de teclado tambÃ©m podem ser customizados. No atom as teclas de atalhos sÃ£o chamadas de <i> keybinds</i>. Nesse tutorial iremos apresentar alguns atalhos do atom que jÃ¡ vem configurados e alguns que vem na instalaÃ§Ã£o dos novos plugins. O Atom tambÃ©m possui a funcionalidade de modificar o layout do editor de texto. Eu particularmente gosto do layout preto mas vocÃª pode configurar como vocÃª quiser. Ok! vamos tornar o Atom um IDE para Python.</p><h2>Ajustando o editor de texto</h2><p>A primeira coisa que vamos ajustar Ã© o editor de texto para ser otimizado para Python. Para isso vÃ¡ atÃ© o arquivo de configuraÃ§Ãµes (figura 1) e clique na aba editor. O primeiro ajuste Ã© marcar as caixas: <i>show line numberâ&#128;&#157;</i> e <i>show ident Guide</i>. Essas duas ConfiguraÃ§Ãµes servem para deixar mais fÃ¡cil de visualizar as identaÃ§Ãµes nos arquivos. ApÃ³s a configuraÃ§Ã£o, coloque o valor 4 no campo <i>Tab length</i>. Essa configuraÃ§Ã£o faz com que cada vez que vocÃª aperte a tecla tab, o editor de texto coloque 4 espaÃ§os. O valor 4 foi definido no PEP 8. VocÃª pode visualizar essas duas configuraÃ§Ãµes na figura 3.</p><p></p>
+<center><amp-img src="https://www.professormarcolan.com.br/wp-content/uploads/2018/02/configurandoEditorTextoAtom.png" alt="configurando o editor de texto do atom para python" width="464" height="319" class="amp-wp-enforced-sizes" layout="intrinsic"></amp-img></center>Figura 3. ConfiguraÃ§Ã£o do editor de texto do atom para melhor programar em python
+<p>Â </p><p>Apos as configuraÃ§Ã£o vocÃª vai perceber que agora o editor esta mostrando um ponto no lugar de espaÃ§o (figura 4b). E possui uma linha guia na identaÃ§Ã£o do documento (figura 4b)</p><p></p>
+<center><amp-img src="https://www.professormarcolan.com.br/wp-content/uploads/2018/02/aposConfiguracaoDoEditorAtom.png" alt="configurando o editor de texto do atom para python" width="562" height="300" class="amp-wp-enforced-sizes" layout="intrinsic"></amp-img></center>Figura 4. Editor de texto configurado a) sem as configuraÃ§Ã£o explicadas b) editor apos as configuraÃ§Ãµes
+<p>Â </p><h2>Key binds</h2><p>O atom possui uma sÃ©rie de atalhos no teclado para as mais diversas funÃ§Ãµes. VocÃª pode observar tudo isso no documento de configuraÃ§Ãµes (figura 1) na aba <i>keybinds </i> . Alguns atalhos que jÃ¡ vem configurados e podem ser uteis para programadores Python sÃ£o:</p><ul><li>Selecionar o texto + tab : faz com que o texto selecionado avance uma identaÃ§Ã£o</li>
+<li>Selecionar o texto + shift-tab : faz com que o texto selecionado retorne uma identaÃ§Ã£o</li>
+<li>selecionar o texto + ctrl-/ : faz com que o texto selecionado vire comentÃ¡rio. Caso ele seja um comentario faz ele se tornar cÃ³digo</li>
+<li>ctrl+s : salva o documento</li>
+</ul><h2>Plugins para ser instalado</h2><p>Agora iremos instalar os plugins que ajudarÃ£o ainda mais o seu desenvolvimento em Python. Para instalar basta ir no arquivo de configuraÃ§Ãµes (figura 1) e ir na aba install. Nela digite o nome do plugins indicado nos subtÃ­tulos a seguir:</p><h3>Plugin: atom-python-run</h3><p>O plugin <a href="https://atom.io/packages/atom-python-run" target="_blank" rel="noopener"> atom-python-run </a> serve para rodar os programas em python direto do editor de texto.<br>
+Para configurar esse plugin vÃ¡ no documento de configuraÃ§Ãµes (figura 1), vÃ¡ na aba packages encontre esse plugin e clique no botÃ£o <i>setting</i> dele. Clicar nele vai<br>
+te direcionar para o documento desse plugin e dentro dele coloque no campo â&#128;&#156;F5 comandoâ&#128;&#157; o path de aonde esta instalado o python que vocÃª deseja rodar. Geralmente o<br>
+Python esta instalando em â&#128;&#156;C:\Users\[nome do usuario]\AppData\Local\Programs\Pythonâ&#128;&#157;.</p><h3>Plugin: autocomplete-python</h3><p>Esse Ã© o plugin de <a href="https://atom.io/packages/autocomplete-python">autocompletar do Python</a>. Para a instalaÃ§Ã£o desse plugin vai aparecer as opÃ§Ãµes entre jedi e keti<br>
+escolha a opÃ§Ã£o Jedi:</p><p></p>
+<center><amp-img src="https://www.professormarcolan.com.br/wp-content/uploads/2018/02/kiteeJedi.png" alt="configurando o editor de texto do atom para python" width="694" height="380" class="amp-wp-enforced-sizes" layout="intrinsic"></amp-img></center><h3>Figura 5. OpÃ§Ãµes de instalaÃ§Ã£o do plugin autocomplete-python a)jedi b)keti</h3><p>Â </p><p>ApÃ³s a instalaÃ§Ã£o do plugin de auto completar vocÃª irÃ¡ perceber que vai aparecendo, em um menu prÃ³ximo ao cursor de escrita, as funÃ§Ãµes em python que podem ser auto-completadas enquanto vocÃª escreve seu cÃ³digo (figura 6). Caso esse menu se feche vocÃª tambÃ©m pode usar o atalho â&#128;&#156;ctrl+espacoâ&#128;&#157; para abri-lo.</p><p></p>
+<center><amp-img src="https://www.professormarcolan.com.br/wp-content/uploads/2018/02/autoCompletarPython.png" alt="configurando o editor de texto do atom para python" width="320" height="384" class="amp-wp-enforced-sizes" layout="intrinsic"></amp-img></center><h3>Figura 6. Menu de auto completar cÃ³digo do Atom</h3><p>Â </p><h3>Plugin: python-tools</h3><p>O plugin <a href="https://atom.io/packages/python-tools" target="_blank" rel="noopener"> python-tools </a> serve para rodar os programas em python serve para movimentar entre funÃ§Ãµes.Para isso basta estar em um documento â&#128;&#156;*.pyâ&#128;&#157; com a estenÃ§Ã£o do python e clicar:</p><ul><li>cursor em cima da funÃ§Ã£o/variavel + ctrl-alt-g: faz o cursor is para a definiÃ§Ã£o da funÃ§Ã£o/variavel</li>
+<li>cursor em cima da definiÃ§Ã£o de uma funÃ§Ã£o + ctrl-alt-u : ressalta todas as usagem da funÃ§Ã£o escolhida</li>
+<li>selecionar o texto + ctrl+/ : faz com que o texto selecionado vire comentÃ¡rio. Caso ele seja um comentÃ¡rio faz ele se tornar cÃ³digo</li>
+<li>ctrl+s : salva o documento</li>
+<li>ctrl+espaco : faz abrir o snipete de alto completar</li>
+</ul><h3>Plugin: hyperclick</h3><p>Ao instalar o plugin <a href="https://atom.io/packages/hyperclick" target="_blank" rel="noopener"> hyperclick </a> e jÃ¡ estiver instalado o Plugin:python-tools faz gerar um novo atalho. O novo atalho faz com que vocÃª vÃ¡ para definiÃ§Ã£o da funÃ§Ã£o usando o atalho ctrl-click na funÃ§Ã£o desejada.</p><h3>Plugin: minimap</h3><p>O plugin minimap habilitarÃ¡ no lado direito do documento um minimapa de todo o documento aberto.</p><h3>Plugin: minimap-highlight-selected</h3><p>O plugin<a href="https://atom.io/packages/minimap-highlight-selected" target="_blank" rel="noopener"> minimap-highlight-selected </a> habilita a funcionalidade de realÃ§ar o texto no minimapa de qualquer texto que o usuÃ¡rio selecionar. Isso ajuda muito a encontrar variÃ¡veis, funÃ§Ãµes no cÃ³digo.</p><h3>Plugin: Magic Python</h3><p>O plugin<a href="https://atom.io/packages/language-python" target="_blank" rel="noopener"> language python</a>, que vem instalado, jÃ¡ consegue destacar a sintaxe da linguagem de programaÃ§Ã£o do Python nos arquivos definidos de Python (.py) . PorÃ©m, para algumas sintaxes novas da linguagem esse plugin nÃ£o consegue realÃ§ar adequadamente. Em alguns tutoriais aqui do site iremos utilizar essas novas sintaxes. Para entÃ£o realÃ§a-las utilizamos o plugin<a href="https://atom.io/packages/MagicPython" target="_blank" rel="noopener"> Magic Python </a>. Para fazer ele funcionar vocÃª deve instalar esse package como fez com os outros. PorÃ©m, apÃ³s instalar vocÃª vai ter que ir na aba de packages e desabilitar o package <i>language python </i> que vem instalado de fÃ¡brica.</p><h2>Pronto! VocÃª tem um super editor de texto</h2><p>Pronto agora vocÃª tem um IDE para Python que ira te ajudar a otimizar seu trabalho. Agora Ã© hora de usar esse editor. Caso vocÃª seja novo em Python, vÃ¡ para as aulas introdutÃ³rias de Python. Caso vocÃª jÃ¡ tenha mais familiaridade vÃ¡ para os tutoriais de opencv.</p><p>Poste suas dÃºvidas nos comentÃ¡rios. Para seguir as atualizaÃ§Ãµes<a href="https://www.youtube.com/channel/UC9eGq_4v1Uu14Uznsey-hOg" target="_blank" rel="noopener"> se inscreva no canal do youtube </a>e <a href="https://www.facebook.com/professormarcolan/" target="_blank" rel="noopener"> e nos siga no facebook. em @professormarcolan</a>.</p><p>Â </p><div class="swp-content-locator"></div>	</div>
+
+	<footer class="amp-wp-article-footer"><div class="amp-wp-meta amp-wp-tax-category">
+		Categorias: <a href="https://github.professormarcolan.com.br/category/pratica/" rel="category tag">pratica</a>, <a href="https://github.professormarcolan.com.br/category/python/" rel="category tag">Python</a>	</div>
+
+	<div class="amp-wp-meta amp-wp-tax-tag">
+		Tags: <a href="https://github.professormarcolan.com.br/tag/ide/" rel="tag">ide</a>, <a href="https://github.professormarcolan.com.br/tag/python/" rel="tag">Python</a>	</div>
+		<div class="amp-wp-meta amp-wp-comments-link">
+		<a href="https://github.professormarcolan.com.br/atom-ide-para-python-gratis/#respond">
+			Deixar um comentÃ¡rio		</a>
+	</div>
+	</footer></article><footer class="amp-wp-footer"><div>
+		<h2>Potencialize com conhecimento os seus estudos e projetos!</h2>
+		<p>
+			<a href="https://wordpress.org/">
+				Desenvolvido por WordPress			</a>
+		</p>
+		<a href="#top" class="back-to-top">Ir para o topo</a>
+	</div>
+</footer></body></html>
