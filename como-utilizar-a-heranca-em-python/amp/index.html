@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html amp lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"><script type="application/ld+json" class="yoast-schema-graph yoast-schema-graph--main">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://github.professormarcolan.com.br/#website","url":"https://github.professormarcolan.com.br/","name":"Potencialize com conhecimento os seus estudos e projetos!","publisher":{"@id":"https://github.professormarcolan.com.br/#person"},"potentialAction":{"@type":"SearchAction","target":"https://github.professormarcolan.com.br/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"WebPage","@id":"https://github.professormarcolan.com.br/como-utilizar-a-heranca-em-python/#webpage","url":"https://github.professormarcolan.com.br/como-utilizar-a-heranca-em-python/","inLanguage":"pt-BR","name":"Como utilizar a heran\u00e7a em Python","isPartOf":{"@id":"https://github.professormarcolan.com.br/#website"},"image":{"@type":"ImageObject","@id":"https://github.professormarcolan.com.br/como-utilizar-a-heranca-em-python/#primaryimage","url":"https://github.professormarcolan.com.br/wp-content/uploads/2018/06/como-utilizaro-a-heran\u00e7a-em-python.png","width":735,"height":735,"caption":"How to use the inheritance feature in python"},"primaryImageOfPage":{"@id":"https://github.professormarcolan.com.br/como-utilizar-a-heranca-em-python/#primaryimage"},"datePublished":"2018-06-24T20:25:45+00:00","dateModified":"2018-11-12T02:16:22+00:00","description":"Nesse post de 5 minutos de leitura sobre como utilizar a Heran\u00e7a em Python voc\u00ea ir\u00e1 entender porque a heran\u00e7a \u00e9 importante para o reaproveitamento de c\u00f3digo"},{"@type":"Article","@id":"https://github.professormarcolan.com.br/como-utilizar-a-heranca-em-python/#article","isPartOf":{"@id":"https://github.professormarcolan.com.br/como-utilizar-a-heranca-em-python/#webpage"},"author":{"@id":"https://github.professormarcolan.com.br/schema/person/joaomarcolan/#author"},"headline":"Como utilizar a heran\u00e7a em Python","datePublished":"2018-06-24T20:25:45+00:00","dateModified":"2018-11-12T02:16:22+00:00","commentCount":0,"mainEntityOfPage":{"@id":"https://github.professormarcolan.com.br/como-utilizar-a-heranca-em-python/#webpage"},"publisher":{"@id":"https://github.professormarcolan.com.br/#person"},"image":{"@id":"https://github.professormarcolan.com.br/como-utilizar-a-heranca-em-python/#primaryimage"},"keywords":"Programa\u00e7\u00e3o Orientada ao objeto,Python","articleSection":"Python,Teoria"},{"@type":["Person"],"@id":"https://github.professormarcolan.com.br/author/joaomarcolan/#author","name":"JoaoMarcolan","image":{"@type":"ImageObject","@id":"https://github.professormarcolan.com.br/#authorlogo","url":"https://secure.gravatar.com/avatar/decab487065c8029b68fb599b5a989c8?s=96&d=mm&r=g","caption":"JoaoMarcolan"},"sameAs":[]}]}</script><title>Como utilizar a heranÃ§a em Python</title><script type="text/javascript" src="https://cdn.ampproject.org/v0.js" async></script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic"><style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style></head><body><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript><style amp-custom>
+		/* Generic WP styling */
+
+.alignright {
+	float: right;
+}
+
+.alignleft {
+	float: left;
+}
+
+.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.amp-wp-enforced-sizes {
+	/** Our sizes fallback is 100vw, and we have a padding on the container; the max-width here prevents the element from overflowing. **/
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+.amp-wp-unknown-size img {
+	/** Worst case scenario when we can't figure out dimensions for an image. **/
+	/** Force the image into a box of fixed dimensions and use object-fit to scale. **/
+	object-fit: contain;
+}
+
+/* Template Styles */
+
+.amp-wp-content,
+.amp-wp-title-bar div {
+		margin: 0 auto;
+	max-width: 895px;
+	}
+
+html {
+	background: #0a89c0;
+}
+
+body {
+	background: #fff;
+	color: #353535;
+	font-family: 'Merriweather', 'Times New Roman', Times, Serif;
+	font-weight: 300;
+	line-height: 1.75em;
+}
+
+p,
+ol,
+ul,
+figure {
+	margin: 0 0 1em;
+	padding: 0;
+}
+
+a,
+a:visited {
+	color: #0a89c0;
+}
+
+a:hover,
+a:active,
+a:focus {
+	color: #353535;
+}
+
+/* Quotes */
+
+blockquote {
+	color: #353535;
+	background: rgba(127,127,127,.125);
+	border-left: 2px solid #0a89c0;
+	margin: 8px 0 24px 0;
+	padding: 16px;
+}
+
+blockquote p:last-child {
+	margin-bottom: 0;
+}
+
+/* UI Fonts */
+
+.amp-wp-meta,
+.amp-wp-header div,
+.amp-wp-title,
+.wp-caption-text,
+.amp-wp-tax-category,
+.amp-wp-tax-tag,
+.amp-wp-comments-link,
+.amp-wp-footer p,
+.back-to-top {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
+}
+
+/* Header */
+
+.amp-wp-header {
+	background-color: #0a89c0;
+}
+
+.amp-wp-header div {
+	color: #fff;
+	font-size: 1em;
+	font-weight: 400;
+	margin: 0 auto;
+	max-width: calc(840px - 32px);
+	padding: .875em 16px;
+	position: relative;
+}
+
+.amp-wp-header a {
+	color: #fff;
+	text-decoration: none;
+}
+
+/* Site Icon */
+
+.amp-wp-header .amp-wp-site-icon {
+	/** site icon is 32px **/
+	background-color: #fff;
+	border: 1px solid #fff;
+	border-radius: 50%;
+	position: absolute;
+	right: 18px;
+	top: 10px;
+}
+
+/* Article */
+
+.amp-wp-article {
+	color: #353535;
+	font-weight: 400;
+	margin: 1.5em auto;
+	max-width: 840px;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+}
+
+/* Article Header */
+
+.amp-wp-article-header {
+	align-items: center;
+	align-content: stretch;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: 1.5em 16px 0;
+}
+
+.amp-wp-title {
+	color: #353535;
+	display: block;
+	flex: 1 0 100%;
+	font-weight: 900;
+	margin: 0 0 .625em;
+	width: 100%;
+}
+
+/* Article Meta */
+
+.amp-wp-meta {
+	color: #696969;
+	display: inline-block;
+	flex: 2 1 50%;
+	font-size: .875em;
+	line-height: 1.5em;
+	margin: 0 0 1.5em;
+	padding: 0;
+}
+
+.amp-wp-article-header .amp-wp-meta:last-of-type {
+	text-align: right;
+}
+
+.amp-wp-article-header .amp-wp-meta:first-of-type {
+	text-align: left;
+}
+
+.amp-wp-byline amp-img,
+.amp-wp-byline .amp-wp-author {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.amp-wp-byline amp-img {
+	border: 1px solid #0a89c0;
+	border-radius: 50%;
+	position: relative;
+	margin-right: 6px;
+}
+
+.amp-wp-posted-on {
+	text-align: right;
+}
+
+/* Featured image */
+
+.amp-wp-article-featured-image {
+	margin: 0 0 1em;
+}
+.amp-wp-article-featured-image amp-img {
+	margin: 0 auto;
+}
+.amp-wp-article-featured-image.wp-caption .wp-caption-text {
+	margin: 0 18px;
+}
+
+/* Article Content */
+
+.amp-wp-article-content {
+	margin: 0 16px;
+}
+
+.amp-wp-article-content ul,
+.amp-wp-article-content ol {
+	margin-left: 1em;
+}
+
+.amp-wp-article-content amp-img {
+	margin: 0 auto;
+}
+
+.amp-wp-article-content amp-img.alignright {
+	margin: 0 0 1em 16px;
+}
+
+.amp-wp-article-content amp-img.alignleft {
+	margin: 0 16px 1em 0;
+}
+
+/* Captions */
+
+.wp-caption {
+	padding: 0;
+}
+
+.wp-caption.alignleft {
+	margin-right: 16px;
+}
+
+.wp-caption.alignright {
+	margin-left: 16px;
+}
+
+.wp-caption .wp-caption-text {
+	border-bottom: 1px solid #c2c2c2;
+	color: #696969;
+	font-size: .875em;
+	line-height: 1.5em;
+	margin: 0;
+	padding: .66em 10px .75em;
+}
+
+/* AMP Media */
+
+amp-carousel {
+	background: #c2c2c2;
+	margin: 0 -16px 1.5em;
+}
+amp-iframe,
+amp-youtube,
+amp-instagram,
+amp-vine {
+	background: #c2c2c2;
+	margin: 0 -16px 1.5em;
+}
+
+.amp-wp-article-content amp-carousel amp-img {
+	border: none;
+}
+
+amp-carousel > amp-img > img {
+	object-fit: contain;
+}
+
+.amp-wp-iframe-placeholder {
+	background: #c2c2c2 url( https://github.professormarcolan.com.br/wp-content/plugins/amp/assets/images/placeholder-icon.png ) no-repeat center 40%;
+	background-size: 48px 48px;
+	min-height: 48px;
+}
+
+/* Article Footer Meta */
+
+.amp-wp-article-footer .amp-wp-meta {
+	display: block;
+}
+
+.amp-wp-tax-category,
+.amp-wp-tax-tag {
+	color: #696969;
+	font-size: .875em;
+	line-height: 1.5em;
+	margin: 1.5em 16px;
+}
+
+.amp-wp-comments-link {
+	color: #696969;
+	font-size: .875em;
+	line-height: 1.5em;
+	text-align: center;
+	margin: 2.25em 0 1.5em;
+}
+
+.amp-wp-comments-link a {
+	border-style: solid;
+	border-color: #c2c2c2;
+	border-width: 1px 1px 2px;
+	border-radius: 4px;
+	background-color: transparent;
+	color: #0a89c0;
+	cursor: pointer;
+	display: block;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 18px;
+	margin: 0 auto;
+	max-width: 200px;
+	padding: 11px 16px;
+	text-decoration: none;
+	width: 50%;
+	-webkit-transition: background-color 0.2s ease;
+			transition: background-color 0.2s ease;
+}
+
+/* AMP Footer */
+
+.amp-wp-footer {
+	border-top: 1px solid #c2c2c2;
+	margin: calc(1.5em - 1px) 0 0;
+}
+
+.amp-wp-footer div {
+	margin: 0 auto;
+	max-width: calc(840px - 32px);
+	padding: 1.25em 16px 1.25em;
+	position: relative;
+}
+
+.amp-wp-footer h2 {
+	font-size: 1em;
+	line-height: 1.375em;
+	margin: 0 0 .5em;
+}
+
+.amp-wp-footer p {
+	color: #696969;
+	font-size: .8em;
+	line-height: 1.5em;
+	margin: 0 85px 0 0;
+}
+
+.amp-wp-footer a {
+	text-decoration: none;
+}
+
+.back-to-top {
+	bottom: 1.275em;
+	font-size: .8em;
+	font-weight: 600;
+	line-height: 2em;
+	position: absolute;
+	right: 16px;
+}
+			</style><header id="top" class="amp-wp-header"><div>
+		<a href="https://github.professormarcolan.com.br/">
+										<amp-img src="https://github.professormarcolan.com.br/wp-content/uploads/2018/06/cropped-professor-marcolan-logo-1-32x32.png" width="32" height="32" class="amp-wp-site-icon"></amp-img><span class="amp-site-title">
+				Potencialize com conhecimento os seus estudos e projetos!			</span>
+		</a>
+	</div>
+</header><article class="amp-wp-article"><header class="amp-wp-article-header"><h1 class="amp-wp-title">Como utilizar a heranÃ§a em Python</h1>
+			<div class="amp-wp-meta amp-wp-byline">
+					<amp-img src="https://secure.gravatar.com/avatar/decab487065c8029b68fb599b5a989c8?s=24&d=mm&r=g" alt="JoaoMarcolan" width="24" height="24" layout="fixed"></amp-img><span class="amp-wp-author author vcard">JoaoMarcolan</span>
+	</div>
+<div class="amp-wp-meta amp-wp-posted-on">
+	<time datetime="2018-06-24T17:25:45+00:00">
+		12 meses atrÃ¡s	</time></div>
+	</header><figure class="amp-wp-article-featured-image wp-caption"><amp-img width="735" height="735" src="https://github.professormarcolan.com.br/wp-content/uploads/2018/06/como-utilizaro-a-heran%C3%A7a-em-python.png" class="attachment-large size-large wp-post-image amp-wp-enforced-sizes" alt="How to use the inheritance feature in python" srcset="https://github.professormarcolan.com.br/wp-content/uploads/2018/06/como-utilizaro-a-heranÃ§a-em-python.png 735w, https://github.professormarcolan.com.br/wp-content/uploads/2018/06/como-utilizaro-a-heranÃ§a-em-python-150x150.png 150w, https://github.professormarcolan.com.br/wp-content/uploads/2018/06/como-utilizaro-a-heranÃ§a-em-python-300x300.png 300w, https://github.professormarcolan.com.br/wp-content/uploads/2018/06/como-utilizaro-a-heranÃ§a-em-python-600x600.png 600w" layout="intrinsic"></amp-img><p class="wp-caption-text">
+			How to use the inheritance feature in python		</p>
+	</figure><div class="amp-wp-article-content">
+		<p>Nesse post, de leitura fÃ¡cil e de 5 minutos, vocÃª irÃ¡ entender como utilizar a HeranÃ§a em Python assim como todos os seus jargÃµes.A HeranÃ§a em Python Ã© super importante para reaproveitamento de cÃ³digos. Sendo assim, venha entender como usar esse recurso para potencializar seus projetos.</p><h2>Principal mecanismo da heranÃ§a</h2><p>O principal mecanismo do recurso da heranÃ§a Ã© permitir que uma classe possa ser derivada de uma classe base, permitindo que um comportamento mais especifico seja implementado na subclasse. A heranÃ§a, Ã© tambÃ©m uma importante caracterÃ­stica para ao reuso de algoritmos e evitar cÃ³digos redundantes que possam tornar difÃ­cil a manutenÃ§Ã£o da base de cÃ³digos.</p><h2>Jargoens da heranÃ§a</h2><p>Mas antes de nos aprofundar mais vamos discutir, revisar, um pouco sobre nomenclaturas e jargÃµes. <b> Quando uma classe â&#128;&#156;Bâ&#128;&#157; herda aspectos da classe â&#128;&#156;Aâ&#128;&#157; </b>:</p><ul><li>a classe â&#128;&#156;Bâ&#128;&#157; Ã© uma subclasse da classe â&#128;&#156;Aâ&#128;&#157;; .</li>
+<li>a clase â&#128;&#156;Aâ&#128;&#157; Ã© uma super classe da classe â&#128;&#156;Bâ&#128;&#157;;</li>
+<li>a classe â&#128;&#156;Bâ&#128;&#157; Ã© uma classe filha da classe â&#128;&#156;Aâ&#128;&#157;;</li>
+<li>a classe â&#128;&#156;Aâ&#128;&#157; Ã© uma classe pai da classe â&#128;&#156;Bâ&#128;&#157;</li>
+<li>a classe â&#128;&#156;Aâ&#128;&#157; Ã© a classe base</li>
+<li>a classe â&#128;&#156;Bâ&#128;&#157; Ã© a classe derivada</li>
+<li>a classe â&#128;&#156;Bâ&#128;&#157; â&#128;&#156;â&#128;¦Ã© umaâ&#128;¦â&#128;&#157; classe â&#128;&#156;Aâ&#128;&#157;;</li>
+</ul><p></p>
+<center><amp-img src="https://github.professormarcolan.com.br/wp-content/uploads/2018/06/Jargoes-Heranca-Orienta%C3%A7ao-Objeto-Python.png" alt="Como utilizar a heranÃ§a em Python" width="900" height="378" class="amp-wp-enforced-sizes" layout="intrinsic"></amp-img></center>Fig. 1: Jargoes do recurso da heranÃ§a do Python
+<p>Â </p><h2>Como utilizar a heranÃ§a em Python</h2><p>Para exemplificar o mecanismo da heranÃ§a, criamos uma classe <i> Carro </i>, cÃ³digo 1, que possui dois mÃ©todos: o inicializador (__init__) e o para escrever o tipo de motor que tem o carro (getMotor). Em seguida, criamos uma classe <i> Taxi </i> que irÃ¡ apenas acessar, de duas formas diferentes, os mÃ©todos implementados em sua classe pai, <i> Carro </i>. Por fim , iremos instanciar um objeto da classe <i>Taxi </i>. O primeiro mÃ©todo de acesso Ã© usando nome da classe em seguida o operador ponto ( . ) e por fim o nome do mÃ©todo. O segundo mÃ©todo de acesso Ã© o acesso normal, objeto self, operador ponto (.) e por fim o nome do mÃ©todo.</p><pre class="brush: python; title: ; notranslate" title="">
+      # CÃ³digo 1 - Utilizando o recurso de heranÃ§a
+      class Carro():
+          def __init__(self):
+              print("Criou um carro")
+
+          def getMotor(self):
+              print("tenho um motor a combustao")
+
+      class Taxi(Carro):
+          def __init__(self):
+              Carro.__init__(self)
+              # Criou um carro
+              self.getMotor()
+
+      car = Taxi()
+      # Criou um carro
+      # Tenho um motor a combustÃ£o
+
+      </pre><p>O resultado, no prompt de comando, foi primeiro a frase â&#128;&#156;Criou um carroâ&#128;&#157; e em seguida a frase â&#128;&#156;Tenho um carro a combustÃ£oâ&#128;&#157;. Os dois mÃ©todos de acesso invocaram os mÃ©todos implementados na classe Carro. O primeiro mÃ©todo acessa explicitamente o mÃ©todo da classe pai e o segundo mÃ©todo consegue demonstrar que os mÃ©todo implementados na classe pai, agora fazem parte da classe filha tambÃ©m. Quando uma classe herda outra classe, automaticamente ela pega todos os mÃ©todos e atributo da classe origina [4]. Caso vocÃª esteja com dificuldades de entender o cÃ³digo 1 revise a aula<a href="https://github.professormarcolan.com.br/programacao-orientada-ao-objeto-classe-em-python/" target="_blank" rel="noopener">sobre como criar uma classe em Python. â&#128;&#157;</a>.</p><h2>Como utilizar o recurso da heranÃ§a em Python</h2><p>AlÃ©m disso, a classe derivada pode adicionar novos mÃ©todos e atributos. No cÃ³digo 2 iremos implementar um novo mÃ©todo para pegar passageiros para a classe <i>Taxi </i>. Esse mÃ©todo nÃ£o Ã© comum a todos os carros de passeio. [4]</p><pre class="brush: python; title: ; notranslate" title="">
+      # cÃ³digo 2 - Especializando a classe Taxi
+      class Taxi(Carro):
+          def __init__(self):
+              Carro.__init__(self)
+              # Criou um carro
+              self.getMotor()
+              # tenho um motor a combustÃ£o
+
+          def getPassageiro(self):
+              print("pegou um novo passageiro")
+
+      car = Taxi()
+      # Criou um carro
+      # Tenho um motor a combustÃ£o
+      car.getPassageiro()
+      # Pegou um novo passageiro
+
+      </pre><h2>RelaÃ§Ã£o â&#128;&#156;â&#128;¦Ã© um(a) ..â&#128;&#157;</h2><p>No post sobre <a href="https://github.professormarcolan.com.br/programacao-orientada-ao-objeto-em-python-recurso-do-composicao/" target="_blank" rel="noopener">composiÃ§Ã£o explicamos, em linhas gerais, a relaÃ§Ã£o â&#128;&#156;â&#128;¦tem umâ&#128;¦â&#128;&#157;, â&#128;&#156;â&#128;¦Ã© parte de â&#128;¦ â&#128;&#157;</a>. Por exemplo, uma classe que descreve um carro ira ter objetos referentes ao motor, pneus, parte elÃ©trica. PorÃ©m, existe outro tipo importante de relaÃ§Ã£o : <b class="code">â&#128;&#156;â&#128;¦ Ã© um(a)â&#128;¦â&#128;&#157; </b> Por exemplo, um bolo de chocolate â&#128;&#156;â&#128;¦ Ã© umâ&#128;¦â&#128;&#157; bolo, uma maÃ§a Ã© uma fruta. Quando esse tipo de relaÃ§Ã£o Ã© detectado Ã© necessÃ¡rio usar o recurso da HeranÃ§a.</p><h2>MÃ©todo super, para acesso de mÃ©todos da classe pai</h2><p>No cÃ³digo 1, quando criamos a classe <i> Taxi </i>, discutimos sobre 2 mÃ©todos de acesso a classe pai: o mÃ©todo que escreve o nome da classe (e.g., Carro.getMotor) e o mÃ©todo normal. PorÃ©m, o mÃ©todo 1 nÃ£o Ã© muito usado pois ele nÃ£o desacopla a classe derivada da classe pai.[10] Geralmente o mÃ©todo usado para acesso a classe pai Ã© atravÃ©s do mÃ©todo <b>super() </b>. Iremos, no cÃ³digo 3 implementar um classe <i> CarroEletric</i> que deriva a classe <i>Carro </i> e implementa um mÃ©todo usando essa forma de acesso.</p><pre class="brush: python; title: ; notranslate" title="">
+        #cÃ³digo 3
+        class CarroEletric(Carro):
+            def __init__(self):
+                super().__init__()
+                self.getMotor()
+
+        car =  CarroEletric()
+        # Criou um carro
+        # Tenho um motor a combustÃ£o
+
+        </pre><p>Ao rodar o cÃ³digo 2 o resultado Ã© semelhante ao resultado do cÃ³digo 1. A diferenÃ§a agora que o mÃ©todo <b>super</b> desacopla as duas classes. PorÃ©m, o carro elÃ©trico nÃ£o tem um motor a combustÃ£o, por isso Ã© necessÃ¡rio sobrescrever mÃ©todos da classe Pai.</p><h2>Sobrescrevendo mÃ©todos da classe Pai</h2><p>O mÃ©todo <b> getMotor() </b> retorna o esperado, porÃ©m o carro elÃ©trico possui um motor diferente. Ã&#137; possÃ­vel sobrescrever qualquer mÃ©todo da classe pai que nÃ£o se adeque a classe filha. Para fazer isso Ã© necessÃ¡rio definir o mÃ©todo na classe derivada com o mesmo nome do mÃ©todo indesejavel. O Python irÃ¡ desprezar o mÃ©todo da classe pai e irÃ¡ sÃ³ dar atenÃ§Ã£o ao mÃ©todo definido na classe filha.</p><pre class="brush: python; title: ; notranslate" title="">
+        #cÃ³digo 4 Sobrescrevendo mÃ©todo
+        # da classe pai
+        class CarroEletric(Carro):
+            def __init__(self):
+                super().__init__()
+                self.getMotor()
+
+            def getMotor(self):
+                print("tenho um motor elÃ©trico")
+
+        car = CarroEletric()
+        # Criou um carro
+        # Tenho um motor elÃ©trico
+        </pre><p>Agora, o resultado foi o esperado que o carro elÃ©trico tem um motor elÃ©trico.</p><h2>Como a heranÃ§a organiza o cÃ³digo</h2><p>Em conclusÃ£o, a heranÃ§a permite reaproveitar cÃ³digos mesmo que a alguns mÃ©todos necessitem ser implementados levemente diferentes nas classe filhas. A classe <i>Carro</i> pode ser reaproveitada e expandida pela classe <i> Taxi </i> e pode ser reaproveita e modificada pela classe <i> CarroEletric </i>. Geralmente, algumas classe levam um grande perÃ­odo de tempo de testes e desenvolvimento. Poder, usar elas como base permite inclusive ter menor custo de desenvolvimento.</p><p>Nesse tutorial introduzimos o recurso da heranÃ§a. No prÃ³ximo iremos discutir um pouco sobre clases conctretas,abstratas e classes interfaces. Poste sua dÃºvida nos comentÃ¡rios. Para seguir as atualizaÃ§Ãµes <a href="https://www.youtube.com/channel/UC9eGq_4v1Uu14Uznsey-hOg" target="_blank" rel="noopener"> se inscreva no canal do youtube </a>e <a href="https://www.facebook.com/professormarcolan/" target="_blank" rel="noopener"> nos siga no facebook. em @professormarcolan</a>.</p><h2>Como a heranÃ§a organiza o cÃ³digo</h2><ul><li>[1] ZELLE, John M. Python programming: an introduction to computer science. Franklin, Beedle & Associates, Inc., 2004.</li>
+<li>[2] DOWNEY, Allen. Think Python. â&#128;&#157; Oâ&#128;&#153;Reilly Media, Inc.â&#128;&#157;, 2012.</li>
+<li>[3] PILGRIM, Mark. Dive Into Python. Createspace, 2009.</li>
+<li>https://docs.python.org/3/</li>
+<li>[4] MATTHES, Eric. Python crash course: a hands-on, project-based introduction to programming. No Starch Press, 2015.</li>
+<li>[5]Smallshire, Robert. Bingham, Austin. The Python Apprentice. Packt Publishing ,2017.</li>
+<li>[6]https://www.sololearn.com/Play/Python</li>
+<li>[7]https://stackoverflow.com/questions/1301346/what-is-the-meaning-of-a-single-and-a-double-underscore-before-an-object-name</li>
+<li>[8]https://www.python.org/dev/peps/pep-0008/#naming-conventions</li>
+<li>[9] Spronck, P. (2016). The Coderâ&#128;&#153;s Apprentice: Learning Programming with Python 3.</li>
+<li>[10] https://pt.stackoverflow.com/questions/22452/como-se-usa-e-para-que-serve-o-super-em-classes-python</li>
+</ul><p>Â </p><div class="swp-content-locator"></div>	</div>
+
+	<footer class="amp-wp-article-footer"><div class="amp-wp-meta amp-wp-tax-category">
+		Categorias: <a href="https://github.professormarcolan.com.br/category/python/" rel="category tag">Python</a>, <a href="https://github.professormarcolan.com.br/category/teoria/" rel="category tag">Teoria</a>	</div>
+
+	<div class="amp-wp-meta amp-wp-tax-tag">
+		Tags: <a href="https://github.professormarcolan.com.br/tag/programacao-orientada-ao-objeto/" rel="tag">ProgramaÃ§Ã£o Orientada ao objeto</a>, <a href="https://github.professormarcolan.com.br/tag/python/" rel="tag">Python</a>	</div>
+		<div class="amp-wp-meta amp-wp-comments-link">
+		<a href="https://github.professormarcolan.com.br/como-utilizar-a-heranca-em-python/#respond">
+			Deixar um comentÃ¡rio		</a>
+	</div>
+	</footer></article><footer class="amp-wp-footer"><div>
+		<h2>Potencialize com conhecimento os seus estudos e projetos!</h2>
+		<p>
+			<a href="https://wordpress.org/">
+				Desenvolvido por WordPress			</a>
+		</p>
+		<a href="#top" class="back-to-top">Ir para o topo</a>
+	</div>
+</footer></body></html>
