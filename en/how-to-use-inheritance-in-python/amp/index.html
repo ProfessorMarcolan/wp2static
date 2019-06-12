@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html amp lang="en-US"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"><script type="application/ld+json" class="yoast-schema-graph yoast-schema-graph--main">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://github.professormarcolan.com.br/en/featured-lesson/#website","url":"https://github.professormarcolan.com.br/en/featured-lesson/","name":"Potencialize com conhecimento os seus estudos e projetos!","publisher":{"@id":"https://github.professormarcolan.com.br/en/featured-lesson/#person"},"potentialAction":{"@type":"SearchAction","target":"https://github.professormarcolan.com.br/en/featured-lesson/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"WebPage","@id":"https://github.professormarcolan.com.br/en/how-to-use-inheritance-in-python/#webpage","url":"https://github.professormarcolan.com.br/en/how-to-use-inheritance-in-python/","inLanguage":"en-US","name":"Object-Oriented Programming in Python: How to use inheritance in Python","isPartOf":{"@id":"https://github.professormarcolan.com.br/en/featured-lesson/#website"},"image":{"@type":"ImageObject","@id":"https://github.professormarcolan.com.br/en/how-to-use-inheritance-in-python/#primaryimage","url":"https://github.professormarcolan.com.br/wp-content/uploads/2018/06/come-understante-the-inheritance-feature-in-python.png","width":735,"height":735,"caption":"How to use the inheritance feature in python"},"primaryImageOfPage":{"@id":"https://github.professormarcolan.com.br/en/how-to-use-inheritance-in-python/#primaryimage"},"datePublished":"2018-06-25T20:47:36+00:00","dateModified":"2018-06-25T22:35:29+00:00","description":"In this easy-to-read, 5 minute post, you will understand how to use Python Inheritance as well as all its jargon. Python Inheritance is super important for code reuse. So, understand how to use this feature to leverage your projects."},{"@type":"Article","@id":"https://github.professormarcolan.com.br/en/how-to-use-inheritance-in-python/#article","isPartOf":{"@id":"https://github.professormarcolan.com.br/en/how-to-use-inheritance-in-python/#webpage"},"author":{"@id":"https://github.professormarcolan.com.br/en/featured-lesson/schema/person/joaomarcolan/#author"},"headline":"Object-Oriented Programming in Python: How to use inheritance in Python","datePublished":"2018-06-25T20:47:36+00:00","dateModified":"2018-06-25T22:35:29+00:00","commentCount":0,"mainEntityOfPage":{"@id":"https://github.professormarcolan.com.br/en/how-to-use-inheritance-in-python/#webpage"},"publisher":{"@id":"https://github.professormarcolan.com.br/en/featured-lesson/#person"},"image":{"@id":"https://github.professormarcolan.com.br/en/how-to-use-inheritance-in-python/#primaryimage"},"keywords":"Classes and objects,Python","articleSection":"Python,theory"},{"@type":["Person"],"@id":"https://github.professormarcolan.com.br/en/author/joaomarcolan/#author","name":"JoaoMarcolan","image":{"@type":"ImageObject","@id":"https://github.professormarcolan.com.br/en/featured-lesson/#authorlogo","url":"https://secure.gravatar.com/avatar/decab487065c8029b68fb599b5a989c8?s=96&d=mm&r=g","caption":"JoaoMarcolan"},"sameAs":[]}]}</script><title>Object-Oriented Programming in Python: How to use inheritance in Python</title><script type="text/javascript" src="https://cdn.ampproject.org/v0.js" async></script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic"><style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style></head><body><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript><style amp-custom>
+		/* Generic WP styling */
+
+.alignright {
+	float: right;
+}
+
+.alignleft {
+	float: left;
+}
+
+.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.amp-wp-enforced-sizes {
+	/** Our sizes fallback is 100vw, and we have a padding on the container; the max-width here prevents the element from overflowing. **/
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+.amp-wp-unknown-size img {
+	/** Worst case scenario when we can't figure out dimensions for an image. **/
+	/** Force the image into a box of fixed dimensions and use object-fit to scale. **/
+	object-fit: contain;
+}
+
+/* Template Styles */
+
+.amp-wp-content,
+.amp-wp-title-bar div {
+		margin: 0 auto;
+	max-width: 895px;
+	}
+
+html {
+	background: #0a89c0;
+}
+
+body {
+	background: #fff;
+	color: #353535;
+	font-family: 'Merriweather', 'Times New Roman', Times, Serif;
+	font-weight: 300;
+	line-height: 1.75em;
+}
+
+p,
+ol,
+ul,
+figure {
+	margin: 0 0 1em;
+	padding: 0;
+}
+
+a,
+a:visited {
+	color: #0a89c0;
+}
+
+a:hover,
+a:active,
+a:focus {
+	color: #353535;
+}
+
+/* Quotes */
+
+blockquote {
+	color: #353535;
+	background: rgba(127,127,127,.125);
+	border-left: 2px solid #0a89c0;
+	margin: 8px 0 24px 0;
+	padding: 16px;
+}
+
+blockquote p:last-child {
+	margin-bottom: 0;
+}
+
+/* UI Fonts */
+
+.amp-wp-meta,
+.amp-wp-header div,
+.amp-wp-title,
+.wp-caption-text,
+.amp-wp-tax-category,
+.amp-wp-tax-tag,
+.amp-wp-comments-link,
+.amp-wp-footer p,
+.back-to-top {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
+}
+
+/* Header */
+
+.amp-wp-header {
+	background-color: #0a89c0;
+}
+
+.amp-wp-header div {
+	color: #fff;
+	font-size: 1em;
+	font-weight: 400;
+	margin: 0 auto;
+	max-width: calc(840px - 32px);
+	padding: .875em 16px;
+	position: relative;
+}
+
+.amp-wp-header a {
+	color: #fff;
+	text-decoration: none;
+}
+
+/* Site Icon */
+
+.amp-wp-header .amp-wp-site-icon {
+	/** site icon is 32px **/
+	background-color: #fff;
+	border: 1px solid #fff;
+	border-radius: 50%;
+	position: absolute;
+	right: 18px;
+	top: 10px;
+}
+
+/* Article */
+
+.amp-wp-article {
+	color: #353535;
+	font-weight: 400;
+	margin: 1.5em auto;
+	max-width: 840px;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+}
+
+/* Article Header */
+
+.amp-wp-article-header {
+	align-items: center;
+	align-content: stretch;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: 1.5em 16px 0;
+}
+
+.amp-wp-title {
+	color: #353535;
+	display: block;
+	flex: 1 0 100%;
+	font-weight: 900;
+	margin: 0 0 .625em;
+	width: 100%;
+}
+
+/* Article Meta */
+
+.amp-wp-meta {
+	color: #696969;
+	display: inline-block;
+	flex: 2 1 50%;
+	font-size: .875em;
+	line-height: 1.5em;
+	margin: 0 0 1.5em;
+	padding: 0;
+}
+
+.amp-wp-article-header .amp-wp-meta:last-of-type {
+	text-align: right;
+}
+
+.amp-wp-article-header .amp-wp-meta:first-of-type {
+	text-align: left;
+}
+
+.amp-wp-byline amp-img,
+.amp-wp-byline .amp-wp-author {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.amp-wp-byline amp-img {
+	border: 1px solid #0a89c0;
+	border-radius: 50%;
+	position: relative;
+	margin-right: 6px;
+}
+
+.amp-wp-posted-on {
+	text-align: right;
+}
+
+/* Featured image */
+
+.amp-wp-article-featured-image {
+	margin: 0 0 1em;
+}
+.amp-wp-article-featured-image amp-img {
+	margin: 0 auto;
+}
+.amp-wp-article-featured-image.wp-caption .wp-caption-text {
+	margin: 0 18px;
+}
+
+/* Article Content */
+
+.amp-wp-article-content {
+	margin: 0 16px;
+}
+
+.amp-wp-article-content ul,
+.amp-wp-article-content ol {
+	margin-left: 1em;
+}
+
+.amp-wp-article-content amp-img {
+	margin: 0 auto;
+}
+
+.amp-wp-article-content amp-img.alignright {
+	margin: 0 0 1em 16px;
+}
+
+.amp-wp-article-content amp-img.alignleft {
+	margin: 0 16px 1em 0;
+}
+
+/* Captions */
+
+.wp-caption {
+	padding: 0;
+}
+
+.wp-caption.alignleft {
+	margin-right: 16px;
+}
+
+.wp-caption.alignright {
+	margin-left: 16px;
+}
+
+.wp-caption .wp-caption-text {
+	border-bottom: 1px solid #c2c2c2;
+	color: #696969;
+	font-size: .875em;
+	line-height: 1.5em;
+	margin: 0;
+	padding: .66em 10px .75em;
+}
+
+/* AMP Media */
+
+amp-carousel {
+	background: #c2c2c2;
+	margin: 0 -16px 1.5em;
+}
+amp-iframe,
+amp-youtube,
+amp-instagram,
+amp-vine {
+	background: #c2c2c2;
+	margin: 0 -16px 1.5em;
+}
+
+.amp-wp-article-content amp-carousel amp-img {
+	border: none;
+}
+
+amp-carousel > amp-img > img {
+	object-fit: contain;
+}
+
+.amp-wp-iframe-placeholder {
+	background: #c2c2c2 url( https://github.professormarcolan.com.br/wp-content/plugins/amp/assets/images/placeholder-icon.png ) no-repeat center 40%;
+	background-size: 48px 48px;
+	min-height: 48px;
+}
+
+/* Article Footer Meta */
+
+.amp-wp-article-footer .amp-wp-meta {
+	display: block;
+}
+
+.amp-wp-tax-category,
+.amp-wp-tax-tag {
+	color: #696969;
+	font-size: .875em;
+	line-height: 1.5em;
+	margin: 1.5em 16px;
+}
+
+.amp-wp-comments-link {
+	color: #696969;
+	font-size: .875em;
+	line-height: 1.5em;
+	text-align: center;
+	margin: 2.25em 0 1.5em;
+}
+
+.amp-wp-comments-link a {
+	border-style: solid;
+	border-color: #c2c2c2;
+	border-width: 1px 1px 2px;
+	border-radius: 4px;
+	background-color: transparent;
+	color: #0a89c0;
+	cursor: pointer;
+	display: block;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 18px;
+	margin: 0 auto;
+	max-width: 200px;
+	padding: 11px 16px;
+	text-decoration: none;
+	width: 50%;
+	-webkit-transition: background-color 0.2s ease;
+			transition: background-color 0.2s ease;
+}
+
+/* AMP Footer */
+
+.amp-wp-footer {
+	border-top: 1px solid #c2c2c2;
+	margin: calc(1.5em - 1px) 0 0;
+}
+
+.amp-wp-footer div {
+	margin: 0 auto;
+	max-width: calc(840px - 32px);
+	padding: 1.25em 16px 1.25em;
+	position: relative;
+}
+
+.amp-wp-footer h2 {
+	font-size: 1em;
+	line-height: 1.375em;
+	margin: 0 0 .5em;
+}
+
+.amp-wp-footer p {
+	color: #696969;
+	font-size: .8em;
+	line-height: 1.5em;
+	margin: 0 85px 0 0;
+}
+
+.amp-wp-footer a {
+	text-decoration: none;
+}
+
+.back-to-top {
+	bottom: 1.275em;
+	font-size: .8em;
+	font-weight: 600;
+	line-height: 2em;
+	position: absolute;
+	right: 16px;
+}
+			</style><header id="top" class="amp-wp-header"><div>
+		<a href="https://github.professormarcolan.com.br/">
+										<amp-img src="https://github.professormarcolan.com.br/wp-content/uploads/2018/06/cropped-professor-marcolan-logo-1-32x32.png" width="32" height="32" class="amp-wp-site-icon"></amp-img><span class="amp-site-title">
+				Potencialize com conhecimento os seus estudos e projetos!			</span>
+		</a>
+	</div>
+</header><article class="amp-wp-article"><header class="amp-wp-article-header"><h1 class="amp-wp-title">Object-Oriented Programming in Python: How to use inheritance in Python</h1>
+			<div class="amp-wp-meta amp-wp-byline">
+					<amp-img src="https://secure.gravatar.com/avatar/decab487065c8029b68fb599b5a989c8?s=24&d=mm&r=g" alt="JoaoMarcolan" width="24" height="24" layout="fixed"></amp-img><span class="amp-wp-author author vcard">JoaoMarcolan</span>
+	</div>
+<div class="amp-wp-meta amp-wp-posted-on">
+	<time datetime="2018-06-25T17:47:36+00:00">
+		12 months ago	</time></div>
+	</header><figure class="amp-wp-article-featured-image wp-caption"><amp-img width="735" height="735" src="https://github.professormarcolan.com.br/wp-content/uploads/2018/06/come-understante-the-inheritance-feature-in-python.png" class="attachment-large size-large wp-post-image amp-wp-enforced-sizes" alt="How to use the inheritance feature in python" srcset="https://github.professormarcolan.com.br/wp-content/uploads/2018/06/come-understante-the-inheritance-feature-in-python.png 735w, https://github.professormarcolan.com.br/wp-content/uploads/2018/06/come-understante-the-inheritance-feature-in-python-150x150.png 150w, https://github.professormarcolan.com.br/wp-content/uploads/2018/06/come-understante-the-inheritance-feature-in-python-300x300.png 300w, https://github.professormarcolan.com.br/wp-content/uploads/2018/06/come-understante-the-inheritance-feature-in-python-600x600.png 600w" layout="intrinsic"></amp-img><p class="wp-caption-text">
+			How to use the inheritance feature in python		</p>
+	</figure><div class="amp-wp-article-content">
+		<p>In this easy-to-read, 5 minute post, you will understand how to use Python Inheritance as well as all its jargon. Python Inheritance is super important for code reuse. So, come and understand how to use this feature to leverage your projects.</p><h2>Main mechanism of inheritance</h2><p>The primary mechanism of inheritance is to allow a class to be derived from a base class, allowing more specific behavior to be implemented in the subclass. Inheritance is also an important feature for reusing algorithms and avoiding redundant codes that may make it difficult to maintain the code base.</p><h2>Inheritance Jargon</h2><p>But before we dive deeper, we will discuss, revise, a bit about nomenclatures and jargon. When a class â&#128;&#156;Bâ&#128;&#157; inherits aspects of class â&#128;&#156;Aâ&#128;&#157;:</p><ul><li>class â&#128;&#156;Bâ&#128;&#157; is a subclass of class â&#128;&#156;Aâ&#128;&#157;; .</li>
+<li>class â&#128;&#156;Aâ&#128;&#157; is a super class of class â&#128;&#156;Bâ&#128;&#157;;</li>
+<li>class â&#128;&#156;Bâ&#128;&#157; is a daughter class of class â&#128;&#156;Aâ&#128;&#157;;</li>
+<li>class â&#128;&#156;Aâ&#128;&#157; is a parent class of class â&#128;&#156;Bâ&#128;&#157;</li>
+<li>class â&#128;&#156;Aâ&#128;&#157; is the base class</li>
+<li>class â&#128;&#156;Bâ&#128;&#157; is the derived class</li>
+<li>the class â&#128;&#156;Bâ&#128;&#157; â&#128;&#156;â&#128;¦ is a â&#128;¦â&#128;&#157; class â&#128;&#156;Aâ&#128;&#157;;</li>
+</ul><p></p>
+<center><amp-img class="amp-wp-enforced-sizes" src="https://github.professormarcolan.com.br/wp-content/uploads/2018/06/how-use-inheritance-in-python.png" alt="Como utilizar a heranÃ§a em Python" width="900" height="378" layout="intrinsic"></amp-img></center>Fig. 1: Python Heritage Resource Jargon
+<p>Â </p><h2><span class="notranslate">How to use inheritance in Python</span></h2><p><span class="notranslate">To exemplify the inheritance mechanism, we created aÂ <i>Car</i>Â class, code 1, which has two methods: the initializer (__init__) and the type of motor that has the car (getMotor).</span><span class="notranslate">Next, we create aÂ <i>Taxi</i>Â class that will only access, in two different ways, the methods implemented in its parent class,Â <i>Car</i>Â .</span>Â <span class="notranslate">Finally, we will instantiate an object of classÂ <i>Taxi</i>Â .</span><span class="notranslate">The first access method is using class name then the dot operator (.) And finally the method name.</span>Â <span class="notranslate">The second access method is normal access, self object, dot operator (.) And finally the method name.</span></p><pre class="brush: python; title: ; notranslate" title="">
+      # CÃ³digo 1 - Using the inheritance feature
+      class Car():
+          def __init__(self):
+              print("Created a car")
+
+          def getMotor(self):
+              print("I have a combustion engine")
+
+      class Taxi(Car):
+          def __init__(self):
+              Carro.__init__(self)
+              # Criou um carro
+              self.getMotor()
+
+      ca = Taxi()
+      # Created a car
+      # I have a combustion engine
+
+      </pre><p>The result, at the command prompt, was first the phrase â&#128;&#156;Created a carâ&#128;&#157; and then the phrase â&#128;&#156;I have a combustion carâ&#128;&#157;. The two access methods invoked the methods implemented in the Car class. The first method explicitly accesses the parent class method and the second method can demonstrate that the methods implemented in the parent class are now also part of the child class. When a class inherits another class, it automatically takes all the methods and attributes of the original class [4]. If you are having trouble understanding code 1 <a href="https://github.professormarcolan.com.br/en/object-oriented-programming-in-python-how-to-create-a-class-in-python/" target="_blank" rel="noopener">review the class on how to create a class in Python.</a> â&#128;&#156;.</p><h2>How to use the inheritance feature in Python</h2><p>In addition, the derived class can add new methods and attributes. In code 2 we will implement a new method to pick up passengers for the Taxi class. This method is not common to all passenger cars. [4]</p><pre class="brush: python; title: ; notranslate" title="">
+      # cÃ³digo 2 - Especializando a classe Taxi
+      class Taxi(Car):
+          def __init__(self):
+              Carro.__init__(self)
+              # Created a car
+              self.getMotor()
+              # I have a combustion engine
+
+          def getPassageiro(self):
+              print("got a new passenger")
+
+      ca = Taxi()
+      # Created a car
+      # I have a combustion engine
+      car.getPassageiro()
+      # got a new passenger
+
+      </pre><h2>Relation â&#128;&#156;â&#128;¦ is a ..â&#128;&#157;</h2><p>In the post about <a href="https://github.professormarcolan.com.br/en/object-oriented-programming-in-python-composition-resource/" target="_blank" rel="noopener">composition we explain, in general terms, the relationship â&#128;&#156;â&#128;¦ has a â&#128;¦â&#128;&#157;, â&#128;&#156;â&#128;¦ is part of â&#128;¦â&#128;&#157;</a> For example, a class describing a car will have objects related to the engine , tires, electrical parts, etc. However, there is another important type of relationship: â&#128;&#156;â&#128;¦ itâ&#128;&#153;s a â&#128;¦â&#128;&#157; For example, a chocolate cake â&#128;&#156;â&#128;¦ is a â&#128;¦â&#128;&#157; cake, an apple is When this type of relationship is detected it is necessary to use the Inheritance feature.</p><h2>Super method, for method access of parent class</h2><p>In code 1, when we created the Taxi class, we discussed 2 methods of accessing the parent class: the method that writes the class name (e.g., Car.getMotor) and the normal method. However, method 1 is not widely used because it does not decouple the class derived from the parent class. Generally the method used to access the parent class is through the super () method. We will in code 2 implement a CarEletric class that derives the Car class and implements a method using this form of access.</p><pre class="brush: python; title: ; notranslate" title="">
+        #cÃ³digo 2
+        class CarEletric(Car):
+            def __init__(self):
+                super().__init__()
+                self.getMotor()
+
+        ca =  CarEletric()
+        # Created a car
+        # I have a combustion engine
+
+        </pre><p>When running code 2 the result is similar to the result of code 1. The difference now that the super method decouples the two classes. However, the electric car does not have a combustion engine, so it is necessary to override parent class methods.</p><h2>Overriding parent class methods</h2><p>The getMotor () method returns as expected, but the electric car has a different engine. It is possible to override any method of the parent class that does not suit the child class (code 4). To do this you need to define the method in the derived class with the same name as the undesirable method. Python will disregard the method of the parent class and will only pay attention to the method defined in the child class.</p><pre class="brush: python; title: ; notranslate" title="">
+        #code 4 Overriding parent class methods
+        class CarroEletric(Carro):
+            def __init__(self):
+                super().__init__()
+                self.getMotor()
+
+            def getMotor(self):
+                print("I have an electric motor")
+
+        ca = CarroEletric()
+        # Created a car
+        # I have an electric motor
+        </pre><p>Now, the result was expected that the electric car has an electric motor.</p><h2>How inheritance organizes the code</h2><p>In conclusion, inheritance allows us to reuse codes even though some methods need to be implemented slightly differently in the child class. The Car class can be reused and expanded by the Taxi class and can be reused and modified by the CarroEletric class. Generally, some classes take a great amount of time for testing and development. Power, using them as a base allows even lower development costs.</p><p>In this tutorial we introduce the inheritance feature. In the next we will discuss a bit about concrete classes, abstract classes and interfaces.</p><h2>Como a heranÃ§a organiza o cÃ³digo</h2><ul><li>[1] ZELLE, John M. Python programming: an introduction to computer science. Franklin, Beedle & Associates, Inc., 2004.</li>
+<li>[2] DOWNEY, Allen. Think Python. â&#128;&#157; Oâ&#128;&#153;Reilly Media, Inc.â&#128;&#157;, 2012.</li>
+<li>[3] PILGRIM, Mark. Dive Into Python. Createspace, 2009.</li>
+<li>https://docs.python.org/3/</li>
+<li>[4] MATTHES, Eric. Python crash course: a hands-on, project-based introduction to programming. No Starch Press, 2015.</li>
+<li>[5]Smallshire, Robert. Bingham, Austin. The Python Apprentice. Packt Publishing ,2017.</li>
+<li>[6]https://www.sololearn.com/Play/Python</li>
+<li>[7]https://stackoverflow.com/questions/1301346/what-is-the-meaning-of-a-single-and-a-double-underscore-before-an-object-name</li>
+<li>[8]https://www.python.org/dev/peps/pep-0008/#naming-conventions</li>
+<li>[9] Spronck, P. (2016). The Coderâ&#128;&#153;s Apprentice: Learning Programming with Python 3.</li>
+<li>[10] https://pt.stackoverflow.com/questions/22452/como-se-usa-e-para-que-serve-o-super-em-classes-python</li>
+</ul><div class="swp-content-locator"></div>	</div>
+
+	<footer class="amp-wp-article-footer"><div class="amp-wp-meta amp-wp-tax-category">
+		Categories: <a href="https://github.professormarcolan.com.br/en/category/python-en/" rel="category tag">Python</a>, <a href="https://github.professormarcolan.com.br/en/category/theory/" rel="category tag">theory</a>	</div>
+
+	<div class="amp-wp-meta amp-wp-tax-tag">
+		Tags: <a href="https://github.professormarcolan.com.br/en/tag/classes-and-objects/" rel="tag">Classes and objects</a>, <a href="https://github.professormarcolan.com.br/en/tag/python-en/" rel="tag">Python</a>	</div>
+		<div class="amp-wp-meta amp-wp-comments-link">
+		<a href="https://github.professormarcolan.com.br/en/how-to-use-inheritance-in-python/#respond">
+			Leave a Comment		</a>
+	</div>
+	</footer></article><footer class="amp-wp-footer"><div>
+		<h2>Potencialize com conhecimento os seus estudos e projetos!</h2>
+		<p>
+			<a href="https://wordpress.org/">
+				Powered by WordPress			</a>
+		</p>
+		<a href="#top" class="back-to-top">Back to top</a>
+	</div>
+</footer></body></html>
